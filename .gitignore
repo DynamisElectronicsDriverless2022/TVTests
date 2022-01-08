@@ -1,2 +1,39 @@
-*.agdai
-MAlonzo/**
+# Windows default autosave extension
+*.asv
+
+# OSX / *nix default autosave extension
+*.m~
+
+# Compiled MEX binaries (all platforms)
+*.mex*
+
+# Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
+
+# Generated helpsearch folders
+helpsearch*/
+
+# Simulink code generation folders
+slprj/**/*.*
+!slprj/ert/**/*.c
+!slprj/ert/**/*.h
+sccprj/
+
+/**/*.xml
+!resources/**/*.xml
+
+# Matlab code generation folders
+Codice generato/**/*.*
+!Codice generato/**/*.c
+!Codice generato/**/*.h
+
+# Simulink autosave extension
+*.autosave
+
+# Simulink cache files
+*.slxc
+
+# Octave session info
+octave-workspace
+
