@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
@@ -19,16 +19,20 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
-#include "constant_defines.h"
 
 /* USER CODE BEGIN 0 */
-uint8_t rxData[UART_READ_DATA_WIDTH], readData = 0;
-char header[] = "hdr", temp[] = {0,0,0};
-int flag = 0;
-uint8_t tempMsg[UART_SENT_DATA_WIDTH+4];
+#define BUFFER 80
+#define NUMBERDATA 50
+uint64_t n=0;
+uint64_t h=0;
+int i;
+uint64_t Number;
+double Data[NUMBERDATA];
+uint8_t RxData[BUFFER];
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart3;
+DMA_HandleTypeDef hdma_usart3_rx;
 DMA_HandleTypeDef hdma_usart3_tx;
 
 /* USART3 init function */
@@ -45,8 +49,21 @@ void MX_USART3_UART_Init(void)
   huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
   huart3.Init.OverSampling = UART_OVERSAMPLING_16;
   huart3.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart3.Init.ClockPrescaler = UART_PRESCALER_DIV1;
   huart3.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
   if (HAL_UART_Init(&huart3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_SetTxFifoThreshold(&huart3, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_SetRxFifoThreshold(&huart3, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_DisableFifoMode(&huart3) != HAL_OK)
   {
     Error_Handler();
   }
@@ -70,17 +87,35 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     PD8     ------> USART3_TX
     PD9     ------> USART3_RX
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
+    GPIO_InitStruct.Pin = STLK_VCP_RX_Pin|STLK_VCP_TX_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct.Alternate = GPIO_AF7_USART3;
     HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
     /* USART3 DMA Init */
+    /* USART3_RX Init */
+    hdma_usart3_rx.Instance = DMA1_Stream0;
+    hdma_usart3_rx.Init.Request = DMA_REQUEST_USART3_RX;
+    hdma_usart3_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_usart3_rx.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_usart3_rx.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_usart3_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
+    hdma_usart3_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+    hdma_usart3_rx.Init.Mode = DMA_NORMAL;
+    hdma_usart3_rx.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_usart3_rx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+    if (HAL_DMA_Init(&hdma_usart3_rx) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_LINKDMA(uartHandle,hdmarx,hdma_usart3_rx);
+
     /* USART3_TX Init */
-    hdma_usart3_tx.Instance = DMA1_Stream3;
-    hdma_usart3_tx.Init.Channel = DMA_CHANNEL_4;
+    hdma_usart3_tx.Instance = DMA1_Stream1;
+    hdma_usart3_tx.Init.Request = DMA_REQUEST_USART3_TX;
     hdma_usart3_tx.Init.Direction = DMA_MEMORY_TO_PERIPH;
     hdma_usart3_tx.Init.PeriphInc = DMA_PINC_DISABLE;
     hdma_usart3_tx.Init.MemInc = DMA_MINC_ENABLE;
@@ -120,9 +155,10 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
     PD8     ------> USART3_TX
     PD9     ------> USART3_RX
     */
-    HAL_GPIO_DeInit(GPIOD, GPIO_PIN_8|GPIO_PIN_9);
+    HAL_GPIO_DeInit(GPIOD, STLK_VCP_RX_Pin|STLK_VCP_TX_Pin);
 
     /* USART3 DMA DeInit */
+    HAL_DMA_DeInit(uartHandle->hdmarx);
     HAL_DMA_DeInit(uartHandle->hdmatx);
 
     /* USART3 interrupt Deinit */
@@ -134,50 +170,26 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
-/*void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+void IdleCallback(void)
 {
-	
-	//__disable_irq();
-	
-	if(!readData)
-	{	
-		temp[0] = temp[1];
-		temp[1] = temp[2];
-		temp[2] = rxData[0];
+	if((&huart3)->RxXferCount != BUFFER){
+		n++;
+		if(n==NUMBERDATA)n=0;
+		h++;
+		(&huart3)->RxXferCount = BUFFER;
+		(&huart3)->pRxBuffPtr=RxData;
+		Number=0;
+		for(i=0;i<8;i++){
+			Number+=((int64_t)RxData[i])<<(8*i);
+		}
+		Data[n]=*((double *)&Number);
+		
+		
 		
 	}
-	else if(readData == 1)
-	{
-		readData = 0;
-		for(int i=0; i<UART_READ_DATA_WIDTH;i++)
-			rtU.UART_message[i] = rxData[i];
-			
-		
-		flag = 1;
-		test_inverter_UART_read();
-		
-		HAL_GPIO_TogglePin(DEBUG_LED_2_GPIO_Port,DEBUG_LED_2_Pin);
-
-		if(rtU.Selector_Mode == UART_Mode)
-		{
-			test_inverter_CAN_unpack();
-			//inserire qui la funzione step per l'interpretazione del messaggio		
-		}	
-	}
-
 	
-	if(!strncmp(header,temp,3))
-	{
-		
-		readData = 1;
-		HAL_UART_Receive_IT(&huartDebug, rxData, UART_READ_DATA_WIDTH);
-		
-		for(int i = 0; i<3; i++)
-			temp[i] = 0;
-	}
-	else HAL_UART_Receive_IT(&huartDebug, rxData, 1);
 	
-}	*/
+}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -40,3 +40,5 @@ itb_nucleo_configuration\stm32f7xx_hal_msp.o: ../Drivers/STM32F7xx_HAL_Driver/In
 itb_nucleo_configuration\stm32f7xx_hal_msp.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 itb_nucleo_configuration\stm32f7xx_hal_msp.o: ..\C_Code_Sources\Inc\TVModel.h
 itb_nucleo_configuration\stm32f7xx_hal_msp.o: ..\C_Code_Sources\Inc\rtwtypes.h
+itb_nucleo_configuration\stm32f7xx_hal_msp.o: D:\keil\core\ARM\ARMCC\Bin\..\include\math.h
+itb_nucleo_configuration\stm32f7xx_hal_msp.o: D:\keil\core\ARM\ARMCC\Bin\..\include\string.h

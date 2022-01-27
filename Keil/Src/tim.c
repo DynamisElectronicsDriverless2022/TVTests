@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
@@ -19,11 +19,11 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "tim.h"
-#include "usartFcnLib.h"
 
 /* USER CODE BEGIN 0 */
+#include "usartFcnLib.h"
 int BufferTime=0,UsartTime,Count=0;
-uint8_t TxData[3]={'\0','\0','\r'};
+uint8_t TxData[4]={'\0','\0','\r',10};
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 /* USER CODE END 0 */
 
@@ -36,7 +36,7 @@ void MX_TIM6_Init(void)
   TIM_MasterConfigTypeDef sMasterConfig = {0};
 
   htim6.Instance = TIM6;
-  htim6.Init.Prescaler = 96-1;
+  htim6.Init.Prescaler = 275-1;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim6.Init.Period = 1000-1;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -87,7 +87,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
     __HAL_RCC_TIM6_CLK_ENABLE();
 
     /* TIM6 interrupt Init */
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 1, 0);
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
   /* USER CODE BEGIN TIM6_MspInit 1 */
 
@@ -100,10 +100,6 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
   /* USER CODE END TIM7_MspInit 0 */
     /* TIM7 clock enable */
     __HAL_RCC_TIM7_CLK_ENABLE();
-
-    /* TIM7 interrupt Init */
-    HAL_NVIC_SetPriority(TIM7_IRQn, 0, 0);
-    HAL_NVIC_EnableIRQ(TIM7_IRQn);
   /* USER CODE BEGIN TIM7_MspInit 1 */
 
   /* USER CODE END TIM7_MspInit 1 */
@@ -134,9 +130,6 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
   /* USER CODE END TIM7_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_TIM7_CLK_DISABLE();
-
-    /* TIM7 interrupt Deinit */
-    HAL_NVIC_DisableIRQ(TIM7_IRQn);
   /* USER CODE BEGIN TIM7_MspDeInit 1 */
 
   /* USER CODE END TIM7_MspDeInit 1 */
@@ -151,21 +144,21 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	if(htim->Instance == TIM6)
 	{				
 		BufferTime++;
-		if(BufferTime>=100){
+		(&htim6)->Instance->SR=0;
+		if(BufferTime>=10){
 			(&htim7)->Instance->CNT=0;
 			TV();
 			TemopoEsecuzione1=((uint16_t)(&htim7)->Instance->CNT);
 			TemopoEsecuzione2=TemopoEsecuzione1/96;
 			TxData[0]=(TemopoEsecuzione2 & 0xFF00)>>8;
 			TxData[1]=(TemopoEsecuzione2 & 0x00FF);
-			usartTransmit_DMA_wrapper(1,TxData,3);
+			if(TxData[0]==13 && TxData[1]==10) TxData[1]=11;
+			usartTransmit_DMA_wrapper(1,TxData,4);
 			BufferTime=0;
 		}
 		
 			
 
-	}
-	else if(htim->Instance == TIM7){
 	}
 }
 /* USER CODE END 1 */

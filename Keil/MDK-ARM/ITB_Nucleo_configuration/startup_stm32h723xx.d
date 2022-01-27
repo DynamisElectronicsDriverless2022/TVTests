@@ -1,0 +1,1 @@
+itb_nucleo_configuration\startup_stm32h723xx.o: startup_stm32h723xx.s
