@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="hpipm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\..\;CMake Files\..\acados\;CMake Files\..\acados\cmake\;CMake Files\..\acados\acados\;CMake Files\..\acados\interfaces\;CMake Files\..\acados\interfaces\acados_c\;CMake Files\..\acados\external\;CMake Files\..\acados\external\blasfeo\;CMake Files\..\acados\external\blasfeo\cmake\;CMake Files\..\acados\external\blasfeo\cmake\isa_tests\;CMake Files\..\acados\external\blasfeo\cmake\intrinsic_tests\;CMake Files\..\acados\external\blasfeo\examples\;CMake Files\..\acados\external\hpipm\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hpipm">
+				<Option output="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/libhpipm.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32H723xx"/>
+					<Add option="-DDEBUG"/>
+					<Add option="-D__STM32__"/>
+					<Add option="-DMEASURE_TIMINGS"/>
+					<Add option="-DK_MAX_STACK=300"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Inc"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/hpipm/include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/interfaces"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/./acados/external/blasfeo/include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/acados/acados"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/external"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include"/>
+					<Add directory="/include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include"/>
+					<Add directory="C:\Users\giuse\scoop\apps\gcc\current\include"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 hpipm"/>
+					<CompileFile command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hpipm/fast">
+				<Option output="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/libhpipm.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32H723xx"/>
+					<Add option="-DDEBUG"/>
+					<Add option="-D__STM32__"/>
+					<Add option="-DMEASURE_TIMINGS"/>
+					<Add option="-DK_MAX_STACK=300"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Inc"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/hpipm/include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/interfaces"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/./acados/external/blasfeo/include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/acados/acados"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/external"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include"/>
+					<Add directory="/include"/>
+					<Add directory="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include"/>
+					<Add directory="C:\Users\giuse\scoop\apps\gcc\current\include"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 hpipm/fast"/>
+					<CompileFile command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/auxiliary/aux_mem.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/auxiliary/aux_string.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/auxiliary/timing.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/d_cast_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/d_cond.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/d_cond_aux.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/d_cond_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/d_part_cond.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/d_part_cond_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/s_cast_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/s_cond.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/s_cond_aux.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/s_cond_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/s_part_cond.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/cond/s_part_cond_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qcqp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qcqp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qcqp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qcqp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qcqp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qp_kkt.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/d_dense_qp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qcqp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qcqp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qcqp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qcqp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qcqp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qp_kkt.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/dense_qp/s_dense_qp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ipm_core/d_core_qp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ipm_core/d_core_qp_ipm_aux.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ipm_core/s_core_qp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ipm_core/s_core_qp_ipm_aux.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qcqp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qcqp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qcqp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qcqp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qcqp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qp_kkt.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qp_red.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/d_ocp_qp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qcqp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qcqp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qcqp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qcqp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qcqp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qp_kkt.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qp_red.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/ocp_qp/s_ocp_qp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qcqp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qcqp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qcqp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qcqp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qcqp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qp_kkt.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/d_tree_ocp_qp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qcqp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qcqp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qcqp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qcqp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qcqp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qcqp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qp.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qp_dim.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qp_ipm.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qp_kkt.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qp_res.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qp_sol.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/s_tree_ocp_qp_utils.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/tree_ocp_qp/scenario_tree.c">
+			<Option target="hpipm"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake/acados.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake/arm-none-eabi-gcc.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\acados\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/cmake/acadosConfig.cmake.in">
+			<Option virtualFolder="CMake Files\..\acados\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/cmake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\..\acados\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/acados/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\acados\acados\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/interfaces/acados_c/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\acados\interfaces\acados_c\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\acados\external\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/blasfeo_target.h.in">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/cmake/ArchitectureTests.cmake">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/cmake/TestSingleTarget.cmake">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/cmake/isa_tests/isa_test.c">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\cmake\isa_tests\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/cmake/isa_tests/isa_test.cmake">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\cmake\isa_tests\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/cmake/intrinsic_tests/intrinsic_test.c">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\cmake\intrinsic_tests\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/cmake/intrinsic_tests/intrinsic_test.cmake">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\cmake\intrinsic_tests\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/blasfeo/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\acados\external\blasfeo\examples\"/>
+		</Unit>
+		<Unit filename="C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/../acados/external/hpipm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\..\acados\external\hpipm\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
