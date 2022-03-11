@@ -21,7 +21,30 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
+#include "acados_wrapper.h"
+#include "tim.h"
+#include "usartFcnLib.h"
+#define BUFFER 80
+#define NUMBERDATA 50
+uint64_t n=0;
+uint64_t h=0;
+int i;
+uint64_t Number;
+double Data[NUMBERDATA];
+uint8_t RxData[BUFFER];
 
+int BufferTime=0,UsartTime,Count=0;
+uint8_t TxData[4]={'\0','\0','\r',10};
+uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
+
+//dt_model_solver_capsule *capsule;
+double x0[3]={16, -0.2, 0.15};
+double extParam[1]={-20};
+double limDown[4]={-20, -20, -20, -20};
+double limUp[4]={20, 20, 20, 20};
+double reference[7]={0, 0, 1, 0, 0, 0, 0};
+double limAggrDown[1]={-4*20};
+double limAggrUp[1]= {4*20};
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart3;
@@ -163,7 +186,35 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+void IdleCallback(void)
+{
+    if((&huart3)->RxXferCount != BUFFER){
+        n++;
 
+        if(n==NUMBERDATA)n=0;
+        h++;
+        (&huart3)->RxXferCount = BUFFER;
+        (&huart3)->pRxBuffPtr=RxData;
+        (&htim7)->Instance->CNT=0;
+        //Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,capsule);
+        TemopoEsecuzione1=((uint16_t)(&htim7)->Instance->CNT);
+        TemopoEsecuzione2=TemopoEsecuzione1/96;
+        TxData[0]=(TemopoEsecuzione2 & 0xFF00)>>8;
+        TxData[1]=(TemopoEsecuzione2 & 0x00FF);
+        if(TxData[0]==13 && TxData[1]==10) TxData[1]=11;
+        //usartTransmit_DMA_wrapper(1,TxData,4);
+        BufferTime=0;
+
+        Number=0;
+        for(i=0;i<8;i++){
+            Number+=((int64_t)RxData[i])<<(8*i);
+        }
+        Data[n]=*((double *)&Number);
+
+    }
+
+
+}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

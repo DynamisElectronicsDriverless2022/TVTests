@@ -65,6 +65,30 @@ CMAKE_BINARY_DIR = C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuratio
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -84,6 +108,27 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -128,6 +173,149 @@ ITB_Nucleo_configuration.elf: cmake_check_build_system
 ITB_Nucleo_configuration.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/build
 .PHONY : ITB_Nucleo_configuration.elf/fast
+
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/CMakeFiles/uninstall.dir/build.make lib/acados/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named lint
+
+# Build rule for target.
+lint: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lint
+.PHONY : lint
+
+# fast build rule for target.
+lint/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/CMakeFiles/lint.dir/build.make lib/acados/CMakeFiles/lint.dir/build
+.PHONY : lint/fast
+
+#=============================================================================
+# Target rules for targets named acados
+
+# Build rule for target.
+acados: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acados
+.PHONY : acados
+
+# fast build rule for target.
+acados/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/acados/CMakeFiles/acados.dir/build.make lib/acados/acados/CMakeFiles/acados.dir/build
+.PHONY : acados/fast
+
+#=============================================================================
+# Target rules for targets named blasfeo
+
+# Build rule for target.
+blasfeo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 blasfeo
+.PHONY : blasfeo
+
+# fast build rule for target.
+blasfeo/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/CMakeFiles/blasfeo.dir/build.make lib/acados/external/blasfeo/CMakeFiles/blasfeo.dir/build
+.PHONY : blasfeo/fast
+
+#=============================================================================
+# Target rules for targets named getting_started
+
+# Build rule for target.
+getting_started: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 getting_started
+.PHONY : getting_started
+
+# fast build rule for target.
+getting_started/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/build
+.PHONY : getting_started/fast
+
+#=============================================================================
+# Target rules for targets named example_d_lu_factorization
+
+# Build rule for target.
+example_d_lu_factorization: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_d_lu_factorization
+.PHONY : example_d_lu_factorization
+
+# fast build rule for target.
+example_d_lu_factorization/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lu_factorization.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lu_factorization.dir/build
+.PHONY : example_d_lu_factorization/fast
+
+#=============================================================================
+# Target rules for targets named example_s_lu_factorization
+
+# Build rule for target.
+example_s_lu_factorization: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_s_lu_factorization
+.PHONY : example_s_lu_factorization
+
+# fast build rule for target.
+example_s_lu_factorization/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_s_lu_factorization.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_s_lu_factorization.dir/build
+.PHONY : example_s_lu_factorization/fast
+
+#=============================================================================
+# Target rules for targets named example_d_lq_factorization
+
+# Build rule for target.
+example_d_lq_factorization: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_d_lq_factorization
+.PHONY : example_d_lq_factorization
+
+# fast build rule for target.
+example_d_lq_factorization/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lq_factorization.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lq_factorization.dir/build
+.PHONY : example_d_lq_factorization/fast
+
+#=============================================================================
+# Target rules for targets named example_s_riccati_recursion
+
+# Build rule for target.
+example_s_riccati_recursion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_s_riccati_recursion
+.PHONY : example_s_riccati_recursion
+
+# fast build rule for target.
+example_s_riccati_recursion/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_s_riccati_recursion.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_s_riccati_recursion.dir/build
+.PHONY : example_s_riccati_recursion/fast
+
+#=============================================================================
+# Target rules for targets named example_d_riccati_recursion
+
+# Build rule for target.
+example_d_riccati_recursion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_d_riccati_recursion
+.PHONY : example_d_riccati_recursion
+
+# fast build rule for target.
+example_d_riccati_recursion/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_d_riccati_recursion.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_d_riccati_recursion.dir/build
+.PHONY : example_d_riccati_recursion/fast
+
+#=============================================================================
+# Target rules for targets named hpipm
+
+# Build rule for target.
+hpipm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hpipm
+.PHONY : hpipm
+
+# fast build rule for target.
+hpipm/fast:
+	$(MAKE) $(MAKESILENT) -f lib/acados/external/hpipm/CMakeFiles/hpipm.dir/build.make lib/acados/external/hpipm/CMakeFiles/hpipm.dir/build
+.PHONY : hpipm/fast
 
 Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.obj: Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
 .PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.obj
@@ -609,6 +797,174 @@ Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.s
 .PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.s
 
+Src/CustomCode/acados_solver_dt_model.obj: Src/CustomCode/acados_solver_dt_model.c.obj
+.PHONY : Src/CustomCode/acados_solver_dt_model.obj
+
+# target to build an object file
+Src/CustomCode/acados_solver_dt_model.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_solver_dt_model.c.obj
+.PHONY : Src/CustomCode/acados_solver_dt_model.c.obj
+
+Src/CustomCode/acados_solver_dt_model.i: Src/CustomCode/acados_solver_dt_model.c.i
+.PHONY : Src/CustomCode/acados_solver_dt_model.i
+
+# target to preprocess a source file
+Src/CustomCode/acados_solver_dt_model.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_solver_dt_model.c.i
+.PHONY : Src/CustomCode/acados_solver_dt_model.c.i
+
+Src/CustomCode/acados_solver_dt_model.s: Src/CustomCode/acados_solver_dt_model.c.s
+.PHONY : Src/CustomCode/acados_solver_dt_model.s
+
+# target to generate assembly for a file
+Src/CustomCode/acados_solver_dt_model.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_solver_dt_model.c.s
+.PHONY : Src/CustomCode/acados_solver_dt_model.c.s
+
+Src/CustomCode/acados_wrapper.obj: Src/CustomCode/acados_wrapper.c.obj
+.PHONY : Src/CustomCode/acados_wrapper.obj
+
+# target to build an object file
+Src/CustomCode/acados_wrapper.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_wrapper.c.obj
+.PHONY : Src/CustomCode/acados_wrapper.c.obj
+
+Src/CustomCode/acados_wrapper.i: Src/CustomCode/acados_wrapper.c.i
+.PHONY : Src/CustomCode/acados_wrapper.i
+
+# target to preprocess a source file
+Src/CustomCode/acados_wrapper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_wrapper.c.i
+.PHONY : Src/CustomCode/acados_wrapper.c.i
+
+Src/CustomCode/acados_wrapper.s: Src/CustomCode/acados_wrapper.c.s
+.PHONY : Src/CustomCode/acados_wrapper.s
+
+# target to generate assembly for a file
+Src/CustomCode/acados_wrapper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_wrapper.c.s
+.PHONY : Src/CustomCode/acados_wrapper.c.s
+
+Src/CustomCode/dt_model_expl_ode_fun.obj: Src/CustomCode/dt_model_expl_ode_fun.c.obj
+.PHONY : Src/CustomCode/dt_model_expl_ode_fun.obj
+
+# target to build an object file
+Src/CustomCode/dt_model_expl_ode_fun.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_fun.c.obj
+.PHONY : Src/CustomCode/dt_model_expl_ode_fun.c.obj
+
+Src/CustomCode/dt_model_expl_ode_fun.i: Src/CustomCode/dt_model_expl_ode_fun.c.i
+.PHONY : Src/CustomCode/dt_model_expl_ode_fun.i
+
+# target to preprocess a source file
+Src/CustomCode/dt_model_expl_ode_fun.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_fun.c.i
+.PHONY : Src/CustomCode/dt_model_expl_ode_fun.c.i
+
+Src/CustomCode/dt_model_expl_ode_fun.s: Src/CustomCode/dt_model_expl_ode_fun.c.s
+.PHONY : Src/CustomCode/dt_model_expl_ode_fun.s
+
+# target to generate assembly for a file
+Src/CustomCode/dt_model_expl_ode_fun.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_fun.c.s
+.PHONY : Src/CustomCode/dt_model_expl_ode_fun.c.s
+
+Src/CustomCode/dt_model_expl_ode_hess.obj: Src/CustomCode/dt_model_expl_ode_hess.c.obj
+.PHONY : Src/CustomCode/dt_model_expl_ode_hess.obj
+
+# target to build an object file
+Src/CustomCode/dt_model_expl_ode_hess.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_hess.c.obj
+.PHONY : Src/CustomCode/dt_model_expl_ode_hess.c.obj
+
+Src/CustomCode/dt_model_expl_ode_hess.i: Src/CustomCode/dt_model_expl_ode_hess.c.i
+.PHONY : Src/CustomCode/dt_model_expl_ode_hess.i
+
+# target to preprocess a source file
+Src/CustomCode/dt_model_expl_ode_hess.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_hess.c.i
+.PHONY : Src/CustomCode/dt_model_expl_ode_hess.c.i
+
+Src/CustomCode/dt_model_expl_ode_hess.s: Src/CustomCode/dt_model_expl_ode_hess.c.s
+.PHONY : Src/CustomCode/dt_model_expl_ode_hess.s
+
+# target to generate assembly for a file
+Src/CustomCode/dt_model_expl_ode_hess.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_hess.c.s
+.PHONY : Src/CustomCode/dt_model_expl_ode_hess.c.s
+
+Src/CustomCode/dt_model_expl_vde_adj.obj: Src/CustomCode/dt_model_expl_vde_adj.c.obj
+.PHONY : Src/CustomCode/dt_model_expl_vde_adj.obj
+
+# target to build an object file
+Src/CustomCode/dt_model_expl_vde_adj.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_adj.c.obj
+.PHONY : Src/CustomCode/dt_model_expl_vde_adj.c.obj
+
+Src/CustomCode/dt_model_expl_vde_adj.i: Src/CustomCode/dt_model_expl_vde_adj.c.i
+.PHONY : Src/CustomCode/dt_model_expl_vde_adj.i
+
+# target to preprocess a source file
+Src/CustomCode/dt_model_expl_vde_adj.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_adj.c.i
+.PHONY : Src/CustomCode/dt_model_expl_vde_adj.c.i
+
+Src/CustomCode/dt_model_expl_vde_adj.s: Src/CustomCode/dt_model_expl_vde_adj.c.s
+.PHONY : Src/CustomCode/dt_model_expl_vde_adj.s
+
+# target to generate assembly for a file
+Src/CustomCode/dt_model_expl_vde_adj.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_adj.c.s
+.PHONY : Src/CustomCode/dt_model_expl_vde_adj.c.s
+
+Src/CustomCode/dt_model_expl_vde_forw.obj: Src/CustomCode/dt_model_expl_vde_forw.c.obj
+.PHONY : Src/CustomCode/dt_model_expl_vde_forw.obj
+
+# target to build an object file
+Src/CustomCode/dt_model_expl_vde_forw.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_forw.c.obj
+.PHONY : Src/CustomCode/dt_model_expl_vde_forw.c.obj
+
+Src/CustomCode/dt_model_expl_vde_forw.i: Src/CustomCode/dt_model_expl_vde_forw.c.i
+.PHONY : Src/CustomCode/dt_model_expl_vde_forw.i
+
+# target to preprocess a source file
+Src/CustomCode/dt_model_expl_vde_forw.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_forw.c.i
+.PHONY : Src/CustomCode/dt_model_expl_vde_forw.c.i
+
+Src/CustomCode/dt_model_expl_vde_forw.s: Src/CustomCode/dt_model_expl_vde_forw.c.s
+.PHONY : Src/CustomCode/dt_model_expl_vde_forw.s
+
+# target to generate assembly for a file
+Src/CustomCode/dt_model_expl_vde_forw.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_forw.c.s
+.PHONY : Src/CustomCode/dt_model_expl_vde_forw.c.s
+
+Src/CustomCode/usartFcnLib.obj: Src/CustomCode/usartFcnLib.c.obj
+.PHONY : Src/CustomCode/usartFcnLib.obj
+
+# target to build an object file
+Src/CustomCode/usartFcnLib.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/usartFcnLib.c.obj
+.PHONY : Src/CustomCode/usartFcnLib.c.obj
+
+Src/CustomCode/usartFcnLib.i: Src/CustomCode/usartFcnLib.c.i
+.PHONY : Src/CustomCode/usartFcnLib.i
+
+# target to preprocess a source file
+Src/CustomCode/usartFcnLib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/usartFcnLib.c.i
+.PHONY : Src/CustomCode/usartFcnLib.c.i
+
+Src/CustomCode/usartFcnLib.s: Src/CustomCode/usartFcnLib.c.s
+.PHONY : Src/CustomCode/usartFcnLib.s
+
+# target to generate assembly for a file
+Src/CustomCode/usartFcnLib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/usartFcnLib.c.s
+.PHONY : Src/CustomCode/usartFcnLib.c.s
+
 Src/dma.obj: Src/dma.c.obj
 .PHONY : Src/dma.obj
 
@@ -888,8 +1244,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... lint"
+	@echo "... uninstall"
 	@echo "... ITB_Nucleo_configuration.elf"
+	@echo "... acados"
+	@echo "... blasfeo"
+	@echo "... example_d_lq_factorization"
+	@echo "... example_d_lu_factorization"
+	@echo "... example_d_riccati_recursion"
+	@echo "... example_s_lu_factorization"
+	@echo "... example_s_riccati_recursion"
+	@echo "... getting_started"
+	@echo "... hpipm"
 	@echo "... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.obj"
 	@echo "... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.i"
 	@echo "... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.s"
@@ -950,6 +1321,27 @@ help:
 	@echo "... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.obj"
 	@echo "... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.i"
 	@echo "... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.s"
+	@echo "... Src/CustomCode/acados_solver_dt_model.obj"
+	@echo "... Src/CustomCode/acados_solver_dt_model.i"
+	@echo "... Src/CustomCode/acados_solver_dt_model.s"
+	@echo "... Src/CustomCode/acados_wrapper.obj"
+	@echo "... Src/CustomCode/acados_wrapper.i"
+	@echo "... Src/CustomCode/acados_wrapper.s"
+	@echo "... Src/CustomCode/dt_model_expl_ode_fun.obj"
+	@echo "... Src/CustomCode/dt_model_expl_ode_fun.i"
+	@echo "... Src/CustomCode/dt_model_expl_ode_fun.s"
+	@echo "... Src/CustomCode/dt_model_expl_ode_hess.obj"
+	@echo "... Src/CustomCode/dt_model_expl_ode_hess.i"
+	@echo "... Src/CustomCode/dt_model_expl_ode_hess.s"
+	@echo "... Src/CustomCode/dt_model_expl_vde_adj.obj"
+	@echo "... Src/CustomCode/dt_model_expl_vde_adj.i"
+	@echo "... Src/CustomCode/dt_model_expl_vde_adj.s"
+	@echo "... Src/CustomCode/dt_model_expl_vde_forw.obj"
+	@echo "... Src/CustomCode/dt_model_expl_vde_forw.i"
+	@echo "... Src/CustomCode/dt_model_expl_vde_forw.s"
+	@echo "... Src/CustomCode/usartFcnLib.obj"
+	@echo "... Src/CustomCode/usartFcnLib.i"
+	@echo "... Src/CustomCode/usartFcnLib.s"
 	@echo "... Src/dma.obj"
 	@echo "... Src/dma.i"
 	@echo "... Src/dma.s"

@@ -14,6 +14,77 @@
 # EXTERNAL cache entries
 ########################
 
+//Compile Examples
+ACADOS_EXAMPLES:BOOL=OFF
+
+//Installation path to PROJECT_SOURCE_DIR
+ACADOS_INSTALL_DIR:PATH=C:/Users/giuse/Desktop/Timing/TVTests/acados
+
+//Compile Lint
+ACADOS_LINT:BOOL=OFF
+
+//The Matlab Interface
+ACADOS_MATLAB:BOOL=OFF
+
+//The Octave Interface
+ACADOS_OCTAVE:BOOL=OFF
+
+//Template MEX Interface
+ACADOS_OCTAVE_TEMPLATE:BOOL=OFF
+
+//Python Interface
+ACADOS_PYTHON:BOOL=OFF
+
+//No console status output
+ACADOS_SILENT:BOOL=OFF
+
+//Compile Unit tests
+ACADOS_UNIT_TESTS:BOOL=OFF
+
+//HPMPC solver
+ACADOS_WITH_HPMPC:BOOL=OFF
+
+//OOQP solver
+ACADOS_WITH_OOQP:BOOL=OFF
+
+//OpenMP Parallelization
+ACADOS_WITH_OPENMP:BOOL=OFF
+
+//OSQP solver
+ACADOS_WITH_OSQP:BOOL=OFF
+
+//QORE solver
+ACADOS_WITH_QORE:BOOL=OFF
+
+//qpDUNES solver
+ACADOS_WITH_QPDUNES:BOOL=OFF
+
+//qpOASES solver
+ACADOS_WITH_QPOASES:BOOL=OFF
+
+//Benchmarks disabled
+BLASFEO_BENCHMARKS:BOOL=OFF
+
+//Examples enabled
+BLASFEO_EXAMPLES:BOOL=ON
+
+BLASFEO_HEADERS_INSTALLATION_DIRECTORY:STRING=include/blasfeo/include
+
+//Path to BLASFEO header files.
+BLASFEO_INCLUDE_DIR:STRING=/include
+
+//BLASFEO Target architecture
+BLASFEO_TARGET:STRING=GENERIC
+
+//Tests disabled
+BLASFEO_TESTING:BOOL=OFF
+
+//Compile BLAS API
+BLAS_API:BOOL=OFF
+
+//Build shared libraries
+BUILD_SHARED_LIBS:STRING=ON
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-addr2line.exe
 
@@ -40,9 +111,9 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the ASM compiler during RELWITHDEBINFO builds.
 CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Debug
+//Valid build types are:         Release (default), None, Debug,
+// WithExternalLibs, RelWithDebInfo, MinSizeRel.
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Id string of the compiler for the CodeBlocks IDE. Automatically
 // detected when left empty
@@ -137,8 +208,8 @@ CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/ITB_Nucleo_configuration
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ld.exe
 
-//No help, variable specified on the command line.
-CMAKE_MAKE_PROGRAM:UNINITIALIZED=C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe
+//Path to a program.
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Users/giuse/scoop/shims/make.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -234,6 +305,29 @@ CMAKE_STRIP:FILEPATH=C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Reference blas to use
+EXTERNAL_BLAS:STRING=0
+
+//Compile external dependencies in BLASFEO
+EXT_DEP:BOOL=ON
+
+//Standard fortran BLAS API
+FORTRAN_BLAS_API:BOOL=OFF
+
+//Turn off BLASFEO from HPIPM
+HPIPM_BLASFEO_LIB:BOOL=OFF
+
+//Set CPU architecture target
+HPIPM_BLASFEO_PATH:STRING=C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo
+
+HPIPM_HEADERS_INSTALLATION_DIRECTORY:STRING=include/hpipm/include
+
+//HPIPM Target architecture
+HPIPM_TARGET:STRING=GENERIC
+
+//Tests disabled
+HPIPM_TESTING:BOOL=OFF
+
 //Value Computed by CMake
 ITB_Nucleo_configuration_BINARY_DIR:STATIC=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug
 
@@ -242,6 +336,15 @@ ITB_Nucleo_configuration_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 ITB_Nucleo_configuration_SOURCE_DIR:STATIC=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration
+
+//Maximum k value using stack memory
+K_MAX_STACK:STRING=300
+
+//Linear algebra optimization level
+LA:STRING=HIGH_PERFORMANCE
+
+//Matrix format
+MF:STRING=PANELMAJ
 
 //Path to a program.
 ProcessorCount_cmd_getconf:FILEPATH=ProcessorCount_cmd_getconf-NOTFOUND
@@ -273,11 +376,57 @@ ProcessorCount_cmd_sysinfo:FILEPATH=ProcessorCount_cmd_sysinfo-NOTFOUND
 //Path to a program.
 ProcessorCount_cmd_uname:FILEPATH=ProcessorCount_cmd_uname-NOTFOUND
 
+//Set CPU architecture target
+REF_BLAS:STRING=0
+
+//Set CPU architecture target
+TARGET:STRING=GENERIC
+
+//Use C99 extension to math library
+USE_C99_MATH:BOOL=ON
+
+//Value Computed by CMake
+acados_BINARY_DIR:STATIC=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados
+
+//Value Computed by CMake
+acados_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+acados_LIB_DEPENDS:STATIC=general;hpipm;general;blasfeo;general;m;
+
+//Value Computed by CMake
+acados_SOURCE_DIR:STATIC=C:/Users/giuse/Desktop/Timing/TVTests/acados
+
+//Value Computed by CMake
+blasfeo_BINARY_DIR:STATIC=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo
+
+//Value Computed by CMake
+blasfeo_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+blasfeo_SOURCE_DIR:STATIC=C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo
+
+//Value Computed by CMake
+hpipm_BINARY_DIR:STATIC=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm
+
+//Value Computed by CMake
+hpipm_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+hpipm_LIB_DEPENDS:STATIC=general;blasfeo;
+
+//Value Computed by CMake
+hpipm_SOURCE_DIR:STATIC=C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//Result of TRY_COMPILE
+CHKINTRINSIC_TARGET_BUILD_GENERIC:INTERNAL=TRUE
+//Result of TRY_COMPILE
+CHKISA_TARGET_BUILD_GENERIC:INTERNAL=TRUE
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_COMPILER_AR
@@ -382,6 +531,8 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_MAKE_PROGRAM
+CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
 CMAKE_MODULE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_DEBUG
@@ -395,7 +546,11 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+//ADVANCED property for variable: CMAKE_OBJCOPY
+CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
+//objcopy tool
+CMAKE_OBJCOPY:INTERNAL=C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-objcopy
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
@@ -414,6 +569,8 @@ CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_SHARED_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//size tool
+CMAKE_SIZE_UTIL:INTERNAL=C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-size
 //ADVANCED property for variable: CMAKE_SKIP_INSTALL_RPATH
 CMAKE_SKIP_INSTALL_RPATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SKIP_RPATH
@@ -432,6 +589,12 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//STRINGS property for variable: EXTERNAL_BLAS
+EXTERNAL_BLAS-STRINGS:INTERNAL=0;OPENBLAS;NETLIB;MKL;BLIS;ATLAS;ARMPL
+//STRINGS property for variable: LA
+LA-STRINGS:INTERNAL=HIGH_PERFORMANCE;REFERENCE;BLAS
+//STRINGS property for variable: MF
+MF-STRINGS:INTERNAL=COLMAJ;PANELMAJ
 //ADVANCED property for variable: ProcessorCount_cmd_getconf
 ProcessorCount_cmd_getconf-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_lsconf
@@ -450,4 +613,8 @@ ProcessorCount_cmd_psrinfo-ADVANCED:INTERNAL=1
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_uname
 ProcessorCount_cmd_uname-ADVANCED:INTERNAL=1
+//STRINGS property for variable: REF_BLAS
+REF_BLAS-STRINGS:INTERNAL=0;OPENBLAS;NETLIB;MKL;BLIS;ATLAS
+//STRINGS property for variable: TARGET
+TARGET-STRINGS:INTERNAL=AVX;GENERIC
 

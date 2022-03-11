@@ -27,7 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "acados_wrapper.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,13 +47,21 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+extern uint8_t RxData[40];
+dt_model_solver_capsule *capsule;
+uint32_t Dato1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+int _gettimeofday( struct timeval *tv, void *tzvp )
+{
+    uint64_t t = 0;  // get uptime in nanoseconds
+    tv->tv_sec = t / 1000000000;  // convert to seconds
+    tv->tv_usec = ( t % 1000000000 ) / 1000;  // get remaining microseconds
+    return 0;  // return non-zero for error
+} // end _gettimeofday()
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -96,6 +104,19 @@ int main(void)
   MX_USB_OTG_HS_USB_Init();
   /* USER CODE BEGIN 2 */
 
+    capsule = dt_model_acados_create_capsule();
+
+    dt_model_acados_create(capsule);
+//    int i;
+//    double * ptr=0xc120;
+//    for(i=0;i<2024-8;i++){
+//        ptr[i]=0;
+//    }
+    (&huart3)->Instance->CR1|= 0x0010;
+    HAL_UART_Receive_IT(&huart3,RxData,40);
+    //Dato1=0;
+    //HAL_TIM_Base_Start_IT(&htim6);
+    HAL_TIM_Base_Start(&htim7);
   /* USER CODE END 2 */
 
   /* Infinite loop */

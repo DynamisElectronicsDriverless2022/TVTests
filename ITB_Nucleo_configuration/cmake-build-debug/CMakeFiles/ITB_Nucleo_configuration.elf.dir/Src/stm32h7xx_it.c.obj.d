@@ -52,4 +52,6 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj: \
  C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Inc/stm32h7xx_it.h
+ C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Inc/stm32h7xx_it.h \
+ C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Inc/usart.h \
+ C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Inc/main.h

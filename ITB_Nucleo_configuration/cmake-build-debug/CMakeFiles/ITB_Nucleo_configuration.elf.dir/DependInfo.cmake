@@ -15,8 +15,11 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
   "DEBUG"
+  "K_MAX_STACK=300"
+  "MEASURE_TIMINGS"
   "STM32H723xx"
   "USE_HAL_DRIVER"
+  "__STM32__"
   )
 
 # The include file search paths:
@@ -26,6 +29,27 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
   "../Drivers/CMSIS/Device/ST/STM32H7xx/Include"
   "../Drivers/CMSIS/Include"
+  "../Inc/CustomInclude"
+  "../../acados/external/hpipm/include"
+  "../../acados/interfaces"
+  "../../acados"
+  "../../acados/external"
+  "../../acados/external/blasfeo/include"
+  "../acados/acados"
+  "../acados/acados/external"
+  "../acados/acados/interfaces"
+  "../"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external/qore/QPSOLVER_DENSE/include"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external/qore/QPSOLVER_DENSE/source"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external/qore/KKTPACK_DENSE/include"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external/qore/KKTPACK_DENSE/source"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external/qore/QPCORE/include"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external/qore"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external"
+  "../interfaces"
+  "/include"
+  "C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include"
   )
 
 # The set of dependency files which are needed:
@@ -50,6 +74,13 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj.d"
   "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj.d"
   "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj.d"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/CustomCode/acados_solver_dt_model.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_solver_dt_model.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_solver_dt_model.c.obj.d"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/CustomCode/acados_wrapper.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_wrapper.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_wrapper.c.obj.d"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/CustomCode/dt_model_expl_ode_fun.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_fun.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_fun.c.obj.d"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/CustomCode/dt_model_expl_ode_hess.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_hess.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_hess.c.obj.d"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/CustomCode/dt_model_expl_vde_adj.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_adj.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_adj.c.obj.d"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/CustomCode/dt_model_expl_vde_forw.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_forw.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_forw.c.obj.d"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/CustomCode/usartFcnLib.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/usartFcnLib.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/usartFcnLib.c.obj.d"
   "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dma.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj.d"
   "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/gpio.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj.d"
   "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/main.c" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj" "gcc" "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj.d"
@@ -65,6 +96,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/CMakeFiles/acados.dir/DependInfo.cmake"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/blasfeo.dir/DependInfo.cmake"
+  "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/hpipm.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
