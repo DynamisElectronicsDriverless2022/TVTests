@@ -24,16 +24,7 @@
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
-#include "acados_wrapper.h"
 
-// include ad acados
-#include "acados/utils/print.h"
-#include "acados_c/sim_interface.h"
-#include "acados_c/external_function_interface.h"
-
-// include al solver specifico
-#include "dt_model_model/dt_model_model.h"
-#include "acados_solver_dt_model.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -62,13 +53,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-int _gettimeofday( struct timeval *tv, void *tzvp )
-{
-    uint64_t t = 0;  // get uptime in nanoseconds
-    tv->tv_sec = t / 1000000000;  // convert to seconds
-    tv->tv_usec = ( t % 1000000000 ) / 1000;  // get remaining microseconds
-    return 0;  // return non-zero for error
-} // end _gettimeofday()
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -83,7 +68,6 @@ int _gettimeofday( struct timeval *tv, void *tzvp )
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
 
   /* USER CODE END 1 */
 
@@ -111,18 +95,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USB_OTG_HS_USB_Init();
   /* USER CODE BEGIN 2 */
-    dt_model_solver_capsule *capsule_long_;
-    dt_model_solver_capsule * capsule = dt_model_acados_create_capsule();
 
-    dt_model_acados_create(capsule);
-    double x0[3]={16, -0.2, 0.15};
-    double extParam[1]={-20};
-    double limDown[4]={-20, -20, -20, -20};
-    double limUp[4]={20, 20, 20, 20};
-    double reference[7]={0, 0, 1, 0, 0, 0, 0};
-    double limAggrDown[1]={-4*20};
-    double limAggrUp[1]= {4*20};
-    Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,capsule_long_,capsule);
   /* USER CODE END 2 */
 
   /* Infinite loop */

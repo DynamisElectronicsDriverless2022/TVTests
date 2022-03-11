@@ -349,38 +349,10 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.s"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.s
 
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj: ../Src/acados_solver_dt_model.c
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/acados_solver_dt_model.c
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.i"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/acados_solver_dt_model.c > CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.i
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.s"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/acados_solver_dt_model.c -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.s
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj: ../Src/acados_wrapper.c
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/acados_wrapper.c
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.i"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/acados_wrapper.c > CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.i
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.s"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/acados_wrapper.c -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.s
-
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj: ../Src/dma.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dma.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.i: cmake_force
@@ -391,66 +363,10 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.s"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dma.c -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.s
 
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj: ../Src/dt_model_expl_ode_fun.c
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_ode_fun.c
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.i"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_ode_fun.c > CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.i
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.s"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_ode_fun.c -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.s
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj: ../Src/dt_model_expl_ode_hess.c
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_ode_hess.c
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.i"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_ode_hess.c > CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.i
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.s"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_ode_hess.c -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.s
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj: ../Src/dt_model_expl_vde_adj.c
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_vde_adj.c
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.i"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_vde_adj.c > CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.i
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.s"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_vde_adj.c -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.s
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj: ../Src/dt_model_expl_vde_forw.c
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_vde_forw.c
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.i"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_vde_forw.c > CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.i
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.s"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_vde_forw.c -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.s
-
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj: ../Src/gpio.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/gpio.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.i: cmake_force
@@ -464,7 +380,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.s: cmake_force
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj: ../Src/main.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/main.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.i: cmake_force
@@ -478,7 +394,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.s: cmake_force
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj: ../Src/stm32h7xx_hal_msp.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/stm32h7xx_hal_msp.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.i: cmake_force
@@ -492,7 +408,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.s: cmake_for
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj: ../Src/stm32h7xx_it.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/stm32h7xx_it.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.i: cmake_force
@@ -506,7 +422,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.s: cmake_force
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.obj: ../Src/syscalls.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/syscalls.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.i: cmake_force
@@ -520,7 +436,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/syscalls.c.s: cmake_force
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj: ../Src/sysmem.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/sysmem.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.i: cmake_force
@@ -534,7 +450,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.s: cmake_force
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj: ../Src/system_stm32h7xx.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/system_stm32h7xx.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.i: cmake_force
@@ -548,7 +464,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.s: cmake_forc
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj: ../Src/tim.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/tim.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.i: cmake_force
@@ -562,7 +478,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.s: cmake_force
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj: ../Src/usart.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/usart.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.i: cmake_force
@@ -576,7 +492,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.s: cmake_force
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj: ../Src/usb_otg.c
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj -MF CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj.d -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Src/usb_otg.c
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.i: cmake_force
@@ -589,7 +505,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.s: cmake_force
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32h723zgtx.s.obj: CMakeFiles/ITB_Nucleo_configuration.elf.dir/flags.make
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32h723zgtx.s.obj: ../Startup/startup_stm32h723zgtx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32h723zgtx.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building ASM object CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32h723zgtx.s.obj"
 	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32h723zgtx.s.obj -c C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/Startup/startup_stm32h723zgtx.s
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32h723zgtx.s.i: cmake_force
@@ -622,13 +538,7 @@ ITB_Nucleo_configuration_elf_OBJECTS = \
 "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj" \
 "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj" \
 "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj" \
-"CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj" \
-"CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj" \
 "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj" \
-"CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj" \
-"CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj" \
-"CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj" \
-"CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj" \
 "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj" \
 "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj" \
 "CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj" \
@@ -664,13 +574,7 @@ ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Driver
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
-ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj
-ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj
-ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj
-ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj
-ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj
-ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj
@@ -683,16 +587,12 @@ ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/us
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32h723zgtx.s.obj
 ITB_Nucleo_configuration.elf: CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make
-ITB_Nucleo_configuration.elf: lib/acados/acados/libacados.a
-ITB_Nucleo_configuration.elf: lib/acados/external/blasfeo/libblasfeo.a
-ITB_Nucleo_configuration.elf: lib/acados/external/hpipm/libhpipm.a
-ITB_Nucleo_configuration.elf: lib/acados/external/blasfeo/libblasfeo.a
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Linking C executable ITB_Nucleo_configuration.elf"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe -O3 -DNDEBUG -Wl,-gc-sections,--print-memory-usage,-Map=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.map -mcpu=cortex-m7 -mthumb -mthumb-interwork -T C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/STM32H723ZGTX_FLASH.ld $(ITB_Nucleo_configuration_elf_OBJECTS) $(ITB_Nucleo_configuration_elf_EXTERNAL_OBJECTS) -o ITB_Nucleo_configuration.elf  lib/acados/acados/libacados.a lib/acados/external/blasfeo/libblasfeo.a lib/acados/external/hpipm/libhpipm.a lib/acados/external/blasfeo/libblasfeo.a -lm 
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking C executable ITB_Nucleo_configuration.elf"
+	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe -g -Wl,-gc-sections,--print-memory-usage,-Map=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.map -mcpu=cortex-m7 -mthumb -mthumb-interwork -T C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/STM32H723ZGTX_FLASH.ld $(ITB_Nucleo_configuration_elf_OBJECTS) $(ITB_Nucleo_configuration_elf_EXTERNAL_OBJECTS) -o ITB_Nucleo_configuration.elf 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.bin"
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-objcopy -Oihex C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.elf C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.hex
-	C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-objcopy -Obinary C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.elf C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.bin
+	arm-none-eabi-objcopy -Oihex C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.elf C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.hex
+	arm-none-eabi-objcopy -Obinary C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.elf C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/ITB_Nucleo_configuration.bin
 
 # Rule to build all files generated by this target.
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/build: ITB_Nucleo_configuration.elf

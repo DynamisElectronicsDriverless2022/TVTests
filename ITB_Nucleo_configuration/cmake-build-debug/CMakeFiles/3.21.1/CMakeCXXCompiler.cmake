@@ -21,7 +21,7 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ar")
+set(CMAKE_AR "arm-none-eabi-ar")
 set(CMAKE_CXX_COMPILER_AR "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe")
 set(CMAKE_RANLIB "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ranlib.exe")
 set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe")

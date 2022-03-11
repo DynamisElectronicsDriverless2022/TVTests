@@ -4,25 +4,19 @@ set(CMAKE_SYSTEM_VERSION 1)
 cmake_minimum_required(VERSION 3.21)
 
 # specify cross compilers and tools
-#set(CMAKE_TOOLCHAIN_FILE "../cmake/arm-none-eabi-gcc.cmake")
-include(cmake/arm-none-eabi-gcc.cmake)
-
-
-
-#set(CMAKE_C_COMPILER arm-none-eabi-gcc)
-#set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
-#set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
-#set(CMAKE_AR arm-none-eabi-ar)
-#set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
-#set(CMAKE_OBJDUMP arm-none-eabi-objdump)
-#set(SIZE arm-none-eabi-size)
-#set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
+set(CMAKE_AR arm-none-eabi-ar)
+set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
+set(CMAKE_OBJDUMP arm-none-eabi-objdump)
+set(SIZE arm-none-eabi-size)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # project settings
 project(ITB_Nucleo_configuration C CXX ASM)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_EXTENSIONS ON)
 
 #Uncomment for hardware floating point
 #add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
@@ -56,16 +50,10 @@ else ()
 endif ()
 
 include_directories(Inc Drivers/STM32H7xx_HAL_Driver/Inc Drivers/STM32H7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32H7xx/Include Drivers/CMSIS/Include)
-include_directories(../acados/external/hpipm/include)
-include_directories(../acados/interfaces)
-include_directories(../acados)
-include_directories(../acados/external)
-include_directories(.//acados/external/blasfeo/include)
 
 add_definitions(-DUSE_HAL_DRIVER -DSTM32H723xx -DDEBUG)
-include(cmake/acados.cmake)
-file(GLOB_RECURSE SOURCES "Startup/*.*" "Src/*.*" "Drivers/*.*")
 
+file(GLOB_RECURSE SOURCES "Startup/*.*" "Src/*.*" "Drivers/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32H723ZGTX_FLASH.ld)
 
@@ -74,7 +62,6 @@ add_link_options(-mcpu=cortex-m7 -mthumb -mthumb-interwork)
 add_link_options(-T ${LINKER_SCRIPT})
 
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
-target_link_libraries(${PROJECT_NAME}.elf acados blasfeo hpipm)
 
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)

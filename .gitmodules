@@ -1,0 +1,3 @@
+[submodule "ITB_Nucleo_configuration/acados"]
+	path = ITB_Nucleo_configuration/acados
+	url = git@github.com:acados/acados.git
