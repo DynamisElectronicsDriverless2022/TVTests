@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/examples
+# Install script for directory: D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/giuse/Desktop/Timing/TVTests/acados")
+  set(CMAKE_INSTALL_PREFIX "D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

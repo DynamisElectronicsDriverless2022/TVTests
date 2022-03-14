@@ -56,10 +56,10 @@ RM = "D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration
+CMAKE_SOURCE_DIR = D:/DynamisGit/TVTests/ITB_Nucleo_configuration
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug
+CMAKE_BINARY_DIR = D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/depend.make
@@ -73,18 +73,18 @@ include lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/prog
 include lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/flags.make
 
 lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj: lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/flags.make
-lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj: C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/examples/getting_started.c
+lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj: ../acados/external/blasfeo/examples/getting_started.c
 lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj: lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj"
-	cd C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj -MF CMakeFiles/getting_started.dir/getting_started.c.obj.d -o CMakeFiles/getting_started.dir/getting_started.c.obj -c C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/examples/getting_started.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj"
+	cd D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj -MF CMakeFiles/getting_started.dir/getting_started.c.obj.d -o CMakeFiles/getting_started.dir/getting_started.c.obj -c D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples/getting_started.c
 
 lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/getting_started.dir/getting_started.c.i"
-	cd C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/examples/getting_started.c > CMakeFiles/getting_started.dir/getting_started.c.i
+	cd D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples/getting_started.c > CMakeFiles/getting_started.dir/getting_started.c.i
 
 lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/getting_started.dir/getting_started.c.s"
-	cd C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/examples/getting_started.c -o CMakeFiles/getting_started.dir/getting_started.c.s
+	cd D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples/getting_started.c -o CMakeFiles/getting_started.dir/getting_started.c.s
 
 # Object files for target getting_started
 getting_started_OBJECTS = \
@@ -96,18 +96,18 @@ getting_started_EXTERNAL_OBJECTS =
 lib/acados/external/blasfeo/examples/getting_started: lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/getting_started.c.obj
 lib/acados/external/blasfeo/examples/getting_started: lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/build.make
 lib/acados/external/blasfeo/examples/getting_started: lib/acados/external/blasfeo/libblasfeo.a
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable getting_started"
-	cd C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe  -std=c99 -Wall -fdiagnostics-show-option -Wno-error -w -DLA_HIGH_PERFORMANCE -DMF_PANELMAJ -DK_MAX_STACK=300 -DUSE_C99_MATH -DEXT_DEP -DOS_WINDOWS -DEXTERNAL_BLAS_NONE -O2 -fPIC -DTARGET_GENERIC  -O3 -DNDEBUG $(getting_started_OBJECTS) $(getting_started_EXTERNAL_OBJECTS) -o getting_started  ../libblasfeo.a -lm 
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable getting_started"
+	cd D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe  -std=c99 -Wall -fdiagnostics-show-option -Wno-error -w -DLA_HIGH_PERFORMANCE -DMF_PANELMAJ -DK_MAX_STACK=300 -DUSE_C99_MATH -DEXT_DEP -DOS_WINDOWS -DEXTERNAL_BLAS_NONE -O2 -fPIC -DTARGET_GENERIC  -O3 -DNDEBUG -mfloat-abi=hard -mfpu=fpv5-d16 $(getting_started_OBJECTS) $(getting_started_EXTERNAL_OBJECTS) -o getting_started  ../libblasfeo.a -lm 
 
 # Rule to build all files generated by this target.
 lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/build: lib/acados/external/blasfeo/examples/getting_started
 .PHONY : lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/build
 
 lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/clean:
-	cd C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && $(CMAKE_COMMAND) -P CMakeFiles/getting_started.dir/cmake_clean.cmake
+	cd D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples && $(CMAKE_COMMAND) -P CMakeFiles/getting_started.dir/cmake_clean.cmake
 .PHONY : lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/clean
 
 lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/examples C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" D:/DynamisGit/TVTests/ITB_Nucleo_configuration D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/depend
 

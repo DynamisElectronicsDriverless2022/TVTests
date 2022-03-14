@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/giuse/Desktop/Timing/TVTests/acados/external
+# Install script for directory: D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados/external
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/giuse/Desktop/Timing/TVTests/acados")
+  set(CMAKE_INSTALL_PREFIX "D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/cmake_install.cmake")
-  include("C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/cmake_install.cmake")
+  include("D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/cmake_install.cmake")
+  include("D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/cmake_install.cmake")
 
 endif()
 

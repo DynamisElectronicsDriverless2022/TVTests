@@ -15,7 +15,7 @@ include_directories(acados/acados)
 include_directories(acados/acados/external)
 include_directories(acados/acados/interfaces)
 
-add_subdirectory(../acados  "lib/acados")
+add_subdirectory(acados  "lib/acados")
 target_compile_options(acados PRIVATE -O3)
 target_compile_options(blasfeo PRIVATE -O3)
 target_compile_options(hpipm PRIVATE -O3)

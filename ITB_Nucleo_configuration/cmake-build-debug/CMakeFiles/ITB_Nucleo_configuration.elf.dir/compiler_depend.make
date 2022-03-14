@@ -1061,7 +1061,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_solver_dt_model.c.obj: ../Src/CustomCode/acados_solver_dt_model.c \
+CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_solver_dt_model.c.obj: ../Src/acados_solver_dt_model.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdio.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
@@ -1094,81 +1094,81 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_solver_dt_mode
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdlib.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/stdlib.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/alloca.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/print.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/dense_qp/dense_qp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_block_size.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp_res.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/types.h \
+  ../acados/acados/utils/print.h \
+  ../acados/acados/dense_qp/dense_qp_common.h \
+  ../acados/external/hpipm/include/hpipm_d_dense_qp.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/external/blasfeo/include/blasfeo_block_size.h \
+  ../acados/external/hpipm/include/hpipm_d_dense_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_common.h \
+  ../acados/external/hpipm/include/hpipm_d_dense_qp_res.h \
+  ../acados/external/hpipm/include/hpipm_d_dense_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_dense_qp.h \
+  ../acados/external/hpipm/include/hpipm_d_dense_qp_sol.h \
+  ../acados/external/hpipm/include/hpipm_d_dense_qp_sol.h \
+  ../acados/acados/utils/types.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_res.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/external_function_generic.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_cost_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_collocation_utils.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/timing.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_constraints_common.h \
+  ../acados/acados/ocp_qp/ocp_qp_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_res.h \
+  ../acados/external/hpipm/include/hpipm_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
+  ../acados/acados/utils/external_function_generic.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_cost_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/acados/sim/sim_common.h \
+  ../acados/acados/sim/sim_collocation_utils.h \
+  ../acados/acados/utils/timing.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_locale.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/stat.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_time.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_reg_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_xcond_solver.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_common_frontend.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_nlp_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_erk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_irk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_lifted_irk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_gnsf.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_old.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas_api.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_kernel.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_qp_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/sim_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/external_function_interface.h \
-  ../Inc/CustomInclude/dt_model_model/dt_model_model.h \
-  ../Inc/CustomInclude/acados_solver_dt_model.h
+  ../acados/acados/ocp_nlp/ocp_nlp_reg_common.h \
+  ../acados/acados/ocp_qp/ocp_qp_xcond_solver.h \
+  ../acados/acados/ocp_qp/ocp_qp_common_frontend.h \
+  ../acados/interfaces/acados_c/ocp_nlp_interface.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h \
+  ../acados/acados/sim/sim_erk_integrator.h \
+  ../acados/acados/sim/sim_irk_integrator.h \
+  ../acados/acados/sim/sim_lifted_irk_integrator.h \
+  ../acados/acados/sim/sim_gnsf.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux_old.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blas.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blas_api.h \
+  ../acados/external/blasfeo/include/blasfeo_d_kernel.h \
+  ../acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/interfaces/acados_c/ocp_qp_interface.h \
+  ../acados/interfaces/acados_c/sim_interface.h \
+  ../acados/interfaces/acados_c/external_function_interface.h \
+  ../Inc/dt_model_model/dt_model_model.h \
+  ../Inc/acados_solver_dt_model.h
 
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_wrapper.c.obj: ../Src/CustomCode/acados_wrapper.c \
-  ../Inc/CustomInclude/acados_wrapper.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/sim_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_common.h \
+CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/acados_wrapper.c.obj: ../Src/acados_wrapper.c \
+  ../Inc/acados_wrapper.h \
+  ../acados/interfaces/acados_c/sim_interface.h \
+  ../acados/acados/sim/sim_common.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_collocation_utils.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/types.h \
+  ../acados/acados/sim/sim_collocation_utils.h \
+  ../acados/acados/utils/types.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/timing.h \
+  ../acados/acados/utils/timing.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
@@ -1200,182 +1200,57 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/acados_wrapper.c.obj:
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/stat.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_time.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/external_function_generic.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/external_function_interface.h \
-  ../Inc/CustomInclude/dt_model_model/dt_model_model.h \
-  ../Inc/CustomInclude/acados_solver_dt_model.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_nlp_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_block_size.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_res.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_cost_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_reg_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_xcond_solver.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_erk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_irk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_lifted_irk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_gnsf.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux.h \
+  ../acados/acados/utils/external_function_generic.h \
+  ../acados/interfaces/acados_c/external_function_interface.h \
+  ../Inc/dt_model_model/dt_model_model.h \
+  ../Inc/acados_solver_dt_model.h \
+  ../acados/interfaces/acados_c/ocp_nlp_interface.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_constraints_common.h \
+  ../acados/acados/ocp_qp/ocp_qp_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/external/blasfeo/include/blasfeo_block_size.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_res.h \
+  ../acados/external/hpipm/include/hpipm_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_cost_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_reg_common.h \
+  ../acados/acados/ocp_qp/ocp_qp_xcond_solver.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h \
+  ../acados/acados/sim/sim_erk_integrator.h \
+  ../acados/acados/sim/sim_irk_integrator.h \
+  ../acados/acados/sim/sim_lifted_irk_integrator.h \
+  ../acados/acados/sim/sim_gnsf.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdlib.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/stdlib.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/alloca.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_old.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux_old.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdio.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/stdio.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas_api.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_kernel.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_qp_interface.h \
-  ../Inc/CustomInclude/dt_model_model/dt_model_model.h \
-  ../Inc/CustomInclude/acados_solver_dt_model.h
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_fun.c.obj: ../Src/CustomCode/dt_model_expl_ode_fun.c \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_ode_hess.c.obj: ../Src/CustomCode/dt_model_expl_ode_hess.c \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_adj.c.obj: ../Src/CustomCode/dt_model_expl_vde_adj.c \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/dt_model_expl_vde_forw.c.obj: ../Src/CustomCode/dt_model_expl_vde_forw.c \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
-
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/CustomCode/usartFcnLib.c.obj: ../Src/CustomCode/usartFcnLib.c \
-  ../Inc/CustomInclude/usartFcnLib.h \
-  ../Inc/main.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
-  ../Inc/stm32h7xx_hal_conf.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
-  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
-  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h \
-  ../Drivers/CMSIS/Include/core_cm7.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdint.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_intsup.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_stdint.h \
-  ../Drivers/CMSIS/Include/cmsis_version.h \
-  ../Drivers/CMSIS/Include/cmsis_compiler.h \
-  ../Drivers/CMSIS/Include/cmsis_gcc.h \
-  ../Drivers/CMSIS/Include/mpu_armv7.h \
-  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
-  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
-  ../Inc/usart.h \
-  ../Inc/main.h
+  ../acados/external/blasfeo/include/blasfeo_d_blas.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blas_api.h \
+  ../acados/external/blasfeo/include/blasfeo_d_kernel.h \
+  ../acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/interfaces/acados_c/ocp_qp_interface.h \
+  ../Inc/dt_model_model/dt_model_model.h \
+  ../Inc/acados_solver_dt_model.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj: ../Src/dma.c \
   ../Inc/dma.h \
@@ -1431,6 +1306,74 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj: ../Src/dma.c \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
+
+CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj: ../Src/dt_model_expl_ode_fun.c \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+
+CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj: ../Src/dt_model_expl_ode_hess.c \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+
+CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj: ../Src/dt_model_expl_vde_adj.c \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+
+CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj: ../Src/dt_model_expl_vde_forw.c \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj: ../Src/gpio.c \
   ../Inc/gpio.h \
@@ -1546,13 +1489,13 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj: ../Src/main.c \
   ../Inc/usart.h \
   ../Inc/usb_otg.h \
   ../Inc/gpio.h \
-  ../Inc/CustomInclude/acados_wrapper.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/sim_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_common.h \
+  ../Inc/acados_wrapper.h \
+  ../acados/interfaces/acados_c/sim_interface.h \
+  ../acados/acados/sim/sim_common.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_collocation_utils.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/types.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/timing.h \
+  ../acados/acados/sim/sim_collocation_utils.h \
+  ../acados/acados/utils/types.h \
+  ../acados/acados/utils/timing.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/types.h \
@@ -1570,55 +1513,57 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj: ../Src/main.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/stat.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_time.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/external_function_generic.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/external_function_interface.h \
-  ../Inc/CustomInclude/dt_model_model/dt_model_model.h \
-  ../Inc/CustomInclude/acados_solver_dt_model.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_nlp_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_block_size.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_res.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_cost_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_reg_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_xcond_solver.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_erk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_irk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_lifted_irk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_gnsf.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux.h \
+  ../acados/acados/utils/external_function_generic.h \
+  ../acados/interfaces/acados_c/external_function_interface.h \
+  ../Inc/dt_model_model/dt_model_model.h \
+  ../Inc/acados_solver_dt_model.h \
+  ../acados/interfaces/acados_c/ocp_nlp_interface.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_constraints_common.h \
+  ../acados/acados/ocp_qp/ocp_qp_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/external/blasfeo/include/blasfeo_block_size.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_res.h \
+  ../acados/external/hpipm/include/hpipm_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_cost_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_reg_common.h \
+  ../acados/acados/ocp_qp/ocp_qp_xcond_solver.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h \
+  ../acados/acados/sim/sim_erk_integrator.h \
+  ../acados/acados/sim/sim_irk_integrator.h \
+  ../acados/acados/sim/sim_lifted_irk_integrator.h \
+  ../acados/acados/sim/sim_gnsf.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdlib.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/stdlib.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/alloca.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_old.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux_old.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdio.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/stdio.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas_api.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_kernel.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_qp_interface.h
+  ../acados/external/blasfeo/include/blasfeo_d_blas.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blas_api.h \
+  ../acados/external/blasfeo/include/blasfeo_d_kernel.h \
+  ../acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/interfaces/acados_c/ocp_qp_interface.h \
+  ../Inc/acados_solver_dt_model.h \
+  ../Inc/dt_model_model/dt_model_model.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj: ../Src/stm32h7xx_hal_msp.c \
   ../Inc/main.h \
@@ -1958,13 +1903,13 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj: ../Src/usart.c \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
-  ../Inc/CustomInclude/acados_wrapper.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/sim_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_common.h \
+  ../Inc/acados_wrapper.h \
+  ../acados/interfaces/acados_c/sim_interface.h \
+  ../acados/acados/sim/sim_common.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_collocation_utils.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/types.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/timing.h \
+  ../acados/acados/sim/sim_collocation_utils.h \
+  ../acados/acados/utils/types.h \
+  ../acados/acados/utils/timing.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/types.h \
@@ -1982,58 +1927,114 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj: ../Src/usart.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/stat.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/time.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_time.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/external_function_generic.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/external_function_interface.h \
-  ../Inc/CustomInclude/dt_model_model/dt_model_model.h \
-  ../Inc/CustomInclude/acados_solver_dt_model.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_nlp_interface.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_block_size.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_res.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_cost_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_reg_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_xcond_solver.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_erk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_irk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_lifted_irk_integrator.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_gnsf.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux.h \
+  ../acados/acados/utils/external_function_generic.h \
+  ../acados/interfaces/acados_c/external_function_interface.h \
+  ../Inc/dt_model_model/dt_model_model.h \
+  ../Inc/acados_solver_dt_model.h \
+  ../acados/interfaces/acados_c/ocp_nlp_interface.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_constraints_common.h \
+  ../acados/acados/ocp_qp/ocp_qp_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/external/blasfeo/include/blasfeo_block_size.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_res.h \
+  ../acados/external/hpipm/include/hpipm_common.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
+  ../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_cost_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_reg_common.h \
+  ../acados/acados/ocp_qp/ocp_qp_xcond_solver.h \
+  ../acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h \
+  ../acados/acados/sim/sim_erk_integrator.h \
+  ../acados/acados/sim/sim_irk_integrator.h \
+  ../acados/acados/sim/sim_lifted_irk_integrator.h \
+  ../acados/acados/sim/sim_gnsf.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdlib.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/stdlib.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/alloca.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_old.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h \
+  ../acados/external/blasfeo/include/blasfeo_common.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux_old.h \
+  ../acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdio.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/stdio.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas_api.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_kernel.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h \
-  C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_qp_interface.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blas.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h \
+  ../acados/external/blasfeo/include/blasfeo_d_blas_api.h \
+  ../acados/external/blasfeo/include/blasfeo_d_kernel.h \
+  ../acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h \
+  ../acados/external/blasfeo/include/blasfeo_target.h \
+  ../acados/interfaces/acados_c/ocp_qp_interface.h \
   ../Inc/tim.h \
-  ../Inc/CustomInclude/usartFcnLib.h \
-  ../Inc/main.h
+  ../Inc/usartFcnLib.h \
+  ../Inc/usart.h
+
+CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usartFcnLib.c.obj: ../Src/usartFcnLib.c \
+  ../Inc/usartFcnLib.h \
+  ../Inc/main.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
+  ../Inc/stm32h7xx_hal_conf.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
+  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
+  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h \
+  ../Drivers/CMSIS/Include/core_cm7.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdint.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_intsup.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_stdint.h \
+  ../Drivers/CMSIS/Include/cmsis_version.h \
+  ../Drivers/CMSIS/Include/cmsis_compiler.h \
+  ../Drivers/CMSIS/Include/cmsis_gcc.h \
+  ../Drivers/CMSIS/Include/mpu_armv7.h \
+  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/newlib.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
+  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
+  ../Inc/usart.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj: ../Src/usb_otg.c \
   ../Inc/usb_otg.h \
@@ -2119,6 +2120,8 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1
 
 ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 
+../Src/dt_model_expl_ode_hess.c:
+
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdint.h:
@@ -2131,10 +2134,6 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machin
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_block_size.h:
-
 ../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h:
@@ -2143,13 +2142,13 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_i
 
 ../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_nlp_interface.h:
-
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_stdint.h:
 
 ../Drivers/CMSIS/Include/cmsis_version.h:
 
 ../Drivers/CMSIS/Include/cmsis_compiler.h:
+
+../acados/acados/ocp_nlp/ocp_nlp_constraints_common.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c:
 
@@ -2157,13 +2156,17 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_s
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/config.h:
 
+../Src/dt_model_expl_ode_fun.c:
+
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/stat.h:
 
 ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h:
 
+../acados/external/blasfeo/include/blasfeo_d_blas.h:
+
 ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_cost_common.h:
+../acados/acados/sim/sim_lifted_irk_integrator.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h:
 
@@ -2174,8 +2177,6 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/reent.h:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h:
 
@@ -2191,8 +2192,6 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machin
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/ocp_qp_interface.h:
-
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_types.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_types.h:
@@ -2200,8 +2199,6 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_t
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h:
 
@@ -2217,23 +2214,17 @@ C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_
 
 ../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:
 
-../Inc/CustomInclude/usartFcnLib.h:
-
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_gnsf.h:
-
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
-
-../Src/CustomCode/acados_wrapper.c:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 
@@ -2263,21 +2254,13 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/errno.
 
 ../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c:
 
-../Src/CustomCode/acados_solver_dt_model.c:
+../Src/acados_solver_dt_model.c:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdio.h:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/types.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/endian.h:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_kernel.h:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/dense_qp/dense_qp_common.h:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/print.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_endian.h:
 
@@ -2291,11 +2274,7 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/ti
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_timespec.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/types.h:
-
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_pthreadtypes.h:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/timing.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/sched.h:
 
@@ -2309,49 +2288,61 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machin
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/alloca.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp.h:
+../acados/acados/utils/print.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_target.h:
+../acados/acados/dense_qp/dense_qp_common.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_common.h:
+../acados/external/hpipm/include/hpipm_d_dense_qp.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp_dim.h:
+../Inc/usartFcnLib.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_common.h:
+../acados/external/blasfeo/include/blasfeo_target.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp_res.h:
+../acados/external/blasfeo/include/blasfeo_common.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_dense_qp_sol.h:
+../acados/external/blasfeo/include/blasfeo_block_size.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_common.h:
+../acados/external/hpipm/include/hpipm_d_dense_qp_dim.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_constraints_common.h:
+../acados/acados/sim/sim_irk_integrator.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_common.h:
+../acados/external/hpipm/include/hpipm_common.h:
 
-../Inc/CustomInclude/dt_model_model/dt_model_model.h:
+../Src/sysmem.c:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp.h:
+../acados/external/hpipm/include/hpipm_d_dense_qp_res.h:
 
-C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/errno.h:
+../acados/external/hpipm/include/hpipm_d_dense_qp_sol.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h:
+../acados/acados/utils/types.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_res.h:
+../acados/acados/ocp_nlp/ocp_nlp_common.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h:
+../acados/acados/ocp_qp/ocp_qp_common.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/utils/external_function_generic.h:
+../acados/external/hpipm/include/hpipm_d_ocp_qp.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_common.h:
+../acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_collocation_utils.h:
+../acados/external/hpipm/include/hpipm_d_ocp_qp_res.h:
+
+../acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h:
+
+../acados/acados/utils/external_function_generic.h:
+
+../acados/acados/ocp_nlp/ocp_nlp_cost_common.h:
+
+../acados/acados/ocp_nlp/ocp_nlp_dynamics_common.h:
+
+../acados/acados/sim/sim_common.h:
+
+../acados/acados/sim/sim_collocation_utils.h:
+
+../acados/acados/utils/timing.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/time.h:
 
 ../Src/dma.c:
-
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_irk_integrator.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/time.h:
 
@@ -2361,55 +2352,63 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/ti
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_time.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_nlp/ocp_nlp_reg_common.h:
+../acados/acados/ocp_nlp/ocp_nlp_reg_common.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_xcond_solver.h:
+../acados/acados/ocp_qp/ocp_qp_xcond_solver.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/ocp_qp/ocp_qp_common_frontend.h:
+../acados/acados/ocp_qp/ocp_qp_common_frontend.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_erk_integrator.h:
+../acados/interfaces/acados_c/ocp_nlp_interface.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/acados/sim/sim_lifted_irk_integrator.h:
+../acados/acados/ocp_nlp/ocp_nlp_constraints_bgh.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_old.h:
+../acados/acados/sim/sim_erk_integrator.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h:
+../acados/acados/sim/sim_gnsf.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas.h:
+../acados/external/blasfeo/include/blasfeo_d_aux.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h:
+../acados/external/blasfeo/include/blasfeo_d_aux_old.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/external/blasfeo/include/blasfeo_d_blas_api.h:
+../acados/external/blasfeo/include/blasfeo_d_aux_ext_dep.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/sim_interface.h:
+../acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h:
 
-C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/external_function_interface.h:
+../acados/external/blasfeo/include/blasfeo_d_blas_api.h:
 
-../Inc/CustomInclude/acados_solver_dt_model.h:
+../acados/external/blasfeo/include/blasfeo_d_kernel.h:
 
-../Inc/CustomInclude/acados_wrapper.h:
+../acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h:
 
-../Src/CustomCode/dt_model_expl_ode_fun.c:
+../acados/interfaces/acados_c/ocp_qp_interface.h:
 
-../Inc/gpio.h:
+../acados/interfaces/acados_c/sim_interface.h:
 
-../Src/CustomCode/dt_model_expl_ode_hess.c:
+../acados/interfaces/acados_c/external_function_interface.h:
 
-../Src/CustomCode/dt_model_expl_vde_adj.c:
+../Inc/dt_model_model/dt_model_model.h:
 
-../Src/CustomCode/dt_model_expl_vde_forw.c:
+../Inc/acados_solver_dt_model.h:
 
-../Src/CustomCode/usartFcnLib.c:
+../Src/acados_wrapper.c:
 
-../Inc/main.h:
-
-../Inc/usart.h:
+../Inc/acados_wrapper.h:
 
 ../Inc/dma.h:
 
+../Inc/main.h:
+
+../Src/dt_model_expl_vde_adj.c:
+
+../Src/dt_model_expl_vde_forw.c:
+
 ../Src/gpio.c:
 
+../Inc/gpio.h:
+
 ../Inc/tim.h:
+
+../Inc/usart.h:
 
 ../Inc/usb_otg.h:
 
@@ -2419,18 +2418,20 @@ C:/Users/giuse/Desktop/Timing/TVTests/acados/interfaces/acados_c/external_functi
 
 ../Src/syscalls.c:
 
+C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/errno.h:
+
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/signal.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/signal.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/times.h:
 
-../Src/sysmem.c:
-
 ../Src/system_stm32h7xx.c:
 
 ../Src/tim.c:
 
 ../Src/usart.c:
+
+../Src/usartFcnLib.c:
 
 ../Src/usb_otg.c:

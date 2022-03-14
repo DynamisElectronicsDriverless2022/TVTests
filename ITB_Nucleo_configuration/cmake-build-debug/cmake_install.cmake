@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration
+# Install script for directory: D:/DynamisGit/TVTests/ITB_Nucleo_configuration
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/cmake_install.cmake")
+  include("D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/giuse/Desktop/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

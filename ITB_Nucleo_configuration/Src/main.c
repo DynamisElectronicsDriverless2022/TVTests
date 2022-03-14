@@ -28,6 +28,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "acados_wrapper.h"
+#include "acados_solver_dt_model.h"
+#include "dt_model_model/dt_model_model.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,7 +50,7 @@
 
 /* USER CODE BEGIN PV */
 extern uint8_t RxData[40];
-dt_model_solver_capsule *capsule;
+extern dt_model_solver_capsule *capsule;
 uint32_t Dato1;
 /* USER CODE END PV */
 
@@ -78,6 +80,12 @@ int main(void)
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
+
+  /* Enable I-Cache---------------------------------------------------------*/
+  SCB_EnableICache();
+
+  /* Enable D-Cache---------------------------------------------------------*/
+  SCB_EnableDCache();
 
   /* MCU Configuration--------------------------------------------------------*/
 
