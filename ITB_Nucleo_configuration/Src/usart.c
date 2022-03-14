@@ -28,6 +28,7 @@
 #define NUMBERDATA 50
 uint64_t n=0;
 uint64_t h=0;
+
 int i;
 uint64_t Number;
 double Data[NUMBERDATA];
@@ -189,21 +190,48 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 void IdleCallback(void)
 {
     if((&huart3)->RxXferCount != BUFFER){
-       //Questi conteggi sono solo di prova
+        //Penso che questi incrementi possano essere tolti
         n++;
 
         if(n==DNUMBERATA)n=0;
         h++;
 
-        //Qui ricezione double da usart (li metto in un array)
+        Number=0;
+        //Creo un array "Data" contenente gli ingressi del blocco TV, ovvero, nell'ordine:
+            //ax
+            //delta
+            //r
+            //steering
+            //vx
+            //vy
+            //yrd
+        for(j=0;j<numImport;j++){
+            //Creo un double come 8 gruppi di 8 bit ciascuno
+            for(i=0;i<8;i++){
+                Number+=((int64_t)RxData[i])<<(8*i);
+            }
+            Data[j]=*((double *)&Number);
+        }
 
-        //I valori nell'array li assegno alle inport del blocco simulink
+        //Qui Assegnare gli elementi di Data[] agli import di Simulink quando Giuseppe ha definito il loro nome
+        = Data[0];
+        = Data[1];
+        = Data[2];
+        = Data[3];
+        = Data[4];
+        = Data[5];
+        = Data[6];
 
-        //reset periferica con fimensione del BUFFER
+        //Chiamare funzione TV(void) quando sarà definita
+        TV();
+
+        //reset periferica con dimensione iniziale del BUFFER
         (&huart3)->RxXferCount = BUFFER;
         (&huart3)->pRxBuffPtr=RxData;
         (&htim7)->Instance->CNT=0;
-        //Acados_caller non va chiamata qui ma nella funzione TV generata da Matlab
+
+        //Acados_caller non va chiamata qui ma nella funzione TV generata da Matlab, la quale a partire dagli
+        //elementi di Data ottiene i parametri che servono a Acados_Caller
         //Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,capsule);
         TemopoEsecuzione1=((uint16_t)(&htim7)->Instance->CNT);
         TemopoEsecuzione2=TemopoEsecuzione1/96;
@@ -213,12 +241,6 @@ void IdleCallback(void)
         //usartTransmit_DMA_wrapper(1,TxData,4);
         BufferTime=0;
 
-        //Va messa a inizio callback con for esterno per accogliere tutti i double che mando da matlab
-        Number=0;
-        for(i=0;i<8;i++){
-            Number+=((int64_t)RxData[i])<<(8*i);
-        }
-        Data[n]=*((double *)&Number);
 
     }
 
