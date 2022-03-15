@@ -205,7 +205,7 @@ void IdleCallback(void)
             //vx
             //vy
             //yrd
-        for(j=0;j<numImport;j++){
+        for(j=0;j<BUFFER/8;j++){
             //Creo un double come 8 gruppi di 8 bit ciascuno
             for(i=0;i<8;i++){
                 Number+=((int64_t)RxData[i])<<(8*i);
