@@ -120,7 +120,7 @@ int main(void)
     HAL_UART_Receive_IT(&huart3,RxData,40);
     //Dato1=0;
     //HAL_TIM_Base_Start_IT(&htim6);
-    HAL_TIM_Base_Start(&htim7);
+    HAL_TIM_Base_Start_IT(&htim7);
   /* USER CODE END 2 */
 
   /* Infinite loop */

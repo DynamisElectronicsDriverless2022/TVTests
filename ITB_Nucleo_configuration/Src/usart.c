@@ -33,6 +33,7 @@ int i;
 uint64_t Number;
 double Data[NUMBERDATA];
 uint8_t RxData[BUFFER];
+uint32_t Time=0;
 
 int BufferTime=0,UsartTime,Count=0;
 uint8_t TxData[4]={'\0','\0','\r',10};
@@ -152,7 +153,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     __HAL_LINKDMA(uartHandle,hdmatx,hdma_usart3_tx);
 
     /* USART3 interrupt Init */
-    HAL_NVIC_SetPriority(USART3_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(USART3_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(USART3_IRQn);
   /* USER CODE BEGIN USART3_MspInit 1 */
 
@@ -232,11 +233,11 @@ void IdleCallback(void)
         (&huart3)->RxXferCount = BUFFER;
         (&huart3)->pRxBuffPtr=RxData;
         (&htim7)->Instance->CNT=0;
-
+        Time=0;
         //Acados_caller non va chiamata qui ma nella funzione TV generata da Matlab, la quale a partire dagli
         //elementi di Data ottiene i parametri che servono a Acados_Caller
         Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule);
-        TemopoEsecuzione1=((uint16_t)(&htim7)->Instance->CNT);
+        TemopoEsecuzione1=Time*1000+((uint16_t)(&htim7)->Instance->CNT);
         TemopoEsecuzione2=TemopoEsecuzione1/96;
         TxData[0]=(TemopoEsecuzione2 & 0xFF00)>>8;
         TxData[1]=(TemopoEsecuzione2 & 0x00FF);

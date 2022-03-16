@@ -208,8 +208,8 @@ lib/acados/interfaces/acados_c/clean:
 # Target rules for target CMakeFiles/ITB_Nucleo_configuration.elf.dir
 
 # All Build rule for target.
-CMakeFiles/ITB_Nucleo_configuration.elf.dir/all: lib/acados/acados/CMakeFiles/acados.dir/all
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/all: lib/acados/external/blasfeo/CMakeFiles/blasfeo.dir/all
+CMakeFiles/ITB_Nucleo_configuration.elf.dir/all: lib/acados/acados/CMakeFiles/acados.dir/all
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/all: lib/acados/external/hpipm/CMakeFiles/hpipm.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ITB_Nucleo_configuration.elf.dir/build.make CMakeFiles/ITB_Nucleo_configuration.elf.dir/build

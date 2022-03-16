@@ -32,19 +32,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 69,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
 				"line" : 25,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 65,
 				"parent" : 0
 			},
 			{
@@ -60,9 +54,15 @@
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 68,
+				"parent" : 0
+			},
+			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 70,
+				"line" : 71,
 				"parent" : 0
 			},
 			{
@@ -74,25 +74,25 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 30,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
 				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 37,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 50,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
@@ -104,13 +104,13 @@
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 59,
+				"line" : 60,
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 60,
+				"line" : 61,
 				"parent" : 0
 			},
 			{
@@ -134,12 +134,6 @@
 				"file" : 1,
 				"line" : 10,
 				"parent" : 15
-			},
-			{
-				"command" : 7,
-				"file" : 0,
-				"line" : 53,
-				"parent" : 0
 			},
 			{
 				"command" : 7,
@@ -169,6 +163,12 @@
 				"command" : 7,
 				"file" : 0,
 				"line" : 58,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 59,
 				"parent" : 0
 			},
 			{
@@ -628,11 +628,11 @@
 	[
 		{
 			"backtrace" : 6,
-			"id" : "acados::@273febf8648f30f54d96"
+			"id" : "blasfeo::@89ec20ae6029458ef6e2"
 		},
 		{
 			"backtrace" : 6,
-			"id" : "blasfeo::@89ec20ae6029458ef6e2"
+			"id" : "acados::@273febf8648f30f54d96"
 		},
 		{
 			"backtrace" : 6,
