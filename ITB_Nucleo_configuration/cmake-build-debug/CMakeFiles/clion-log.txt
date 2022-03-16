@@ -1,4 +1,4 @@
-"D:\Clion\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -DCMAKE_C_COMPILER=C:/Users/giuse/scoop/apps/gcc/11.2.0/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/Users/giuse/scoop/apps/gcc/11.2.0/bin/gcc.exe -G "CodeBlocks - Unix Makefiles" D:\DynamisGit\TVTests\ITB_Nucleo_configuration
+"D:\Clion\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -DCMAKE_C_COMPILER=C:/Users/giuse/scoop/apps/gcc/11.2.0/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/Users/giuse/scoop/apps/gcc/11.2.0/bin/gcc.exe -G "CodeBlocks - Unix Makefiles" D:\DynamisGit\Timing\TVTests\ITB_Nucleo_configuration
 Toolchain directory: C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin
 -- Minimal optimization, debug info included
 -- Build type is Debug
@@ -26,7 +26,7 @@ CMake Deprecation Warning at acados/external/hpipm/CMakeLists.txt:36 (cmake_mini
 
 
 -- Using BLASFEO path: 
--- Installation directory: D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados
+-- Installation directory: D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
 --  
 -- Target: BLASFEO is GENERIC, HPIPM is GENERIC
 -- Linear algebra: HIGH_PERFORMANCE
@@ -35,7 +35,7 @@ CMake Deprecation Warning at acados/external/hpipm/CMakeLists.txt:36 (cmake_mini
 -- Octave Templates (OFF)
 -- System name:version Generic:1
 -- Build type is Debug
--- Installation directory is D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados
+-- Installation directory is D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
 -- OpenMP parallelization is OFF
 --  
 -- Configuring done
@@ -108,7 +108,7 @@ CMake Warning (dev) at acados/external/hpipm/CMakeLists.txt:331 (add_library):
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Using BLASFEO path: 
--- Installation directory: D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados
+-- Installation directory: D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
 --  
 -- Target: BLASFEO is GENERIC, HPIPM is GENERIC
 -- Linear algebra: HIGH_PERFORMANCE
@@ -117,9 +117,9 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Octave Templates (OFF)
 -- System name:version Generic:1
 -- Build type is Release
--- Installation directory is D:/DynamisGit/TVTests/ITB_Nucleo_configuration/acados
+-- Installation directory is D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
 -- OpenMP parallelization is OFF
 --  
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug
+-- Build files have been written to: D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug

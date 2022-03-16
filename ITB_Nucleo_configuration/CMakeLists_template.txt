@@ -3,14 +3,15 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION 1)
 ${cmakeRequiredVersion}
 # specify cross compilers and tools
-set(CMAKE_C_COMPILER arm-none-eabi-gcc)
-set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
-set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
-set(CMAKE_AR arm-none-eabi-ar)
-set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
-set(CMAKE_OBJDUMP arm-none-eabi-objdump)
-set(SIZE arm-none-eabi-size)
-set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+include(cmake/arm-none-eabi-gcc.cmake)
+#set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+#set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+#set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
+#set(CMAKE_AR arm-none-eabi-ar)
+#set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
+#set(CMAKE_OBJDUMP arm-none-eabi-objdump)
+#set(SIZE arm-none-eabi-size)
+#set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # project settings
 project(${projectName} C CXX ASM)
@@ -18,9 +19,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
 #Uncomment for hardware floating point
-#add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
-#add_compile_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
-#add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
+add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
+add_compile_options(-mfloat-abi=hard -mfpu=fpv5-d16)
+add_link_options(-mfloat-abi=hard -mfpu=fpv5-d16)
+
 
 #Uncomment for software floating point
 #add_compile_options(-mfloat-abi=soft)
@@ -45,13 +47,17 @@ elseif ("$${CMAKE_BUILD_TYPE}" STREQUAL "MinSizeRel")
     add_compile_options(-Os)
 else ()
     message(STATUS "Minimal optimization, debug info included")
-    add_compile_options(-Og -g)
+    add_compile_options(-O2 -g)
 endif ()
 
 include_directories(${includes})
-
+include_directories(acados/external/hpipm/include)
+include_directories(acados/interfaces)
+include_directories(acados)
+include_directories(acados/external)
+include_directories(acados/external/blasfeo/include)
 add_definitions(${defines})
-
+include(cmake/acados.cmake)
 file(GLOB_RECURSE SOURCES ${sources})
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})
@@ -61,7 +67,7 @@ add_link_options(-mcpu=${mcpu} -mthumb -mthumb-interwork)
 add_link_options(-T $${LINKER_SCRIPT})
 
 add_executable($${PROJECT_NAME}.elf $${SOURCES} $${LINKER_SCRIPT})
-
+target_link_libraries(${PROJECT_NAME}.elf acados blasfeo hpipm)
 set(HEX_FILE $${PROJECT_BINARY_DIR}/$${PROJECT_NAME}.hex)
 set(BIN_FILE $${PROJECT_BINARY_DIR}/$${PROJECT_NAME}.bin)
 

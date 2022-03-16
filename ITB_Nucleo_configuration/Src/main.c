@@ -115,11 +115,7 @@ int main(void)
     capsule = dt_model_acados_create_capsule();
 
     dt_model_acados_create(capsule);
-//    int i;
-//    double * ptr=0xc120;
-//    for(i=0;i<2024-8;i++){
-//        ptr[i]=0;
-//    }
+
     (&huart3)->Instance->CR1|= 0x0010;
     HAL_UART_Receive_IT(&huart3,RxData,40);
     //Dato1=0;

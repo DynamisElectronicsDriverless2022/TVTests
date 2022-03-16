@@ -38,14 +38,17 @@ int BufferTime=0,UsartTime,Count=0;
 uint8_t TxData[4]={'\0','\0','\r',10};
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 
-//dt_model_solver_capsule *capsule;
-double x0[3]={16, -0.2, 0.15};
-double extParam[1]={-20};
-double limDown[4]={-20, -20, -20, -20};
-double limUp[4]={20, 20, 20, 20};
-double reference[7]={0, 0, 1, 0, 0, 0, 0};
-double limAggrDown[1]={-4*20};
-double limAggrUp[1]= {4*20};
+dt_model_solver_capsule *capsule;
+double x0[3]={18.3, 0.23, 0.828};
+double extParam[12]={0.117,0,0.0396,-0.0461,0.00961,0,0,0,0,15.1,-0.67,0.93};
+double limDown[4]={2.41, -3.59, -13.2, -18.6};
+double limUp[4]={16.5, 17.2, 7.55, 2.13};
+double reference[7]={0, 0, 0.905, 0, 0, 0, 0};
+double limAggrDown[4]={8.06,-33.2,15,15};
+double limAggrUp[4]= {8.91,76,15,15};
+double cost_W[49]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
+
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart3;
@@ -193,7 +196,7 @@ void IdleCallback(void)
         //Penso che questi incrementi possano essere tolti
         n++;
 
-        if(n==DNUMBERATA)n=0;
+        if(n==NUMBERDATA)n=0;
         h++;
 
         Number=0;
@@ -205,7 +208,7 @@ void IdleCallback(void)
             //vx
             //vy
             //yrd
-        for(j=0;j<BUFFER/8;j++){
+        for(int j=0;j<BUFFER/8;j++){
             //Creo un double come 8 gruppi di 8 bit ciascuno
             for(i=0;i<8;i++){
                 Number+=((int64_t)RxData[i])<<(8*i);
@@ -214,16 +217,16 @@ void IdleCallback(void)
         }
 
         //Qui Assegnare gli elementi di Data[] agli import di Simulink quando Giuseppe ha definito il loro nome
-        = Data[0];
-        = Data[1];
-        = Data[2];
-        = Data[3];
-        = Data[4];
-        = Data[5];
-        = Data[6];
+//        = Data[0];
+//        = Data[1];
+//        = Data[2];
+//        = Data[3];
+//        = Data[4];
+//        = Data[5];
+//        = Data[6];
 
         //Chiamare funzione TV(void) quando sarà definita
-        TV();
+        //TV();
 
         //reset periferica con dimensione iniziale del BUFFER
         (&huart3)->RxXferCount = BUFFER;
@@ -232,7 +235,7 @@ void IdleCallback(void)
 
         //Acados_caller non va chiamata qui ma nella funzione TV generata da Matlab, la quale a partire dagli
         //elementi di Data ottiene i parametri che servono a Acados_Caller
-        //Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,capsule);
+        Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule);
         TemopoEsecuzione1=((uint16_t)(&htim7)->Instance->CNT);
         TemopoEsecuzione2=TemopoEsecuzione1/96;
         TxData[0]=(TemopoEsecuzione2 & 0xFF00)>>8;

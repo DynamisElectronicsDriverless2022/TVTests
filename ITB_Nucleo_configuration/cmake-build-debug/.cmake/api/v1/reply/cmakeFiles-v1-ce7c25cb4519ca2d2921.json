@@ -1249,8 +1249,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/DynamisGit/TVTests/ITB_Nucleo_configuration/cmake-build-debug",
-		"source" : "D:/DynamisGit/TVTests/ITB_Nucleo_configuration"
+		"build" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug",
+		"source" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration"
 	},
 	"version" : 
 	{
