@@ -35,6 +35,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -89,6 +90,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -143,6 +145,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -197,6 +200,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -251,6 +255,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -305,6 +310,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -359,6 +365,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -413,6 +420,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -467,6 +475,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -521,6 +530,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -575,6 +585,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -629,6 +640,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -683,6 +695,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -737,6 +750,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -791,6 +805,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -845,6 +860,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -899,6 +915,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -953,6 +970,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1007,6 +1025,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1061,6 +1080,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1310,6 +1330,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1347,6 +1368,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_ode_hess.c
@@ -1365,6 +1387,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_vde_adj.c
@@ -1383,6 +1406,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src/dt_model_expl_vde_forw.c
@@ -1401,6 +1425,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src/gpio.c
@@ -1438,6 +1463,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1493,6 +1519,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1629,6 +1656,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1684,6 +1712,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1808,6 +1837,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1864,6 +1894,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -1920,6 +1951,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -2052,6 +2084,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usartFcnLib.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -2109,6 +2142,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h
  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h

@@ -14,4 +14,5 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj: \
  c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\machine\_default_types.h \
  c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\sys\lock.h \
  c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\sys\cdefs.h \
- c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\_ansi.h
+ c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\_ansi.h \
+ c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\machine\fastmath.h

@@ -34,6 +34,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -87,6 +88,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -140,6 +142,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -193,6 +196,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -246,6 +250,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -299,6 +304,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -352,6 +358,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -405,6 +412,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -458,6 +466,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -511,6 +520,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -564,6 +574,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -617,6 +628,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -670,6 +682,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -723,6 +736,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -776,6 +790,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -829,6 +844,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -882,6 +898,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -935,6 +952,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -988,6 +1006,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1041,6 +1060,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1287,6 +1307,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj: ../Src/dma.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1322,7 +1343,8 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_fun.c.obj: ../
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj: ../Src/dt_model_expl_ode_hess.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
@@ -1339,7 +1361,8 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_ode_hess.c.obj: ..
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj: ../Src/dt_model_expl_vde_adj.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
@@ -1356,7 +1379,8 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_adj.c.obj: ../
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj: ../Src/dt_model_expl_vde_forw.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/math.h \
@@ -1373,7 +1397,8 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dt_model_expl_vde_forw.c.obj: ..
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_default_types.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
-  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h
 
 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj: ../Src/gpio.c \
   ../Inc/gpio.h \
@@ -1410,6 +1435,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/gpio.c.obj: ../Src/gpio.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1464,6 +1490,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/main.c.obj: ../Src/main.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1599,6 +1626,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_hal_msp.c.obj: ../Src/
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1653,6 +1681,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/stm32h7xx_it.c.obj: ../Src/stm32
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1774,6 +1803,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32h7xx.c.obj: ../Src/s
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1829,6 +1859,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj: ../Src/tim.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -1884,6 +1915,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj: ../Src/usart.c \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -2015,6 +2047,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usartFcnLib.c.obj: ../Src/usartF
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -2071,6 +2104,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usb_otg.c.obj: ../Src/usb_otg.c 
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/lock.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h \
   C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_ansi.h \
+  C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
   ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
@@ -2134,8 +2168,6 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machin
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/features.h:
 
-../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:
-
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/_newlib_version.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_intsup.h:
@@ -2198,6 +2230,10 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/_t
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/cdefs.h:
 
+C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_endian.h:
+
+C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/fastmath.h:
+
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h:
@@ -2242,6 +2278,8 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1
 
 ../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c:
 
+../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:
+
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/errno.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c:
@@ -2261,8 +2299,6 @@ C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/stdio.
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/types.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/endian.h:
-
-C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/machine/_endian.h:
 
 C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/sys/select.h:
 

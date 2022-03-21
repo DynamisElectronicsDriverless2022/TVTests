@@ -5,7 +5,7 @@
 		<Option title="hpipm"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\acados\;CMake Files\acados\cmake\;CMake Files\acados\acados\;CMake Files\acados\interfaces\;CMake Files\acados\interfaces\acados_c\;CMake Files\acados\external\;CMake Files\acados\external\blasfeo\;CMake Files\acados\external\blasfeo\cmake\;CMake Files\acados\external\blasfeo\cmake\isa_tests\;CMake Files\acados\external\blasfeo\cmake\intrinsic_tests\;CMake Files\acados\external\blasfeo\examples\;CMake Files\acados\external\hpipm\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\acados\;CMake Files\acados\cmake\;CMake Files\acados\acados\;CMake Files\acados\interfaces\;CMake Files\acados\interfaces\acados_c\;CMake Files\acados\external\;CMake Files\acados\external\blasfeo\;CMake Files\acados\external\blasfeo\cmake\;CMake Files\acados\external\blasfeo\cmake\isa_tests\;CMake Files\acados\external\blasfeo\cmake\intrinsic_tests\;CMake Files\acados\external\hpipm\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm"/>
@@ -38,6 +38,7 @@
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/interfaces"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"/>
@@ -83,6 +84,7 @@
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/interfaces"/>
 					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"/>
@@ -458,9 +460,6 @@
 		</Unit>
 		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/cmake/intrinsic_tests/intrinsic_test.cmake">
 			<Option virtualFolder="CMake Files\acados\external\blasfeo\cmake\intrinsic_tests\"/>
-		</Unit>
-		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\acados\external\blasfeo\examples\"/>
 		</Unit>
 		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\acados\external\hpipm\"/>

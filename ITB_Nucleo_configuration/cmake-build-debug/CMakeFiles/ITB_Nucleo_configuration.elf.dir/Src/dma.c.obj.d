@@ -34,6 +34,7 @@ CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/dma.c.obj: \
  c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\sys\lock.h \
  c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\sys\cdefs.h \
  c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\_ansi.h \
+ c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\arm-none-eabi\include\machine\fastmath.h \
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
  D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \

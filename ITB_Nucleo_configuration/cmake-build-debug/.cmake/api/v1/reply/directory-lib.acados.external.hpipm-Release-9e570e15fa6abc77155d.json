@@ -1,0 +1,195 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"acados/external/hpipm/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 341,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 346,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 349,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/acados/external/hpipm/libhpipm.a"
+			],
+			"targetId" : "hpipm::@7e7b5fafbcda485504e0",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "cmake",
+			"exportName" : "hpipmConfig",
+			"exportTargets" : 
+			[
+				{
+					"id" : "hpipm::@7e7b5fafbcda485504e0",
+					"index" : 3
+				}
+			],
+			"paths" : 
+			[
+				"lib/acados/external/hpipm/CMakeFiles/Export/cmake/hpipmConfig.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/hpipm/include",
+			"paths" : 
+			[
+				"acados/external/hpipm/include/hpipm_aux_mem.h",
+				"acados/external/hpipm/include/hpipm_aux_string.h",
+				"acados/external/hpipm/include/hpipm_common.h",
+				"acados/external/hpipm/include/hpipm_d_cast_qcqp.h",
+				"acados/external/hpipm/include/hpipm_d_cond.h",
+				"acados/external/hpipm/include/hpipm_d_cond_aux.h",
+				"acados/external/hpipm/include/hpipm_d_cond_qcqp.h",
+				"acados/external/hpipm/include/hpipm_d_core_qp_ipm.h",
+				"acados/external/hpipm/include/hpipm_d_core_qp_ipm_aux.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qcqp.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qcqp_dim.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qcqp_ipm.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qcqp_res.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qcqp_sol.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qcqp_utils.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qp.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qp_dim.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qp_ipm.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qp_kkt.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qp_res.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qp_sol.h",
+				"acados/external/hpipm/include/hpipm_d_dense_qp_utils.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qcqp.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qcqp_dim.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qcqp_ipm.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qcqp_res.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qcqp_sol.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qcqp_utils.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qp.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qp_dim.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qp_ipm.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qp_kkt.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qp_red.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qp_res.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qp_sol.h",
+				"acados/external/hpipm/include/hpipm_d_ocp_qp_utils.h",
+				"acados/external/hpipm/include/hpipm_d_part_cond.h",
+				"acados/external/hpipm/include/hpipm_d_part_cond_qcqp.h",
+				"acados/external/hpipm/include/hpipm_d_sim_erk.h",
+				"acados/external/hpipm/include/hpipm_d_sim_rk.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qcqp.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qcqp_dim.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qcqp_ipm.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qcqp_res.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qcqp_sol.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qcqp_utils.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qp.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qp_dim.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qp_ipm.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qp_kkt.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qp_res.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qp_sol.h",
+				"acados/external/hpipm/include/hpipm_d_tree_ocp_qp_utils.h",
+				"acados/external/hpipm/include/hpipm_m_dense_qp.h",
+				"acados/external/hpipm/include/hpipm_m_dense_qp_dim.h",
+				"acados/external/hpipm/include/hpipm_m_ocp_qp.h",
+				"acados/external/hpipm/include/hpipm_m_ocp_qp_ipm_hard.h",
+				"acados/external/hpipm/include/hpipm_m_ocp_qp_kkt.h",
+				"acados/external/hpipm/include/hpipm_s_cast_qcqp.h",
+				"acados/external/hpipm/include/hpipm_s_cond.h",
+				"acados/external/hpipm/include/hpipm_s_cond_aux.h",
+				"acados/external/hpipm/include/hpipm_s_cond_qcqp.h",
+				"acados/external/hpipm/include/hpipm_s_core_qp_ipm.h",
+				"acados/external/hpipm/include/hpipm_s_core_qp_ipm_aux.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qcqp.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qcqp_dim.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qcqp_ipm.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qcqp_res.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qcqp_sol.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qcqp_utils.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qp.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qp_dim.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qp_ipm.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qp_kkt.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qp_res.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qp_sol.h",
+				"acados/external/hpipm/include/hpipm_s_dense_qp_utils.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qcqp.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qcqp_dim.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qcqp_ipm.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qcqp_res.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qcqp_sol.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qcqp_utils.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qp.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qp_dim.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qp_ipm.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qp_kkt.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qp_red.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qp_res.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qp_sol.h",
+				"acados/external/hpipm/include/hpipm_s_ocp_qp_utils.h",
+				"acados/external/hpipm/include/hpipm_s_part_cond.h",
+				"acados/external/hpipm/include/hpipm_s_part_cond_qcqp.h",
+				"acados/external/hpipm/include/hpipm_s_sim_erk.h",
+				"acados/external/hpipm/include/hpipm_s_sim_rk.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qcqp.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qcqp_dim.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qcqp_ipm.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qcqp_res.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qcqp_sol.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qcqp_utils.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qp.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qp_dim.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qp_ipm.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qp_kkt.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qp_res.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qp_sol.h",
+				"acados/external/hpipm/include/hpipm_s_tree_ocp_qp_utils.h",
+				"acados/external/hpipm/include/hpipm_scenario_tree.h",
+				"acados/external/hpipm/include/hpipm_timing.h",
+				"acados/external/hpipm/include/hpipm_tree.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "lib/acados/external/hpipm",
+		"source" : "acados/external/hpipm"
+	}
+}

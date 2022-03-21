@@ -52,6 +52,7 @@ else ()
 endif ()
 
 include_directories(Inc Drivers/STM32H7xx_HAL_Driver/Inc Drivers/STM32H7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32H7xx/Include Drivers/CMSIS/Include)
+include_directories(C_Code_Sources/Inc)
 include_directories(acados/external/hpipm/include)
 include_directories(acados/interfaces)
 include_directories(acados)
@@ -59,7 +60,7 @@ include_directories(acados/external)
 include_directories(acados/external/blasfeo/include)
 add_definitions(-DUSE_HAL_DRIVER -DSTM32H723xx -DDEBUG)
 include(cmake/acados.cmake)
-file(GLOB_RECURSE SOURCES "Startup/*.*" "Src/*.*" "Drivers/*.*")
+file(GLOB_RECURSE SOURCES "Startup/*.*" "Src/*.*" "Drivers/*.*" "C_Code_Sources/Srx/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32H723ZGTX_FLASH.ld)
 

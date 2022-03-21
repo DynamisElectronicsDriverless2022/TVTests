@@ -2,7 +2,7 @@
 ## Makefile generated for component 'TVModel'. 
 ## 
 ## Makefile     : TVModel.mk
-## Generated on : Fri Jan 14 15:10:55 2022
+## Generated on : Mon Mar 21 21:08:11 2022
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/TVModel.exe
 ## Product type : executable
 ## 
@@ -23,7 +23,7 @@ MAKEFILE                  = TVModel.mk
 MATLAB_ROOT               = D:/Matlab2021b
 MATLAB_BIN                = D:/Matlab2021b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = C:/Users/giuse/Desktop/Timing/TVTests/CodiceGenerato
+START_DIR                 = D:/DynamisGit/Timing/TVTests/CodiceGenerato
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0

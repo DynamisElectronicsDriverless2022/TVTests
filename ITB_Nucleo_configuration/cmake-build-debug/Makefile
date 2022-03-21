@@ -227,84 +227,6 @@ blasfeo/fast:
 .PHONY : blasfeo/fast
 
 #=============================================================================
-# Target rules for targets named getting_started
-
-# Build rule for target.
-getting_started: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 getting_started
-.PHONY : getting_started
-
-# fast build rule for target.
-getting_started/fast:
-	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir/build
-.PHONY : getting_started/fast
-
-#=============================================================================
-# Target rules for targets named example_d_lu_factorization
-
-# Build rule for target.
-example_d_lu_factorization: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_d_lu_factorization
-.PHONY : example_d_lu_factorization
-
-# fast build rule for target.
-example_d_lu_factorization/fast:
-	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lu_factorization.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lu_factorization.dir/build
-.PHONY : example_d_lu_factorization/fast
-
-#=============================================================================
-# Target rules for targets named example_s_lu_factorization
-
-# Build rule for target.
-example_s_lu_factorization: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_s_lu_factorization
-.PHONY : example_s_lu_factorization
-
-# fast build rule for target.
-example_s_lu_factorization/fast:
-	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_s_lu_factorization.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_s_lu_factorization.dir/build
-.PHONY : example_s_lu_factorization/fast
-
-#=============================================================================
-# Target rules for targets named example_d_lq_factorization
-
-# Build rule for target.
-example_d_lq_factorization: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_d_lq_factorization
-.PHONY : example_d_lq_factorization
-
-# fast build rule for target.
-example_d_lq_factorization/fast:
-	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lq_factorization.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lq_factorization.dir/build
-.PHONY : example_d_lq_factorization/fast
-
-#=============================================================================
-# Target rules for targets named example_s_riccati_recursion
-
-# Build rule for target.
-example_s_riccati_recursion: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_s_riccati_recursion
-.PHONY : example_s_riccati_recursion
-
-# fast build rule for target.
-example_s_riccati_recursion/fast:
-	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_s_riccati_recursion.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_s_riccati_recursion.dir/build
-.PHONY : example_s_riccati_recursion/fast
-
-#=============================================================================
-# Target rules for targets named example_d_riccati_recursion
-
-# Build rule for target.
-example_d_riccati_recursion: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_d_riccati_recursion
-.PHONY : example_d_riccati_recursion
-
-# fast build rule for target.
-example_d_riccati_recursion/fast:
-	$(MAKE) $(MAKESILENT) -f lib/acados/external/blasfeo/examples/CMakeFiles/example_d_riccati_recursion.dir/build.make lib/acados/external/blasfeo/examples/CMakeFiles/example_d_riccati_recursion.dir/build
-.PHONY : example_d_riccati_recursion/fast
-
-#=============================================================================
 # Target rules for targets named hpipm
 
 # Build rule for target.
@@ -1254,12 +1176,6 @@ help:
 	@echo "... ITB_Nucleo_configuration.elf"
 	@echo "... acados"
 	@echo "... blasfeo"
-	@echo "... example_d_lq_factorization"
-	@echo "... example_d_lu_factorization"
-	@echo "... example_d_riccati_recursion"
-	@echo "... example_s_lu_factorization"
-	@echo "... example_s_riccati_recursion"
-	@echo "... getting_started"
 	@echo "... hpipm"
 	@echo "... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.obj"
 	@echo "... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.i"

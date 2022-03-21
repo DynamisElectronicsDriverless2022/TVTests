@@ -7,8 +7,8 @@ HeaderPath=Drivers\STM32H7xx_HAL_Driver\Inc;Drivers\STM32H7xx_HAL_Driver\Inc\Leg
 CDefines=USE_HAL_DRIVER;STM32H723xx;USE_HAL_DRIVER;USE_HAL_DRIVER;
 
 [PreviousGenFiles]
-HeaderPath=D:/DynamisGit/TVTests/ITB_Nucleo_configuration/Inc
+HeaderPath=D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Inc
 HeaderFiles=gpio.h;dma.h;tim.h;usart.h;usb_otg.h;stm32h7xx_it.h;stm32h7xx_hal_conf.h;main.h;
-SourcePath=D:/DynamisGit/TVTests/ITB_Nucleo_configuration/Src
+SourcePath=D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src
 SourceFiles=gpio.c;dma.c;tim.c;usart.c;usb_otg.c;stm32h7xx_it.c;stm32h7xx_hal_msp.c;main.c;
 

@@ -32,6 +32,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
   "../Drivers/CMSIS/Device/ST/STM32H7xx/Include"
   "../Drivers/CMSIS/Include"
+  "../C_Code_Sources/Inc"
   "../acados/external/hpipm/include"
   "../acados/interfaces"
   "../acados"
