@@ -1,3 +1,0 @@
-[submodule "acados"]
-	path = acados
-	url = git@github.com:acados/acados.git
