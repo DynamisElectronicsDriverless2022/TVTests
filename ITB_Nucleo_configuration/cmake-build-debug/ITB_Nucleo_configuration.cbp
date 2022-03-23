@@ -125,26 +125,6 @@
 					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install/local">
-				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug"/>
 				<Option type="4"/>
@@ -170,6 +150,26 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
 					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -765,96 +765,6 @@
 					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="example_s_riccati_recursion">
-				<Option output="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/example_s_riccati_recursion" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DARM_MATH_CM4"/>
-					<Add option="-DARM_MATH_MATRIX_CHECK"/>
-					<Add option="-DARM_MATH_ROUNDING"/>
-					<Add option="-DUSE_HAL_DRIVER"/>
-					<Add option="-DSTM32H723xx"/>
-					<Add option="-DDEBUG"/>
-					<Add option="-D__STM32__"/>
-					<Add option="-DMEASURE_TIMINGS"/>
-					<Add option="-DK_MAX_STACK=300"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Inc"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/interfaces"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/external"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"/>
-					<Add directory="C:\Users\giuse\scoop\apps\gcc\current\include"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 example_s_riccati_recursion"/>
-					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="example_s_riccati_recursion/fast">
-				<Option output="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/example_s_riccati_recursion" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DARM_MATH_CM4"/>
-					<Add option="-DARM_MATH_MATRIX_CHECK"/>
-					<Add option="-DARM_MATH_ROUNDING"/>
-					<Add option="-DUSE_HAL_DRIVER"/>
-					<Add option="-DSTM32H723xx"/>
-					<Add option="-DDEBUG"/>
-					<Add option="-D__STM32__"/>
-					<Add option="-DMEASURE_TIMINGS"/>
-					<Add option="-DK_MAX_STACK=300"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Inc"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/interfaces"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/external"/>
-					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"/>
-					<Add directory="C:\Users\giuse\scoop\apps\gcc\current\include"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
-					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 example_s_riccati_recursion/fast"/>
-					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="example_d_riccati_recursion">
 				<Option output="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/example_d_riccati_recursion" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples"/>
@@ -940,6 +850,96 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 example_d_riccati_recursion/fast"/>
+					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="example_s_riccati_recursion">
+				<Option output="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/example_s_riccati_recursion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32H723xx"/>
+					<Add option="-DDEBUG"/>
+					<Add option="-D__STM32__"/>
+					<Add option="-DMEASURE_TIMINGS"/>
+					<Add option="-DK_MAX_STACK=300"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Inc"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/interfaces"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/external"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"/>
+					<Add directory="C:\Users\giuse\scoop\apps\gcc\current\include"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 example_s_riccati_recursion"/>
+					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="example_s_riccati_recursion/fast">
+				<Option output="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/example_s_riccati_recursion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32H723xx"/>
+					<Add option="-DDEBUG"/>
+					<Add option="-D__STM32__"/>
+					<Add option="-DMEASURE_TIMINGS"/>
+					<Add option="-DK_MAX_STACK=300"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Inc"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/interfaces"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/external"/>
+					<Add directory="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"/>
+					<Add directory="C:\Users\giuse\scoop\apps\gcc\current\include"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 example_s_riccati_recursion/fast"/>
 					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1627,12 +1627,12 @@
 			<Option target="getting_started"/>
 		</Unit>
 		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples/tools.c">
-			<Option target="example_s_riccati_recursion"/>
 			<Option target="example_d_riccati_recursion"/>
+			<Option target="example_s_riccati_recursion"/>
 		</Unit>
 		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples/tools.h">
-			<Option target="example_s_riccati_recursion"/>
 			<Option target="example_d_riccati_recursion"/>
+			<Option target="example_s_riccati_recursion"/>
 		</Unit>
 		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/kernel/generic/kernel_align_generic.c">
 			<Option target="blasfeo"/>
