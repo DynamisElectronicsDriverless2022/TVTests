@@ -5,16 +5,16 @@
 		<Option title="hpipm"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\acados\;CMake Files\acados\cmake\;CMake Files\acados\acados\;CMake Files\acados\interfaces\;CMake Files\acados\interfaces\acados_c\;CMake Files\acados\external\;CMake Files\acados\external\blasfeo\;CMake Files\acados\external\blasfeo\cmake\;CMake Files\acados\external\blasfeo\cmake\isa_tests\;CMake Files\acados\external\blasfeo\cmake\intrinsic_tests\;CMake Files\acados\external\hpipm\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\acados\;CMake Files\acados\cmake\;CMake Files\acados\acados\;CMake Files\acados\interfaces\;CMake Files\acados\interfaces\acados_c\;CMake Files\acados\external\;CMake Files\acados\external\blasfeo\;CMake Files\acados\external\blasfeo\cmake\;CMake Files\acados\external\blasfeo\cmake\isa_tests\;CMake Files\acados\external\blasfeo\cmake\intrinsic_tests\;CMake Files\acados\external\blasfeo\examples\;CMake Files\acados\external\hpipm\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="hpipm">
@@ -57,10 +57,10 @@
 					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 hpipm"/>
-					<CompileFile command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 hpipm"/>
+					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="hpipm/fast">
@@ -103,10 +103,10 @@
 					<Add directory="c:\users\giuse\scoop\apps\gcc-arm-none-eabi\current\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 hpipm/fast"/>
-					<CompileFile command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/giuse/scoop/shims/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 hpipm/fast"/>
+					<CompileFile command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/giuse/scoop/apps/make/4.3/bin/make.exe -f &quot;D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -460,6 +460,9 @@
 		</Unit>
 		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/cmake/intrinsic_tests/intrinsic_test.cmake">
 			<Option virtualFolder="CMake Files\acados\external\blasfeo\cmake\intrinsic_tests\"/>
+		</Unit>
+		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\acados\external\blasfeo\examples\"/>
 		</Unit>
 		<Unit filename="D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\acados\external\hpipm\"/>

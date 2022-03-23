@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lib/acados/external/blasfeo/examples",
+		"source" : "acados/external/blasfeo/examples"
+	}
+}
