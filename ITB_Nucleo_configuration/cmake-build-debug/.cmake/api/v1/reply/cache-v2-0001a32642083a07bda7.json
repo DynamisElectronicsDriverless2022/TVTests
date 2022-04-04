@@ -23,7 +23,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados"
 		},
 		{
 			"name" : "ACADOS_LINT",
@@ -327,7 +327,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-addr2line.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_ASM_COMPILER_AR",
@@ -343,7 +343,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_ASM_COMPILER_RANLIB",
@@ -359,7 +359,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_ASM_COMPILER_WORKS",
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug"
+			"value" : "c:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -499,7 +499,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "23"
+			"value" : "21"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -511,7 +511,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -523,7 +523,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/CMake/bin/cmake.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -535,7 +535,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/CMake/bin/cpack.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -547,23 +547,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/CMake/bin/ctest.exe"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
-				}
-			],
-			"type" : "STRING",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-g++.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -579,7 +563,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -595,7 +579,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -678,22 +662,6 @@
 			"value" : "-O2 -g -DNDEBUG"
 		},
 		{
-			"name" : "CMAKE_C_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "C compiler"
-				}
-			],
-			"type" : "STRING",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe"
-		},
-		{
 			"name" : "CMAKE_C_COMPILER_AR",
 			"properties" : 
 			[
@@ -707,7 +675,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -723,7 +691,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -819,19 +787,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc/current/bin/dlltool.exe"
-		},
-		{
-			"name" : "CMAKE_EDIT_COMMAND",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to cache edit program executable."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "D:/CMake/bin/cmake-gui.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/dlltool.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -1011,7 +967,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1039,7 +995,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ld.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -1051,7 +1007,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Clion/CLion 2021.3.3/bin/ninja/win/ninja.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/ninja/win/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1147,7 +1103,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-nm.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -1159,7 +1115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "7"
+			"value" : "8"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1175,7 +1131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-objcopy"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-objcopy"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1239,7 +1195,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ranlib.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -1255,7 +1211,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-readelf.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1267,7 +1223,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/CMake/share/cmake-3.23"
+			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1359,7 +1315,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-size"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-size"
 		},
 		{
 			"name" : "CMAKE_SKIP_INSTALL_RPATH",
@@ -1487,7 +1443,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-strip.exe"
+			"value" : "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-strip.exe"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1567,7 +1523,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo"
 		},
 		{
 			"name" : "HPIPM_HEADERS_INSTALLATION_DIRECTORY",
@@ -1615,7 +1571,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug"
 		},
 		{
 			"name" : "ITB_Nucleo_configuration_IS_TOP_LEVEL",
@@ -1639,7 +1595,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration"
 		},
 		{
 			"name" : "K_MAX_STACK",
@@ -1739,7 +1695,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados"
 		},
 		{
 			"name" : "acados_IS_TOP_LEVEL",
@@ -1775,7 +1731,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados"
 		},
 		{
 			"name" : "blasfeo_BINARY_DIR",
@@ -1787,7 +1743,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo"
 		},
 		{
 			"name" : "blasfeo_IS_TOP_LEVEL",
@@ -1811,7 +1767,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo"
 		},
 		{
 			"name" : "hpipm_BINARY_DIR",
@@ -1823,7 +1779,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm"
 		},
 		{
 			"name" : "hpipm_IS_TOP_LEVEL",
@@ -1859,7 +1815,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm"
+			"value" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/hpipm"
 		}
 	],
 	"kind" : "cache",

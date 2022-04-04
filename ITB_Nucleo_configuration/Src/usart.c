@@ -34,6 +34,7 @@ uint64_t Number;
 double Data[NUMBERDATA];
 uint8_t RxData[BUFFER];
 uint32_t Time=0;
+double throttle,brake,steering,vx,vy,ax,ay,yaw_rate,brake_torque,omega_wheels;
 
 int BufferTime=0,UsartTime,Count=0;
 uint8_t TxData[4]={'\0','\0','\r',10};
@@ -201,14 +202,8 @@ void IdleCallback(void)
         h++;
 
         Number=0;
-        //Creo un array "Data" contenente gli ingressi del blocco TV, ovvero, nell'ordine:
-            //ax
-            //delta
-            //r
-            //steering
-            //vx
-            //vy
-            //yrd
+        //Creo un array "Data" contenente gli ingressi del blocco TV
+
         for(int j=0;j<BUFFER/8;j++){
             //Creo un double come 8 gruppi di 8 bit ciascuno
             for(i=0;i<8;i++){
@@ -217,14 +212,17 @@ void IdleCallback(void)
             Data[j]=*((double *)&Number);
         }
 
-        //Qui Assegnare gli elementi di Data[] agli import di Simulink quando Giuseppe ha definito il loro nome
-//        = Data[0];
-//        = Data[1];
-//        = Data[2];
-//        = Data[3];
-//        = Data[4];
-//        = Data[5];
-//        = Data[6];
+        //Assegnazione degli elementi di Data[] agli import di Simulink
+        throttle= Data[0];
+        brake= Data[1];
+        steering= Data[2];
+        vx= Data[3];
+        vy= Data[4];
+        ax= Data[5];
+        ay= Data[6];
+        yaw_rate= Data[7];
+        brake_torque= Data[8];
+        omega_wheels= Data[9];
 
         //Chiamare funzione TV(void) quando sarà definita
         //TV();

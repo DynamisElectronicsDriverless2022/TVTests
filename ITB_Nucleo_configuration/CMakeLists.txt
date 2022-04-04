@@ -53,6 +53,11 @@ endif ()
 
 include_directories(Inc Drivers/STM32H7xx_HAL_Driver/Inc Drivers/STM32H7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32H7xx/Include Drivers/CMSIS/Include)
 include_directories(C_Code_Sources/Inc)
+
+#Aggiunti da Mario
+include_directories(../c_generated_code)
+include_directories(../c_generated_code/dt_model_model)
+
 include_directories(acados/external/hpipm/include)
 include_directories(acados/interfaces)
 include_directories(acados)

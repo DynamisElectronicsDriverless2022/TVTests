@@ -1,17 +1,17 @@
-"D:\Clion\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/Clion/CLion 2021.3.3/bin/ninja/win/ninja.exe" -DCMAKE_C_COMPILER=C:/Users/giuse/scoop/apps/gcc/11.2.0/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/Users/giuse/scoop/apps/gcc/11.2.0/bin/gcc.exe -G Ninja D:\DynamisGit\Timing\TVTests\ITB_Nucleo_configuration
-Toolchain directory: C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin
+"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.3/bin/ninja/win/ninja.exe" -G Ninja "C:\Users\Mario Bertelli\Desktop\TV_Test\TVTests\ITB_Nucleo_configuration"
+Toolchain directory: C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin
 -- The C compiler identification is GNU 10.3.1
 -- The CXX compiler identification is GNU 10.3.1
 -- The ASM compiler identification is GNU
--- Found assembler: C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe
+-- Found assembler: C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe - skipped
+-- Check for working C compiler: C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-g++.exe - skipped
+-- Check for working CXX compiler: C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Minimal optimization, debug info included
@@ -58,7 +58,7 @@ CMake Warning (dev) at acados/external/hpipm/CMakeLists.txt:331 (add_library):
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Using BLASFEO path: 
--- Installation directory: D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
+-- Installation directory: C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados
 --  
 -- Target: BLASFEO is GENERIC, HPIPM is GENERIC
 -- Linear algebra: HIGH_PERFORMANCE
@@ -67,9 +67,9 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Octave Templates (OFF)
 -- System name:version Generic:1
 -- Build type is Debug
--- Installation directory is D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
+-- Installation directory is C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados
 -- OpenMP parallelization is OFF
 --  
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug
+-- Build files have been written to: C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug
