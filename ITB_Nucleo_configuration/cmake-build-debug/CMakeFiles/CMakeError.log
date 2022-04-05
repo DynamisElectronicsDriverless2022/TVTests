@@ -1,23 +1,27 @@
 Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe 
+Compiler: C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 1
-c:/users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld.exe: c:/users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o): in function `exit':
+c:/users/mario bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld.exe: c:/users/mario bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o): in function `exit':
 exit.c:(.text.exit+0x2c): undefined reference to `_exit'
 collect2.exe: error: ld returned 1 exit status
 
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-g++.exe 
+Compiler: C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-g++.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 1
+<<<<<<< HEAD
 c:/users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld.exe: c:/users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o): in function `exit':
+=======
+c:/users/mario bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld.exe: c:/users/mario bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib\libc.a(lib_a-exit.o): in function `exit':
+>>>>>>> 3e230807712cc901148190525b19f297e9914836
 exit.c:(.text.exit+0x2c): undefined reference to `_exit'
 collect2.exe: error: ld returned 1 exit status
 
