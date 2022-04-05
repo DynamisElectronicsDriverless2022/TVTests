@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "ITB_Nucleo_configuration.elf"
+			"path" : "======ITB_Nucleo_configuration.elf"
 		}
 	],
 	"backtrace" : 1,
@@ -32,11 +32,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
-				"line" : 73,
-========
-				"line" : 76,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
+				"line" : 72,
 				"parent" : 0
 			},
 			{
@@ -48,7 +44,12 @@
 			{
 				"command" : 1,
 				"file" : 0,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
+				"line" : 68,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
 				"line" : 69,
 				"parent" : 0
 			},
@@ -56,35 +57,12 @@
 				"command" : 1,
 				"file" : 0,
 				"line" : 70,
-========
-				"line" : 72,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
-				"line" : 71,
-========
-				"line" : 73,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 74,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
-				"line" : 74,
-========
-				"line" : 77,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
+				"line" : 73,
 				"parent" : 0
 			},
 			{
@@ -126,21 +104,13 @@
 			{
 				"command" : 5,
 				"file" : 0,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
 				"line" : 62,
-========
-				"line" : 66,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 0,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
 				"line" : 63,
-========
-				"line" : 67,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
 				"parent" : 0
 			},
 			{
@@ -180,6 +150,18 @@
 			{
 				"command" : 7,
 				"file" : 0,
+				"line" : 56,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 57,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
 				"line" : 58,
 				"parent" : 0
 			},
@@ -192,35 +174,13 @@
 			{
 				"command" : 7,
 				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
 				"line" : 61,
-				"parent" : 0
-			},
-			{
-				"command" : 7,
-				"file" : 0,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
-				"line" : 61,
-========
-				"line" : 62,
-				"parent" : 0
-			},
-			{
-				"command" : 7,
-				"file" : 0,
-				"line" : 63,
-				"parent" : 0
-			},
-			{
-				"command" : 7,
-				"file" : 0,
-				"line" : 64,
-				"parent" : 0
-			},
-			{
-				"command" : 7,
-				"file" : 0,
-				"line" : 65,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
 				"parent" : 0
 			},
 			{
@@ -342,65 +302,6 @@
 			[
 				{
 					"backtrace" : 19,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Inc"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"
-				},
-				{
-					"backtrace" : 20,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"
-				},
-				{
-					"backtrace" : 21,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"
-				},
-				{
-					"backtrace" : 22,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/../c_generated_code"
-				},
-				{
-					"backtrace" : 23,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/interfaces"
-				},
-				{
-					"backtrace" : 24,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"
-				},
-				{
-					"backtrace" : 25,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external"
-				},
-				{
-					"backtrace" : 26,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"
-				},
-				{
-					"backtrace" : 27,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados"
-				},
-				{
-					"backtrace" : 28,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/external"
-				},
-				{
-					"backtrace" : 29,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"
-========
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/Inc"
 				},
 				{
@@ -425,44 +326,39 @@
 				},
 				{
 					"backtrace" : 21,
-					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code"
-				},
-				{
-					"backtrace" : 22,
-					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code/dt_model_model"
-				},
-				{
-					"backtrace" : 23,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 22,
+					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code"
+				},
+				{
+					"backtrace" : 23,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/interfaces"
 				},
 				{
-					"backtrace" : 25,
+					"backtrace" : 24,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados"
 				},
 				{
-					"backtrace" : 26,
+					"backtrace" : 25,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 26,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"
 				},
 				{
-					"backtrace" : 28,
+					"backtrace" : 27,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados"
 				},
 				{
-					"backtrace" : 29,
+					"backtrace" : 28,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados/external"
 				},
 				{
-					"backtrace" : 30,
+					"backtrace" : 29,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
 				},
 				{
 					"backtrace" : 6,
@@ -655,65 +551,6 @@
 			[
 				{
 					"backtrace" : 19,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-0bdc3ab743ae3d17c331.json
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Inc"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"
-				},
-				{
-					"backtrace" : 20,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"
-				},
-				{
-					"backtrace" : 21,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"
-				},
-				{
-					"backtrace" : 22,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/../c_generated_code"
-				},
-				{
-					"backtrace" : 23,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/interfaces"
-				},
-				{
-					"backtrace" : 24,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados"
-				},
-				{
-					"backtrace" : 25,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external"
-				},
-				{
-					"backtrace" : 26,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"
-				},
-				{
-					"backtrace" : 27,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados"
-				},
-				{
-					"backtrace" : 28,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/external"
-				},
-				{
-					"backtrace" : 29,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"
-========
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/Inc"
 				},
 				{
@@ -738,44 +575,39 @@
 				},
 				{
 					"backtrace" : 21,
-					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code"
-				},
-				{
-					"backtrace" : 22,
-					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code/dt_model_model"
-				},
-				{
-					"backtrace" : 23,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 22,
+					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code"
+				},
+				{
+					"backtrace" : 23,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/interfaces"
 				},
 				{
-					"backtrace" : 25,
+					"backtrace" : 24,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados"
 				},
 				{
-					"backtrace" : 26,
+					"backtrace" : 25,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 26,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"
 				},
 				{
-					"backtrace" : 28,
+					"backtrace" : 27,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados"
 				},
 				{
-					"backtrace" : 29,
+					"backtrace" : 28,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados/external"
 				},
 				{
-					"backtrace" : 30,
+					"backtrace" : 29,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-ITB_Nucleo_configuration.elf-Debug-7e4127c2b611aca43f60.json
 				},
 				{
 					"backtrace" : 6,
@@ -917,7 +749,7 @@
 		"language" : "C"
 	},
 	"name" : "ITB_Nucleo_configuration.elf",
-	"nameOnDisk" : "ITB_Nucleo_configuration.elf",
+	"nameOnDisk" : "======ITB_Nucleo_configuration.elf",
 	"paths" : 
 	{
 		"build" : ".",
@@ -1037,31 +869,31 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "D:/DynamisGit/Timing/TVTests/c_generated_code/acados_solver_dt_model.c",
+			"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/c_generated_code/acados_solver_dt_model.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "D:/DynamisGit/Timing/TVTests/c_generated_code/dt_model_model/dt_model_expl_ode_fun.c",
+			"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/c_generated_code/dt_model_model/dt_model_expl_ode_fun.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "D:/DynamisGit/Timing/TVTests/c_generated_code/dt_model_model/dt_model_expl_ode_hess.c",
+			"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/c_generated_code/dt_model_model/dt_model_expl_ode_hess.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "D:/DynamisGit/Timing/TVTests/c_generated_code/dt_model_model/dt_model_expl_vde_adj.c",
+			"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/c_generated_code/dt_model_model/dt_model_expl_vde_adj.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "D:/DynamisGit/Timing/TVTests/c_generated_code/dt_model_model/dt_model_expl_vde_forw.c",
+			"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/c_generated_code/dt_model_model/dt_model_expl_vde_forw.c",
 			"sourceGroupIndex" : 0
 		},
 		{

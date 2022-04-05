@@ -2,6 +2,18 @@
 	"entries" : 
 	[
 		{
+			"name" : "",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "======"
+		},
+		{
 			"name" : "ACADOS_EXAMPLES",
 			"properties" : 
 			[
@@ -523,11 +535,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-11405d670c51c72466e0.json
-			"value" : "D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe"
-========
 			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe"
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-0001a32642083a07bda7.json
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -539,11 +547,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-11405d670c51c72466e0.json
-			"value" : "D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cpack.exe"
-========
 			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cpack.exe"
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-0001a32642083a07bda7.json
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -555,27 +559,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-11405d670c51c72466e0.json
-			"value" : "D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/ctest.exe"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
-				}
-			],
-			"type" : "STRING",
-			"value" : "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-g++.exe"
-========
 			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/ctest.exe"
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-0001a32642083a07bda7.json
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -815,11 +799,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-11405d670c51c72466e0.json
-			"value" : "C:/Users/giuse/scoop/apps/gcc/current/bin/dlltool.exe"
-========
 			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/bin/dlltool.exe"
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-0001a32642083a07bda7.json
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -1147,16 +1127,12 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "8"
+			"value" : "7"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
 			"properties" : 
 			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
 				{
 					"name" : "HELPSTRING",
 					"value" : "objcopy tool"
@@ -1255,11 +1231,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-11405d670c51c72466e0.json
-			"value" : "D:/Clion/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21"
-========
 			"value" : "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21"
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/cache-v2-0001a32642083a07bda7.json
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",

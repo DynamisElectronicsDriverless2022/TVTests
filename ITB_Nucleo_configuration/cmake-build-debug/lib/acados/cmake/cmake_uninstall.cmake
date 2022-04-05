@@ -44,11 +44,7 @@ FOREACH(file ${files})
     MESSAGE(STATUS "Uninstalling $ENV{DESTDIR}${file}")
     IF(EXISTS "$ENV{DESTDIR}${file}" OR IS_SYMLINK "$ENV{DESTDIR}${file}")
         EXEC_PROGRAM(
-<<<<<<< HEAD
-        "D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" ARGS "-E remove -f $ENV{DESTDIR}${file}"
-=======
         "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" ARGS "-E remove -f $ENV{DESTDIR}${file}"
->>>>>>> 3e230807712cc901148190525b19f297e9914836
         OUTPUT_VARIABLE rm_out
         RETURN_VALUE rm_retval)
         IF(NOT "${rm_retval}" STREQUAL 0)

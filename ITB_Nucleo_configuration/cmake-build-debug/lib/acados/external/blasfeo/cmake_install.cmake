@@ -105,13 +105,3 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     )
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-<<<<<<< HEAD
-  include("D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/cmake_install.cmake")
-=======
-  include("C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/cmake_install.cmake")
->>>>>>> 3e230807712cc901148190525b19f297e9914836
-
-endif()
-

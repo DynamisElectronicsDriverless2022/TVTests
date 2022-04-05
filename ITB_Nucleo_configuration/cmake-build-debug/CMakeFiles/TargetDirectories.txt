@@ -1,65 +1,3 @@
-<<<<<<< HEAD
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/ITB_Nucleo_configuration.elf.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/install/local.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/install.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/list_install_components.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/install/strip.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/CMakeFiles/install/strip.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/CMakeFiles/uninstall.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/CMakeFiles/lint.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/CMakeFiles/install/local.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/CMakeFiles/install.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/CMakeFiles/edit_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/CMakeFiles/rebuild_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/CMakeFiles/list_install_components.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/CMakeFiles/acados.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/CMakeFiles/install/local.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/CMakeFiles/install.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/CMakeFiles/edit_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/CMakeFiles/rebuild_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/CMakeFiles/list_install_components.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/CMakeFiles/install/strip.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/interfaces/acados_c/CMakeFiles/install/local.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/interfaces/acados_c/CMakeFiles/install.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/interfaces/acados_c/CMakeFiles/edit_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/interfaces/acados_c/CMakeFiles/rebuild_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/interfaces/acados_c/CMakeFiles/list_install_components.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/interfaces/acados_c/CMakeFiles/install/strip.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/CMakeFiles/install/local.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/CMakeFiles/install.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/CMakeFiles/edit_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/CMakeFiles/rebuild_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/CMakeFiles/list_install_components.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/CMakeFiles/install/strip.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/blasfeo.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/install/local.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/install.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/edit_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/rebuild_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/list_install_components.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/install/strip.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/rebuild_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lu_factorization.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_s_lu_factorization.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lq_factorization.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_s_riccati_recursion.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_d_riccati_recursion.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/edit_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/list_install_components.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/install/local.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/install.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/install/strip.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/hpipm.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/install/local.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/install.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/edit_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/rebuild_cache.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/list_install_components.dir
-D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/install/strip.dir
-=======
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/ITB_Nucleo_configuration.elf.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/install/local.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/CMakeFiles/install.dir
@@ -101,18 +39,6 @@ C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-b
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/rebuild_cache.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/list_install_components.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/CMakeFiles/install/strip.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/rebuild_cache.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/getting_started.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lu_factorization.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_s_lu_factorization.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_d_lq_factorization.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_s_riccati_recursion.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/example_d_riccati_recursion.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/edit_cache.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/list_install_components.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/install/local.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/install.dir
-C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/blasfeo/examples/CMakeFiles/install/strip.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/hpipm.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/install/local.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/install.dir
@@ -120,4 +46,3 @@ C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-b
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/rebuild_cache.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/list_install_components.dir
 C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/hpipm/CMakeFiles/install/strip.dir
->>>>>>> 3e230807712cc901148190525b19f297e9914836

@@ -45,7 +45,7 @@
 				"lib/acados/external/hpipm/libhpipm.a"
 			],
 			"targetId" : "hpipm::@7e7b5fafbcda485504e0",
-			"targetIndex" : 9,
+			"targetIndex" : 3,
 			"type" : "target"
 		},
 		{
@@ -57,7 +57,7 @@
 			[
 				{
 					"id" : "hpipm::@7e7b5fafbcda485504e0",
-					"index" : 9
+					"index" : 3
 				}
 			],
 			"paths" : 
