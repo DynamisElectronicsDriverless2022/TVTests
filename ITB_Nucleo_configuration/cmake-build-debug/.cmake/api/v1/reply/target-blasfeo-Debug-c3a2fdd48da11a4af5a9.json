@@ -71,21 +71,17 @@
 			},
 			{
 				"command" : 3,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-b5d29728ecea48115d71.json
 				"file" : 1,
 				"line" : 23,
 				"parent" : 3
 			},
 			{
 				"command" : 4,
-========
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-2b11df8fd0751337605e.json
 				"file" : 1,
-				"line" : 23,
+				"line" : 62,
 				"parent" : 3
 			},
 			{
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-b5d29728ecea48115d71.json
 				"command" : 5,
 				"file" : 1,
 				"line" : 63,
@@ -100,12 +96,6 @@
 				"file" : 2,
 				"line" : 12,
 				"parent" : 11
-========
-				"command" : 4,
-				"file" : 1,
-				"line" : 66,
-				"parent" : 3
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-2b11df8fd0751337605e.json
 			},
 			{
 				"command" : 4,
@@ -122,37 +112,6 @@
 			{
 				"command" : 6,
 				"file" : 1,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-b5d29728ecea48115d71.json
-========
-				"line" : 67,
-				"parent" : 3
-			},
-			{
-				"file" : 2,
-				"parent" : 10
-			},
-			{
-				"command" : 3,
-				"file" : 2,
-				"line" : 12,
-				"parent" : 11
-			},
-			{
-				"command" : 4,
-				"file" : 2,
-				"line" : 11,
-				"parent" : 11
-			},
-			{
-				"command" : 4,
-				"file" : 2,
-				"line" : 10,
-				"parent" : 11
-			},
-			{
-				"command" : 6,
-				"file" : 1,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-2b11df8fd0751337605e.json
 				"line" : 54,
 				"parent" : 3
 			},
@@ -165,7 +124,6 @@
 			{
 				"command" : 6,
 				"file" : 1,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-b5d29728ecea48115d71.json
 				"line" : 56,
 				"parent" : 3
 			},
@@ -178,8 +136,6 @@
 			{
 				"command" : 6,
 				"file" : 1,
-========
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-2b11df8fd0751337605e.json
 				"line" : 58,
 				"parent" : 3
 			},
@@ -187,15 +143,12 @@
 				"command" : 6,
 				"file" : 1,
 				"line" : 59,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-b5d29728ecea48115d71.json
 				"parent" : 3
 			},
 			{
 				"command" : 6,
 				"file" : 1,
 				"line" : 60,
-========
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-2b11df8fd0751337605e.json
 				"parent" : 3
 			},
 			{
@@ -205,35 +158,7 @@
 				"parent" : 3
 			},
 			{
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-b5d29728ecea48115d71.json
 				"command" : 6,
-========
-				"command" : 6,
-				"file" : 1,
-				"line" : 62,
-				"parent" : 3
-			},
-			{
-				"command" : 6,
-				"file" : 1,
-				"line" : 63,
-				"parent" : 3
-			},
-			{
-				"command" : 6,
-				"file" : 1,
-				"line" : 64,
-				"parent" : 3
-			},
-			{
-				"command" : 6,
-				"file" : 1,
-				"line" : 65,
-				"parent" : 3
-			},
-			{
-				"command" : 6,
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-2b11df8fd0751337605e.json
 				"file" : 2,
 				"line" : 14,
 				"parent" : 11
@@ -351,33 +276,6 @@
 			[
 				{
 					"backtrace" : 15,
-<<<<<<<< HEAD:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-b5d29728ecea48115d71.json
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Inc"
-				},
-				{
-					"backtrace" : 15,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc"
-				},
-				{
-					"backtrace" : 15,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
-				},
-				{
-					"backtrace" : 15,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
-				},
-				{
-					"backtrace" : 15,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"
-				},
-				{
-					"backtrace" : 16,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"
-				},
-				{
-					"backtrace" : 17,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"
-========
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/Inc"
 				},
 				{
@@ -402,47 +300,38 @@
 				},
 				{
 					"backtrace" : 17,
-					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code"
-				},
-				{
-					"backtrace" : 18,
-					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code/dt_model_model"
->>>>>>>> 3e230807712cc901148190525b19f297e9914836:ITB_Nucleo_configuration/cmake-build-debug/.cmake/api/v1/reply/target-blasfeo-Debug-2b11df8fd0751337605e.json
-				},
-				{
-					"backtrace" : 18,
-					"path" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/../c_generated_code"
-				},
-				{
-					"backtrace" : 19,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"
 				},
 				{
-					"backtrace" : 20,
+					"backtrace" : 18,
+					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code"
+				},
+				{
+					"backtrace" : 19,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/interfaces"
 				},
 				{
-					"backtrace" : 21,
+					"backtrace" : 20,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados"
 				},
 				{
-					"backtrace" : 22,
+					"backtrace" : 21,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external"
 				},
 				{
-					"backtrace" : 23,
+					"backtrace" : 22,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 23,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados"
 				},
 				{
-					"backtrace" : 25,
+					"backtrace" : 24,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados/external"
 				},
 				{
-					"backtrace" : 26,
+					"backtrace" : 25,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"
 				}
 			],
