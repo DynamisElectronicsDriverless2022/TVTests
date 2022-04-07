@@ -1,6 +1,7 @@
 #ifndef ACADOS_WRAPPER_H
 #define ACADOS_WRAPPER_H
 
+#ifndef MATLAB_MEX_FILE
 // include ad acados
 //#include "acados/utils/print.h"
 #include "acados_c/sim_interface.h"
@@ -13,5 +14,7 @@
 
 double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[],dt_model_solver_capsule * capsule);
 
+#endif
+double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[]);
 
 #endif

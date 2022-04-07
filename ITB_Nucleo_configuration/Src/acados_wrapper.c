@@ -1,5 +1,5 @@
 #include "acados_wrapper.h"
-
+#ifndef MATLAB_MEX_FILE
 // include ad acados
 //#include "acados/utils/print.h"
 #include "acados_c/sim_interface.h"
@@ -8,7 +8,7 @@
 // include al solver specifico
 #include "dt_model_model/dt_model_model.h"
 #include "acados_solver_dt_model.h"
-
+extern dt_model_solver_capsule * capsule;
 
 // Inizializzazione solver, questa la mettiamo nel .h
 
@@ -114,3 +114,11 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     // estraggo il valore di interesse della variabile di controllo dal vettore delle variabili predette
     return out_x1[0];
 }
+#endif
+double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[]){
+	#ifndef MATLAB_MEX_FILE
+		return Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule);
+	#endif
+	return x0[0]+x0[1];	
+}
+
