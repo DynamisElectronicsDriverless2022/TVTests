@@ -1,0 +1,26 @@
+TorqueVectoring_sfun.obj
+c21_TorqueVectoring.obj
+TorqueVectoring_sfun_registry.obj
+half_type.obj
+
+
+
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\sf_runtime.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmx.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmex.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmat.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libfixedpoint.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libut.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwstringutil.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwmathutil.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libemlrt.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwsl_log_load_blocks.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwsimulink.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwsl_sfcn_cov_bridge.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libcovrt.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwsl_simtarget_core.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwsl_simtarget_instrumentation.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwslexec_simlog.lib" 
+"A:\Downloads\Apps\Matlab2021b\extern\lib\win64\mingw64\libmwslccrt.lib" 
+"-LA:\Downloads\Apps\Matlab2021b\bin\win64" "-llibmwipp"
+
