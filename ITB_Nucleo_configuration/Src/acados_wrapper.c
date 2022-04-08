@@ -37,21 +37,13 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
 
     // Gli passo i parametri esterni, in questo caso un solo parametro per il numero di step del solver
     for (int ii = 0; ii < N_it; ii++) {
-        //temp[0] = 5/180*3.14; // ANGOLO RUOTA (DELTA)
-        dt_model_acados_update_params(capsule, ii,(void *) extParam, 12);
+        dt_model_acados_update_params(capsule, ii,(void *) &extParam[ii*13], 13);
     }
 
-    //if (!flag_long_acados) {
-    //flag_long_acados = true;
 
     // limiti inferiori della variabile di controllo
     for (int ii = 0; ii < N_it; ii++) {
-        //double temp[]
-        //temp[0] = -20; // COPPIA DI PICCO
-        //temp[1] = -20; // COPPIA DI PICCO
-        //temp[2] = -20; // COPPIA DI PICCO
-        //temp[3] = -20; // COPPIA DI PICCO
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lbu", (void *) limDown);
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lbu", (void *) &limDown[4*ii]);
     }
 
     // limiti superiori della variabile di controllo
@@ -61,21 +53,13 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
         //temp[1] = +20; // COPPIA DI PICCO
         //temp[2] = +20; // COPPIA DI PICCO
         //temp[3] = +20; // COPPIA DI PICCO
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ubu", (void *) limUp);
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ubu", (void *) &limUp[4*ii]);
     }
     //}
 
     // riferimento che deve seguire lo stato
     for (int ii = 0; ii < N_it; ii++) {
-        //double buffer[];
-        //buffer[0] = 0;
-        //buffer[1] = 0;
-        //buffer[2] = 1; // METTI YAW RATE GENERICO TARGET
-        //buffer[3] = 0;
-        //buffer[4] = 0;
-        //buffer[5] = 0;
-        //buffer[6] = 0;
-        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "yref", (void *) reference);
+        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "yref", (void *) &reference[ii*7]);
     }
 
     // constraint affine (somma di coppie)

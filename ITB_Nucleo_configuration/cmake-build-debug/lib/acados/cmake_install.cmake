@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados
+# Install script for directory: D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados")
+  set(CMAKE_INSTALL_PREFIX "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,14 +34,14 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-objdump")
+  set(CMAKE_OBJDUMP "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/cmake_install.cmake")
-  include("C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/interfaces/acados_c/cmake_install.cmake")
-  include("C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/cmake_install.cmake")
+  include("D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/acados/cmake_install.cmake")
+  include("D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/interfaces/acados_c/cmake_install.cmake")
+  include("D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/external/cmake_install.cmake")
 
 endif()
 

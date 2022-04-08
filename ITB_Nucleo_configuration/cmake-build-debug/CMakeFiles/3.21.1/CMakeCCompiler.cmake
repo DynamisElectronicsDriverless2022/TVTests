@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe")
+set(CMAKE_C_COMPILER "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "10.3.1")
@@ -20,11 +20,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ar")
-set(CMAKE_C_COMPILER_AR "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe")
-set(CMAKE_RANLIB "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ld.exe")
+set(CMAKE_AR "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ar")
+set(CMAKE_C_COMPILER_AR "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -74,7 +74,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/Mario Bertelli/scoop/apps/gcc/current/include;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include-fixed;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/giuse/scoop/apps/gcc/current/include;C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include;C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include-fixed;C:/Users/giuse/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

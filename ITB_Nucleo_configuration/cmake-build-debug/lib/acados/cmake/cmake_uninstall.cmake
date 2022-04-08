@@ -33,18 +33,18 @@
 
 
 # Remove everything from install_manifest
-IF(NOT EXISTS "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/install_manifest.txt")
-    MESSAGE(FATAL_ERROR "Cannot find install manifest: 'C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/install_manifest.txt'")
+IF(NOT EXISTS "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/install_manifest.txt")
+    MESSAGE(FATAL_ERROR "Cannot find install manifest: 'D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/install_manifest.txt'")
 ENDIF()
 
-FILE(READ "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/install_manifest.txt" files)
+FILE(READ "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug/lib/acados/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 list(REVERSE files)
 FOREACH(file ${files})
     MESSAGE(STATUS "Uninstalling $ENV{DESTDIR}${file}")
     IF(EXISTS "$ENV{DESTDIR}${file}" OR IS_SYMLINK "$ENV{DESTDIR}${file}")
         EXEC_PROGRAM(
-        "C:/Program Files/JetBrains/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" ARGS "-E remove -f $ENV{DESTDIR}${file}"
+        "D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" ARGS "-E remove -f $ENV{DESTDIR}${file}"
         OUTPUT_VARIABLE rm_out
         RETURN_VALUE rm_retval)
         IF(NOT "${rm_retval}" STREQUAL 0)
@@ -56,9 +56,9 @@ FOREACH(file ${files})
 ENDFOREACH()
 
 # Remove directories
-execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/include/acados)
-execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/include/hpmpc)
-execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/include/ooqp)
-execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/include/qpdunes)
-execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/include/qpOASES_e)
-execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/lib/+acados)
+execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/include/acados)
+execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/include/hpmpc)
+execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/include/ooqp)
+execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/include/qpdunes)
+execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/include/qpOASES_e)
+execute_process(COMMAND ${CMAKE_COMMAND} -E remove_directory D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados/lib/+acados)

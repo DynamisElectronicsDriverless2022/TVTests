@@ -1,0 +1,323 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "lib/acados",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados-Debug-c47daa7d01ac7b6fe7c2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "acados",
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"build" : "lib/acados/acados",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.acados-Debug-f4edb8c4ebbef863176b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "acados/acados",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "lib/acados/interfaces/acados_c",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.interfaces.acados_c-Debug-4ff77d18ca001fb31455.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "acados/interfaces/acados_c"
+				},
+				{
+					"build" : "lib/acados/external",
+					"childIndexes" : 
+					[
+						5,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.external-Debug-eb5673a11694a0a03f97.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "acados/external"
+				},
+				{
+					"build" : "lib/acados/external/blasfeo",
+					"childIndexes" : 
+					[
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.external.blasfeo-Debug-fbabaecaaac2bc9a8284.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.11"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 2,
+					"source" : "acados/external/blasfeo",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "lib/acados/external/blasfeo/examples",
+					"jsonFile" : "directory-lib.acados.external.blasfeo.examples-Debug-cb28ac568ef43eb6b3e8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.11"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 2,
+					"source" : "acados/external/blasfeo/examples",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "lib/acados/external/hpipm",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.external.hpipm-Debug-1c9d495629e573b042c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.11"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "acados/external/hpipm",
+					"targetIndexes" : 
+					[
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ITB_Nucleo_configuration",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "acados",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5,
+						6
+					],
+					"name" : "blasfeo",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "hpipm",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ITB_Nucleo_configuration.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ITB_Nucleo_configuration.elf-Debug-f5570ac9d7c082f4bc0f.json",
+					"name" : "ITB_Nucleo_configuration.elf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "acados::@273febf8648f30f54d96",
+					"jsonFile" : "target-acados-Debug-1e6d4ba64cb47b7a8e08.json",
+					"name" : "acados",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "blasfeo::@89ec20ae6029458ef6e2",
+					"jsonFile" : "target-blasfeo-Debug-b5d29728ecea48115d71.json",
+					"name" : "blasfeo",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "example_d_lq_factorization::@bd0269faf05beb55ad8f",
+					"jsonFile" : "target-example_d_lq_factorization-Debug-e5d5fdce3a624ac38785.json",
+					"name" : "example_d_lq_factorization",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "example_d_lu_factorization::@bd0269faf05beb55ad8f",
+					"jsonFile" : "target-example_d_lu_factorization-Debug-7dfbc3861045ae55cbce.json",
+					"name" : "example_d_lu_factorization",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "example_d_riccati_recursion::@bd0269faf05beb55ad8f",
+					"jsonFile" : "target-example_d_riccati_recursion-Debug-f660b1326a6589150252.json",
+					"name" : "example_d_riccati_recursion",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "example_s_lu_factorization::@bd0269faf05beb55ad8f",
+					"jsonFile" : "target-example_s_lu_factorization-Debug-6bbb6aaa213525a61a45.json",
+					"name" : "example_s_lu_factorization",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "example_s_riccati_recursion::@bd0269faf05beb55ad8f",
+					"jsonFile" : "target-example_s_riccati_recursion-Debug-7382ab1c1f95efca9191.json",
+					"name" : "example_s_riccati_recursion",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "getting_started::@bd0269faf05beb55ad8f",
+					"jsonFile" : "target-getting_started-Debug-976b170ab16af62a697e.json",
+					"name" : "getting_started",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "hpipm::@7e7b5fafbcda485504e0",
+					"jsonFile" : "target-hpipm-Debug-6e02309e74d3340fec7f.json",
+					"name" : "hpipm",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "lint::@d0f155a43de911538f63",
+					"jsonFile" : "target-lint-Debug-edf4ba460468ca6da058.json",
+					"name" : "lint",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@d0f155a43de911538f63",
+					"jsonFile" : "target-uninstall-Debug-c1b495d7bc4f2bedb20b.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug",
+		"source" : "D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
