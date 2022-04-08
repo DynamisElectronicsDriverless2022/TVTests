@@ -150,7 +150,7 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     capsule->nlp_solver_plan = nlp_solver_plan;
     nlp_solver_plan->nlp_solver = SQP_RTI;
 
-    nlp_solver_plan->ocp_qp_solver_plan.qp_solver = PARTIAL_CONDENSING_HPIPM;
+    nlp_solver_plan->ocp_qp_solver_plan.qp_solver = FULL_CONDENSING_HPIPM;
 
     nlp_solver_plan->nlp_cost[0] = LINEAR_LS;
     for (int i = 1; i < N; i++)
@@ -297,7 +297,7 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
         capsule->forw_vde_casadi[i].casadi_sparsity_in = &dt_model_expl_vde_forw_sparsity_in;
         capsule->forw_vde_casadi[i].casadi_sparsity_out = &dt_model_expl_vde_forw_sparsity_out;
         capsule->forw_vde_casadi[i].casadi_work = &dt_model_expl_vde_forw_work;
-        external_function_param_casadi_create(&capsule->forw_vde_casadi[i], 1);
+        external_function_param_casadi_create(&capsule->forw_vde_casadi[i], 13);
     }
 
     capsule->expl_ode_fun = (external_function_param_casadi *) malloc(sizeof(external_function_param_casadi)*N);
@@ -308,7 +308,7 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
         capsule->expl_ode_fun[i].casadi_sparsity_in = &dt_model_expl_ode_fun_sparsity_in;
         capsule->expl_ode_fun[i].casadi_sparsity_out = &dt_model_expl_ode_fun_sparsity_out;
         capsule->expl_ode_fun[i].casadi_work = &dt_model_expl_ode_fun_work;
-        external_function_param_casadi_create(&capsule->expl_ode_fun[i], 1);
+        external_function_param_casadi_create(&capsule->expl_ode_fun[i], 13);
     }
 
 
@@ -325,7 +325,7 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     if (new_time_steps) {
         dt_model_acados_update_time_steps(capsule, N, new_time_steps);
     } else {// all time_steps are identical
-        double time_step = 0.01;
+        double time_step = 0.02;
         for (int i = 0; i < N; i++)
         {
             ocp_nlp_in_set(nlp_config, nlp_dims, nlp_in, i, "Ts", &time_step);
@@ -346,13 +346,12 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
 
     double* W_0 = calloc(NY0*NY0, sizeof(double));
     // change only the non-zero elements:
-    W_0[2+(NY0) * 2] = 100;
+    W_0[2+(NY0) * 2] = 50;
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "W", W_0);
     free(W_0);
 
     double* yref_0 = calloc(NY0, sizeof(double));
     // change only the non-zero elements:
-    yref_0[2] = 1;
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "yref", yref_0);
     free(yref_0);
 
@@ -361,11 +360,10 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     double* W = calloc(NY*NY, sizeof(double));
     // change only the non-zero elements:
     
-    W[2+(NY) * 2] = 100;
+    W[2+(NY) * 2] = 50;
 
     double* yref = calloc(NY, sizeof(double));
     // change only the non-zero elements:
-    yref[2] = 1;
 
     for (int i = 1; i < N; i++)
     {
@@ -429,6 +427,28 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
 
 
 
+    double* zlumem = calloc(4*NS, sizeof(double));
+    double* Zl = zlumem+NS*0;
+    double* Zu = zlumem+NS*1;
+    double* zl = zlumem+NS*2;
+    double* zu = zlumem+NS*3;
+    // change only the non-zero elements:
+    zl[0] = 200;
+    zl[1] = 0.01;
+    zl[2] = 0.01;
+    zu[0] = 200;
+    zu[1] = 0.01;
+    zu[2] = 0.01;
+
+    for (int i = 0; i < N; i++)
+    {
+        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, i, "Zl", Zl);
+        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, i, "Zu", Zu);
+        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, i, "zl", zl);
+        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, i, "zu", zu);
+    }
+    free(zlumem);
+
 
     // terminal cost
 
@@ -485,14 +505,6 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     double* lbu = lubu;
     double* ubu = lubu + NBU;
     
-    lbu[0] = -1000;
-    ubu[0] = 1000;
-    lbu[1] = -1000;
-    ubu[1] = 1000;
-    lbu[2] = -1000;
-    ubu[2] = 1000;
-    lbu[3] = -1000;
-    ubu[3] = 1000;
 
     for (int i = 0; i < N; i++)
     {
@@ -506,6 +518,26 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
 
 
 
+
+    // set up soft bounds for general linear constraints
+    int* idxsg = malloc(NSG * sizeof(int));
+    
+    idxsg[0] = 0;
+    idxsg[1] = 2;
+    idxsg[2] = 3;
+    double* lusg = calloc(2*NSG, sizeof(double));
+    double* lsg = lusg;
+    double* usg = lusg + NSG;
+    
+
+    for (int i = 0; i < N; i++)
+    {
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "idxsg", idxsg);
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "lsg", lsg);
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "usg", usg);
+    }
+    free(idxsg);
+    free(lusg);
 
 
 
@@ -527,13 +559,24 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     D[0+NG * 1] = 1;
     D[0+NG * 2] = 1;
     D[0+NG * 3] = 1;
+    D[1+NG * 0] = 1;
+    D[1+NG * 1] = 1;
+    D[1+NG * 2] = 1;
+    D[1+NG * 3] = 1;
+    D[2+NG * 1] = 1;
+    D[2+NG * 3] = -1;
+    D[3+NG * 0] = 1;
+    D[3+NG * 2] = -1;
 
     
 
     
+    lg[0] = 1;
+    lg[1] = 1;
 
     
-    ug[0] = 4000;
+    ug[0] = 1;
+    ug[1] = 1;
 
     for (int i = 0; i < N; i++)
     {
@@ -585,13 +628,13 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
 
     // set up sim_method_num_steps
     // all sim_method_num_steps are identical
-    int sim_method_num_steps = 3;
+    int sim_method_num_steps = 1;
     for (int i = 0; i < N; i++)
         ocp_nlp_solver_opts_set_at_stage(nlp_config, capsule->nlp_opts, i, "dynamics_num_steps", &sim_method_num_steps);
 
     // set up sim_method_num_stages
     // all sim_method_num_stages are identical
-    int sim_method_num_stages = 4;
+    int sim_method_num_stages = 2;
     for (int i = 0; i < N; i++)
         ocp_nlp_solver_opts_set_at_stage(nlp_config, capsule->nlp_opts, i, "dynamics_num_stages", &sim_method_num_stages);
 
@@ -612,11 +655,6 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "levenberg_marquardt", &levenberg_marquardt);
 
     /* options QP solver */
-    int qp_solver_cond_N;
-    qp_solver_cond_N = 5;
-    
-    ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "qp_cond_N", &qp_solver_cond_N);
-
 
     int qp_solver_iter_max = 50;
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "qp_iter_max", &qp_solver_iter_max);
@@ -687,7 +725,7 @@ int dt_model_acados_update_params(dt_model_solver_capsule * capsule, int stage, 
 {
     int solver_status = 0;
 
-    int casadi_np = 1;
+    int casadi_np = 13;
     if (casadi_np != np) {
         printf("acados_update_params: trying to set %i parameters for external functions."
             " External function has %i parameters. Exiting.\n", np, casadi_np);

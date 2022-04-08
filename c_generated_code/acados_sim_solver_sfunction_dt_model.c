@@ -47,7 +47,7 @@
 
 #include "simstruc.h"
 
-#define SAMPLINGTIME 0.01
+#define SAMPLINGTIME 0.02
 
 
 static void mdlInitializeSizes (SimStruct *S)
@@ -72,7 +72,7 @@ static void mdlInitializeSizes (SimStruct *S)
     // u0
     ssSetInputPortVectorDimension(S, 1, 4);
     // parameters
-    ssSetInputPortVectorDimension(S, 2, 1);
+    ssSetInputPortVectorDimension(S, 2, 13);
 
     // specify dimension information for the output ports
     ssSetOutputPortVectorDimension(S, 0, 3 ); // xnext
@@ -138,7 +138,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     
 
     // local buffer
-    real_t buffer[4];
+    real_t buffer[13];
 
 
     /* go through inputs */
@@ -170,11 +170,11 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     // parameters
     in_sign = ssGetInputPortRealSignalPtrs(S, 2);
 
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < 13; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     // update value of parameters
-    dt_model_acados_sim_update_params(capsule, buffer, 1);
+    dt_model_acados_sim_update_params(capsule, buffer, 13);
 
 
     /* call solver */

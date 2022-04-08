@@ -40,7 +40,7 @@
 #define DT_MODEL_NX     3
 #define DT_MODEL_NZ     0
 #define DT_MODEL_NU     4
-#define DT_MODEL_NP     1
+#define DT_MODEL_NP     13
 
 #ifdef __cplusplus
 extern "C" {

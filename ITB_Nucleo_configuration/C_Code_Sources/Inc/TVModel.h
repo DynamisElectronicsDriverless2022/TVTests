@@ -25,6 +25,7 @@
 #include <stddef.h>
 #include <math.h>
 #include <string.h>
+#include "acados_wrapper.h"
 #ifndef TVModel_COMMON_INCLUDES_
 #define TVModel_COMMON_INCLUDES_
 #include "rtwtypes.h"

@@ -77,7 +77,7 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
     bool tmp_bool;
 
     
-    double Tsim = 0.01;
+    double Tsim = 0.02;
 
     
     // explicit ode
@@ -127,9 +127,9 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
     sim_opts_set(dt_model_sim_config, dt_model_sim_opts, "collocation_type", &collocation_type);
 
  
-    tmp_int = 4;
+    tmp_int = 2;
     sim_opts_set(dt_model_sim_config, dt_model_sim_opts, "num_stages", &tmp_int);
-    tmp_int = 3;
+    tmp_int = 1;
     sim_opts_set(dt_model_sim_config, dt_model_sim_opts, "num_steps", &tmp_int);
     tmp_bool = 0;
     sim_opts_set(dt_model_sim_config, dt_model_sim_opts, "jac_reuse", &tmp_bool);

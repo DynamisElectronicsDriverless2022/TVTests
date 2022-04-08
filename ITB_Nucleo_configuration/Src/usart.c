@@ -24,6 +24,7 @@
 #include "acados_wrapper.h"
 #include "tim.h"
 #include "usartFcnLib.h"
+#include "TVModel.h"
 #define BUFFER 80
 #define NUMBERDATA 50
 uint64_t n=0;
@@ -34,23 +35,12 @@ uint64_t Number;
 double Data[NUMBERDATA];
 uint8_t RxData[BUFFER];
 uint32_t Time=0;
-double throttle,brake,steering,vx,vy,ax,ay,yaw_rate,brake_torque,omega_wheels;
 
 int BufferTime=0,UsartTime,Count=0;
 uint8_t TxData[4]={'\0','\0','\r',10};
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 
 dt_model_solver_capsule *capsule;
-double x0[3]={18.3, 0.23, 0.828};
-double extParam[12]={0.117,0,0.0396,-0.0461,0.00961,0,0,0,0,15.1,-0.67,0.93};
-double limDown[4]={2.41, -3.59, -13.2, -18.6};
-double limUp[4]={16.5, 17.2, 7.55, 2.13};
-double reference[7]={0, 0, 0.905, 0, 0, 0, 0};
-double limAggrDown[4]={8.06,-33.2,15,15};
-double limAggrUp[4]= {8.91,76,15,15};
-double cost_W[49]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-
-
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart3;
@@ -213,34 +203,40 @@ void IdleCallback(void)
         }
 
         //Assegnazione degli elementi di Data[] agli import di Simulink
-        throttle= Data[0];
-        brake= Data[1];
-        steering= Data[2];
-        vx= Data[3];
-        vy= Data[4];
-        ax= Data[5];
-        ay= Data[6];
-        yaw_rate= Data[7];
-        brake_torque= Data[8];
-        omega_wheels= Data[9];
+        rtU.throttle= Data[0];
+        rtU.brake= Data[1];
+        rtU.steering= Data[2];
+        rtU.vx= Data[3];
+        rtU.vy= Data[4];
+        rtU.ax= Data[5];
+        rtU.ay= Data[6];
+        rtU.yaw_rate_deg= Data[7];
+        rtU.brake_torque_FL= Data[8];
+        rtU.brake_torque_FR= Data[9];
+        rtU.brake_torque_RL= Data[10];
+        rtU.brake_torque_RR= Data[11];
+        rtU.omega_wheels_FL= Data[12];
+        rtU.omega_wheels_FR= Data[13];
+        rtU.omega_wheels_RL= Data[14];
+        rtU.omega_wheels_RR= Data[15];
 
-        //Chiamare funzione TV(void) quando sarà definita
-        //TV();
+
 
         //reset periferica con dimensione iniziale del BUFFER
         (&huart3)->RxXferCount = BUFFER;
         (&huart3)->pRxBuffPtr=RxData;
         (&htim7)->Instance->CNT=0;
         Time=0;
-        //Acados_caller non va chiamata qui ma nella funzione TV generata da Matlab, la quale a partire dagli
-        //elementi di Data ottiene i parametri che servono a Acados_Caller
-        Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule);
+
+        //Chiamare funzione TV(void) quando sarà definita
+        TVModel_step1();
+
         TemopoEsecuzione1=Time*1000+((uint16_t)(&htim7)->Instance->CNT);
-        TemopoEsecuzione2=TemopoEsecuzione1/96;
-        TxData[0]=(TemopoEsecuzione2 & 0xFF00)>>8;
-        TxData[1]=(TemopoEsecuzione2 & 0x00FF);
+        //TemopoEsecuzione2=TemopoEsecuzione1/96;
+        TxData[0]=(TemopoEsecuzione1 & 0xFF00)>>8;
+        TxData[1]=(TemopoEsecuzione1 & 0x00FF);
         if(TxData[0]==13 && TxData[1]==10) TxData[1]=11;
-        //usartTransmit_DMA_wrapper(1,TxData,4);
+        usartTransmit_DMA_wrapper(1,TxData,4);
         BufferTime=0;
 
 
