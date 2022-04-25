@@ -28,7 +28,7 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32h7xx_hal.h"
+#include "stm32f7xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -58,56 +58,80 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define B1_Pin GPIO_PIN_13
-#define B1_GPIO_Port GPIOC
-#define MCO_Pin GPIO_PIN_0
-#define MCO_GPIO_Port GPIOH
-#define RMII_MDC_Pin GPIO_PIN_1
-#define RMII_MDC_GPIO_Port GPIOC
-#define RMII_REF_CLK_Pin GPIO_PIN_1
-#define RMII_REF_CLK_GPIO_Port GPIOA
-#define RMII_MDIO_Pin GPIO_PIN_2
-#define RMII_MDIO_GPIO_Port GPIOA
-#define RMII_CRS_DV_Pin GPIO_PIN_7
-#define RMII_CRS_DV_GPIO_Port GPIOA
-#define RMII_RXD0_Pin GPIO_PIN_4
-#define RMII_RXD0_GPIO_Port GPIOC
-#define RMII_RXD1_Pin GPIO_PIN_5
-#define RMII_RXD1_GPIO_Port GPIOC
-#define LED_GREEN_Pin GPIO_PIN_0
-#define LED_GREEN_GPIO_Port GPIOB
-#define RMII_TXD1_Pin GPIO_PIN_13
-#define RMII_TXD1_GPIO_Port GPIOB
-#define LED_RED_Pin GPIO_PIN_14
-#define LED_RED_GPIO_Port GPIOB
-#define STLK_VCP_RX_Pin GPIO_PIN_8
-#define STLK_VCP_RX_GPIO_Port GPIOD
-#define STLK_VCP_TX_Pin GPIO_PIN_9
-#define STLK_VCP_TX_GPIO_Port GPIOD
-#define USB_FS_PWR_EN_Pin GPIO_PIN_10
-#define USB_FS_PWR_EN_GPIO_Port GPIOD
-#define USB_FS_OVCR_Pin GPIO_PIN_7
-#define USB_FS_OVCR_GPIO_Port GPIOG
-#define USB_FS_VBUS_Pin GPIO_PIN_9
-#define USB_FS_VBUS_GPIO_Port GPIOA
-#define USB_FS_ID_Pin GPIO_PIN_10
-#define USB_FS_ID_GPIO_Port GPIOA
-#define USB_FS_DM_Pin GPIO_PIN_11
-#define USB_FS_DM_GPIO_Port GPIOA
-#define USB_FS_DP_Pin GPIO_PIN_12
-#define USB_FS_DP_GPIO_Port GPIOA
-#define SWDIO_Pin GPIO_PIN_13
-#define SWDIO_GPIO_Port GPIOA
-#define SWCLK_Pin GPIO_PIN_14
-#define SWCLK_GPIO_Port GPIOA
-#define RMII_TX_EN_Pin GPIO_PIN_11
-#define RMII_TX_EN_GPIO_Port GPIOG
-#define RMII_TXD0_Pin GPIO_PIN_13
-#define RMII_TXD0_GPIO_Port GPIOG
-#define SWO_Pin GPIO_PIN_3
-#define SWO_GPIO_Port GPIOB
-#define LED_YELLOW_Pin GPIO_PIN_1
-#define LED_YELLOW_GPIO_Port GPIOE
+#define ADC_CONVST_Pin GPIO_PIN_8
+#define ADC_CONVST_GPIO_Port GPIOI
+#define ADC_RESET_Pin GPIO_PIN_13
+#define ADC_RESET_GPIO_Port GPIOC
+#define ADC_BUSY_Pin GPIO_PIN_14
+#define ADC_BUSY_GPIO_Port GPIOC
+#define AUX_12V_BATT_Pin GPIO_PIN_6
+#define AUX_12V_BATT_GPIO_Port GPIOH
+#define AUX_12V_DCDC_Pin GPIO_PIN_7
+#define AUX_12V_DCDC_GPIO_Port GPIOH
+#define FLASH_RESET_Pin GPIO_PIN_11
+#define FLASH_RESET_GPIO_Port GPIOD
+#define COOLING2_BATT_Pin GPIO_PIN_6
+#define COOLING2_BATT_GPIO_Port GPIOJ
+#define COOLING2_DCDC_Pin GPIO_PIN_7
+#define COOLING2_DCDC_GPIO_Port GPIOJ
+#define COOLING1_BATT_Pin GPIO_PIN_8
+#define COOLING1_BATT_GPIO_Port GPIOJ
+#define COOLING1_DCDC_Pin GPIO_PIN_9
+#define COOLING1_DCDC_GPIO_Port GPIOJ
+#define EXT_INTERRUPT_AUX_Pin GPIO_PIN_10
+#define EXT_INTERRUPT_AUX_GPIO_Port GPIOJ
+#define EXT_INTERRUPT_AUX_EXTI_IRQn EXTI15_10_IRQn
+#define STEP_UP_ENABLE_Pin GPIO_PIN_11
+#define STEP_UP_ENABLE_GPIO_Port GPIOJ
+#define DIGITAL_IN_AUX_Pin GPIO_PIN_0
+#define DIGITAL_IN_AUX_GPIO_Port GPIOK
+#define DIGITAL_OUT_AUX_Pin GPIO_PIN_1
+#define DIGITAL_OUT_AUX_GPIO_Port GPIOK
+#define LED_DEBUG_5_Pin GPIO_PIN_2
+#define LED_DEBUG_5_GPIO_Port GPIOK
+#define LED_DEBUG_4_Pin GPIO_PIN_2
+#define LED_DEBUG_4_GPIO_Port GPIOG
+#define LED_DEBUG_3_Pin GPIO_PIN_3
+#define LED_DEBUG_3_GPIO_Port GPIOG
+#define LED_DEBUG_2_Pin GPIO_PIN_6
+#define LED_DEBUG_2_GPIO_Port GPIOG
+#define LED_DEBUG_1_Pin GPIO_PIN_7
+#define LED_DEBUG_1_GPIO_Port GPIOG
+#define PUMP_PWM_Pin GPIO_PIN_7
+#define PUMP_PWM_GPIO_Port GPIOC
+#define FAN_5_PWM_Pin GPIO_PIN_8
+#define FAN_5_PWM_GPIO_Port GPIOC
+#define FAN_4_PWM_Pin GPIO_PIN_9
+#define FAN_4_PWM_GPIO_Port GPIOC
+#define FAN_1_PWM_Pin GPIO_PIN_9
+#define FAN_1_PWM_GPIO_Port GPIOA
+#define FAN_2_PWM_Pin GPIO_PIN_10
+#define FAN_2_PWM_GPIO_Port GPIOA
+#define FAN_3_PWM_Pin GPIO_PIN_11
+#define FAN_3_PWM_GPIO_Port GPIOA
+#define AMP_MUTE_Pin GPIO_PIN_13
+#define AMP_MUTE_GPIO_Port GPIOJ
+#define AMP_STBY_Pin GPIO_PIN_14
+#define AMP_STBY_GPIO_Port GPIOJ
+#define AMP_FAULT_Pin GPIO_PIN_15
+#define AMP_FAULT_GPIO_Port GPIOJ
+#define AMP_WARN_Pin GPIO_PIN_9
+#define AMP_WARN_GPIO_Port GPIOG
+#define KEY_SWITCH_IT_Pin GPIO_PIN_12
+#define KEY_SWITCH_IT_GPIO_Port GPIOG
+#define KEY_SWITCH_IT_EXTI_IRQn EXTI15_10_IRQn
+#define INVERTER_X_BE2_Pin GPIO_PIN_13
+#define INVERTER_X_BE2_GPIO_Port GPIOG
+#define INVERTER_X_EF_Pin GPIO_PIN_3
+#define INVERTER_X_EF_GPIO_Port GPIOK
+#define INVERTER_1_BE1_Pin GPIO_PIN_4
+#define INVERTER_1_BE1_GPIO_Port GPIOK
+#define INVERTER_2_BE1_Pin GPIO_PIN_5
+#define INVERTER_2_BE1_GPIO_Port GPIOK
+#define INVERTER_3_BE1_Pin GPIO_PIN_6
+#define INVERTER_3_BE1_GPIO_Port GPIOK
+#define INVERTER_4_BE1_Pin GPIO_PIN_7
+#define INVERTER_4_BE1_GPIO_Port GPIOK
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
