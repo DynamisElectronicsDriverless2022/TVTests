@@ -2,7 +2,7 @@
 ## Makefile generated for component 'TVModel'. 
 ## 
 ## Makefile     : TVModel.mk
-## Generated on : Fri Apr 08 14:25:16 2022
+## Generated on : Thu Apr 14 16:29:05 2022
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/TVModel.exe
 ## Product type : executable
 ## 
@@ -183,7 +183,7 @@ DEFINES = $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_STAN
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/TVModel_ert_rtw/TVModel.c $(START_DIR)/TVModel_ert_rtw/TVModel_data.c
+SRCS = $(START_DIR)/TVModel_ert_rtw/TVModel.c $(START_DIR)/TVModel_ert_rtw/TVModel_data.c D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src/acados_wrapper.c
 
 MAIN_SRC = $(START_DIR)/TVModel_ert_rtw/ert_main.c
 
@@ -193,7 +193,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = TVModel.obj TVModel_data.obj
+OBJS = TVModel.obj TVModel_data.obj acados_wrapper.obj
 
 MAIN_OBJ = ert_main.obj
 
@@ -345,6 +345,14 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
+%.obj : D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.obj : D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
 %.obj : $(MATLAB_ROOT)/rtw/c/src/%.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
@@ -370,6 +378,10 @@ TVModel_data.obj : $(START_DIR)/TVModel_ert_rtw/TVModel_data.c
 
 
 ert_main.obj : $(START_DIR)/TVModel_ert_rtw/ert_main.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+acados_wrapper.obj : D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/Src/acados_wrapper.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 

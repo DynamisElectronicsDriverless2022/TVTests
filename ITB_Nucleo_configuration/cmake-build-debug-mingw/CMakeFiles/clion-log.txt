@@ -1,0 +1,41 @@
+"D:\Clion\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" D:\DynamisGit\Timing\TVTests\ITB_Nucleo_configuration
+-- Build type is Debug
+-- ACADOS_WITH_OPENMP: OFF
+CMake Deprecation Warning at acados/external/blasfeo/CMakeLists.txt:36 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Using linear algebra: HIGH_PERFORMANCE
+-- Using matrix format: PANELMAJ
+-- Using external BLAS: 0
+-- Testing target GENERIC: assembly compilation [success]
+-- Testing target GENERIC: intrinsic compilation [success]
+-- Compiling for target: GENERIC
+CMake Deprecation Warning at acados/external/hpipm/CMakeLists.txt:36 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Using BLASFEO path: 
+-- Installation directory: D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
+--  
+-- Target: BLASFEO is GENERIC, HPIPM is GENERIC
+-- Linear algebra: HIGH_PERFORMANCE
+-- Matlab MEX (OFF)
+-- Octave MEX (OFF)
+-- Octave Templates (OFF)
+-- System name:version Generic:1
+-- Build type is Debug
+-- Installation directory is D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/acados
+-- OpenMP parallelization is OFF
+--  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/DynamisGit/Timing/TVTests/ITB_Nucleo_configuration/cmake-build-debug-mingw

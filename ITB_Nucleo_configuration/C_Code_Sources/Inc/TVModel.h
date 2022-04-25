@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.19
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Apr  8 14:42:59 2022
+ * C/C++ source code generated on : Thu Apr 14 16:28:42 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -25,7 +25,6 @@
 #include <stddef.h>
 #include <math.h>
 #include <string.h>
-#include "acados_wrapper.h"
 #ifndef TVModel_COMMON_INCLUDES_
 #define TVModel_COMMON_INCLUDES_
 #include "rtwtypes.h"
@@ -34,6 +33,9 @@
 /* Model Code Variants */
 
 /* Macros for accessing real-time model data structure */
+
+/* user code (top of header file) */
+#include "ITB_Nucleo_configuration\Inc\acados_wrapper.h"
 #ifndef DEFINED_TYPEDEF_FOR_zGeneral_Params_
 #define DEFINED_TYPEDEF_FOR_zGeneral_Params_
 
@@ -311,8 +313,8 @@ extern const ConstP rtConstP;
 
 /* Model entry point functions */
 extern void TVModel_initialize(void);
+extern void TVModel_step0(void);
 extern void TV(void);
-extern void TVModel_step1(void);
 
 /*-
  * These blocks were eliminated from the model due to optimizations:

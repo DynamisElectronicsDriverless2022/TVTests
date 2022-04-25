@@ -44,7 +44,7 @@ FOREACH(file ${files})
     MESSAGE(STATUS "Uninstalling $ENV{DESTDIR}${file}")
     IF(EXISTS "$ENV{DESTDIR}${file}" OR IS_SYMLINK "$ENV{DESTDIR}${file}")
         EXEC_PROGRAM(
-        "D:/Clion/CLion 2021.3.3/bin/cmake/win/bin/cmake.exe" ARGS "-E remove -f $ENV{DESTDIR}${file}"
+        "C:/Users/giuse/scoop/apps/cmake/3.22.2/bin/cmake.exe" ARGS "-E remove -f $ENV{DESTDIR}${file}"
         OUTPUT_VARIABLE rm_out
         RETURN_VALUE rm_retval)
         IF(NOT "${rm_retval}" STREQUAL 0)

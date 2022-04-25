@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.19
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Apr  8 14:42:59 2022
+ * C/C++ source code generated on : Thu Apr 14 16:28:42 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -788,13 +788,13 @@ real_T rt_powd_snf(real_T u0, real_T u1)
 }
 
 /* Model step function for TID0 */
-void TV(void)                          /* Sample time: [0.01s, 0.0s] */
+void TVModel_step0(void)               /* Sample time: [0.01s, 0.0s] */
 {
   /* (no output/update code required) */
 }
 
 /* Model step function for TID1 */
-void TVModel_step1(void)               /* Explicit Task: Subsystem */
+void TV(void)                          /* Explicit Task: Subsystem */
 {
   real_T rtb_y[49];
   real_T rtb_CCaller_o3[39];

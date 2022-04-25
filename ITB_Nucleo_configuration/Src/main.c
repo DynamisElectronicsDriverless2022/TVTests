@@ -19,12 +19,14 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "stdint.h"
+#ifndef WINDOWSCOMPILATION
 #include "dma.h"
 #include "tim.h"
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
-
+#endif
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "acados_wrapper.h"
@@ -80,7 +82,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
-
+#ifndef WINDOWSCOMPILATION
   /* Enable I-Cache---------------------------------------------------------*/
   SCB_EnableICache();
 
@@ -110,17 +112,19 @@ int main(void)
   MX_TIM7_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_HS_USB_Init();
+#endif
   /* USER CODE BEGIN 2 */
 
-    capsule = dt_model_acados_create_capsule();
+    //capsule = dt_model_acados_create_capsule();
 
-    dt_model_acados_create(capsule);
-
+    //dt_model_acados_create(capsule);
+#ifndef WINDOWSCOMPILATION
     (&huart3)->Instance->CR1|= 0x0010;
     HAL_UART_Receive_IT(&huart3,RxData,40);
     //Dato1=0;
     //HAL_TIM_Base_Start_IT(&htim6);
     HAL_TIM_Base_Start_IT(&htim7);
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -128,13 +132,13 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-      HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
-      HAL_Delay(500);
+      //HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
+      //HAL_Delay(500);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
-
+#ifndef WINDOWSCOMPILATION
 /**
   * @brief System Clock Configuration
   * @retval None
@@ -233,6 +237,7 @@ void assert_failed(uint8_t *file, uint32_t line)
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
+#endif
 #endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

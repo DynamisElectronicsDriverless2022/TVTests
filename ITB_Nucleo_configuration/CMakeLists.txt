@@ -1,81 +1,120 @@
-#THIS FILE IS AUTO GENERATED FROM THE TEMPLATE! DO NOT CHANGE!
-set(CMAKE_SYSTEM_NAME Generic)
-set(CMAKE_SYSTEM_VERSION 1)
-cmake_minimum_required(VERSION 3.21)
+set(DEBUG_VAR "Microsoft")
+if("${DEBUG_VAR}" STREQUAL "Arm")
 
-# specify cross compilers and tools
-include(cmake/arm-none-eabi-gcc.cmake)
-#set(CMAKE_C_COMPILER arm-none-eabi-gcc)
-#set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
-#set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
-#set(CMAKE_AR arm-none-eabi-ar)
-#set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
-#set(CMAKE_OBJDUMP arm-none-eabi-objdump)
-#set(SIZE arm-none-eabi-size)
-#set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+    #THIS FILE IS AUTO GENERATED FROM THE TEMPLATE! DO NOT CHANGE!
+    set(CMAKE_SYSTEM_NAME Generic)
+    set(CMAKE_SYSTEM_VERSION 1)
+    cmake_minimum_required(VERSION 3.21)
 
-# project settings
-project(ITB_Nucleo_configuration C CXX ASM)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_C_STANDARD 11)
+    # specify cross compilers and tools
+    include(cmake/arm-none-eabi-gcc.cmake)
+    #set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+    #set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+    #set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
+    #set(CMAKE_AR arm-none-eabi-ar)
+    #set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
+    #set(CMAKE_OBJDUMP arm-none-eabi-objdump)
+    #set(SIZE arm-none-eabi-size)
+    #set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
-#Uncomment for hardware floating point
-add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
-add_compile_options(-mfloat-abi=hard -mfpu=fpv5-d16)
-add_link_options(-mfloat-abi=hard -mfpu=fpv5-d16)
+    # project settings
+    project(ITB_Nucleo_configuration C CXX ASM)
+    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_C_STANDARD 11)
+
+    #Uncomment for hardware floating point
+    add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
+    add_compile_options(-mfloat-abi=hard -mfpu=fpv5-d16)
+    add_link_options(-mfloat-abi=hard -mfpu=fpv5-d16)
 
 
-#Uncomment for software floating point
-#add_compile_options(-mfloat-abi=soft)
+    #Uncomment for software floating point
+    #add_compile_options(-mfloat-abi=soft)
 
-add_compile_options(-mcpu=cortex-m7 -mthumb -mthumb-interwork)
-add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length=0)
+    add_compile_options(-mcpu=cortex-m7 -mthumb -mthumb-interwork)
+    add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length=0)
 
-# uncomment to mitigate c++17 absolute addresses warnings
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-register")
+    # uncomment to mitigate c++17 absolute addresses warnings
+    #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-register")
 
-# Enable assembler files preprocessing
-add_compile_options($<$<COMPILE_LANGUAGE:ASM>:-x$<SEMICOLON>assembler-with-cpp>)
+    # Enable assembler files preprocessing
+    add_compile_options($<$<COMPILE_LANGUAGE:ASM>:-x$<SEMICOLON>assembler-with-cpp>)
 
-if ("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
-    message(STATUS "Maximum optimization for speed")
-    add_compile_options(-Ofast)
-elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebInfo")
-    message(STATUS "Maximum optimization for speed, debug info included")
-    add_compile_options(-Ofast -g)
-elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "MinSizeRel")
-    message(STATUS "Maximum optimization for size")
-    add_compile_options(-Os)
-else ()
-    message(STATUS "Minimal optimization, debug info included")
-    add_compile_options(-O2 -g)
-endif ()
+    if ("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
+        message(STATUS "Maximum optimization for speed")
+        add_compile_options(-Ofast)
+    elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebInfo")
+        message(STATUS "Maximum optimization for speed, debug info included")
+        add_compile_options(-Ofast -g)
+    elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "MinSizeRel")
+        message(STATUS "Maximum optimization for size")
+        add_compile_options(-Os)
+    else ()
+        message(STATUS "Minimal optimization, debug info included")
+        add_compile_options(-O2 -g)
+    endif ()
 
-include_directories(Inc Drivers/STM32H7xx_HAL_Driver/Inc Drivers/STM32H7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32H7xx/Include Drivers/CMSIS/Include)
-include_directories(C_Code_Sources/Inc)
-include_directories(acados/external/hpipm/include)
-include_directories(../c_generated_code)
-include_directories(acados/interfaces)
-include_directories(acados)
-include_directories(acados/external)
-include_directories(acados/external/blasfeo/include)
-add_definitions(-DUSE_HAL_DRIVER -DSTM32H723xx -DDEBUG)
-include(cmake/acados.cmake)
-file(GLOB_RECURSE SOURCES "Startup/*.*" "Src/*.*" "Drivers/*.*" "C_Code_Sources/Src/*.*" "../c_generated_code/acados_solver_dt_model.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_forw.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
+    include_directories(Inc Drivers/STM32H7xx_HAL_Driver/Inc Drivers/STM32H7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32H7xx/Include Drivers/CMSIS/Include)
+    include_directories(C_Code_Sources/Inc)
+    include_directories(acados/external/hpipm/include)
+    include_directories(../c_generated_code)
+    include_directories(acados/interfaces)
+    include_directories(acados)
+    include_directories(acados/external)
+    include_directories(acados/external/blasfeo/include)
+    add_definitions(-DUSE_HAL_DRIVER -DSTM32H723xx -DDEBUG)
+    include(cmake/acados.cmake)
+    file(GLOB_RECURSE SOURCES "Startup/*.*" "Src/*.*" "Drivers/*.*" "C_Code_Sources/Src/*.*" "../c_generated_code/acados_solver_dt_model.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_forw.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
 
-set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32H723ZGTX_FLASH.ld)
+    set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32H723ZGTX_FLASH.ld)
 
-add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
-add_link_options(-mcpu=cortex-m7 -mthumb -mthumb-interwork)
-add_link_options(-T ${LINKER_SCRIPT})
+    add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
+    add_link_options(-mcpu=cortex-m7 -mthumb -mthumb-interwork)
+    add_link_options(-T ${LINKER_SCRIPT})
 
-add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
-target_link_libraries(${PROJECT_NAME}.elf acados blasfeo hpipm)
-set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
-set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)
+    add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
+    target_link_libraries(${PROJECT_NAME}.elf acados blasfeo hpipm)
+    set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
+    set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)
 
-add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
-        COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
-        COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
-        COMMENT "Building ${HEX_FILE}
-Building ${BIN_FILE}")
+    add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+            COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
+            COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
+            COMMENT "Building ${HEX_FILE}
+    Building ${BIN_FILE}")
+elseif("${DEBUG_VAR}" STREQUAL "Microsoft")
+    #THIS FILE IS AUTO GENERATED FROM THE TEMPLATE! DO NOT CHANGE!
+    set(CMAKE_SYSTEM_NAME Generic)
+    set(CMAKE_SYSTEM_VERSION 1)
+    cmake_minimum_required(VERSION 3.19)
+
+    project(ITB_Nucleo_configuration C CXX ASM)
+    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_C_STANDARD 11)
+
+    #add_compile_options(-O0 -g -fsanitize=undefined -fsanitize=address -fsanitize=leak -Wl,-fsanitize=undefined -Wl,-fsanitize=address -Wl,-fsanitize=leak -Wl,--wrap,malloc)
+    add_compile_options(-Og -g)
+
+
+    include_directories(Inc)
+    include_directories(C_Code_Sources/Inc)
+    include_directories(acados/external/hpipm/include)
+    include_directories(../c_generated_code)
+    include_directories(acados/interfaces)
+    include_directories(acados)
+    include_directories(acados/external)
+    include_directories(acados/external/blasfeo/include)
+    include(cmake/acados.cmake)
+    file(GLOB_RECURSE SOURCES
+            "Src/main.c"
+            "../c_generated_code/acados_solver_dt_model.c"
+            "../c_generated_code/dt_model_model/dt_model_expl_vde_forw.c"
+            "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c"
+            "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c"
+            "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
+
+    #add_link_options(-Wl,-wrap,malloc -Wl,-wrap,calloc -static)
+    add_executable(${PROJECT_NAME}.exe ${SOURCES} )
+    target_link_libraries(${PROJECT_NAME}.exe acados blasfeo hpipm)
+
+endif()
