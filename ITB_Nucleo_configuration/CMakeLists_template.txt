@@ -59,7 +59,7 @@ include_directories(acados/external)
 include_directories(acados/external/blasfeo/include)
 add_definitions(${defines})
 include(cmake/acados.cmake)
-file(GLOB_RECURSE SOURCES ${sources} "C_Code_Sources/Srx/*.*")
+file(GLOB_RECURSE SOURCES ${sources} "C_Code_Sources/Src/*.*" "../c_generated_code/acados_solver_dt_model.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_forw.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})
 
