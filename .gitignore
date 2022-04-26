@@ -37,3 +37,16 @@ Codice generato/**/*.*
 # Octave session info
 octave-workspace
 
+# Others
+ITB_Nucleo_configuration/.idea/
+ITB_Nucleo_configuration/.idea/*
+ITB_Nucleo_configuration/cmake-build-debug/
+ITB_Nucleo_configuration/cmake-build-debug/*
+ITB_Nucleo_configuration/cmake-build-release/
+ITB_Nucleo_configuration/cmake-build-release/*
+ITB_Nucleo_configuration/cmake-build-debug-coverage/
+ITB_Nucleo_configuration/cmake-build-debug-coverage/*
+ITB_Nucleo_configuration/clion/
+ITB_Nucleo_configuration/clion-cmake/
+ITB_Nucleo_configuration/clion-cmake/*
+
