@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.20
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Apr  8 14:42:59 2022
+ * C/C++ source code generated on : Wed Apr 27 15:54:04 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -33,6 +33,9 @@
 /* Model Code Variants */
 
 /* Macros for accessing real-time model data structure */
+
+/* user code (top of header file) */
+#include "ITB_Nucleo_configuration\Inc\acados_wrapper.h"
 #ifndef DEFINED_TYPEDEF_FOR_zGeneral_Params_
 #define DEFINED_TYPEDEF_FOR_zGeneral_Params_
 
@@ -250,6 +253,21 @@ typedef struct {
    */
   real_T uDLookupTable_bp01Data[20];
 
+  /* Expression: TV.LV.efficiency_LUT.Eta
+   * Referenced by: '<S54>/2-D Lookup Table'
+   */
+  real_T uDLookupTable_tableData_i[1071];
+
+  /* Expression: TV.LV.efficiency_LUT.Omega
+   * Referenced by: '<S54>/2-D Lookup Table'
+   */
+  real_T uDLookupTable_bp01Data_e[51];
+
+  /* Expression: TV.LV.efficiency_LUT.Torque
+   * Referenced by: '<S54>/2-D Lookup Table'
+   */
+  real_T uDLookupTable_bp02Data[21];
+
   /* Pooled Parameter (Expression: )
    * Referenced by:
    *   '<S60>/LUT_-3'
@@ -269,6 +287,11 @@ typedef struct {
    *   '<S21>/2-D Lookup Table1'
    */
   uint32_T pooled49[2];
+
+  /* Computed Parameter: uDLookupTable_maxIndex
+   * Referenced by: '<S54>/2-D Lookup Table'
+   */
+  uint32_T uDLookupTable_maxIndex[2];
 } ConstP;
 
 /* External inputs (root inport signals with default storage) */
@@ -293,7 +316,7 @@ typedef struct {
 
 /* External outputs (root outports fed by signals with default storage) */
 typedef struct {
-  real_T Output;                       /* '<Root>/Output' */
+  real_T Torque;                       /* '<Root>/Torque' */
 } ExtY;
 
 /* Block signals and states (default storage) */
@@ -310,8 +333,8 @@ extern const ConstP rtConstP;
 
 /* Model entry point functions */
 extern void TVModel_initialize(void);
+extern void TVModel_step0(void);
 extern void TV(void);
-extern void TVModel_step1(void);
 
 /*-
  * These blocks were eliminated from the model due to optimizations:

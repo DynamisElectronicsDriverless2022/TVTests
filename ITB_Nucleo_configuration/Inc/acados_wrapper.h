@@ -12,9 +12,9 @@
 #include "acados_solver_dt_model.h"
 
 
-double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[],dt_model_solver_capsule * capsule);
+double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[],dt_model_solver_capsule * capsule, double result[]);
 
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[]);
+double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[], double result[]);
 
 #endif

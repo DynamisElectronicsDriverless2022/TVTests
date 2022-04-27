@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.20
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Apr  8 14:42:59 2022
+ * C/C++ source code generated on : Wed Apr 27 15:54:04 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -788,66 +788,67 @@ real_T rt_powd_snf(real_T u0, real_T u1)
 }
 
 /* Model step function for TID0 */
-void TV(void)                          /* Sample time: [0.01s, 0.0s] */
+void TVModel_step0(void)               /* Sample time: [0.01s, 0.0s] */
 {
   /* (no output/update code required) */
 }
 
 /* Model step function for TID1 */
-void TVModel_step1(void)               /* Explicit Task: Subsystem */
+void TV(void)                          /* Explicit Task: Subsystem */
 {
   real_T rtb_y[49];
-  real_T rtb_CCaller_o3[39];
   real_T varargin_2[16];
-  real_T rtb_CCaller_o6[14];
   real_T rtb_TmpSignalConversionAtCFunct[13];
   real_T varargin_1[9];
-  real_T rtb_CCaller_o4[8];
-  real_T rtb_CCaller_o5[8];
   real_T rtb_TmpSignalConversionAtSFun_o[7];
-  real_T rtb_max_torque_available[4];
-  real_T rtb_ubu[4];
-  real_T rtb_CCaller_o2[3];
+  real_T rtb_CCaller_o2[4];
+  real_T rtb_Efficiency[4];
+  real_T rtb_Saturation_e[4];
+  real_T rtb_TmpSignalConversionAtCCalle[3];
   real_T fractions[2];
   real_T fractions_0[2];
-  real_T frac;
+  real_T minV_idx_0;
+  real_T minV_idx_1;
   real_T rtb_Abs_o_idx_0;
-  real_T rtb_Gain1;
+  real_T rtb_CCaller_o2_tmp;
   real_T rtb_Gain_a_idx_0;
+  real_T rtb_Gain_a_idx_1;
   real_T rtb_Gain_a_idx_2;
   real_T rtb_Gain_a_idx_3;
   real_T rtb_Integrator_idx_0;
   real_T rtb_Integrator_idx_1;
   real_T rtb_Integrator_idx_2;
   real_T rtb_Integrator_idx_3;
+  real_T rtb_Memory_idx_0;
+  real_T rtb_Memory_idx_1;
+  real_T rtb_Memory_idx_2;
+  real_T rtb_Memory_idx_3;
   real_T rtb_RL_m;
   real_T rtb_RR;
-  real_T rtb_Saturation_n_idx_0;
-  real_T rtb_Saturation_n_idx_1;
-  real_T rtb_Saturation_n_idx_2;
-  real_T rtb_Saturation_n_idx_3;
   real_T rtb_Sign;
+  real_T rtb_Sum;
   real_T rtb_Sum1;
+  real_T rtb_Sum1_tmp;
   real_T rtb_Sum_ks;
   real_T rtb_Switch_c;
   real_T rtb_YRD;
+  real_T rtb_max_torque_available_idx_1;
+  real_T rtb_max_torque_available_idx_2;
+  real_T rtb_max_torque_available_idx_3;
   real_T rtb_max_torque_temperature_IGBT;
   real_T rtb_max_torque_temperature_IG_0;
-  real_T rtb_max_torque_temperature_ex_0;
-  real_T rtb_max_torque_temperature_ex_1;
-  real_T rtb_max_torque_temperature_ex_2;
-  real_T rtb_max_torque_temperature_ex_3;
   real_T rtb_max_torque_temperature_in_0;
+  real_T rtb_torquemapselected;
+  real_T rtb_torquemapselected_tmp;
   real_T rtb_uDLookupTable_idx_0;
   real_T rtb_uDLookupTable_idx_1;
   real_T rtb_uDLookupTable_idx_2;
   real_T rtb_uDLookupTable_idx_3;
+  real_T rtb_ubu_idx_0;
+  real_T rtb_ubu_idx_1;
+  real_T rtb_ubu_idx_2;
   real_T rtb_vx;
   real_T u0;
-  real_T u0_tmp;
-  real_T u0_tmp_0;
-  real_T u0_tmp_1;
-  real_T u0_tmp_2;
   int32_T i;
   int32_T iU;
   uint32_T bpIndices[2];
@@ -876,7 +877,7 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
   /* Gain: '<S5>/Gain1' incorporates:
    *  Inport: '<Root>/yaw_rate'
    */
-  rtb_Gain1 = 0.017453292519943295 * rtU.yaw_rate_deg;
+  rtb_torquemapselected = 0.017453292519943295 * rtU.yaw_rate_deg;
 
   /* Signum: '<S10>/Sign' */
   if (rtb_max_torque_temperature_IGBT < 0.0) {
@@ -905,9 +906,9 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  Lookup_n-D: '<S10>/steering_to_wheel_angles_LUT'
    *  UnaryMinus: '<S10>/Unary Minus'
    */
-  rtb_Gain_a_idx_0 = fabs(look1_binlx(-rtb_max_torque_temperature_IGBT,
-    rtConstP.pooled18, rtConstP.steering_to_wheel_angles_LUT_ta, 32U)) *
-    rtb_Sign;
+  rtb_max_torque_available_idx_1 = fabs(look1_binlx
+    (-rtb_max_torque_temperature_IGBT, rtConstP.pooled18,
+     rtConstP.steering_to_wheel_angles_LUT_ta, 32U)) * rtb_Sign;
 
   /* Switch: '<S12>/Switch' incorporates:
    *  Constant: '<S12>/Constant'
@@ -956,7 +957,8 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
      *  Trigonometry: '<S13>/Cos1'
      *  Trigonometry: '<S13>/Cos2'
      */
-    rtb_Sum_ks = rtb_vx * cos(rtb_Gain_a_idx_0) + sin(rtb_Gain_a_idx_0) * rtU.vy;
+    rtb_Sum_ks = rtb_vx * cos(rtb_max_torque_available_idx_1) + sin
+      (rtb_max_torque_available_idx_1) * rtU.vy;
     rtb_Switch_c = (0.235 * rtU.omega_wheels_FR - rtb_Sum_ks) / rtb_Sum_ks;
     rtb_RR = (0.235 * rtU.omega_wheels_RR - rtb_vx) / rtb_vx;
     rtb_RL_m = (0.235 * rtU.omega_wheels_RL - rtb_vx) / rtb_vx;
@@ -1055,18 +1057,38 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
 
   /* End of CFunction: '<S30>/C Function' */
 
+  /* Switch: '<S31>/Switch1' incorporates:
+   *  Constant: '<S31>/Constant3'
+   *  Sum: '<S31>/Subtract'
+   */
+  if (rtb_vx - 2.0 > 0.0) {
+    /* SignalConversion generated from: '<S16>/C Caller' */
+    rtb_TmpSignalConversionAtCCalle[0] = rtb_vx;
+  } else {
+    /* SignalConversion generated from: '<S16>/C Caller' */
+    rtb_TmpSignalConversionAtCCalle[0] = 2.0;
+  }
+
+  /* End of Switch: '<S31>/Switch1' */
+
+  /* SignalConversion generated from: '<S16>/C Caller' incorporates:
+   *  Inport: '<Root>/vy'
+   */
+  rtb_TmpSignalConversionAtCCalle[1] = rtU.vy;
+  rtb_TmpSignalConversionAtCCalle[2] = rtb_torquemapselected;
+
   /* Sum: '<S42>/Subtract' incorporates:
    *  Sum: '<S41>/Subtract'
    *  Switch: '<S41>/Switch1'
    */
-  rtb_Saturation_n_idx_3 = rtb_Gain1 - rtb_YRD;
+  rtb_Sum1_tmp = rtb_torquemapselected - rtb_YRD;
 
   /* Sum: '<S42>/Sum1' incorporates:
    *  Abs: '<S42>/Abs'
    *  Constant: '<S42>/Constant7'
    *  Sum: '<S42>/Subtract'
    */
-  rtb_Sum1 = fabs(rtb_Saturation_n_idx_3) + 5.0;
+  rtb_Sum1 = fabs(rtb_Sum1_tmp) + 5.0;
 
   /* Math: '<S43>/Square1' incorporates:
    *  Math: '<S43>/Square2'
@@ -1085,7 +1107,7 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  Gain: '<S44>/Lift Force'
    *  Math: '<S43>/Square1'
    */
-  rtb_Gain_a_idx_2 = rtb_uDLookupTable_idx_2 * 0.87348504901960788;
+  rtb_Gain_a_idx_1 = rtb_uDLookupTable_idx_2 * 0.87348504901960788;
 
   /* Gain: '<S43>/Drag moment' incorporates:
    *  Gain: '<S44>/Drag moment'
@@ -1101,7 +1123,7 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  Inport: '<Root>/ax'
    *  UnaryMinus: '<S43>/Unary Minus1'
    */
-  rtb_max_torque_temperature_IGBT = 25.588235294117645 * -rtU.ax;
+  rtb_Gain_a_idx_0 = 25.588235294117645 * -rtU.ax;
 
   /* SignalConversion generated from: '<S21>/2-D Lookup Table' incorporates:
    *  Constant: '<S43>/Static Load Front'
@@ -1114,16 +1136,14 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  Sum: '<S44>/Subtract'
    */
   rtb_uDLookupTable_idx_0 = (((rtb_uDLookupTable_idx_1 + 662.17500000000007) +
-    rtb_Gain_a_idx_2) - rtb_uDLookupTable_idx_3) +
-    rtb_max_torque_temperature_IGBT;
+    rtb_Gain_a_idx_1) - rtb_uDLookupTable_idx_3) + rtb_Gain_a_idx_0;
   rtb_uDLookupTable_idx_1 = (((662.17500000000007 - rtb_uDLookupTable_idx_1) +
-    rtb_Gain_a_idx_2) - rtb_uDLookupTable_idx_3) +
-    rtb_max_torque_temperature_IGBT;
+    rtb_Gain_a_idx_1) - rtb_uDLookupTable_idx_3) + rtb_Gain_a_idx_0;
 
   /* Gain: '<S45>/Lift Force' incorporates:
    *  Gain: '<S46>/Lift Force'
    */
-  rtb_Gain_a_idx_2 = rtb_uDLookupTable_idx_2 * 0.70063995098039222;
+  rtb_Gain_a_idx_1 = rtb_uDLookupTable_idx_2 * 0.70063995098039222;
 
   /* SignalConversion generated from: '<S21>/2-D Lookup Table' incorporates:
    *  Constant: '<S45>/Static Load Front'
@@ -1138,24 +1158,22 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  UnaryMinus: '<S46>/Unary Minus'
    */
   rtb_uDLookupTable_idx_2 = (((15.413385826771654 * -rtU.ay + 662.17500000000007)
-    + rtb_Gain_a_idx_2) + rtb_uDLookupTable_idx_3) -
-    rtb_max_torque_temperature_IGBT;
+    + rtb_Gain_a_idx_1) + rtb_uDLookupTable_idx_3) - rtb_Gain_a_idx_0;
   rtb_uDLookupTable_idx_3 = (((662.17500000000007 - 15.413385826771654 * -rtU.ay)
-    + rtb_Gain_a_idx_2) + rtb_uDLookupTable_idx_3) -
-    rtb_max_torque_temperature_IGBT;
+    + rtb_Gain_a_idx_1) + rtb_uDLookupTable_idx_3) - rtb_Gain_a_idx_0;
 
   /* Sum: '<S48>/Subtract1' incorporates:
    *  Gain: '<S48>/Gain'
    *  Inport: '<Root>/vy'
    *  Sum: '<S49>/Subtract1'
    */
-  rtb_max_torque_temperature_IGBT = 0.765 * rtb_Gain1 + rtU.vy;
+  rtb_Gain_a_idx_2 = 0.765 * rtb_torquemapselected + rtU.vy;
 
   /* Sum: '<S48>/Subtract' incorporates:
    *  Gain: '<S48>/Gain1'
    *  Sum: '<S50>/Subtract'
    */
-  rtb_Gain_a_idx_2 = rtb_vx - 0.635 * rtb_Gain1;
+  rtb_Gain_a_idx_0 = rtb_vx - 0.635 * rtb_torquemapselected;
 
   /* SignalConversion generated from: '<S21>/2-D Lookup Table' incorporates:
    *  Sum: '<S48>/Subtract'
@@ -1163,53 +1181,63 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  Sum: '<S48>/Subtract2'
    *  Trigonometry: '<S48>/Atan'
    */
-  rtb_max_torque_available[0] = rt_atan2d_snf(rtb_max_torque_temperature_IGBT,
-    rtb_Gain_a_idx_2) - rtb_Abs_o_idx_0;
+  rtb_Abs_o_idx_0 = rt_atan2d_snf(rtb_Gain_a_idx_2, rtb_Gain_a_idx_0) -
+    rtb_Abs_o_idx_0;
 
   /* Sum: '<S49>/Subtract' incorporates:
    *  Gain: '<S49>/Gain1'
    *  Sum: '<S51>/Subtract'
    */
-  rtb_Abs_o_idx_0 = 0.635 * rtb_Gain1 + rtb_vx;
+  rtb_Gain_a_idx_1 = 0.635 * rtb_torquemapselected + rtb_vx;
 
   /* SignalConversion generated from: '<S21>/2-D Lookup Table' incorporates:
    *  Sum: '<S49>/Subtract'
    *  Sum: '<S49>/Subtract2'
    *  Trigonometry: '<S49>/Atan'
    */
-  rtb_max_torque_available[1] = rt_atan2d_snf(rtb_max_torque_temperature_IGBT,
-    rtb_Abs_o_idx_0) - rtb_Gain_a_idx_0;
+  rtb_max_torque_available_idx_1 = rt_atan2d_snf(rtb_Gain_a_idx_2,
+    rtb_Gain_a_idx_1) - rtb_max_torque_available_idx_1;
 
   /* Sum: '<S50>/Subtract1' incorporates:
    *  Gain: '<S50>/Gain'
    *  Inport: '<Root>/vy'
    *  Sum: '<S51>/Subtract1'
    */
-  rtb_max_torque_temperature_IGBT = rtU.vy - 0.765 * rtb_Gain1;
+  rtb_torquemapselected = rtU.vy - 0.765 * rtb_torquemapselected;
 
   /* SignalConversion generated from: '<S21>/2-D Lookup Table' incorporates:
    *  Sum: '<S50>/Subtract1'
    *  Trigonometry: '<S50>/Atan'
    *  Trigonometry: '<S51>/Atan'
    */
-  rtb_max_torque_available[2] = rt_atan2d_snf(rtb_max_torque_temperature_IGBT,
-    rtb_Gain_a_idx_2);
-  rtb_max_torque_available[3] = rt_atan2d_snf(rtb_max_torque_temperature_IGBT,
-    rtb_Abs_o_idx_0);
+  rtb_max_torque_available_idx_2 = rt_atan2d_snf(rtb_torquemapselected,
+    rtb_Gain_a_idx_0);
+  rtb_max_torque_available_idx_3 = rt_atan2d_snf(rtb_torquemapselected,
+    rtb_Gain_a_idx_1);
 
-  /* Lookup_n-D: '<S21>/2-D Lookup Table' */
-  rtb_max_torque_temperature_ex_3 = look2_binlx(rtb_uDLookupTable_idx_0,
-    rtb_max_torque_available[0], rtConstP.pooled29, rtConstP.pooled30,
-    rtConstP.uDLookupTable_tableData, rtConstP.pooled49, 20U);
-  rtb_max_torque_temperature_ex_2 = look2_binlx(rtb_uDLookupTable_idx_1,
-    rtb_max_torque_available[1], rtConstP.pooled29, rtConstP.pooled30,
-    rtConstP.uDLookupTable_tableData, rtConstP.pooled49, 20U);
-  rtb_max_torque_temperature_ex_1 = look2_binlx(rtb_uDLookupTable_idx_2,
-    rtb_max_torque_available[2], rtConstP.pooled29, rtConstP.pooled30,
-    rtConstP.uDLookupTable_tableData, rtConstP.pooled49, 20U);
-  rtb_max_torque_temperature_ex_0 = look2_binlx(rtb_uDLookupTable_idx_3,
-    rtb_max_torque_available[3], rtConstP.pooled29, rtConstP.pooled30,
-    rtConstP.uDLookupTable_tableData, rtConstP.pooled49, 20U);
+  /* Memory: '<S16>/Memory' */
+  rtb_Memory_idx_0 = rtDW.Memory_PreviousInput[0];
+  rtb_Memory_idx_1 = rtDW.Memory_PreviousInput[1];
+  rtb_Memory_idx_2 = rtDW.Memory_PreviousInput[2];
+  rtb_Memory_idx_3 = rtDW.Memory_PreviousInput[3];
+
+  /* Lookup_n-D: '<S68>/Max_Torque_Overload_Motor_LUT' incorporates:
+   *  Constant: '<S2>/Constant10'
+   *  Lookup_n-D: '<S68>/Max_Torque_Overload_Inverter_LUT'
+   *  Lookup_n-D: '<S69>/Display Overload Inverter LUT'
+   *  Lookup_n-D: '<S69>/Display Overload Motor LUT'
+   */
+  rtb_CCaller_o2_tmp = look1_binlx(0.0, rtConstP.pooled33, rtConstP.pooled32, 2U);
+  rtb_CCaller_o2[0] = rtb_CCaller_o2_tmp;
+  rtb_CCaller_o2[1] = rtb_CCaller_o2_tmp;
+  rtb_CCaller_o2[2] = rtb_CCaller_o2_tmp;
+  rtb_CCaller_o2[3] = rtb_CCaller_o2_tmp;
+
+  /* Lookup_n-D: '<S68>/Max_Torque_Overload_Inverter_LUT' */
+  rtb_Efficiency[0] = rtb_CCaller_o2_tmp;
+  rtb_Efficiency[1] = rtb_CCaller_o2_tmp;
+  rtb_Efficiency[2] = rtb_CCaller_o2_tmp;
+  rtb_Efficiency[3] = rtb_CCaller_o2_tmp;
 
   /* Lookup_n-D: '<S68>/Max_Torque_Temperature_Internal_LUT' incorporates:
    *  Constant: '<S2>/Constant3'
@@ -1225,6 +1253,13 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
   rtb_max_torque_temperature_IG_0 = look1_binlx(0.0, rtConstP.pooled35,
     rtConstP.pooled32, 2U);
 
+  /* Lookup_n-D: '<S68>/Max_Torque_Temperature_External_LUT' incorporates:
+   *  Constant: '<S68>/Constant5'
+   *  Lookup_n-D: '<S69>/Temperature External LUT'
+   */
+  rtb_torquemapselected_tmp = look1_binlx(0.0, rtConstP.pooled36,
+    rtConstP.pooled32, 2U);
+
   /* RelationalOperator: '<S76>/Compare' incorporates:
    *  Constant: '<S73>/Time constant'
    *  Constant: '<S76>/Constant'
@@ -1233,253 +1268,285 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
   rtb_Compare = (0.079577471545947673 - rtDW.Probe[0] <= 0.0);
 
   /* Gain: '<S70>/Gain4' incorporates:
-   *  Gain: '<S79>/Gain4'
    *  Inport: '<Root>/omega_wheels_FL'
    *  Inport: '<Root>/omega_wheels_FR'
    *  Inport: '<Root>/omega_wheels_RL'
    *  Inport: '<Root>/omega_wheels_RR'
    */
-  u0_tmp = 128.91550390443524 * rtU.omega_wheels_FL;
-  u0_tmp_0 = 128.91550390443524 * rtU.omega_wheels_FR;
-  u0_tmp_1 = 128.91550390443524 * rtU.omega_wheels_RL;
-  u0_tmp_2 = 128.91550390443524 * rtU.omega_wheels_RR;
+  rtb_Saturation_e[0] = 128.91550390443524 * rtU.omega_wheels_FL;
+  rtb_Saturation_e[1] = 128.91550390443524 * rtU.omega_wheels_FR;
+  rtb_Saturation_e[2] = 128.91550390443524 * rtU.omega_wheels_RL;
+  rtb_Saturation_e[3] = 128.91550390443524 * rtU.omega_wheels_RR;
+
+  /* Saturate: '<S70>/Saturation1' */
+  u0 = rtb_Saturation_e[0];
+  if (u0 <= 0.0) {
+    rtb_Saturation_e[0] = 0.0;
+  } else {
+    rtb_Saturation_e[0] = u0;
+  }
+
+  u0 = rtb_Saturation_e[1];
+  if (u0 <= 0.0) {
+    rtb_Saturation_e[1] = 0.0;
+  } else {
+    rtb_Saturation_e[1] = u0;
+  }
+
+  u0 = rtb_Saturation_e[2];
+  if (u0 <= 0.0) {
+    rtb_Saturation_e[2] = 0.0;
+  } else {
+    rtb_Saturation_e[2] = u0;
+  }
+
+  u0 = rtb_Saturation_e[3];
+  if (u0 <= 0.0) {
+    rtb_Saturation_e[3] = 0.0;
+  } else {
+    rtb_Saturation_e[3] = u0;
+  }
+
+  /* End of Saturate: '<S70>/Saturation1' */
 
   /* Lookup_n-D: '<S70>/2-D Lookup Table' incorporates:
    *  Constant: '<S2>/Constant5'
    */
-  bpIndices[1U] = plook_binc(540.0, rtConstP.pooled40, 45U, &frac);
-  fractions[1U] = frac;
+  bpIndices[1U] = plook_binc(540.0, rtConstP.pooled40, 45U,
+    &rtb_torquemapselected);
+  fractions[1U] = rtb_torquemapselected;
+  rtb_Sum = rtb_Saturation_e[0];
+  bpIndices[0U] = plook_binc(rtb_Sum, rtConstP.pooled39, 200U,
+    &rtb_torquemapselected);
+  fractions[0U] = rtb_torquemapselected;
+  rtb_Saturation_e[0] = intrp2d_l(bpIndices, fractions, rtConstP.pooled38, 201U);
+  rtb_Sum = rtb_Saturation_e[1];
+  bpIndices[0U] = plook_binc(rtb_Sum, rtConstP.pooled39, 200U,
+    &rtb_torquemapselected);
+  fractions[0U] = rtb_torquemapselected;
+  rtb_Saturation_e[1] = intrp2d_l(bpIndices, fractions, rtConstP.pooled38, 201U);
+  rtb_Sum = rtb_Saturation_e[2];
+  bpIndices[0U] = plook_binc(rtb_Sum, rtConstP.pooled39, 200U,
+    &rtb_torquemapselected);
+  fractions[0U] = rtb_torquemapselected;
+  rtb_Saturation_e[2] = intrp2d_l(bpIndices, fractions, rtConstP.pooled38, 201U);
+  rtb_Sum = rtb_Saturation_e[3];
+  bpIndices[0U] = plook_binc(rtb_Sum, rtConstP.pooled39, 200U,
+    &rtb_torquemapselected);
+  fractions[0U] = rtb_torquemapselected;
+  rtb_Saturation_e[3] = intrp2d_l(bpIndices, fractions, rtConstP.pooled38, 201U);
 
-  /* Saturate: '<S70>/Saturation1' incorporates:
-   *  Gain: '<S70>/Gain4'
-   */
-  if (u0_tmp <= 0.0) {
-    u0 = 0.0;
-  } else {
-    u0 = u0_tmp;
-  }
-
-  /* Lookup_n-D: '<S70>/2-D Lookup Table' */
-  bpIndices[0U] = plook_binc(u0, rtConstP.pooled39, 200U, &frac);
-  fractions[0U] = frac;
-  rtb_Saturation_n_idx_0 = intrp2d_l(bpIndices, fractions, rtConstP.pooled38,
-    201U);
-
-  /* Saturate: '<S70>/Saturation1' incorporates:
-   *  Gain: '<S70>/Gain4'
-   */
-  if (u0_tmp_0 <= 0.0) {
-    u0 = 0.0;
-  } else {
-    u0 = u0_tmp_0;
-  }
-
-  /* Lookup_n-D: '<S70>/2-D Lookup Table' */
-  bpIndices[0U] = plook_binc(u0, rtConstP.pooled39, 200U, &frac);
-  fractions[0U] = frac;
-  rtb_Saturation_n_idx_1 = intrp2d_l(bpIndices, fractions, rtConstP.pooled38,
-    201U);
-
-  /* Saturate: '<S70>/Saturation1' incorporates:
-   *  Gain: '<S70>/Gain4'
-   */
-  if (u0_tmp_1 <= 0.0) {
-    u0 = 0.0;
-  } else {
-    u0 = u0_tmp_1;
-  }
-
-  /* Lookup_n-D: '<S70>/2-D Lookup Table' */
-  bpIndices[0U] = plook_binc(u0, rtConstP.pooled39, 200U, &frac);
-  fractions[0U] = frac;
-  rtb_Saturation_n_idx_2 = intrp2d_l(bpIndices, fractions, rtConstP.pooled38,
-    201U);
-
-  /* Saturate: '<S70>/Saturation1' incorporates:
-   *  Gain: '<S70>/Gain4'
-   */
-  if (u0_tmp_2 <= 0.0) {
-    u0 = 0.0;
-  } else {
-    u0 = u0_tmp_2;
-  }
-
-  /* Lookup_n-D: '<S70>/2-D Lookup Table' */
-  bpIndices[0U] = plook_binc(u0, rtConstP.pooled39, 200U, &frac);
-  fractions[0U] = frac;
-
-  /* Gain: '<S70>/Gain' incorporates:
-   *  Lookup_n-D: '<S70>/2-D Lookup Table'
-   */
-  rtb_Gain_a_idx_0 = 0.0098000000000000014 * rtb_Saturation_n_idx_0;
-  rtb_Abs_o_idx_0 = 0.0098000000000000014 * rtb_Saturation_n_idx_1;
-  rtb_Gain_a_idx_2 = 0.0098000000000000014 * rtb_Saturation_n_idx_2;
-  rtb_Gain_a_idx_3 = 0.0098000000000000014 * intrp2d_l(bpIndices, fractions,
-    rtConstP.pooled38, 201U);
+  /* Gain: '<S70>/Gain' */
+  rtb_Gain_a_idx_0 = 0.0098000000000000014 * rtb_Saturation_e[0];
+  rtb_Gain_a_idx_1 = 0.0098000000000000014 * rtb_Saturation_e[1];
+  rtb_Gain_a_idx_2 = 0.0098000000000000014 * rtb_Saturation_e[2];
+  rtb_Gain_a_idx_3 = 0.0098000000000000014 * rtb_Saturation_e[3];
 
   /* DiscreteIntegrator: '<S78>/Integrator' */
   if (rtDW.Integrator_IC_LOADING != 0) {
     rtDW.Integrator_DSTATE[0] = rtb_Gain_a_idx_0;
-    rtDW.Integrator_DSTATE[1] = rtb_Abs_o_idx_0;
+    rtDW.Integrator_DSTATE[1] = rtb_Gain_a_idx_1;
     rtDW.Integrator_DSTATE[2] = rtb_Gain_a_idx_2;
     rtDW.Integrator_DSTATE[3] = rtb_Gain_a_idx_3;
   }
 
   if (rtb_Compare || (rtDW.Integrator_PrevResetState != 0)) {
     rtDW.Integrator_DSTATE[0] = rtb_Gain_a_idx_0;
-    rtDW.Integrator_DSTATE[1] = rtb_Abs_o_idx_0;
+    rtDW.Integrator_DSTATE[1] = rtb_Gain_a_idx_1;
     rtDW.Integrator_DSTATE[2] = rtb_Gain_a_idx_2;
     rtDW.Integrator_DSTATE[3] = rtb_Gain_a_idx_3;
   }
 
   rtb_Integrator_idx_0 = rtDW.Integrator_DSTATE[0];
+  rtb_Integrator_idx_1 = rtDW.Integrator_DSTATE[1];
+  rtb_Integrator_idx_2 = rtDW.Integrator_DSTATE[2];
+  rtb_Integrator_idx_3 = rtDW.Integrator_DSTATE[3];
 
-  /* MinMax: '<S68>/Min' incorporates:
+  /* Switch: '<S72>/Switch' incorporates:
    *  Constant: '<S70>/Constant'
    *  DiscreteIntegrator: '<S78>/Integrator'
-   *  RelationalOperator: '<S72>/LowerRelop1'
    *  RelationalOperator: '<S72>/UpperRelop'
-   *  Switch: '<S72>/Switch'
-   *  Switch: '<S72>/Switch2'
    */
-  if (rtDW.Integrator_DSTATE[0] > 21.0) {
-    rtb_Saturation_n_idx_1 = 21.0;
-  } else if (rtDW.Integrator_DSTATE[0] < 0.0) {
-    /* Switch: '<S72>/Switch' incorporates:
-     *  Constant: '<S70>/Constant'
-     */
-    rtb_Saturation_n_idx_1 = 0.0;
+  if (rtDW.Integrator_DSTATE[0] < 0.0) {
+    rtb_Saturation_e[0] = 0.0;
   } else {
-    rtb_Saturation_n_idx_1 = rtDW.Integrator_DSTATE[0];
+    rtb_Saturation_e[0] = rtDW.Integrator_DSTATE[0];
   }
 
-  /* Lookup_n-D: '<S68>/Max_Torque_Overload_Motor_LUT' incorporates:
-   *  Constant: '<S2>/Constant10'
-   *  Lookup_n-D: '<S68>/Max_Torque_Overload_Inverter_LUT'
+  if (rtDW.Integrator_DSTATE[1] < 0.0) {
+    rtb_Saturation_e[1] = 0.0;
+  } else {
+    rtb_Saturation_e[1] = rtDW.Integrator_DSTATE[1];
+  }
+
+  if (rtDW.Integrator_DSTATE[2] < 0.0) {
+    rtb_Saturation_e[2] = 0.0;
+  } else {
+    rtb_Saturation_e[2] = rtDW.Integrator_DSTATE[2];
+  }
+
+  if (rtDW.Integrator_DSTATE[3] < 0.0) {
+    rtb_Saturation_e[3] = 0.0;
+  } else {
+    rtb_Saturation_e[3] = rtDW.Integrator_DSTATE[3];
+  }
+
+  /* End of Switch: '<S72>/Switch' */
+
+  /* Switch: '<S72>/Switch2' incorporates:
+   *  DiscreteIntegrator: '<S78>/Integrator'
+   *  RelationalOperator: '<S72>/LowerRelop1'
    */
-  rtb_max_torque_temperature_IGBT = look1_binlx(0.0, rtConstP.pooled33,
-    rtConstP.pooled32, 2U);
+  if (rtDW.Integrator_DSTATE[0] > 21.0) {
+    rtb_Saturation_e[0] = 21.0;
+  }
+
+  if (rtDW.Integrator_DSTATE[1] > 21.0) {
+    rtb_Saturation_e[1] = 21.0;
+  }
+
+  if (rtDW.Integrator_DSTATE[2] > 21.0) {
+    rtb_Saturation_e[2] = 21.0;
+  }
+
+  if (rtDW.Integrator_DSTATE[3] > 21.0) {
+    rtb_Saturation_e[3] = 21.0;
+  }
+
+  /* End of Switch: '<S72>/Switch2' */
 
   /* MinMax: '<S68>/Min' incorporates:
-   *  Constant: '<S68>/Constant5'
-   *  Lookup_n-D: '<S68>/Max_Torque_Overload_Motor_LUT'
+   *  Constant: '<S68>/Constant'
+   *  Constant: '<S68>/Constant1'
+   *  Constant: '<S68>/Constant2'
+   *  Constant: '<S68>/Constant3'
    *  Lookup_n-D: '<S68>/Max_Torque_Temperature_External_LUT'
    *  Lookup_n-D: '<S68>/Max_Torque_Temperature_IGBT_LUT'
    *  Lookup_n-D: '<S68>/Max_Torque_Temperature_Internal_LUT'
    */
-  rtb_max_torque_temperature_IGBT = fmin(fmin(fmin(fmin
-    (rtb_max_torque_temperature_IGBT, rtb_max_torque_temperature_IGBT),
+  minV_idx_0 = fmin(rtb_CCaller_o2[0], rtb_Efficiency[0]);
+  minV_idx_1 = fmin(rtb_CCaller_o2[1], rtb_Efficiency[1]);
+  rtb_Sum = fmin(rtb_CCaller_o2[2], rtb_Efficiency[2]);
+  u0 = fmin(rtb_CCaller_o2[3], rtb_Efficiency[3]);
+  rtb_torquemapselected = fmin(fmin(fmin(fmin(minV_idx_0,
     rtb_max_torque_temperature_in_0), rtb_max_torque_temperature_IG_0),
-    look1_binlx(0.0, rtConstP.pooled36, rtConstP.pooled32, 2U));
-  u0 = fmin(fmin(rtb_max_torque_temperature_IGBT, rtb_Saturation_n_idx_1),
-            21.560000000000002);
+    rtb_torquemapselected_tmp), rtb_Saturation_e[0]);
+  rtb_max_torque_temperature_IGBT = fmin(fmin(fmin(fmin(minV_idx_1,
+    rtb_max_torque_temperature_in_0), rtb_max_torque_temperature_IG_0),
+    rtb_torquemapselected_tmp), rtb_Saturation_e[1]);
+  rtb_Sum = fmin(fmin(fmin(fmin(rtb_Sum, rtb_max_torque_temperature_in_0),
+    rtb_max_torque_temperature_IG_0), rtb_torquemapselected_tmp),
+                 rtb_Saturation_e[2]);
+  u0 = fmin(fmin(fmin(fmin(u0, rtb_max_torque_temperature_in_0),
+                      rtb_max_torque_temperature_IG_0),
+                 rtb_torquemapselected_tmp), rtb_Saturation_e[3]);
+  rtb_CCaller_o2[0] = fmin(rtb_torquemapselected, 21.560000000000002);
+  rtb_CCaller_o2[1] = fmin(rtb_max_torque_temperature_IGBT, 21.560000000000002);
+  rtb_CCaller_o2[2] = fmin(rtb_Sum, 21.560000000000002);
+  rtb_CCaller_o2[3] = fmin(u0, 21.560000000000002);
 
-  /* Saturate: '<S21>/Saturation1' incorporates:
-   *  Constant: '<S21>/Actual LMU // Nominal LMU'
-   *  Gain: '<S21>/Gain'
-   *  Product: '<S21>/Product'
-   */
-  rtb_max_torque_temperature_ex_3 = 0.017407407407407406 *
-    rtb_max_torque_temperature_ex_3 * 0.80645161290322576;
-
-  /* DiscreteIntegrator: '<S78>/Integrator' */
-  rtb_Integrator_idx_1 = rtDW.Integrator_DSTATE[1];
-
-  /* MinMax: '<S68>/Min' incorporates:
-   *  Constant: '<S70>/Constant'
-   *  DiscreteIntegrator: '<S78>/Integrator'
-   *  RelationalOperator: '<S72>/LowerRelop1'
-   *  RelationalOperator: '<S72>/UpperRelop'
-   *  Switch: '<S72>/Switch'
-   *  Switch: '<S72>/Switch2'
-   */
-  if (rtDW.Integrator_DSTATE[1] > 21.0) {
-    rtb_Saturation_n_idx_1 = 21.0;
-  } else if (rtDW.Integrator_DSTATE[1] < 0.0) {
-    /* Switch: '<S72>/Switch' incorporates:
-     *  Constant: '<S70>/Constant'
-     */
-    rtb_Saturation_n_idx_1 = 0.0;
+  /* Saturate: '<S68>/Saturation_Positive' */
+  u0 = rtb_CCaller_o2[0];
+  if (u0 <= 0.0) {
+    rtb_CCaller_o2[0] = 0.0;
   } else {
-    rtb_Saturation_n_idx_1 = rtDW.Integrator_DSTATE[1];
+    rtb_CCaller_o2[0] = u0;
   }
 
-  frac = fmin(fmin(rtb_max_torque_temperature_IGBT, rtb_Saturation_n_idx_1),
-              21.560000000000002);
-
-  /* Saturate: '<S21>/Saturation1' incorporates:
-   *  Constant: '<S21>/Actual LMU // Nominal LMU'
-   *  Gain: '<S21>/Gain'
-   *  Product: '<S21>/Product'
-   */
-  rtb_max_torque_temperature_ex_2 = 0.017407407407407406 *
-    rtb_max_torque_temperature_ex_2 * 0.80645161290322576;
-
-  /* DiscreteIntegrator: '<S78>/Integrator' */
-  rtb_Integrator_idx_2 = rtDW.Integrator_DSTATE[2];
-
-  /* MinMax: '<S68>/Min' incorporates:
-   *  Constant: '<S70>/Constant'
-   *  DiscreteIntegrator: '<S78>/Integrator'
-   *  RelationalOperator: '<S72>/LowerRelop1'
-   *  RelationalOperator: '<S72>/UpperRelop'
-   *  Switch: '<S72>/Switch'
-   *  Switch: '<S72>/Switch2'
-   */
-  if (rtDW.Integrator_DSTATE[2] > 21.0) {
-    rtb_Saturation_n_idx_1 = 21.0;
-  } else if (rtDW.Integrator_DSTATE[2] < 0.0) {
-    /* Switch: '<S72>/Switch' incorporates:
-     *  Constant: '<S70>/Constant'
-     */
-    rtb_Saturation_n_idx_1 = 0.0;
+  u0 = rtb_CCaller_o2[1];
+  if (u0 <= 0.0) {
+    rtb_CCaller_o2[1] = 0.0;
   } else {
-    rtb_Saturation_n_idx_1 = rtDW.Integrator_DSTATE[2];
+    rtb_CCaller_o2[1] = u0;
   }
 
-  rtb_Saturation_n_idx_0 = fmin(fmin(rtb_max_torque_temperature_IGBT,
-    rtb_Saturation_n_idx_1), 21.560000000000002);
-
-  /* Saturate: '<S21>/Saturation1' incorporates:
-   *  Constant: '<S21>/Actual LMU // Nominal LMU'
-   *  Gain: '<S21>/Gain'
-   *  Product: '<S21>/Product'
-   */
-  rtb_max_torque_temperature_ex_1 = 0.017407407407407406 *
-    rtb_max_torque_temperature_ex_1 * 0.80645161290322576;
-
-  /* DiscreteIntegrator: '<S78>/Integrator' */
-  rtb_Integrator_idx_3 = rtDW.Integrator_DSTATE[3];
-
-  /* MinMax: '<S68>/Min' incorporates:
-   *  Constant: '<S70>/Constant'
-   *  DiscreteIntegrator: '<S78>/Integrator'
-   *  RelationalOperator: '<S72>/LowerRelop1'
-   *  RelationalOperator: '<S72>/UpperRelop'
-   *  Switch: '<S72>/Switch'
-   *  Switch: '<S72>/Switch2'
-   */
-  if (rtDW.Integrator_DSTATE[3] > 21.0) {
-    rtb_Saturation_n_idx_1 = 21.0;
-  } else if (rtDW.Integrator_DSTATE[3] < 0.0) {
-    /* Switch: '<S72>/Switch' incorporates:
-     *  Constant: '<S70>/Constant'
-     */
-    rtb_Saturation_n_idx_1 = 0.0;
+  u0 = rtb_CCaller_o2[2];
+  if (u0 <= 0.0) {
+    rtb_CCaller_o2[2] = 0.0;
   } else {
-    rtb_Saturation_n_idx_1 = rtDW.Integrator_DSTATE[3];
+    rtb_CCaller_o2[2] = u0;
   }
 
-  rtb_Saturation_n_idx_1 = fmin(fmin(rtb_max_torque_temperature_IGBT,
-    rtb_Saturation_n_idx_1), 21.560000000000002);
+  u0 = rtb_CCaller_o2[3];
+  if (u0 <= 0.0) {
+    rtb_CCaller_o2[3] = 0.0;
+  } else {
+    rtb_CCaller_o2[3] = u0;
+  }
 
-  /* Saturate: '<S21>/Saturation1' incorporates:
+  /* End of Saturate: '<S68>/Saturation_Positive' */
+
+  /* Product: '<S21>/Product' incorporates:
    *  Constant: '<S21>/Actual LMU // Nominal LMU'
    *  Gain: '<S21>/Gain'
-   *  Product: '<S21>/Product'
+   *  Lookup_n-D: '<S21>/2-D Lookup Table'
    */
-  rtb_Saturation_n_idx_2 = 0.017407407407407406 *
-    rtb_max_torque_temperature_ex_0 * 0.80645161290322576;
+  u0 = 0.017407407407407406 * look2_binlx(rtb_uDLookupTable_idx_0,
+    rtb_Abs_o_idx_0, rtConstP.pooled29, rtConstP.pooled30,
+    rtConstP.uDLookupTable_tableData, rtConstP.pooled49, 20U) *
+    0.80645161290322576;
+
+  /* Saturate: '<S21>/Saturation1' */
+  if (u0 <= 0.0) {
+    u0 = 0.0;
+  }
+
+  /* MinMax: '<S21>/Min' */
+  minV_idx_0 = fmin(u0, rtb_CCaller_o2[0]);
+
+  /* Product: '<S21>/Product' incorporates:
+   *  Constant: '<S21>/Actual LMU // Nominal LMU'
+   *  Gain: '<S21>/Gain'
+   *  Lookup_n-D: '<S21>/2-D Lookup Table'
+   */
+  u0 = 0.017407407407407406 * look2_binlx(rtb_uDLookupTable_idx_1,
+    rtb_max_torque_available_idx_1, rtConstP.pooled29, rtConstP.pooled30,
+    rtConstP.uDLookupTable_tableData, rtConstP.pooled49, 20U) *
+    0.80645161290322576;
+
+  /* Saturate: '<S21>/Saturation1' */
+  if (u0 <= 0.0) {
+    u0 = 0.0;
+  }
+
+  /* MinMax: '<S21>/Min' */
+  minV_idx_1 = fmin(u0, rtb_CCaller_o2[1]);
+
+  /* Product: '<S21>/Product' incorporates:
+   *  Constant: '<S21>/Actual LMU // Nominal LMU'
+   *  Gain: '<S21>/Gain'
+   *  Lookup_n-D: '<S21>/2-D Lookup Table'
+   */
+  u0 = 0.017407407407407406 * look2_binlx(rtb_uDLookupTable_idx_2,
+    rtb_max_torque_available_idx_2, rtConstP.pooled29, rtConstP.pooled30,
+    rtConstP.uDLookupTable_tableData, rtConstP.pooled49, 20U) *
+    0.80645161290322576;
+
+  /* Saturate: '<S21>/Saturation1' */
+  if (u0 <= 0.0) {
+    u0 = 0.0;
+  }
+
+  /* MinMax: '<S21>/Min' */
+  rtb_Sum = fmin(u0, rtb_CCaller_o2[2]);
+
+  /* Product: '<S21>/Product' incorporates:
+   *  Constant: '<S21>/Actual LMU // Nominal LMU'
+   *  Gain: '<S21>/Gain'
+   *  Lookup_n-D: '<S21>/2-D Lookup Table'
+   */
+  u0 = 0.017407407407407406 * look2_binlx(rtb_uDLookupTable_idx_3,
+    rtb_max_torque_available_idx_3, rtConstP.pooled29, rtConstP.pooled30,
+    rtConstP.uDLookupTable_tableData, rtConstP.pooled49, 20U) *
+    0.80645161290322576;
+
+  /* Saturate: '<S21>/Saturation1' */
+  if (u0 <= 0.0) {
+    u0 = 0.0;
+  }
+
+  /* MinMax: '<S21>/Min' */
+  u0 = fmin(u0, rtb_CCaller_o2[3]);
 
   /* Gain: '<S9>/Gain' incorporates:
    *  Inport: '<Root>/brake'
@@ -1496,87 +1563,23 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
   /* End of Saturate: '<S9>/Saturation' */
 
   /* Switch: '<S33>/Switch' */
-  rtb_max_torque_temperature_ex_0 = !(rtb_max_torque_temperature_IGBT > 0.95);
-
-  /* Saturate: '<S21>/Saturation1' */
-  if (rtb_max_torque_temperature_ex_3 <= 0.0) {
-    rtb_max_torque_temperature_ex_3 = 0.0;
-  }
-
-  /* Saturate: '<S68>/Saturation_Positive' */
-  if (u0 <= 0.0) {
-    u0 = 0.0;
-  }
+  rtb_torquemapselected = !(rtb_max_torque_temperature_IGBT > 0.95);
 
   /* Product: '<S33>/Product' incorporates:
+   *  Constant: '<S21>/Constant'
    *  Memory: '<S16>/Memory'
    *  MinMax: '<S21>/Min'
    *  MinMax: '<S21>/Min2'
    *  Sum: '<S42>/Sum'
    */
-  rtb_ubu[0] = fmin(rtDW.Memory_PreviousInput[0] + rtb_Sum1, fmin
-                    (rtb_max_torque_temperature_ex_3, u0)) *
-    rtb_max_torque_temperature_ex_0;
-
-  /* Saturate: '<S21>/Saturation1' */
-  if (rtb_max_torque_temperature_ex_2 <= 0.0) {
-    rtb_max_torque_temperature_ex_2 = 0.0;
-  }
-
-  /* Saturate: '<S68>/Saturation_Positive' */
-  if (frac <= 0.0) {
-    frac = 0.0;
-  }
-
-  /* Product: '<S33>/Product' incorporates:
-   *  Memory: '<S16>/Memory'
-   *  MinMax: '<S21>/Min'
-   *  MinMax: '<S21>/Min2'
-   *  Sum: '<S42>/Sum'
-   */
-  rtb_ubu[1] = fmin(rtDW.Memory_PreviousInput[1] + rtb_Sum1, fmin
-                    (rtb_max_torque_temperature_ex_2, frac)) *
-    rtb_max_torque_temperature_ex_0;
-
-  /* Saturate: '<S21>/Saturation1' */
-  if (rtb_max_torque_temperature_ex_1 <= 0.0) {
-    rtb_max_torque_temperature_ex_1 = 0.0;
-  }
-
-  /* Saturate: '<S68>/Saturation_Positive' */
-  if (rtb_Saturation_n_idx_0 <= 0.0) {
-    rtb_Saturation_n_idx_0 = 0.0;
-  }
-
-  /* Product: '<S33>/Product' incorporates:
-   *  Memory: '<S16>/Memory'
-   *  MinMax: '<S21>/Min'
-   *  MinMax: '<S21>/Min2'
-   *  Sum: '<S42>/Sum'
-   */
-  rtb_ubu[2] = fmin(rtDW.Memory_PreviousInput[2] + rtb_Sum1, fmin
-                    (rtb_max_torque_temperature_ex_1, rtb_Saturation_n_idx_0)) *
-    rtb_max_torque_temperature_ex_0;
-
-  /* Saturate: '<S21>/Saturation1' */
-  if (rtb_Saturation_n_idx_2 <= 0.0) {
-    rtb_Saturation_n_idx_2 = 0.0;
-  }
-
-  /* Saturate: '<S68>/Saturation_Positive' */
-  if (rtb_Saturation_n_idx_1 <= 0.0) {
-    rtb_Saturation_n_idx_1 = 0.0;
-  }
-
-  /* Product: '<S33>/Product' incorporates:
-   *  Memory: '<S16>/Memory'
-   *  MinMax: '<S21>/Min'
-   *  MinMax: '<S21>/Min2'
-   *  Sum: '<S42>/Sum'
-   */
-  rtb_ubu[3] = fmin(rtDW.Memory_PreviousInput[3] + rtb_Sum1, fmin
-                    (rtb_Saturation_n_idx_2, rtb_Saturation_n_idx_1)) *
-    rtb_max_torque_temperature_ex_0;
+  rtb_ubu_idx_0 = fmin(rtDW.Memory_PreviousInput[0] + rtb_Sum1, fmin(minV_idx_0,
+    100.0)) * rtb_torquemapselected;
+  rtb_ubu_idx_1 = fmin(rtDW.Memory_PreviousInput[1] + rtb_Sum1, fmin(minV_idx_1,
+    100.0)) * rtb_torquemapselected;
+  rtb_ubu_idx_2 = fmin(rtDW.Memory_PreviousInput[2] + rtb_Sum1, fmin(rtb_Sum,
+    100.0)) * rtb_torquemapselected;
+  rtb_Sum1 = fmin(rtDW.Memory_PreviousInput[3] + rtb_Sum1, fmin(u0, 100.0)) *
+    rtb_torquemapselected;
 
   /* RelationalOperator: '<S47>/Less Than' incorporates:
    *  Abs: '<S47>/Abs'
@@ -1599,95 +1602,151 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    */
   rtb_AND_n = (i >= 163840);
 
-  /* Lookup_n-D: '<S21>/2-D Lookup Table1' */
-  u0 = look2_binlx(rtb_uDLookupTable_idx_0, rtb_max_torque_available[0],
-                   rtConstP.pooled29, rtConstP.pooled30,
-                   rtConstP.uDLookupTable1_tableData, rtConstP.pooled49, 20U);
-  rtb_YRD = look2_binlx(rtb_uDLookupTable_idx_1, rtb_max_torque_available[1],
-                        rtConstP.pooled29, rtConstP.pooled30,
-                        rtConstP.uDLookupTable1_tableData, rtConstP.pooled49,
-                        20U);
-  rtb_Sum1 = look2_binlx(rtb_uDLookupTable_idx_2, rtb_max_torque_available[2],
-    rtConstP.pooled29, rtConstP.pooled30, rtConstP.uDLookupTable1_tableData,
-    rtConstP.pooled49, 20U);
-  rtb_max_torque_temperature_ex_0 = look2_binlx(rtb_uDLookupTable_idx_3,
-    rtb_max_torque_available[3], rtConstP.pooled29, rtConstP.pooled30,
-    rtConstP.uDLookupTable1_tableData, rtConstP.pooled49, 20U);
+  /* Sum: '<S37>/Subtract' incorporates:
+   *  Constant: '<S21>/Actual LMU // Nominal LMU'
+   *  Gain: '<S21>/Gain1'
+   *  Gain: '<S37>/Wheel2Motor'
+   *  Lookup_n-D: '<S21>/2-D Lookup Table1'
+   *  Product: '<S21>/Product1'
+   *  UnitDelay: '<S1>/Unit Delay'
+   */
+  rtb_Saturation_e[0] = 0.017407407407407406 * look2_binlx
+    (rtb_uDLookupTable_idx_0, rtb_Abs_o_idx_0, rtConstP.pooled29,
+     rtConstP.pooled30, rtConstP.uDLookupTable1_tableData, rtConstP.pooled49,
+     20U) * 0.80645161290322576 + 0.07407407407407407 * rtDW.UnitDelay_DSTATE[0];
+  rtb_Saturation_e[1] = 0.017407407407407406 * look2_binlx
+    (rtb_uDLookupTable_idx_1, rtb_max_torque_available_idx_1, rtConstP.pooled29,
+     rtConstP.pooled30, rtConstP.uDLookupTable1_tableData, rtConstP.pooled49,
+     20U) * 0.80645161290322576 + 0.07407407407407407 * rtDW.UnitDelay_DSTATE[1];
+  rtb_Saturation_e[2] = 0.017407407407407406 * look2_binlx
+    (rtb_uDLookupTable_idx_2, rtb_max_torque_available_idx_2, rtConstP.pooled29,
+     rtConstP.pooled30, rtConstP.uDLookupTable1_tableData, rtConstP.pooled49,
+     20U) * 0.80645161290322576 + 0.07407407407407407 * rtDW.UnitDelay_DSTATE[2];
+  rtb_Saturation_e[3] = 0.017407407407407406 * look2_binlx
+    (rtb_uDLookupTable_idx_3, rtb_max_torque_available_idx_3, rtConstP.pooled29,
+     rtConstP.pooled30, rtConstP.uDLookupTable1_tableData, rtConstP.pooled49,
+     20U) * 0.80645161290322576 + 0.07407407407407407 * rtDW.UnitDelay_DSTATE[3];
+
+  /* Saturate: '<S21>/Saturation' */
+  u0 = rtb_Saturation_e[0];
+  if (u0 >= 0.0) {
+    rtb_Saturation_e[0] = 0.0;
+  } else {
+    rtb_Saturation_e[0] = u0;
+  }
+
+  u0 = rtb_Saturation_e[1];
+  if (u0 >= 0.0) {
+    rtb_Saturation_e[1] = 0.0;
+  } else {
+    rtb_Saturation_e[1] = u0;
+  }
+
+  u0 = rtb_Saturation_e[2];
+  if (u0 >= 0.0) {
+    rtb_Saturation_e[2] = 0.0;
+  } else {
+    rtb_Saturation_e[2] = u0;
+  }
+
+  u0 = rtb_Saturation_e[3];
+  if (u0 >= 0.0) {
+    rtb_Saturation_e[3] = 0.0;
+  } else {
+    rtb_Saturation_e[3] = u0;
+  }
+
+  /* End of Saturate: '<S21>/Saturation' */
+
+  /* Lookup_n-D: '<S69>/Display Overload Motor LUT' */
+  rtb_Efficiency[0] = rtb_CCaller_o2_tmp;
+  rtb_Efficiency[1] = rtb_CCaller_o2_tmp;
+  rtb_Efficiency[2] = rtb_CCaller_o2_tmp;
+  rtb_Efficiency[3] = rtb_CCaller_o2_tmp;
+
+  /* Lookup_n-D: '<S69>/Display Overload Inverter LUT' */
+  rtb_CCaller_o2[0] = rtb_CCaller_o2_tmp;
+  rtb_CCaller_o2[1] = rtb_CCaller_o2_tmp;
+  rtb_CCaller_o2[2] = rtb_CCaller_o2_tmp;
+  rtb_CCaller_o2[3] = rtb_CCaller_o2_tmp;
+
+  /* Gain: '<S79>/Gain4' incorporates:
+   *  Inport: '<Root>/omega_wheels_FL'
+   */
+  rtb_Abs_o_idx_0 = 128.91550390443524 * rtU.omega_wheels_FL;
 
   /* Saturate: '<S79>/Saturation1' */
-  if (u0_tmp <= 0.0) {
-    rtb_max_torque_available[0] = 0.0;
-  } else {
-    rtb_max_torque_available[0] = u0_tmp;
+  if (rtb_Abs_o_idx_0 <= 0.0) {
+    rtb_Abs_o_idx_0 = 0.0;
   }
 
-  if (u0_tmp_0 <= 0.0) {
-    rtb_max_torque_available[1] = 0.0;
-  } else {
-    rtb_max_torque_available[1] = u0_tmp_0;
+  /* Gain: '<S79>/Gain4' incorporates:
+   *  Inport: '<Root>/omega_wheels_FR'
+   */
+  rtb_max_torque_available_idx_1 = 128.91550390443524 * rtU.omega_wheels_FR;
+
+  /* Saturate: '<S79>/Saturation1' */
+  if (rtb_max_torque_available_idx_1 <= 0.0) {
+    rtb_max_torque_available_idx_1 = 0.0;
   }
 
-  if (u0_tmp_1 <= 0.0) {
-    rtb_max_torque_available[2] = 0.0;
-  } else {
-    rtb_max_torque_available[2] = u0_tmp_1;
+  /* Gain: '<S79>/Gain4' incorporates:
+   *  Inport: '<Root>/omega_wheels_RL'
+   */
+  rtb_max_torque_available_idx_2 = 128.91550390443524 * rtU.omega_wheels_RL;
+
+  /* Saturate: '<S79>/Saturation1' */
+  if (rtb_max_torque_available_idx_2 <= 0.0) {
+    rtb_max_torque_available_idx_2 = 0.0;
   }
 
-  if (u0_tmp_2 <= 0.0) {
-    rtb_max_torque_available[3] = 0.0;
-  } else {
-    rtb_max_torque_available[3] = u0_tmp_2;
-  }
+  /* Gain: '<S79>/Gain4' incorporates:
+   *  Inport: '<Root>/omega_wheels_RR'
+   */
+  rtb_max_torque_available_idx_3 = 128.91550390443524 * rtU.omega_wheels_RR;
 
-  /* End of Saturate: '<S79>/Saturation1' */
+  /* Saturate: '<S79>/Saturation1' */
+  if (rtb_max_torque_available_idx_3 <= 0.0) {
+    rtb_max_torque_available_idx_3 = 0.0;
+  }
 
   /* Lookup_n-D: '<S79>/1-D Lookup Table' */
-  rtb_uDLookupTable_idx_0 = look1_binlx(rtb_max_torque_available[0],
+  rtb_uDLookupTable_idx_0 = look1_binlx(rtb_Abs_o_idx_0,
     rtConstP.uDLookupTable_bp01Data, rtConstP.uDLookupTable_tableData_p, 19U);
-  rtb_uDLookupTable_idx_1 = look1_binlx(rtb_max_torque_available[1],
+  rtb_uDLookupTable_idx_1 = look1_binlx(rtb_max_torque_available_idx_1,
     rtConstP.uDLookupTable_bp01Data, rtConstP.uDLookupTable_tableData_p, 19U);
-  rtb_uDLookupTable_idx_2 = look1_binlx(rtb_max_torque_available[2],
-    rtConstP.uDLookupTable_bp01Data, rtConstP.uDLookupTable_tableData_p, 19U);
-  rtb_uDLookupTable_idx_3 = look1_binlx(rtb_max_torque_available[3],
+  rtb_uDLookupTable_idx_2 = look1_binlx(rtb_max_torque_available_idx_2,
     rtConstP.uDLookupTable_bp01Data, rtConstP.uDLookupTable_tableData_p, 19U);
 
   /* Lookup_n-D: '<S79>/2-D Lookup Table1' incorporates:
    *  Constant: '<S2>/Constant5'
    */
-  bpIndices_0[1U] = plook_binc(540.0, rtConstP.pooled40, 45U, &frac);
-  fractions_0[1U] = frac;
-  bpIndices_0[0U] = plook_binc(rtb_max_torque_available[0], rtConstP.pooled39,
-    200U, &frac);
-  fractions_0[0U] = frac;
-  rtb_max_torque_available[0] = intrp2d_l(bpIndices_0, fractions_0,
+  bpIndices_0[1U] = plook_binc(540.0, rtConstP.pooled40, 45U,
+    &rtb_torquemapselected);
+  fractions_0[1U] = rtb_torquemapselected;
+  bpIndices_0[0U] = plook_binc(rtb_Abs_o_idx_0, rtConstP.pooled39, 200U,
+    &rtb_torquemapselected);
+  fractions_0[0U] = rtb_torquemapselected;
+  rtb_Abs_o_idx_0 = intrp2d_l(bpIndices_0, fractions_0, rtConstP.pooled38, 201U);
+  bpIndices_0[0U] = plook_binc(rtb_max_torque_available_idx_1, rtConstP.pooled39,
+    200U, &rtb_torquemapselected);
+  fractions_0[0U] = rtb_torquemapselected;
+  rtb_max_torque_available_idx_1 = intrp2d_l(bpIndices_0, fractions_0,
     rtConstP.pooled38, 201U);
-  bpIndices_0[0U] = plook_binc(rtb_max_torque_available[1], rtConstP.pooled39,
-    200U, &frac);
-  fractions_0[0U] = frac;
-  rtb_max_torque_available[1] = intrp2d_l(bpIndices_0, fractions_0,
+  bpIndices_0[0U] = plook_binc(rtb_max_torque_available_idx_2, rtConstP.pooled39,
+    200U, &rtb_torquemapselected);
+  fractions_0[0U] = rtb_torquemapselected;
+  rtb_max_torque_available_idx_2 = intrp2d_l(bpIndices_0, fractions_0,
     rtConstP.pooled38, 201U);
-  bpIndices_0[0U] = plook_binc(rtb_max_torque_available[2], rtConstP.pooled39,
-    200U, &frac);
-  fractions_0[0U] = frac;
-  rtb_max_torque_available[2] = intrp2d_l(bpIndices_0, fractions_0,
-    rtConstP.pooled38, 201U);
-  bpIndices_0[0U] = plook_binc(rtb_max_torque_available[3], rtConstP.pooled39,
-    200U, &frac);
-  fractions_0[0U] = frac;
-  rtb_max_torque_available[3] = intrp2d_l(bpIndices_0, fractions_0,
-    rtConstP.pooled38, 201U);
+  bpIndices_0[0U] = plook_binc(rtb_max_torque_available_idx_3, rtConstP.pooled39,
+    200U, &rtb_torquemapselected);
+  fractions_0[0U] = rtb_torquemapselected;
 
   /* Gain: '<S79>/Gain' incorporates:
    *  MinMax: '<S79>/Min'
    */
-  rtb_max_torque_available[0] = 0.0098000000000000014 * fmin
-    (rtb_uDLookupTable_idx_0, rtb_max_torque_available[0]);
-  rtb_max_torque_available[1] = 0.0098000000000000014 * fmin
-    (rtb_uDLookupTable_idx_1, rtb_max_torque_available[1]);
-  rtb_max_torque_available[2] = 0.0098000000000000014 * fmin
-    (rtb_uDLookupTable_idx_2, rtb_max_torque_available[2]);
-  rtb_max_torque_available[3] = 0.0098000000000000014 * fmin
-    (rtb_uDLookupTable_idx_3, rtb_max_torque_available[3]);
+  rtb_YRD = 0.0098000000000000014 * fmin(rtb_uDLookupTable_idx_0,
+    rtb_Abs_o_idx_0);
 
   /* Switch: '<S80>/Switch2' incorporates:
    *  Constant: '<S79>/Constant'
@@ -1695,214 +1754,178 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  RelationalOperator: '<S80>/UpperRelop'
    *  Switch: '<S80>/Switch'
    */
-  if (rtb_max_torque_available[0] > 21.0) {
-    rtb_max_torque_available[0] = 21.0;
-  } else if (rtb_max_torque_available[0] < 0.0) {
+  if (rtb_YRD > 21.0) {
+    rtb_YRD = 21.0;
+  } else if (rtb_YRD < 0.0) {
     /* Switch: '<S80>/Switch' incorporates:
      *  Constant: '<S79>/Constant'
      */
-    rtb_max_torque_available[0] = 0.0;
+    rtb_YRD = 0.0;
   }
-
-  if (rtb_max_torque_available[1] > 21.0) {
-    rtb_max_torque_available[1] = 21.0;
-  } else if (rtb_max_torque_available[1] < 0.0) {
-    /* Switch: '<S80>/Switch' incorporates:
-     *  Constant: '<S79>/Constant'
-     */
-    rtb_max_torque_available[1] = 0.0;
-  }
-
-  if (rtb_max_torque_available[2] > 21.0) {
-    rtb_max_torque_available[2] = 21.0;
-  } else if (rtb_max_torque_available[2] < 0.0) {
-    /* Switch: '<S80>/Switch' incorporates:
-     *  Constant: '<S79>/Constant'
-     */
-    rtb_max_torque_available[2] = 0.0;
-  }
-
-  if (rtb_max_torque_available[3] > 21.0) {
-    rtb_max_torque_available[3] = 21.0;
-  } else if (rtb_max_torque_available[3] < 0.0) {
-    /* Switch: '<S80>/Switch' incorporates:
-     *  Constant: '<S79>/Constant'
-     */
-    rtb_max_torque_available[3] = 0.0;
-  }
-
-  /* End of Switch: '<S80>/Switch2' */
 
   /* RateLimiter: '<S79>/Rate Limiter' */
-  rtb_uDLookupTable_idx_0 = rtb_max_torque_available[0] - rtDW.PrevY[0];
-  rtb_uDLookupTable_idx_1 = rtb_max_torque_available[1] - rtDW.PrevY[1];
-  rtb_uDLookupTable_idx_2 = rtb_max_torque_available[2] - rtDW.PrevY[2];
-  rtb_uDLookupTable_idx_3 = rtb_max_torque_available[3] - rtDW.PrevY[3];
-  if (rtb_uDLookupTable_idx_0 > 0.84) {
-    rtb_max_torque_available[0] = rtDW.PrevY[0] + 0.84;
+  if (rtb_YRD - rtDW.PrevY[0] > 0.84) {
+    rtb_YRD = rtDW.PrevY[0] + 0.84;
   }
 
-  if (rtb_uDLookupTable_idx_1 > 0.84) {
-    rtb_max_torque_available[1] = rtDW.PrevY[1] + 0.84;
-  }
+  rtDW.PrevY[0] = rtb_YRD;
 
-  if (rtb_uDLookupTable_idx_2 > 0.84) {
-    rtb_max_torque_available[2] = rtDW.PrevY[2] + 0.84;
-  }
-
-  if (rtb_uDLookupTable_idx_3 > 0.84) {
-    rtb_max_torque_available[3] = rtDW.PrevY[3] + 0.84;
-  }
-
-  rtDW.PrevY[0] = rtb_max_torque_available[0];
-  rtDW.PrevY[1] = rtb_max_torque_available[1];
-  rtDW.PrevY[2] = rtb_max_torque_available[2];
-  rtDW.PrevY[3] = rtb_max_torque_available[3];
-
-  /* End of RateLimiter: '<S79>/Rate Limiter' */
-
-  /* Saturate: '<S21>/Saturation' incorporates:
-   *  Constant: '<S21>/Actual LMU // Nominal LMU'
-   *  Gain: '<S21>/Gain1'
-   *  Gain: '<S37>/Wheel2Motor'
-   *  Product: '<S21>/Product1'
-   *  Sum: '<S37>/Subtract'
-   *  UnitDelay: '<S1>/Unit Delay'
+  /* Gain: '<S79>/Gain' incorporates:
+   *  MinMax: '<S79>/Min'
    */
-  u0 = 0.017407407407407406 * u0 * 0.80645161290322576 + 0.07407407407407407 *
-    rtDW.UnitDelay_DSTATE[0];
+  rtb_Abs_o_idx_0 = rtb_YRD;
+  rtb_YRD = 0.0098000000000000014 * fmin(rtb_uDLookupTable_idx_1,
+    rtb_max_torque_available_idx_1);
+
+  /* Switch: '<S80>/Switch2' incorporates:
+   *  Constant: '<S79>/Constant'
+   *  RelationalOperator: '<S80>/LowerRelop1'
+   *  RelationalOperator: '<S80>/UpperRelop'
+   *  Switch: '<S80>/Switch'
+   */
+  if (rtb_YRD > 21.0) {
+    rtb_YRD = 21.0;
+  } else if (rtb_YRD < 0.0) {
+    /* Switch: '<S80>/Switch' incorporates:
+     *  Constant: '<S79>/Constant'
+     */
+    rtb_YRD = 0.0;
+  }
+
+  /* RateLimiter: '<S79>/Rate Limiter' */
+  if (rtb_YRD - rtDW.PrevY[1] > 0.84) {
+    rtb_YRD = rtDW.PrevY[1] + 0.84;
+  }
+
+  rtDW.PrevY[1] = rtb_YRD;
+
+  /* Gain: '<S79>/Gain' incorporates:
+   *  MinMax: '<S79>/Min'
+   */
+  rtb_max_torque_available_idx_1 = rtb_YRD;
+  rtb_YRD = 0.0098000000000000014 * fmin(rtb_uDLookupTable_idx_2,
+    rtb_max_torque_available_idx_2);
+
+  /* Switch: '<S80>/Switch2' incorporates:
+   *  Constant: '<S79>/Constant'
+   *  RelationalOperator: '<S80>/LowerRelop1'
+   *  RelationalOperator: '<S80>/UpperRelop'
+   *  Switch: '<S80>/Switch'
+   */
+  if (rtb_YRD > 21.0) {
+    rtb_YRD = 21.0;
+  } else if (rtb_YRD < 0.0) {
+    /* Switch: '<S80>/Switch' incorporates:
+     *  Constant: '<S79>/Constant'
+     */
+    rtb_YRD = 0.0;
+  }
+
+  /* RateLimiter: '<S79>/Rate Limiter' */
+  if (rtb_YRD - rtDW.PrevY[2] > 0.84) {
+    rtb_YRD = rtDW.PrevY[2] + 0.84;
+  }
+
+  rtDW.PrevY[2] = rtb_YRD;
+
+  /* Gain: '<S79>/Gain' incorporates:
+   *  Lookup_n-D: '<S79>/1-D Lookup Table'
+   *  Lookup_n-D: '<S79>/2-D Lookup Table1'
+   *  MinMax: '<S79>/Min'
+   */
+  rtb_max_torque_available_idx_2 = rtb_YRD;
+  rtb_YRD = 0.0098000000000000014 * fmin(look1_binlx
+    (rtb_max_torque_available_idx_3, rtConstP.uDLookupTable_bp01Data,
+     rtConstP.uDLookupTable_tableData_p, 19U), intrp2d_l(bpIndices_0,
+    fractions_0, rtConstP.pooled38, 201U));
+
+  /* Switch: '<S80>/Switch2' incorporates:
+   *  Constant: '<S79>/Constant'
+   *  RelationalOperator: '<S80>/LowerRelop1'
+   *  RelationalOperator: '<S80>/UpperRelop'
+   *  Switch: '<S80>/Switch'
+   */
+  if (rtb_YRD > 21.0) {
+    rtb_YRD = 21.0;
+  } else if (rtb_YRD < 0.0) {
+    /* Switch: '<S80>/Switch' incorporates:
+     *  Constant: '<S79>/Constant'
+     */
+    rtb_YRD = 0.0;
+  }
+
+  /* RateLimiter: '<S79>/Rate Limiter' */
+  if (rtb_YRD - rtDW.PrevY[3] > 0.84) {
+    rtb_YRD = rtDW.PrevY[3] + 0.84;
+  }
+
+  rtDW.PrevY[3] = rtb_YRD;
 
   /* MinMax: '<S69>/Min1' incorporates:
-   *  Constant: '<S2>/Constant'
-   *  Constant: '<S2>/Constant10'
-   *  Constant: '<S2>/Constant6'
-   *  Lookup_n-D: '<S69>/Display Overload Inverter LUT'
-   *  Lookup_n-D: '<S69>/Display Overload Motor LUT'
-   *  Lookup_n-D: '<S69>/Temperature External LUT'
-   *  Sum: '<S37>/Subtract'
+   *  Constant: '<S69>/Constant'
+   *  Constant: '<S69>/Constant1'
+   *  Constant: '<S69>/Constant2'
+   *  Constant: '<S69>/Constant3'
    */
-  u0_tmp = fmin(fmin(fmin(fmin(look1_binlx(0.0, rtConstP.pooled33,
-    rtConstP.pooled32, 2U), look1_binlx(0.0, rtConstP.pooled33,
-    rtConstP.pooled32, 2U)), rtb_max_torque_temperature_in_0),
-                     rtb_max_torque_temperature_IG_0), look1_binlx(0.0,
-    rtConstP.pooled36, rtConstP.pooled32, 2U));
-  rtb_max_torque_temperature_ex_3 = fmin(fmin(u0_tmp, rtb_max_torque_available[0]),
-    21.0);
-
-  /* Saturate: '<S21>/Saturation' */
-  if (u0 >= 0.0) {
-    u0 = 0.0;
-  }
+  minV_idx_0 = fmin(rtb_Efficiency[0], rtb_CCaller_o2[0]);
+  minV_idx_1 = fmin(rtb_Efficiency[1], rtb_CCaller_o2[1]);
+  rtb_Sum = fmin(rtb_Efficiency[2], rtb_CCaller_o2[2]);
+  u0 = fmin(rtb_Efficiency[3], rtb_CCaller_o2[3]);
+  rtb_Efficiency[0] = fmin(fmin(fmin(fmin(fmin(minV_idx_0,
+    rtb_max_torque_temperature_in_0), rtb_max_torque_temperature_IG_0),
+    rtb_torquemapselected_tmp), rtb_Abs_o_idx_0), 21.0);
+  rtb_Efficiency[1] = fmin(fmin(fmin(fmin(fmin(minV_idx_1,
+    rtb_max_torque_temperature_in_0), rtb_max_torque_temperature_IG_0),
+    rtb_torquemapselected_tmp), rtb_max_torque_available_idx_1), 21.0);
+  rtb_Efficiency[2] = fmin(fmin(fmin(fmin(fmin(rtb_Sum,
+    rtb_max_torque_temperature_in_0), rtb_max_torque_temperature_IG_0),
+    rtb_torquemapselected_tmp), rtb_max_torque_available_idx_2), 21.0);
+  rtb_Efficiency[3] = fmin(fmin(fmin(fmin(fmin(u0,
+    rtb_max_torque_temperature_in_0), rtb_max_torque_temperature_IG_0),
+    rtb_torquemapselected_tmp), rtb_YRD), 21.0);
 
   /* Saturate: '<S69>/Saturation_Positive' */
-  if (rtb_max_torque_temperature_ex_3 <= 0.0) {
-    rtb_max_torque_temperature_ex_3 = 0.0;
+  u0 = rtb_Efficiency[0];
+  if (u0 <= 0.0) {
+    rtb_Efficiency[0] = 0.0;
+  } else {
+    rtb_Efficiency[0] = u0;
   }
 
-  /* MinMax: '<S21>/Min1' incorporates:
-   *  Sum: '<S37>/Subtract'
-   *  UnaryMinus: '<S21>/Unary Minus'
-   */
-  rtb_max_torque_available[0] = fmax(u0, -rtb_max_torque_temperature_ex_3);
-
-  /* Saturate: '<S21>/Saturation' incorporates:
-   *  Constant: '<S21>/Actual LMU // Nominal LMU'
-   *  Gain: '<S21>/Gain1'
-   *  Gain: '<S37>/Wheel2Motor'
-   *  Product: '<S21>/Product1'
-   *  Sum: '<S37>/Subtract'
-   *  UnitDelay: '<S1>/Unit Delay'
-   */
-  u0 = 0.017407407407407406 * rtb_YRD * 0.80645161290322576 +
-    0.07407407407407407 * rtDW.UnitDelay_DSTATE[1];
-
-  /* MinMax: '<S69>/Min1' incorporates:
-   *  Sum: '<S37>/Subtract'
-   */
-  rtb_max_torque_temperature_ex_3 = fmin(fmin(u0_tmp, rtb_max_torque_available[1]),
-    21.0);
-
-  /* Saturate: '<S21>/Saturation' */
-  if (u0 >= 0.0) {
-    u0 = 0.0;
+  u0 = rtb_Efficiency[1];
+  if (u0 <= 0.0) {
+    rtb_Efficiency[1] = 0.0;
+  } else {
+    rtb_Efficiency[1] = u0;
   }
 
-  /* Saturate: '<S69>/Saturation_Positive' */
-  if (rtb_max_torque_temperature_ex_3 <= 0.0) {
-    rtb_max_torque_temperature_ex_3 = 0.0;
+  u0 = rtb_Efficiency[2];
+  if (u0 <= 0.0) {
+    rtb_Efficiency[2] = 0.0;
+  } else {
+    rtb_Efficiency[2] = u0;
   }
 
-  /* MinMax: '<S21>/Min1' incorporates:
-   *  Sum: '<S37>/Subtract'
-   *  UnaryMinus: '<S21>/Unary Minus'
-   */
-  rtb_max_torque_available[1] = fmax(u0, -rtb_max_torque_temperature_ex_3);
-
-  /* Saturate: '<S21>/Saturation' incorporates:
-   *  Constant: '<S21>/Actual LMU // Nominal LMU'
-   *  Gain: '<S21>/Gain1'
-   *  Gain: '<S37>/Wheel2Motor'
-   *  Product: '<S21>/Product1'
-   *  Sum: '<S37>/Subtract'
-   *  UnitDelay: '<S1>/Unit Delay'
-   */
-  u0 = 0.017407407407407406 * rtb_Sum1 * 0.80645161290322576 +
-    0.07407407407407407 * rtDW.UnitDelay_DSTATE[2];
-
-  /* MinMax: '<S69>/Min1' incorporates:
-   *  Sum: '<S37>/Subtract'
-   */
-  rtb_max_torque_temperature_ex_3 = fmin(fmin(u0_tmp, rtb_max_torque_available[2]),
-    21.0);
-
-  /* Saturate: '<S21>/Saturation' */
-  if (u0 >= 0.0) {
-    u0 = 0.0;
+  u0 = rtb_Efficiency[3];
+  if (u0 <= 0.0) {
+    rtb_Efficiency[3] = 0.0;
+  } else {
+    rtb_Efficiency[3] = u0;
   }
 
-  /* Saturate: '<S69>/Saturation_Positive' */
-  if (rtb_max_torque_temperature_ex_3 <= 0.0) {
-    rtb_max_torque_temperature_ex_3 = 0.0;
-  }
+  /* End of Saturate: '<S69>/Saturation_Positive' */
 
-  /* MinMax: '<S21>/Min1' incorporates:
-   *  Sum: '<S37>/Subtract'
-   *  UnaryMinus: '<S21>/Unary Minus'
-   */
-  rtb_max_torque_available[2] = fmax(u0, -rtb_max_torque_temperature_ex_3);
+  /* UnaryMinus: '<S21>/Unary Minus' */
+  rtb_Efficiency[0] = -rtb_Efficiency[0];
+  rtb_Efficiency[1] = -rtb_Efficiency[1];
+  rtb_Efficiency[2] = -rtb_Efficiency[2];
+  rtb_Efficiency[3] = -rtb_Efficiency[3];
 
-  /* Saturate: '<S21>/Saturation' incorporates:
-   *  Constant: '<S21>/Actual LMU // Nominal LMU'
-   *  Gain: '<S21>/Gain1'
-   *  Gain: '<S37>/Wheel2Motor'
-   *  Product: '<S21>/Product1'
-   *  Sum: '<S37>/Subtract'
-   *  UnitDelay: '<S1>/Unit Delay'
-   */
-  u0 = 0.017407407407407406 * rtb_max_torque_temperature_ex_0 *
-    0.80645161290322576 + 0.07407407407407407 * rtDW.UnitDelay_DSTATE[3];
-
-  /* MinMax: '<S69>/Min1' incorporates:
-   *  Sum: '<S37>/Subtract'
-   */
-  rtb_max_torque_temperature_ex_3 = fmin(fmin(u0_tmp, rtb_max_torque_available[3]),
-    21.0);
-
-  /* Saturate: '<S21>/Saturation' */
-  if (u0 >= 0.0) {
-    u0 = 0.0;
-  }
-
-  /* Saturate: '<S69>/Saturation_Positive' */
-  if (rtb_max_torque_temperature_ex_3 <= 0.0) {
-    rtb_max_torque_temperature_ex_3 = 0.0;
-  }
-
-  /* MinMax: '<S21>/Min1' incorporates:
-   *  Sum: '<S37>/Subtract'
-   *  UnaryMinus: '<S21>/Unary Minus'
-   */
-  rtb_max_torque_available[3] = fmax(u0, -rtb_max_torque_temperature_ex_3);
+  /* MinMax: '<S21>/Min1' */
+  rtb_Efficiency[0] = fmax(rtb_Saturation_e[0], rtb_Efficiency[0]);
+  rtb_Efficiency[1] = fmax(rtb_Saturation_e[1], rtb_Efficiency[1]);
+  rtb_Efficiency[2] = fmax(rtb_Saturation_e[2], rtb_Efficiency[2]);
+  rtb_Efficiency[3] = fmax(rtb_Saturation_e[3], rtb_Efficiency[3]);
 
   /* Switch: '<S41>/Switch1' incorporates:
    *  Constant: '<S41>/Constant6'
@@ -1916,10 +1939,10 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    */
   if ((rtDW.UnitDelay1_DSTATE < 0.05) && (0.05 < rtb_max_torque_temperature_IGBT))
   {
-    rtb_Saturation_n_idx_0 = -21.0;
-    rtb_Saturation_n_idx_1 = -21.0;
-    rtb_Saturation_n_idx_2 = -21.0;
-    rtb_Saturation_n_idx_3 = -21.0;
+    rtb_Saturation_e[0] = -21.0;
+    rtb_Saturation_e[1] = -21.0;
+    rtb_Saturation_e[2] = -21.0;
+    rtb_Saturation_e[3] = -21.0;
   } else {
     /* Sum: '<S41>/Sum1' incorporates:
      *  Abs: '<S41>/Abs'
@@ -1927,39 +1950,37 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
      *  Constant: '<S41>/Constant8'
      *  Product: '<S41>/Product'
      */
-    rtb_max_torque_temperature_ex_0 = fabs(rtb_Saturation_n_idx_3 * 5.0) + 5.0;
-    rtb_Saturation_n_idx_0 = rtDW.Memory_PreviousInput[0] -
-      rtb_max_torque_temperature_ex_0;
-    rtb_Saturation_n_idx_1 = rtDW.Memory_PreviousInput[1] -
-      rtb_max_torque_temperature_ex_0;
-    rtb_Saturation_n_idx_2 = rtDW.Memory_PreviousInput[2] -
-      rtb_max_torque_temperature_ex_0;
-    rtb_Saturation_n_idx_3 = rtDW.Memory_PreviousInput[3] -
-      rtb_max_torque_temperature_ex_0;
+    rtb_torquemapselected = fabs(rtb_Sum1_tmp * 5.0) + 5.0;
+    rtb_Saturation_e[0] = rtDW.Memory_PreviousInput[0] - rtb_torquemapselected;
+    rtb_Saturation_e[1] = rtDW.Memory_PreviousInput[1] - rtb_torquemapselected;
+    rtb_Saturation_e[2] = rtDW.Memory_PreviousInput[2] - rtb_torquemapselected;
+    rtb_Saturation_e[3] = rtDW.Memory_PreviousInput[3] - rtb_torquemapselected;
   }
+
+  /* MinMax: '<S21>/Max' incorporates:
+   *  MinMax: '<S21>/Min1'
+   */
+  rtb_Saturation_e[0] = fmax(rtb_Efficiency[0], rtb_Saturation_e[0]);
+  rtb_Saturation_e[1] = fmax(rtb_Efficiency[1], rtb_Saturation_e[1]);
+  rtb_Saturation_e[2] = fmax(rtb_Efficiency[2], rtb_Saturation_e[2]);
+  rtb_Saturation_e[3] = fmax(rtb_Efficiency[3], rtb_Saturation_e[3]);
 
   /* Product: '<S32>/Product' incorporates:
    *  Constant: '<S32>/Constant'
-   *  MinMax: '<S21>/Max'
    *  RelationalOperator: '<S32>/Less Than'
    */
-  rtb_max_torque_temperature_ex_3 = (real_T)(rtb_Sign >= -0.5) * fmax
-    (rtb_max_torque_available[0], rtb_Saturation_n_idx_0);
-  rtb_max_torque_temperature_ex_2 = (real_T)(rtb_Switch_c >= -0.5) * fmax
-    (rtb_max_torque_available[1], rtb_Saturation_n_idx_1);
-  rtb_max_torque_temperature_ex_1 = (real_T)(rtb_RL_m >= -0.5) * fmax
-    (rtb_max_torque_available[2], rtb_Saturation_n_idx_2);
-  rtb_max_torque_temperature_ex_0 = (real_T)(rtb_RR >= -0.5) * fmax
-    (rtb_max_torque_available[3], rtb_Saturation_n_idx_3);
+  rtb_Abs_o_idx_0 = (real_T)(rtb_Sign >= -0.5) * rtb_Saturation_e[0];
+  rtb_max_torque_available_idx_1 = (real_T)(rtb_Switch_c >= -0.5) *
+    rtb_Saturation_e[1];
+  rtb_max_torque_available_idx_2 = (real_T)(rtb_RL_m >= -0.5) *
+    rtb_Saturation_e[2];
+  rtb_max_torque_available_idx_3 = (real_T)(rtb_RR >= -0.5) * rtb_Saturation_e[3];
 
   /* SignalConversion generated from: '<S36>/ SFunction ' incorporates:
    *  MATLAB Function: '<S21>/Cross Check'
+   *  MinMax: '<S21>/Min1'
    */
-  rtb_TmpSignalConversionAtCFunct[1] = rtb_ubu[0];
-  rtb_TmpSignalConversionAtCFunct[2] = rtb_ubu[1];
-  rtb_TmpSignalConversionAtCFunct[3] = rtb_ubu[2];
-  rtb_TmpSignalConversionAtCFunct[4] = rtb_ubu[3];
-  rtb_TmpSignalConversionAtCFunct[9] = rtb_max_torque_available[0];
+  rtb_TmpSignalConversionAtCFunct[9] = rtb_Efficiency[0];
 
   /* MATLAB Function: '<S21>/Cross Check' incorporates:
    *  Constant: '<S47>/ '
@@ -1981,79 +2002,75 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
              rtb_max_torque_temperature_IGBT) && rtb_AND_n) * 2.0 + (real_T)
                     (rtb_AND_n && (rtU.throttle >= 0.05)))) {
    case 0:
-    rtb_Sign = rtb_max_torque_temperature_ex_3;
-    if (rtb_max_torque_temperature_ex_3 > rtb_ubu[0]) {
-      rtb_Sign = rtb_ubu[0] - rtb_TmpSignalConversionAtCFunct[9];
+    rtb_YRD = rtb_Abs_o_idx_0;
+    if (rtb_Abs_o_idx_0 > rtb_ubu_idx_0) {
+      rtb_YRD = rtb_ubu_idx_0 - rtb_TmpSignalConversionAtCFunct[9];
     }
 
-    rtb_max_torque_temperature_ex_3 = rtb_Sign;
-    rtb_Sign = rtb_max_torque_temperature_ex_2;
-    if (rtb_max_torque_temperature_ex_2 > rtb_ubu[1]) {
-      rtb_Sign = rtb_ubu[1] - rtb_TmpSignalConversionAtCFunct[9];
+    rtb_Abs_o_idx_0 = rtb_YRD;
+    rtb_YRD = rtb_max_torque_available_idx_1;
+    if (rtb_max_torque_available_idx_1 > rtb_ubu_idx_1) {
+      rtb_YRD = rtb_ubu_idx_1 - rtb_TmpSignalConversionAtCFunct[9];
     }
 
-    rtb_max_torque_temperature_ex_2 = rtb_Sign;
-    rtb_Sign = rtb_max_torque_temperature_ex_1;
-    if (rtb_max_torque_temperature_ex_1 > rtb_ubu[2]) {
-      rtb_Sign = rtb_ubu[2] - rtb_TmpSignalConversionAtCFunct[9];
+    rtb_max_torque_available_idx_1 = rtb_YRD;
+    rtb_YRD = rtb_max_torque_available_idx_2;
+    if (rtb_max_torque_available_idx_2 > rtb_ubu_idx_2) {
+      rtb_YRD = rtb_ubu_idx_2 - rtb_TmpSignalConversionAtCFunct[9];
     }
 
-    rtb_max_torque_temperature_ex_1 = rtb_Sign;
-    rtb_Sign = rtb_max_torque_temperature_ex_0;
-    if (rtb_max_torque_temperature_ex_0 > rtb_ubu[3]) {
-      rtb_Sign = rtb_ubu[3] - rtb_TmpSignalConversionAtCFunct[9];
+    rtb_max_torque_available_idx_2 = rtb_YRD;
+    rtb_YRD = rtb_max_torque_available_idx_3;
+    if (rtb_max_torque_available_idx_3 > rtb_Sum1) {
+      rtb_YRD = rtb_Sum1 - rtb_TmpSignalConversionAtCFunct[9];
     }
 
-    rtb_max_torque_temperature_ex_0 = rtb_Sign;
+    rtb_max_torque_available_idx_3 = rtb_YRD;
     break;
 
    case 1:
-    rtb_ubu[0] = rtb_TmpSignalConversionAtCFunct[1];
-    rtb_max_torque_temperature_ex_3 = 0.0;
-    rtb_ubu[1] = rtb_TmpSignalConversionAtCFunct[2];
-    rtb_max_torque_temperature_ex_2 = 0.0;
-    rtb_ubu[2] = rtb_TmpSignalConversionAtCFunct[3];
-    rtb_max_torque_temperature_ex_1 = 0.0;
-    rtb_ubu[3] = rtb_TmpSignalConversionAtCFunct[4];
-    rtb_max_torque_temperature_ex_0 = 0.0;
+    rtb_Abs_o_idx_0 = 0.0;
+    rtb_max_torque_available_idx_1 = 0.0;
+    rtb_max_torque_available_idx_2 = 0.0;
+    rtb_max_torque_available_idx_3 = 0.0;
     break;
 
    case 2:
-    rtb_ubu[0] = 0.0;
-    rtb_ubu[1] = 0.0;
-    rtb_ubu[2] = 0.0;
-    rtb_ubu[3] = 0.0;
+    rtb_ubu_idx_0 = 0.0;
+    rtb_ubu_idx_1 = 0.0;
+    rtb_ubu_idx_2 = 0.0;
+    rtb_Sum1 = 0.0;
     break;
 
    case 3:
-    rtb_max_torque_temperature_ex_3 = 0.0;
-    rtb_ubu[0] = 0.0;
-    rtb_max_torque_temperature_ex_2 = 0.0;
-    rtb_ubu[1] = 0.0;
-    rtb_max_torque_temperature_ex_1 = 0.0;
-    rtb_ubu[2] = 0.0;
-    rtb_max_torque_temperature_ex_0 = 0.0;
-    rtb_ubu[3] = 0.0;
+    rtb_Abs_o_idx_0 = 0.0;
+    rtb_ubu_idx_0 = 0.0;
+    rtb_max_torque_available_idx_1 = 0.0;
+    rtb_ubu_idx_1 = 0.0;
+    rtb_max_torque_available_idx_2 = 0.0;
+    rtb_ubu_idx_2 = 0.0;
+    rtb_max_torque_available_idx_3 = 0.0;
+    rtb_Sum1 = 0.0;
     break;
   }
 
   /* CFunction: '<S34>/C Function' */
   for (i = 0; i < 2; i++) {
     iU = i << 2;
-    rtDW.CFunction_i[iU] = rtb_max_torque_temperature_ex_3;
-    rtDW.CFunction_i[iU + 1] = rtb_max_torque_temperature_ex_2;
-    rtDW.CFunction_i[iU + 2] = rtb_max_torque_temperature_ex_1;
-    rtDW.CFunction_i[iU + 3] = rtb_max_torque_temperature_ex_0;
+    rtDW.CFunction_i[iU] = rtb_Abs_o_idx_0;
+    rtDW.CFunction_i[iU + 1] = rtb_max_torque_available_idx_1;
+    rtDW.CFunction_i[iU + 2] = rtb_max_torque_available_idx_2;
+    rtDW.CFunction_i[iU + 3] = rtb_max_torque_available_idx_3;
   }
 
   /* End of CFunction: '<S34>/C Function' */
 
   /* CFunction: '<S35>/C Function' */
   for (i = 0; i < 2; i++) {
-    rtDW.CFunction_a[i << 2] = rtb_ubu[0];
-    rtDW.CFunction_a[(i << 2) + 1] = rtb_ubu[1];
-    rtDW.CFunction_a[(i << 2) + 2] = rtb_ubu[2];
-    rtDW.CFunction_a[(i << 2) + 3] = rtb_ubu[3];
+    rtDW.CFunction_a[i << 2] = rtb_ubu_idx_0;
+    rtDW.CFunction_a[(i << 2) + 1] = rtb_ubu_idx_1;
+    rtDW.CFunction_a[(i << 2) + 2] = rtb_ubu_idx_2;
+    rtDW.CFunction_a[(i << 2) + 3] = rtb_Sum1;
   }
 
   /* End of CFunction: '<S35>/C Function' */
@@ -2076,16 +2093,37 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  Sum: '<S56>/Subtract'
    *  Sum: '<S56>/Sum'
    */
-  rtb_Switch_c = (1.0 / (rt_powd_snf(rtU.throttle / (1.0 - rtU.throttle), -1.5)
-    + 1.0) - rtb_max_torque_temperature_IGBT) * (real_T)(int8_T)((int8_T)
-    (rtb_max_torque_temperature_IGBT >= 0.05) ^ (int8_T)(rtU.throttle >= 0.05)) *
-    84.0;
+  rtb_Sign = (1.0 / (rt_powd_snf(rtU.throttle / (1.0 - rtU.throttle), -1.5) +
+                     1.0) - rtb_max_torque_temperature_IGBT) * (real_T)(int8_T)
+    ((int8_T)(rtb_max_torque_temperature_IGBT >= 0.05) ^ (int8_T)(rtU.throttle >=
+      0.05)) * 84.0;
 
   /* Gain: '<S25>/Gain2' */
-  rtb_Sign = 0.95 * rtb_Switch_c;
+  rtb_torquemapselected = 0.95 * rtb_Sign;
 
   /* Gain: '<S25>/Gain3' */
-  rtb_Switch_c *= 1.05;
+  rtb_Sign *= 1.05;
+
+  /* Switch: '<S25>/Switch2' incorporates:
+   *  Constant: '<S23>/Constant'
+   *  Inport: '<Root>/throttle'
+   *  Logic: '<S23>/AND'
+   *  RelationalOperator: '<S23>/Less Than'
+   *  RelationalOperator: '<S23>/Less Than1'
+   */
+  if ((rtU.throttle < 0.05) && (0.05 > rtb_max_torque_temperature_IGBT)) {
+    /* SignalConversion generated from: '<S16>/C Caller' incorporates:
+     *  Constant: '<S25>/Constant'
+     */
+    rtb_Saturation_e[0] = -0.0;
+  } else {
+    /* SignalConversion generated from: '<S16>/C Caller' incorporates:
+     *  MinMax: '<S25>/Max1'
+     */
+    rtb_Saturation_e[0] = fmin(rtb_torquemapselected, rtb_Sign);
+  }
+
+  /* End of Switch: '<S25>/Switch2' */
 
   /* Product: '<S25>/Divide' incorporates:
    *  Constant: '<S2>/Constant8'
@@ -2093,49 +2131,95 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  Gain: '<S25>/Powertrain Efficiency Regen'
    *  Product: '<S25>/Divide1'
    */
-  u0_tmp = 1.0 / (57.4468085106383 * rtb_vx);
-  u0 = u0_tmp * -28000.0;
+  rtb_Switch_c = 1.0 / (57.4468085106383 * rtb_vx);
+  u0 = rtb_Switch_c * -28000.0;
+
+  /* Saturate: '<S25>/Saturation' */
+  if (u0 > 0.0) {
+    /* SignalConversion generated from: '<S16>/C Caller' */
+    rtb_Saturation_e[1] = 0.0;
+  } else if (u0 < -84.0) {
+    /* SignalConversion generated from: '<S16>/C Caller' */
+    rtb_Saturation_e[1] = -84.0;
+  } else {
+    /* SignalConversion generated from: '<S16>/C Caller' */
+    rtb_Saturation_e[1] = u0;
+  }
+
+  /* End of Saturate: '<S25>/Saturation' */
+
+  /* SignalConversion generated from: '<S16>/C Caller' incorporates:
+   *  Constant: '<S25>/Constant3'
+   */
+  rtb_Saturation_e[2] = 0.0;
+  rtb_Saturation_e[3] = 0.0;
+
+  /* SignalConversion generated from: '<S16>/C Caller' incorporates:
+   *  MinMax: '<S25>/Max'
+   */
+  rtb_Efficiency[0] = fmax(rtb_torquemapselected, rtb_Sign);
+
+  /* Product: '<S25>/Divide1' incorporates:
+   *  Constant: '<S2>/Constant9'
+   *  Gain: '<S25>/Powertrain Efficiency Tractive'
+   */
+  u0 = rtb_Switch_c * 64000.0;
+
+  /* Saturate: '<S25>/Saturation1' */
+  if (u0 > 84.0) {
+    /* SignalConversion generated from: '<S16>/C Caller' */
+    rtb_Efficiency[1] = 84.0;
+  } else if (u0 < 0.0) {
+    /* SignalConversion generated from: '<S16>/C Caller' */
+    rtb_Efficiency[1] = 0.0;
+  } else {
+    /* SignalConversion generated from: '<S16>/C Caller' */
+    rtb_Efficiency[1] = u0;
+  }
+
+  /* End of Saturate: '<S25>/Saturation1' */
+
+  /* SignalConversion generated from: '<S16>/C Caller' incorporates:
+   *  Constant: '<S25>/Constant4'
+   */
+  rtb_Efficiency[2] = 0.0;
+  rtb_Efficiency[3] = 0.0;
 
   /* Gain: '<S26>/Gain' incorporates:
    *  Abs: '<S26>/Abs'
    */
-  rtb_Sum_ks = 57.295779513082323 * fabs(rtb_Sum_ks);
+  rtb_torquemapselected = 57.295779513082323 * fabs(rtb_Sum_ks);
 
   /* Saturate: '<S26>/Saturation' */
-  if (rtb_Sum_ks > 1.0) {
-    rtb_Sum_ks = 1.0;
+  if (rtb_torquemapselected > 1.0) {
+    rtb_torquemapselected = 1.0;
   }
 
   /* End of Saturate: '<S26>/Saturation' */
 
   /* MATLAB Function: '<S26>/Linear Activation' */
-  rtb_Sum_ks = 1.0 / (rt_powd_snf(rtb_Sum_ks / (1.0 - rtb_Sum_ks), -3.0) + 1.0);
+  rtb_torquemapselected = 1.0 / (rt_powd_snf(rtb_torquemapselected / (1.0 -
+    rtb_torquemapselected), -3.0) + 1.0);
 
   /* MATLAB Function: '<S26>/MATLAB Function' incorporates:
    *  Constant: '<S26>/r'
    *  Constant: '<S26>/r1'
    *  MATLAB Function: '<S26>/Linear Activation'
    */
-  rtb_CCaller_o2[0] = 0.0;
-  rtb_CCaller_o2[1] = 0.0;
-  rtb_CCaller_o2[2] = (1.0 - rtb_Sum_ks) * 0.0 + 0.0001 * rtb_Sum_ks;
   memset(&varargin_1[0], 0, 9U * sizeof(real_T));
-  varargin_1[0] = rtb_CCaller_o2[0];
-  varargin_1[4] = rtb_CCaller_o2[1];
-  varargin_1[8] = rtb_CCaller_o2[2];
-  rtb_ubu[0] = 0.01;
-  rtb_ubu[1] = 0.01;
-  rtb_ubu[2] = 0.01;
-  rtb_ubu[3] = 0.01;
+  varargin_1[0] = 0.0;
+  varargin_1[4] = 0.0;
+  varargin_1[8] = (1.0 - rtb_torquemapselected) * 0.0 + 0.0001 *
+    rtb_torquemapselected;
   memset(&varargin_2[0], 0, sizeof(real_T) << 4U);
-  varargin_2[0] = rtb_ubu[0];
-  varargin_2[5] = rtb_ubu[1];
-  varargin_2[10] = rtb_ubu[2];
-  varargin_2[15] = rtb_ubu[3];
+  varargin_2[0] = 0.01;
+  varargin_2[5] = 0.01;
+  varargin_2[10] = 0.01;
+  varargin_2[15] = 0.01;
   memset(&rtb_y[0], 0, 49U * sizeof(real_T));
   for (i = 0; i < 3; i++) {
-    rtb_y[7 * i] = varargin_1[3 * i];
-    rtb_y[7 * i + 1] = varargin_1[3 * i + 1];
+    rtb_y[7 * i] = 0.0;
+    rtb_y[7 * i + 1] = 0.0;
     rtb_y[7 * i + 2] = varargin_1[3 * i + 2];
   }
 
@@ -2149,122 +2233,167 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
     rtb_y[rtb_y_tmp + 6] = varargin_2[iU + 3];
   }
 
-  /* Switch: '<S31>/Switch1' incorporates:
-   *  Constant: '<S31>/Constant3'
-   *  Sum: '<S31>/Subtract'
-   */
-  if (rtb_vx - 2.0 > 0.0) {
-    /* CCaller: '<S16>/C Caller' */
-    rtb_CCaller_o2[0] = rtb_vx;
-  } else {
-    /* CCaller: '<S16>/C Caller' */
-    rtb_CCaller_o2[0] = 2.0;
+  for (i = 0; i < 49; i++) {
+    rtb_y[i] *= 50.0;
   }
 
-  /* End of Switch: '<S31>/Switch1' */
+  /* End of MATLAB Function: '<S26>/MATLAB Function' */
 
   /* CCaller: '<S16>/C Caller' incorporates:
    *  CFunction: '<S27>/C Function'
    *  CFunction: '<S30>/C Function'
    *  CFunction: '<S34>/C Function'
    *  CFunction: '<S35>/C Function'
-   *  Inport: '<Root>/vy'
-   *  SignalConversion generated from: '<S16>/C Caller'
    */
-  rtb_CCaller_o2[1] = rtU.vy;
-  rtb_CCaller_o2[2] = rtb_Gain1;
-  memcpy(&rtb_CCaller_o3[0], &rtDW.CFunction_c[0], 39U * sizeof(real_T));
-  memcpy(&rtb_CCaller_o4[0], &rtDW.CFunction_i[0], sizeof(real_T) << 3U);
-  memcpy(&rtb_CCaller_o5[0], &rtDW.CFunction_a[0], sizeof(real_T) << 3U);
-  memcpy(&rtb_CCaller_o6[0], &rtDW.CFunction[0], 14U * sizeof(real_T));
+  Acados_Caller_wrapper(&rtb_TmpSignalConversionAtCCalle[0], &rtDW.CFunction_c[0],
+                        &rtDW.CFunction_i[0], &rtDW.CFunction_a[0],
+                        &rtDW.CFunction[0], &rtb_Saturation_e[0],
+                        &rtb_Efficiency[0], &rtb_y[0], &rtb_CCaller_o2[0]);
 
-  /* Switch: '<S25>/Switch2' incorporates:
-   *  Constant: '<S23>/Constant'
-   *  Inport: '<Root>/throttle'
-   *  Logic: '<S23>/AND'
-   *  RelationalOperator: '<S23>/Less Than'
-   *  RelationalOperator: '<S23>/Less Than1'
+  /* Gain: '<S52>/Gain2' incorporates:
+   *  Inport: '<Root>/omega_wheels_FL'
+   *  Inport: '<Root>/omega_wheels_FR'
+   *  Inport: '<Root>/omega_wheels_RL'
+   *  Inport: '<Root>/omega_wheels_RR'
    */
-  if ((rtU.throttle < 0.05) && (0.05 > rtb_max_torque_temperature_IGBT)) {
-    /* CCaller: '<S16>/C Caller' incorporates:
-     *  Constant: '<S25>/Constant'
-     */
-    rtb_ubu[0] = -0.0;
+  rtb_Saturation_e[0] = 13.5 * rtU.omega_wheels_FL;
+  rtb_Saturation_e[1] = 13.5 * rtU.omega_wheels_FR;
+  rtb_Saturation_e[2] = 13.5 * rtU.omega_wheels_RL;
+  rtb_Saturation_e[3] = 13.5 * rtU.omega_wheels_RR;
+
+  /* Saturate: '<S52>/Saturation' */
+  u0 = rtb_Saturation_e[0];
+  if (u0 > 2083.9231268812296) {
+    rtb_Saturation_e[0] = 2083.9231268812296;
+  } else if (u0 < 10.471975511965978) {
+    rtb_Saturation_e[0] = 10.471975511965978;
   } else {
-    /* CCaller: '<S16>/C Caller' incorporates:
-     *  MinMax: '<S25>/Max1'
-     */
-    rtb_ubu[0] = fmin(rtb_Sign, rtb_Switch_c);
+    rtb_Saturation_e[0] = u0;
   }
 
-  /* End of Switch: '<S25>/Switch2' */
-
-  /* Saturate: '<S25>/Saturation' */
-  if (u0 > 0.0) {
-    /* CCaller: '<S16>/C Caller' */
-    rtb_ubu[1] = 0.0;
-  } else if (u0 < -84.0) {
-    /* CCaller: '<S16>/C Caller' */
-    rtb_ubu[1] = -84.0;
+  u0 = rtb_Saturation_e[1];
+  if (u0 > 2083.9231268812296) {
+    rtb_Saturation_e[1] = 2083.9231268812296;
+  } else if (u0 < 10.471975511965978) {
+    rtb_Saturation_e[1] = 10.471975511965978;
   } else {
-    /* CCaller: '<S16>/C Caller' */
-    rtb_ubu[1] = u0;
+    rtb_Saturation_e[1] = u0;
   }
 
-  /* End of Saturate: '<S25>/Saturation' */
-
-  /* CCaller: '<S16>/C Caller' incorporates:
-   *  Constant: '<S25>/Constant3'
-   *  MinMax: '<S25>/Max'
-   *  SignalConversion generated from: '<S16>/C Caller'
-   */
-  rtb_ubu[2] = 0.0;
-  rtb_ubu[3] = 0.0;
-  rtb_max_torque_available[0] = fmax(rtb_Sign, rtb_Switch_c);
-
-  /* Product: '<S25>/Divide1' incorporates:
-   *  Constant: '<S2>/Constant9'
-   *  Gain: '<S25>/Powertrain Efficiency Tractive'
-   */
-  u0 = u0_tmp * 64000.0;
-
-  /* Saturate: '<S25>/Saturation1' */
-  if (u0 > 84.0) {
-    /* CCaller: '<S16>/C Caller' */
-    rtb_max_torque_available[1] = 84.0;
-  } else if (u0 < 0.0) {
-    /* CCaller: '<S16>/C Caller' */
-    rtb_max_torque_available[1] = 0.0;
+  u0 = rtb_Saturation_e[2];
+  if (u0 > 2083.9231268812296) {
+    rtb_Saturation_e[2] = 2083.9231268812296;
+  } else if (u0 < 10.471975511965978) {
+    rtb_Saturation_e[2] = 10.471975511965978;
   } else {
-    /* CCaller: '<S16>/C Caller' */
-    rtb_max_torque_available[1] = u0;
+    rtb_Saturation_e[2] = u0;
   }
 
-  /* End of Saturate: '<S25>/Saturation1' */
+  u0 = rtb_Saturation_e[3];
+  if (u0 > 2083.9231268812296) {
+    rtb_Saturation_e[3] = 2083.9231268812296;
+  } else if (u0 < 10.471975511965978) {
+    rtb_Saturation_e[3] = 10.471975511965978;
+  } else {
+    rtb_Saturation_e[3] = u0;
+  }
 
-  /* CCaller: '<S16>/C Caller' incorporates:
-   *  Constant: '<S25>/Constant4'
-   *  MATLAB Function: '<S26>/MATLAB Function'
-   *  SignalConversion generated from: '<S16>/C Caller'
+  /* End of Saturate: '<S52>/Saturation' */
+
+  /* Abs: '<S54>/Abs' */
+  rtb_Efficiency[0] = fabs(rtb_Memory_idx_0);
+  rtb_Efficiency[1] = fabs(rtb_Memory_idx_1);
+  rtb_Efficiency[2] = fabs(rtb_Memory_idx_2);
+  rtb_Efficiency[3] = fabs(rtb_Memory_idx_3);
+
+  /* Lookup_n-D: '<S54>/2-D Lookup Table' */
+  rtb_Sum = rtb_Saturation_e[0];
+  rtb_torquemapselected = rtb_Efficiency[0];
+  rtb_Efficiency[0] = look2_binlx(rtb_Sum, rtb_torquemapselected,
+    rtConstP.uDLookupTable_bp01Data_e, rtConstP.uDLookupTable_bp02Data,
+    rtConstP.uDLookupTable_tableData_i, rtConstP.uDLookupTable_maxIndex, 51U);
+  rtb_Sum = rtb_Saturation_e[1];
+  rtb_torquemapselected = rtb_Efficiency[1];
+  rtb_Efficiency[1] = look2_binlx(rtb_Sum, rtb_torquemapselected,
+    rtConstP.uDLookupTable_bp01Data_e, rtConstP.uDLookupTable_bp02Data,
+    rtConstP.uDLookupTable_tableData_i, rtConstP.uDLookupTable_maxIndex, 51U);
+  rtb_Sum = rtb_Saturation_e[2];
+  rtb_torquemapselected = rtb_Efficiency[2];
+  rtb_Efficiency[2] = look2_binlx(rtb_Sum, rtb_torquemapselected,
+    rtConstP.uDLookupTable_bp01Data_e, rtConstP.uDLookupTable_bp02Data,
+    rtConstP.uDLookupTable_tableData_i, rtConstP.uDLookupTable_maxIndex, 51U);
+  rtb_Sum = rtb_Saturation_e[3];
+  rtb_torquemapselected = rtb_Efficiency[3];
+  rtb_Efficiency[3] = look2_binlx(rtb_Sum, rtb_torquemapselected,
+    rtConstP.uDLookupTable_bp01Data_e, rtConstP.uDLookupTable_bp02Data,
+    rtConstP.uDLookupTable_tableData_i, rtConstP.uDLookupTable_maxIndex, 51U);
+
+  /* Saturate: '<S54>/Saturation' */
+  u0 = rtb_Efficiency[0];
+  if (u0 > 1.0) {
+    rtb_Efficiency[0] = 1.0;
+  } else if (u0 < 0.5) {
+    rtb_Efficiency[0] = 0.5;
+  } else {
+    rtb_Efficiency[0] = u0;
+  }
+
+  u0 = rtb_Efficiency[1];
+  if (u0 > 1.0) {
+    rtb_Efficiency[1] = 1.0;
+  } else if (u0 < 0.5) {
+    rtb_Efficiency[1] = 0.5;
+  } else {
+    rtb_Efficiency[1] = u0;
+  }
+
+  u0 = rtb_Efficiency[2];
+  if (u0 > 1.0) {
+    rtb_Efficiency[2] = 1.0;
+  } else if (u0 < 0.5) {
+    rtb_Efficiency[2] = 0.5;
+  } else {
+    rtb_Efficiency[2] = u0;
+  }
+
+  u0 = rtb_Efficiency[3];
+  if (u0 > 1.0) {
+    rtb_Efficiency[3] = 1.0;
+  } else if (u0 < 0.5) {
+    rtb_Efficiency[3] = 0.5;
+  } else {
+    rtb_Efficiency[3] = u0;
+  }
+
+  /* End of Saturate: '<S54>/Saturation' */
+
+  /* Switch: '<S52>/Switch3' incorporates:
+   *  Gain: '<S52>/     '
+   *  Gain: '<S52>/      '
+   *  Inport: '<Root>/omega_wheels_FL'
    */
-  rtb_max_torque_available[2] = 0.0;
-  rtb_max_torque_available[3] = 0.0;
-  for (i = 0; i < 49; i++) {
-    rtb_y[i] *= 50.0;
+  if (rtU.omega_wheels_FL > 0.0) {
+    rtb_Efficiency[0] *= 0.96;
+    rtb_Efficiency[1] *= 0.96;
+    rtb_Efficiency[2] *= 0.96;
+    rtb_Efficiency[3] *= 0.96;
+  } else {
+    rtb_Efficiency[0] *= 1.0416666666666667;
+    rtb_Efficiency[1] *= 1.0416666666666667;
+    rtb_Efficiency[2] *= 1.0416666666666667;
+    rtb_Efficiency[3] *= 1.0416666666666667;
   }
 
-  rtb_max_torque_temperature_ex_0 = Acados_Caller_wrapper(&rtb_CCaller_o2[0],
-    &rtb_CCaller_o3[0], &rtb_CCaller_o4[0], &rtb_CCaller_o5[0], &rtb_CCaller_o6
-    [0], &rtb_ubu[0], &rtb_max_torque_available[0], &rtb_y[0]);
+  /* End of Switch: '<S52>/Switch3' */
 
   /* DiscreteFir: '<S55>/Discrete FIR Filter' */
-  rtb_Switch_c = 0.0;
+  rtb_torquemapselected = 0.0;
   for (iU = rtDW.DiscreteFIRFilter_circBuf_h; iU < 4; iU++) {
-    rtb_Switch_c += rtDW.DiscreteFIRFilter_states[iU];
+    rtb_torquemapselected += rtDW.DiscreteFIRFilter_states[iU];
   }
 
   for (iU = 0; iU < rtDW.DiscreteFIRFilter_circBuf_h; iU++) {
-    rtb_Switch_c += rtDW.DiscreteFIRFilter_states[iU];
+    rtb_torquemapselected += rtDW.DiscreteFIRFilter_states[iU];
   }
 
   /* End of DiscreteFir: '<S55>/Discrete FIR Filter' */
@@ -2276,7 +2405,7 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  RelationalOperator: '<S55>/Less Than'
    *  RelationalOperator: '<S55>/Less Than1'
    */
-  if ((rtb_vx < 3.0) || (rtb_Switch_c >= 4.0)) {
+  if ((rtb_vx < 3.0) || (rtb_torquemapselected >= 4.0)) {
     /* Update for Memory: '<S16>/Memory' incorporates:
      *  Constant: '<S55>/Constant2'
      *  Inport: '<Root>/throttle'
@@ -2288,10 +2417,10 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
     rtDW.Memory_PreviousInput[3] = rtU.throttle * 21.0;
   } else {
     /* Update for Memory: '<S16>/Memory' */
-    rtDW.Memory_PreviousInput[0] = rtb_max_torque_temperature_ex_0;
-    rtDW.Memory_PreviousInput[1] = rtb_max_torque_temperature_ex_0;
-    rtDW.Memory_PreviousInput[2] = rtb_max_torque_temperature_ex_0;
-    rtDW.Memory_PreviousInput[3] = rtb_max_torque_temperature_ex_0;
+    rtDW.Memory_PreviousInput[0] = rtb_CCaller_o2[0];
+    rtDW.Memory_PreviousInput[1] = rtb_CCaller_o2[1];
+    rtDW.Memory_PreviousInput[2] = rtb_CCaller_o2[2];
+    rtDW.Memory_PreviousInput[3] = rtb_CCaller_o2[3];
   }
 
   /* End of Switch: '<S24>/Switch' */
@@ -2314,20 +2443,20 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
    *  Constant: '<S73>/Time constant'
    *  MinMax: '<S73>/Max'
    */
-  rtb_Saturation_n_idx_1 = 1.0 / fmax(rtDW.Probe[0], 0.079577471545947673);
+  rtb_vx = 1.0 / fmax(rtDW.Probe[0], 0.079577471545947673);
 
   /* Update for DiscreteIntegrator: '<S78>/Integrator' incorporates:
    *  Product: '<S71>/1//T'
    *  Sum: '<S71>/Sum1'
    */
   rtDW.Integrator_DSTATE[0] += (rtb_Gain_a_idx_0 - rtb_Integrator_idx_0) *
-    rtb_Saturation_n_idx_1 * 0.02;
-  rtDW.Integrator_DSTATE[1] += (rtb_Abs_o_idx_0 - rtb_Integrator_idx_1) *
-    rtb_Saturation_n_idx_1 * 0.02;
+    rtb_vx * 0.02;
+  rtDW.Integrator_DSTATE[1] += (rtb_Gain_a_idx_1 - rtb_Integrator_idx_1) *
+    rtb_vx * 0.02;
   rtDW.Integrator_DSTATE[2] += (rtb_Gain_a_idx_2 - rtb_Integrator_idx_2) *
-    rtb_Saturation_n_idx_1 * 0.02;
+    rtb_vx * 0.02;
   rtDW.Integrator_DSTATE[3] += (rtb_Gain_a_idx_3 - rtb_Integrator_idx_3) *
-    rtb_Saturation_n_idx_1 * 0.02;
+    rtb_vx * 0.02;
   rtDW.Integrator_PrevResetState = (int8_T)rtb_Compare;
 
   /* Update for DiscreteFir: '<S47>/Discrete FIR Filter' */
@@ -2358,8 +2487,8 @@ void TVModel_step1(void)               /* Explicit Task: Subsystem */
   /* End of Update for DiscreteFir: '<S55>/Discrete FIR Filter' */
   /* End of Outputs for SubSystem: '<Root>/Subsystem' */
 
-  /* Outport: '<Root>/Output' */
-  rtY.Output = 0.0;
+  /* Outport: '<Root>/Torque' */
+  rtY.Torque = 0.0;
 }
 
 /* Model initialize function */

@@ -29,6 +29,7 @@ ENTRY(Reset_Handler)
 
 /* Highest address of the user mode stack */
 _estack = ORIGIN(RAM) + LENGTH(RAM);	/* end of "RAM" Ram type memory */
+_estack_ = ORIGIN(RAMEXT) + LENGTH(RAMEXT);	/* end of "RAMEXT" Ram type memory */
 
 _Min_Heap_Size = 0x4000;	/* required amount of heap  */
 _Min_Stack_Size = 0x4000;	/* required amount of stack */
@@ -37,6 +38,7 @@ _Min_Stack_Size = 0x4000;	/* required amount of stack */
 MEMORY
 {
   RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 512K
+  RAMEXT   (rw)    : ORIGIN = 0xC0000000,  LENGTH = 256M
   FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 2048K
 }
 
@@ -161,7 +163,7 @@ SECTIONS
     . = . + _Min_Heap_Size;
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
-  } >RAM
+  } >RAMEXT
 
   /* Remove information from the compiler libraries */
   /DISCARD/ :

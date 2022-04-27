@@ -66,6 +66,10 @@ file(GLOB_RECURSE SOURCES
         "Src/acados_wrapper.c"
         "Src/gpio.c"
         "Src/main.c"
+        "Src/fmc.c"
+        "Src/usart.c"
+        "Src/dma.c"
+        "Src/usartFcnLib.c"
         #"Src/stm32f7xx_hal.c"
         "Src/stm32f7xx_hal_msp.c"
         "Src/stm32f7xx_hal_timebase_tim.c"
@@ -81,7 +85,7 @@ file(GLOB_RECURSE SOURCES
         "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c"
         "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c"
         "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
-)
+
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})
 

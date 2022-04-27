@@ -6,10 +6,10 @@ int usartTransmit_DMA_wrapper(unsigned char usartNum, unsigned char *dataArray, 
     #ifndef MATLAB_MEX_FILE
 
     if (usartNum == 1)
-        HAL_UART_Transmit_DMA(&huart3, (uint8_t*) dataArray, dataLen);
+        HAL_UART_Transmit_IT(&huart1, (uint8_t*) dataArray, dataLen);
 
     else if (usartNum == 3)
-        HAL_UART_Transmit_DMA(&huart3, (uint8_t*) dataArray, dataLen);    
+        HAL_UART_Transmit_IT(&huart1, (uint8_t*) dataArray, dataLen);
 
     return 1;
     #else
@@ -25,10 +25,10 @@ int usartRead_IT_wrapper(unsigned char usartNum, unsigned char *readArray, unsig
     #ifndef MATLAB_MEX_FILE
 
     if (usartNum == 1)
-        HAL_UART_Receive_IT(&huart3, (uint8_t*) readArray, dataLen);
+        HAL_UART_Receive_IT(&huart1, (uint8_t*) readArray, dataLen);
 
     else if (usartNum == 3)
-        HAL_UART_Receive_IT(&huart3, (uint8_t*) readArray, dataLen);
+        HAL_UART_Receive_IT(&huart1, (uint8_t*) readArray, dataLen);
         
     return 1;
     #else

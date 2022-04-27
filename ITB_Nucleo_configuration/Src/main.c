@@ -19,7 +19,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 #include "fmc.h"
 
@@ -28,6 +30,7 @@
 #include "acados_wrapper.h"
 #include "acados_solver_dt_model.h"
 #include "dt_model_model/dt_model_model.h"
+#include "TVModel.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,9 +66,10 @@ static FMC_SDRAM_CommandTypeDef Command;
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-extern uint8_t RxData[40];
+extern uint8_t RxData[2*128];
 dt_model_solver_capsule *capsule;
 uint32_t Dato1;
+extern uint32_t Time;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -113,8 +117,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM1_Init();
   MX_FMC_Init();
+  MX_USART1_UART_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
     MX_SDRAM_InitEx();
     HAL_Delay(500);
@@ -123,11 +130,10 @@ int main(void)
 
     dt_model_acados_create(capsule);
 
-    //(&huart3)->Instance->CR1|= 0x0010;
-    //HAL_UART_Receive_IT(&huart3,RxData,40);
-    //Dato1=0;
-    //HAL_TIM_Base_Start_IT(&htim6);
-    //HAL_TIM_Base_Start_IT(&htim7);
+    TVModel_initialize();
+    (&huart1)->Instance->CR1|= 0x0010;
+    HAL_UART_Receive_IT(&huart1,RxData,2*128);
+    HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -149,6 +155,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
 
   /** Configure the main internal regulator output voltage
   */
@@ -185,6 +192,12 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_USART1;
+  PeriphClkInitStruct.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
@@ -258,7 +271,11 @@ void MX_SDRAM_InitEx(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   /* USER CODE BEGIN Callback 0 */
-
+    switch((uint32_t)htim->Instance) {
+        case (uint32_t) TIM6:
+            Time++;
+            break;
+    }
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM7) {
     HAL_IncTick();
