@@ -24,7 +24,6 @@ add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
 add_compile_options(-mfloat-abi=hard -mfpu=fpv5-d16)
 add_link_options(-mfloat-abi=hard -mfpu=fpv5-d16)
 
-
 #Uncomment for software floating point
 #add_compile_options(-mfloat-abi=soft)
 
@@ -51,25 +50,40 @@ else ()
     add_compile_options(-O2 -g)
 endif ()
 
-include_directories(Inc Drivers/STM32F7xx_HAL_Driver/Inc Drivers/STM32F7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F7xx/Include Drivers/CMSIS/Include Drivers/CMSIS/DSP/Include Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common  Drivers/CMSIS/DSP/Include  Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/inc/filtering_tests)
+include_directories(Inc Drivers/STM32F7xx_HAL_Driver/Inc Drivers/STM32F7xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F7xx/Include Drivers/CMSIS/Include)
 include_directories(C_Code_Sources/Inc)
-include_directories(Drivers/CMSIS/DSP/DSP_Lib_TestSuite)
-include_directories(Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/JTest/inc)
-include_directories(Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/JTest/inc/arr_desc)
 include_directories(acados/external/hpipm/include)
-include_directories(../c_generated_code)
 include_directories(acados/interfaces)
 include_directories(acados)
 include_directories(acados/external)
 include_directories(acados/external/blasfeo/include)
-include_directories(Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/inc)
-include_directories(Drivers/CMSIS/Core/Include)
-
-add_definitions(-DUSE_HAL_DRIVER -DSTM32H723xx -DDEBUG)
+include_directories(../c_generated_code)
 include(cmake/acados.cmake)
-file(GLOB_RECURSE SOURCES "Startup/*.*" "Src/*.*" "Drivers/*.*" "C_Code_Sources/Src/*.*" "../c_generated_code/acados_solver_dt_model.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_forw.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
 
-set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32H723ZGTX_FLASH.ld)
+add_definitions(-DSTM32F765xx -DUSE_HAL_DRIVER -DDEBUG)
+
+file(GLOB_RECURSE SOURCES
+        "Startup/*.*"
+        "Src/acados_wrapper.c"
+        "Src/gpio.c"
+        "Src/main.c"
+        #"Src/stm32f7xx_hal.c"
+        "Src/stm32f7xx_hal_msp.c"
+        "Src/stm32f7xx_hal_timebase_tim.c"
+        "Src/stm32f7xx_it.c"
+        "Src/syscalls.c"
+        "Src/sysmem.c"
+        "Src/system_stm32f7xx.c"
+        "Src/tim.c"
+        "Drivers/*.*"
+        "C_Code_Sources/Src/*.*"
+        "../c_generated_code/acados_solver_dt_model.c"
+        "../c_generated_code/dt_model_model/dt_model_expl_vde_forw.c"
+        "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c"
+        "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c"
+        "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
+
+set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F765BITX_FLASH.ld)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
 add_link_options(-mcpu=cortex-m7 -mthumb -mthumb-interwork)

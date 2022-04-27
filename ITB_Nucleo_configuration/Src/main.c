@@ -47,7 +47,7 @@
 
 /* USER CODE BEGIN PV */
 extern uint8_t RxData[40];
-extern dt_model_solver_capsule *capsule;
+dt_model_solver_capsule *capsule;
 uint32_t Dato1;
 /* USER CODE END PV */
 
@@ -103,11 +103,11 @@ int main(void)
 
     dt_model_acados_create(capsule);
 
-    (&huart3)->Instance->CR1|= 0x0010;
-    HAL_UART_Receive_IT(&huart3,RxData,40);
+    //(&huart3)->Instance->CR1|= 0x0010;
+    //HAL_UART_Receive_IT(&huart3,RxData,40);
     //Dato1=0;
     //HAL_TIM_Base_Start_IT(&htim6);
-    HAL_TIM_Base_Start_IT(&htim7);
+    //HAL_TIM_Base_Start_IT(&htim7);
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -151,16 +151,16 @@ void HAL_TIM_PWM_MspDeInit(TIM_HandleTypeDef* tim_pwmHandle)
 }
 
 /* USER CODE BEGIN 1 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-    switch((uint32_t)htim->Instance)
-    {
-        case (uint32_t)TIM7:
-            Time++;
-            break;
-    }
-
-}
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//{
+//    switch((uint32_t)htim->Instance)
+//    {
+//        case (uint32_t)TIM7:
+//            Time++;
+//            break;
+//    }
+//
+//}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
