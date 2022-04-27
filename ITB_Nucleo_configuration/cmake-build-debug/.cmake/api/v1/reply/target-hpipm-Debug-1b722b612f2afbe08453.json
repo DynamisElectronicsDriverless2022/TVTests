@@ -56,12 +56,6 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 24,
-				"parent" : 4
-			},
-			{
-				"command" : 3,
-				"file" : 1,
 				"line" : 30,
 				"parent" : 4
 			},
@@ -78,12 +72,6 @@
 				"parent" : 4
 			},
 			{
-				"command" : 4,
-				"file" : 1,
-				"line" : 23,
-				"parent" : 4
-			},
-			{
 				"command" : 5,
 				"file" : 1,
 				"line" : 61,
@@ -91,25 +79,25 @@
 			},
 			{
 				"file" : 2,
-				"parent" : 10
+				"parent" : 8
 			},
 			{
 				"command" : 4,
 				"file" : 2,
 				"line" : 12,
-				"parent" : 11
+				"parent" : 9
 			},
 			{
 				"command" : 6,
 				"file" : 2,
 				"line" : 11,
-				"parent" : 11
+				"parent" : 9
 			},
 			{
 				"command" : 6,
 				"file" : 2,
 				"line" : 10,
-				"parent" : 11
+				"parent" : 9
 			},
 			{
 				"command" : 7,
@@ -163,19 +151,19 @@
 				"command" : 7,
 				"file" : 2,
 				"line" : 14,
-				"parent" : 11
+				"parent" : 9
 			},
 			{
 				"command" : 7,
 				"file" : 2,
 				"line" : 15,
-				"parent" : 11
+				"parent" : 9
 			},
 			{
 				"command" : 7,
 				"file" : 2,
 				"line" : 16,
-				"parent" : 11
+				"parent" : 9
 			},
 			{
 				"command" : 8,
@@ -195,46 +183,38 @@
 				},
 				{
 					"backtrace" : 5,
-					"fragment" : "-mfloat-abi=hard"
-				},
-				{
-					"backtrace" : 5,
-					"fragment" : "-mfpu=fpv5-d16"
-				},
-				{
-					"backtrace" : 6,
 					"fragment" : "-mcpu=cortex-m7"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 5,
 					"fragment" : "-mthumb"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 5,
 					"fragment" : "-mthumb-interwork"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 6,
 					"fragment" : "-ffunction-sections"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 6,
 					"fragment" : "-fdata-sections"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 6,
 					"fragment" : "-fno-common"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 6,
 					"fragment" : "-fmessage-length=0"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 7,
 					"fragment" : "-O2"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 7,
 					"fragment" : "-g"
 				},
 				{
@@ -244,94 +224,82 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 9,
-					"define" : "ARM_MATH_CM4"
-				},
-				{
-					"backtrace" : 9,
-					"define" : "ARM_MATH_MATRIX_CHECK"
-				},
-				{
-					"backtrace" : 9,
-					"define" : "ARM_MATH_ROUNDING"
-				},
-				{
-					"backtrace" : 12,
+					"backtrace" : 10,
 					"define" : "K_MAX_STACK=300"
 				},
 				{
-					"backtrace" : 13,
+					"backtrace" : 11,
 					"define" : "MEASURE_TIMINGS"
 				},
 				{
-					"backtrace" : 14,
+					"backtrace" : 12,
 					"define" : "__STM32__"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 15,
+					"backtrace" : 13,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/Inc"
 				},
 				{
-					"backtrace" : 15,
+					"backtrace" : 13,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/Drivers/STM32F7xx_HAL_Driver/Inc"
 				},
 				{
-					"backtrace" : 15,
+					"backtrace" : 13,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy"
 				},
 				{
-					"backtrace" : 15,
+					"backtrace" : 13,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Device/ST/STM32F7xx/Include"
 				},
 				{
-					"backtrace" : 15,
+					"backtrace" : 13,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/Drivers/CMSIS/Include"
 				},
 				{
-					"backtrace" : 16,
+					"backtrace" : 14,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/C_Code_Sources/Inc"
 				},
 				{
-					"backtrace" : 17,
+					"backtrace" : 15,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/hpipm/include"
 				},
 				{
-					"backtrace" : 18,
+					"backtrace" : 16,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/interfaces"
 				},
 				{
-					"backtrace" : 19,
+					"backtrace" : 17,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados"
 				},
 				{
-					"backtrace" : 20,
+					"backtrace" : 18,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external"
 				},
 				{
-					"backtrace" : 21,
+					"backtrace" : 19,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include"
 				},
 				{
-					"backtrace" : 22,
+					"backtrace" : 20,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/../c_generated_code"
 				},
 				{
-					"backtrace" : 23,
+					"backtrace" : 21,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 22,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados/external"
 				},
 				{
-					"backtrace" : 25,
+					"backtrace" : 23,
 					"path" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/acados/interfaces"
 				},
 				{
-					"backtrace" : 26,
+					"backtrace" : 24,
 					"path" : "/include"
 				}
 			],

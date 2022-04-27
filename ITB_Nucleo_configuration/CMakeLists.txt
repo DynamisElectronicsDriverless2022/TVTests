@@ -20,9 +20,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
 #Uncomment for hardware floating point
-add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
-add_compile_options(-mfloat-abi=hard -mfpu=fpv5-d16)
-add_link_options(-mfloat-abi=hard -mfpu=fpv5-d16)
+#add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
+#add_compile_options(-mfloat-abi=hard -mfpu=fpv5-d16)
+#add_link_options(-mfloat-abi=hard -mfpu=fpv5-d16)
 
 #Uncomment for software floating point
 #add_compile_options(-mfloat-abi=soft)
@@ -67,6 +67,7 @@ file(GLOB_RECURSE SOURCES
         "Src/acados_wrapper.c"
         "Src/gpio.c"
         "Src/main.c"
+        "Src/fmc.c"
         #"Src/stm32f7xx_hal.c"
         "Src/stm32f7xx_hal_msp.c"
         "Src/stm32f7xx_hal_timebase_tim.c"
@@ -83,6 +84,7 @@ file(GLOB_RECURSE SOURCES
         "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c"
         "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
 
+
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F765BITX_FLASH.ld)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
@@ -91,6 +93,7 @@ add_link_options(-T ${LINKER_SCRIPT})
 
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
 target_link_libraries(${PROJECT_NAME}.elf acados blasfeo hpipm)
+
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)
 

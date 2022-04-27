@@ -25,6 +25,10 @@
 #include <errno.h>
 #include <stdint.h>
 
+void* getSP (){
+    int i;
+    return (void*) &i;
+}
 /**
  * Pointer to the current high watermark of the heap usage
  */
@@ -54,9 +58,9 @@ static uint8_t *__sbrk_heap_end = NULL;
 void *_sbrk(ptrdiff_t incr)
 {
   extern uint8_t _end; /* Symbol defined in the linker script */
-  extern uint8_t _estack; /* Symbol defined in the linker script */
+  extern uint8_t _estack_; /* Symbol defined in the linker script */
   extern uint32_t _Min_Stack_Size; /* Symbol defined in the linker script */
-  const uint32_t stack_limit = (uint32_t)&_estack - (uint32_t)&_Min_Stack_Size;
+  const uint32_t stack_limit = (uint32_t)&_estack_ - (uint32_t)&_Min_Stack_Size;
   const uint8_t *max_heap = (uint8_t *)stack_limit;
   uint8_t *prev_heap_end;
 
@@ -67,6 +71,8 @@ void *_sbrk(ptrdiff_t incr)
   }
 
   /* Protect heap from growing into the reserved MSP stack */
+  uint32_t volatile address=0;
+  address= (uint32_t) getSP();
   if (__sbrk_heap_end + incr > max_heap)
   {
     errno = ENOMEM;
