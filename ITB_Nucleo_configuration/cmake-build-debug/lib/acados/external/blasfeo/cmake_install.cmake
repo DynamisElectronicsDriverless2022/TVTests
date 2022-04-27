@@ -75,6 +75,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include/blasfeo_d_blas_api.h"
     "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include/blasfeo_d_blasfeo_api.h"
     "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include/blasfeo_d_blasfeo_api_ref.h"
+    "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include/blasfeo_d_blasfeo_hp_api.h"
     "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include/blasfeo_d_blasfeo_ref_api.h"
     "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include/blasfeo_d_kernel.h"
     "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/acados/external/blasfeo/include/blasfeo_i_aux_ext_dep.h"

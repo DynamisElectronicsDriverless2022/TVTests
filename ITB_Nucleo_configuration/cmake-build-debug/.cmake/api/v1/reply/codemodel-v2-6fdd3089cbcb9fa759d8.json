@@ -1,0 +1,250 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "lib/acados",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados-Debug-c47daa7d01ac7b6fe7c2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "acados",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "lib/acados/acados",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.acados-Debug-f4edb8c4ebbef863176b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "acados/acados",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "lib/acados/interfaces/acados_c",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.interfaces.acados_c-Debug-4ff77d18ca001fb31455.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "acados/interfaces/acados_c"
+				},
+				{
+					"build" : "lib/acados/external",
+					"childIndexes" : 
+					[
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.external-Debug-eb5673a11694a0a03f97.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "acados/external"
+				},
+				{
+					"build" : "lib/acados/external/blasfeo",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.external.blasfeo-Debug-602d8e41cecee4b20e1a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.11"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 2,
+					"source" : "acados/external/blasfeo",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "lib/acados/external/hpipm",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.acados.external.hpipm-Debug-9e570e15fa6abc77155d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.11"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "acados/external/hpipm",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ITB_Nucleo_configuration",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "acados",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "blasfeo",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "hpipm",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ITB_Nucleo_configuration.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ITB_Nucleo_configuration.elf-Debug-c15df46f6354f0ca87d6.json",
+					"name" : "ITB_Nucleo_configuration.elf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "acados::@273febf8648f30f54d96",
+					"jsonFile" : "target-acados-Debug-0a62781f902bd4324bee.json",
+					"name" : "acados",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "blasfeo::@89ec20ae6029458ef6e2",
+					"jsonFile" : "target-blasfeo-Debug-8935136c89b5def9c1c0.json",
+					"name" : "blasfeo",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "hpipm::@7e7b5fafbcda485504e0",
+					"jsonFile" : "target-hpipm-Debug-ee343125250c0125bdc2.json",
+					"name" : "hpipm",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "lint::@d0f155a43de911538f63",
+					"jsonFile" : "target-lint-Debug-1be34a390dcc329dc497.json",
+					"name" : "lint",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@d0f155a43de911538f63",
+					"jsonFile" : "target-uninstall-Debug-a1553c1854b86a11d8ba.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration/cmake-build-debug",
+		"source" : "C:/Users/Mario Bertelli/Desktop/TV_Test/TVTests/ITB_Nucleo_configuration"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
