@@ -84,7 +84,7 @@
 
 dt_model_solver_capsule * dt_model_acados_create_capsule(void)
 {
-    void* capsule_mem = malloc(sizeof(dt_model_solver_capsule));
+    volatile void* capsule_mem = malloc(sizeof(dt_model_solver_capsule));
     dt_model_solver_capsule *capsule = (dt_model_solver_capsule *) capsule_mem;
 
     return capsule;

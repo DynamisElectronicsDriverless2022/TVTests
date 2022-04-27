@@ -58,10 +58,9 @@ include_directories(acados/interfaces)
 include_directories(acados)
 include_directories(acados/external)
 include_directories(acados/external/blasfeo/include)
-include_directories(../c_generated_code)
-
 add_definitions(-DUSE_HAL_DRIVER -DSTM32H723xx -DDEBUG)
 include(cmake/acados.cmake)
+include_directories(../c_generated_code)
 file(GLOB_RECURSE SOURCES "Startup/*.*" "Src/*.*" "Drivers/*.*" "C_Code_Sources/Src/*.*" "../c_generated_code/acados_solver_dt_model.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_forw.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c" "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c" "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32H723ZGTX_FLASH.ld)
