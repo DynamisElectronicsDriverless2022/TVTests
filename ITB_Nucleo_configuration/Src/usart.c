@@ -200,7 +200,7 @@ void IdleCallback(void)
         //TemopoEsecuzione2=TemopoEsecuzione1/96;
         TxData[0]=(TemopoEsecuzione1 & 0xFF00)>>8;
         TxData[1]=(TemopoEsecuzione1 & 0x00FF);
-        if(TxData[0]==13 && TxData[1]==10) TxData[1]=11;
+        if(TxData[0]==13 && TxData[1]== 10) TxData[1]=11;
         usartTransmit_DMA_wrapper(1,TxData,4);
         BufferTime=0;
 

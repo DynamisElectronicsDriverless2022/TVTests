@@ -16,7 +16,7 @@
  * Code generation objectives:
  *    1. Execution efficiency
  *    2. RAM efficiency
- * Validation result: Not run
+ * Validation esult: Not run
  */
 
 #include "TVModel.h"

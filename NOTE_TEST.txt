@@ -1,0 +1,3 @@
+NOTE TEST SU VCU DP12e CON RAM ESTERNA:
+- Acados alloca un totale di 98kB circa
+- La Heap è allocata solamente sulla RAM Esterna

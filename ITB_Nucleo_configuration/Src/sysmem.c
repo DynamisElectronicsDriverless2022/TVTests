@@ -25,10 +25,6 @@
 #include <errno.h>
 #include <stdint.h>
 
-void* getSP (){
-    int i;
-    return (void*) &i;
-}
 /**
  * Pointer to the current high watermark of the heap usage
  */
@@ -71,8 +67,6 @@ void *_sbrk(ptrdiff_t incr)
   }
 
   /* Protect heap from growing into the reserved MSP stack */
-  uint32_t volatile address=0;
-  address= (uint32_t) getSP();
   if (__sbrk_heap_end + incr > max_heap)
   {
     errno = ENOMEM;
