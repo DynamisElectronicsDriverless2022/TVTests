@@ -29,13 +29,16 @@
 uint64_t h=0;
 
 int i;
+int j;
 uint64_t Number;
 double Data[2*BUFFER];
 uint8_t RxData[2*BUFFER];
 uint32_t Time=0;
 
 int BufferTime=0,UsartTime,Count=0;
-uint8_t TxData[4]={'\0','\0','\r',10};
+uint8_t TxData[36]={'\0','\0','\r',10};
+uint64_t* ptr;
+double outData[4];
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 
 extern dt_model_solver_capsule *capsule;
@@ -157,7 +160,7 @@ void IdleCallback(void)
         Number=0;
         //Creo un array "Data" contenente gli ingressi del blocco TV
 
-        for(int j=0;j<BUFFER/8;j++){
+        for(j=0;j<BUFFER/8;j++){
             //Creo un double come 8 gruppi di 8 bit ciascuno
             for(i=0;i<8;i++){
                 Number+=((int64_t)RxData[8*j+i])<<(8*i);
@@ -200,14 +203,22 @@ void IdleCallback(void)
         //TemopoEsecuzione2=TemopoEsecuzione1/96;
         TxData[0]=(TemopoEsecuzione1 & 0xFF00)>>8;
         TxData[1]=(TemopoEsecuzione1 & 0x00FF);
+
+        //Riempio TxData con quattro double, scomposto ognuno in 4 Bytes
+        for (i=0; j<4; j++){
+            //j conta a che output di Acados sono arrivato tr i 4 disponibili
+            ptr=&outData[j];
+            for(i=0; i<8; i++){
+                //i conta a che byte sono arrivato tra gli 8 disponibili nel double (64 bit)
+                TxData[2+j*8+i]= *ptr>>(i*8);     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla seconda
+            }
+        }
+        TxData[34]='\r';
+        TxData[35]= 10;
         if(TxData[0]==13 && TxData[1]== 10) TxData[1]=11;
-        usartTransmit_DMA_wrapper(1,TxData,4);
+        usartTransmit_DMA_wrapper(1,TxData,36);
         BufferTime=0;
-
-
     //}
-
-
 }
 /* USER CODE END 1 */
 
