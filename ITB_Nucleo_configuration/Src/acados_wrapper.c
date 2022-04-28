@@ -17,7 +17,7 @@ extern dt_model_solver_capsule * capsule;
 
 
 
-double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[],dt_model_solver_capsule * capsule,double result[]){
+double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[],dt_model_solver_capsule * capsule,double torqueOut[]){
     /** Da qua in poi Ã¨ il codice che va messo nella funzione che viene chiamata ogni iterazione per chiamare il solver **/
     // Inizializzazione delle variabili del solver
     ocp_nlp_config *nlp_config = dt_model_acados_get_nlp_config(capsule);
@@ -84,8 +84,8 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     int acados_status = dt_model_acados_solve(capsule);
 
     // prendo il vettore delle variabili predette dal solver al primo step (u + x)
-    volatile double out_x1[4];
-    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) result);
+    volatile double torque_Out[4];
+    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) torque_Out);
 
     // tempo di solving
 //  double out_cpu_time[1];
@@ -99,9 +99,9 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     return 1;
 }
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[], double result[]){
+double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[], double torqueOut[]){
 	#ifndef MATLAB_MEX_FILE
-		return Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule,result);
+		return Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule,torqueOut);
 	#endif
 	return x0[0]+x0[1];	
 }
