@@ -40,7 +40,7 @@ int BufferTime=0,UsartTime,Count=0;
 //uint8_t TxData[36]={'\0','\0','\r',10};
 uint8_t TxData[36];
 uint64_t* ptr;
-double outData[4]={3, 5, 4, 7};
+double outData[4]={3333, 5555, 4444, 7777};
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 
 extern dt_model_solver_capsule *capsule;
@@ -209,7 +209,7 @@ void IdleCallback(void)
         for (j=0; j<4; j++){
             //j conta a che output di Acados sono arrivato tr i 4 disponibili
             ptr=(uint64_t*)&outData[j];
-            for(i=0; i<8; i++){
+            for(i=0; i<8 ; i++){
                 //i conta a che byte sono arrivato tra gli 8 disponibili nel double (64 bit)
                 TxData[2+j*8+i]= *ptr>>(i*8);     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla seconda
             }

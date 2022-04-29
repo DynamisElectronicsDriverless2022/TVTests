@@ -1,0 +1,49 @@
+lab1es4_1MOTOR.obj: C:/Users/Mario\\ Bertelli/Desktop/TV_Test/TVTests/lab1es4_1MOTOR_ert_rtw/lab1es4_1MOTOR.c
+lab1es4_1MOTOR.obj: C:\Users\Mario\\ Bertelli\Desktop\TV_Test\TVTests\lab1es4_1MOTOR_ert_rtw\lab1es4_1MOTOR.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/3P778C~1.INS/TIC28X~1.INS/TI-CGT~1.LTS/include/stddef.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/3P778C~1.INS/TIC28X~1.INS/TI-CGT~1.LTS/include/_ti_config.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/3P778C~1.INS/TIC28X~1.INS/TI-CGT~1.LTS/include/linkage.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/3P778C~1.INS/TIC28X~1.INS/TI-CGT~1.LTS/include/string.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/3P778C~1.INS/TIC28X~1.INS/TI-CGT~1.LTS/include/sys/cdefs.h
+lab1es4_1MOTOR.obj: C:\Users\Mario\\ Bertelli\Desktop\TV_Test\TVTests\lab1es4_1MOTOR_ert_rtw\rtwtypes.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/R2021b/toolbox/shared/SUPPOR~1/tic2000/src/c2000BoardSupport.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/3P778C~1.INS/TIC28X~1.INS/TI-CGT~1.LTS/include/stdbool.h
+lab1es4_1MOTOR.obj: C:/Users/MARIOB~1/Desktop/TV_Test/TVTests/lab1es4_1MOTOR_ert_rtw/rtwtypes.h
+lab1es4_1MOTOR.obj: C:/ti/CONTRO~1/DEVICE~1/f2806x/v151/F2806X~4/include/F2806x_Device.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Adc.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_BootVars.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Cla.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Comp.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_CpuTimers.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_DevEmu.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Dma.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_ECan.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_ECap.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_EPwm.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_EQep.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Gpio.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_HRCap.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_I2c.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Mcbsp.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_NmiIntrupt.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_PieCtrl.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_PieVect.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Spi.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Sci.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_SysCtrl.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_Usb.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~4\include\F2806x_XIntrupt.h
+lab1es4_1MOTOR.obj: C:/ti/CONTRO~1/DEVICE~1/f2806x/v151/F2806X~1/include/F2806x_Examples.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~1\include\F2806x_GlobalPrototypes.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~1\include\F2806x_EPwm_defines.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~1\include\F2806x_I2c_defines.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~1\include\F2806x_Dma_defines.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~1\include\F2806x_Cla_defines.h
+lab1es4_1MOTOR.obj: C:\ti\CONTRO~1\DEVICE~1\f2806x\v151\F2806X~1\include\F2806x_DefaultISR.h
+lab1es4_1MOTOR.obj: C:\Users\Mario\\ Bertelli\Desktop\TV_Test\TVTests\lab1es4_1MOTOR_ert_rtw\DSP28xx_SciUtil.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/R2021b/toolbox/shared/SUPPOR~1/tic2000/inc/IQmathLib.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/3P778C~1.INS/TIC28X~1.INS/TI-CGT~1.LTS/include/limits.h
+lab1es4_1MOTOR.obj: C:\Users\Mario\\ Bertelli\Desktop\TV_Test\TVTests\lab1es4_1MOTOR_ert_rtw\lab1es4_1MOTOR_types.h
+lab1es4_1MOTOR.obj: C:\Users\Mario\\ Bertelli\Desktop\TV_Test\TVTests\lab1es4_1MOTOR_ert_rtw\MW_target_hardware_resources.h
+lab1es4_1MOTOR.obj: C:/PROGRA~3/MATLAB/SUPPOR~1/R2021b/toolbox/shared/SUPPOR~1/tic2000/src/c2000SchedulerTimer.h
+lab1es4_1MOTOR.obj: C:\Users\Mario\\ Bertelli\Desktop\TV_Test\TVTests\lab1es4_1MOTOR_ert_rtw\lab1es4_1MOTOR_private.h

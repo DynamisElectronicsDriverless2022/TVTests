@@ -4852,120 +4852,121 @@ LOAD c:/users/mariob~1/scoop/apps/gcc-ar~1/current/bin/../lib/gcc/arm-none-eabi/
                 0x0800fd38       0xb8 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj
                 0x0800fd38                HAL_UART_MspInit
  .text.IdleCallback
-                0x0800fdf0      0x210 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj
+                0x0800fdf0      0x20c CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj
                 0x0800fdf0                IdleCallback
  .text.usartTransmit_DMA_wrapper
-                0x08010000       0x1c CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usartFcnLib.c.obj
-                0x08010000                usartTransmit_DMA_wrapper
+                0x0800fffc       0x1c CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usartFcnLib.c.obj
+                0x0800fffc                usartTransmit_DMA_wrapper
  .text.Reset_Handler
-                0x0801001c       0x50 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32f765bitx.s.obj
-                0x0801001c                Reset_Handler
+                0x08010018       0x50 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32f765bitx.s.obj
+                0x08010018                Reset_Handler
  .text.Default_Handler
-                0x0801006c        0x2 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32f765bitx.s.obj
-                0x0801006c                RTC_Alarm_IRQHandler
-                0x0801006c                EXTI2_IRQHandler
-                0x0801006c                TIM8_CC_IRQHandler
-                0x0801006c                UART8_IRQHandler
-                0x0801006c                SPI4_IRQHandler
-                0x0801006c                TIM1_CC_IRQHandler
-                0x0801006c                DMA2_Stream5_IRQHandler
-                0x0801006c                DMA1_Stream5_IRQHandler
-                0x0801006c                CAN3_RX1_IRQHandler
-                0x0801006c                PVD_IRQHandler
-                0x0801006c                TAMP_STAMP_IRQHandler
-                0x0801006c                CAN2_RX1_IRQHandler
-                0x0801006c                EXTI3_IRQHandler
-                0x0801006c                TIM8_TRG_COM_TIM14_IRQHandler
-                0x0801006c                DFSDM1_FLT1_IRQHandler
-                0x0801006c                TIM1_UP_TIM10_IRQHandler
-                0x0801006c                TIM8_UP_TIM13_IRQHandler
-                0x0801006c                I2C3_ER_IRQHandler
-                0x0801006c                DFSDM1_FLT2_IRQHandler
-                0x0801006c                EXTI0_IRQHandler
-                0x0801006c                I2C2_EV_IRQHandler
-                0x0801006c                DMA1_Stream2_IRQHandler
-                0x0801006c                CAN1_RX0_IRQHandler
-                0x0801006c                FPU_IRQHandler
-                0x0801006c                OTG_HS_WKUP_IRQHandler
-                0x0801006c                CAN3_SCE_IRQHandler
-                0x0801006c                CAN2_SCE_IRQHandler
-                0x0801006c                SPI1_IRQHandler
-                0x0801006c                TIM1_BRK_TIM9_IRQHandler
-                0x0801006c                DCMI_IRQHandler
-                0x0801006c                CAN2_RX0_IRQHandler
-                0x0801006c                DMA2_Stream3_IRQHandler
-                0x0801006c                SAI2_IRQHandler
-                0x0801006c                DFSDM1_FLT3_IRQHandler
-                0x0801006c                USART6_IRQHandler
-                0x0801006c                CAN3_RX0_IRQHandler
-                0x0801006c                USART3_IRQHandler
-                0x0801006c                CAN1_RX1_IRQHandler
-                0x0801006c                UART5_IRQHandler
-                0x0801006c                DMA2_Stream0_IRQHandler
-                0x0801006c                TIM4_IRQHandler
-                0x0801006c                QUADSPI_IRQHandler
-                0x0801006c                I2C1_EV_IRQHandler
-                0x0801006c                DMA1_Stream6_IRQHandler
-                0x0801006c                DMA1_Stream1_IRQHandler
-                0x0801006c                UART4_IRQHandler
-                0x0801006c                TIM3_IRQHandler
-                0x0801006c                RCC_IRQHandler
-                0x0801006c                TIM8_BRK_TIM12_IRQHandler
-                0x0801006c                Default_Handler
-                0x0801006c                CEC_IRQHandler
-                0x0801006c                ADC_IRQHandler
-                0x0801006c                DMA1_Stream7_IRQHandler
-                0x0801006c                SPI5_IRQHandler
-                0x0801006c                SDMMC1_IRQHandler
-                0x0801006c                CAN2_TX_IRQHandler
-                0x0801006c                TIM5_IRQHandler
-                0x0801006c                DMA2_Stream7_IRQHandler
-                0x0801006c                I2C3_EV_IRQHandler
-                0x0801006c                EXTI9_5_IRQHandler
-                0x0801006c                RTC_WKUP_IRQHandler
-                0x0801006c                ETH_WKUP_IRQHandler
-                0x0801006c                SPDIF_RX_IRQHandler
-                0x0801006c                SPI2_IRQHandler
-                0x0801006c                OTG_HS_EP1_IN_IRQHandler
-                0x0801006c                DMA1_Stream0_IRQHandler
-                0x0801006c                CAN1_TX_IRQHandler
-                0x0801006c                EXTI4_IRQHandler
-                0x0801006c                RNG_IRQHandler
-                0x0801006c                ETH_IRQHandler
-                0x0801006c                OTG_HS_EP1_OUT_IRQHandler
-                0x0801006c                WWDG_IRQHandler
-                0x0801006c                SPI6_IRQHandler
-                0x0801006c                MDIOS_IRQHandler
-                0x0801006c                I2C4_EV_IRQHandler
-                0x0801006c                CAN3_TX_IRQHandler
-                0x0801006c                TIM2_IRQHandler
-                0x0801006c                OTG_FS_WKUP_IRQHandler
-                0x0801006c                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0801006c                OTG_HS_IRQHandler
-                0x0801006c                DMA2D_IRQHandler
-                0x0801006c                EXTI1_IRQHandler
-                0x0801006c                SDMMC2_IRQHandler
-                0x0801006c                UART7_IRQHandler
-                0x0801006c                USART2_IRQHandler
-                0x0801006c                DFSDM1_FLT0_IRQHandler
-                0x0801006c                I2C2_ER_IRQHandler
-                0x0801006c                DMA2_Stream1_IRQHandler
-                0x0801006c                CAN1_SCE_IRQHandler
-                0x0801006c                FLASH_IRQHandler
-                0x0801006c                DMA2_Stream4_IRQHandler
-                0x0801006c                OTG_FS_IRQHandler
-                0x0801006c                SPI3_IRQHandler
-                0x0801006c                DMA1_Stream4_IRQHandler
-                0x0801006c                I2C1_ER_IRQHandler
-                0x0801006c                FMC_IRQHandler
-                0x0801006c                LPTIM1_IRQHandler
-                0x0801006c                I2C4_ER_IRQHandler
-                0x0801006c                DMA2_Stream6_IRQHandler
-                0x0801006c                SAI1_IRQHandler
-                0x0801006c                DMA1_Stream3_IRQHandler
- *fill*         0x0801006e        0x2 
+                0x08010068        0x2 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32f765bitx.s.obj
+                0x08010068                RTC_Alarm_IRQHandler
+                0x08010068                EXTI2_IRQHandler
+                0x08010068                TIM8_CC_IRQHandler
+                0x08010068                UART8_IRQHandler
+                0x08010068                SPI4_IRQHandler
+                0x08010068                TIM1_CC_IRQHandler
+                0x08010068                DMA2_Stream5_IRQHandler
+                0x08010068                DMA1_Stream5_IRQHandler
+                0x08010068                CAN3_RX1_IRQHandler
+                0x08010068                PVD_IRQHandler
+                0x08010068                TAMP_STAMP_IRQHandler
+                0x08010068                CAN2_RX1_IRQHandler
+                0x08010068                EXTI3_IRQHandler
+                0x08010068                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08010068                DFSDM1_FLT1_IRQHandler
+                0x08010068                TIM1_UP_TIM10_IRQHandler
+                0x08010068                TIM8_UP_TIM13_IRQHandler
+                0x08010068                I2C3_ER_IRQHandler
+                0x08010068                DFSDM1_FLT2_IRQHandler
+                0x08010068                EXTI0_IRQHandler
+                0x08010068                I2C2_EV_IRQHandler
+                0x08010068                DMA1_Stream2_IRQHandler
+                0x08010068                CAN1_RX0_IRQHandler
+                0x08010068                FPU_IRQHandler
+                0x08010068                OTG_HS_WKUP_IRQHandler
+                0x08010068                CAN3_SCE_IRQHandler
+                0x08010068                CAN2_SCE_IRQHandler
+                0x08010068                SPI1_IRQHandler
+                0x08010068                TIM1_BRK_TIM9_IRQHandler
+                0x08010068                DCMI_IRQHandler
+                0x08010068                CAN2_RX0_IRQHandler
+                0x08010068                DMA2_Stream3_IRQHandler
+                0x08010068                SAI2_IRQHandler
+                0x08010068                DFSDM1_FLT3_IRQHandler
+                0x08010068                USART6_IRQHandler
+                0x08010068                CAN3_RX0_IRQHandler
+                0x08010068                USART3_IRQHandler
+                0x08010068                CAN1_RX1_IRQHandler
+                0x08010068                UART5_IRQHandler
+                0x08010068                DMA2_Stream0_IRQHandler
+                0x08010068                TIM4_IRQHandler
+                0x08010068                QUADSPI_IRQHandler
+                0x08010068                I2C1_EV_IRQHandler
+                0x08010068                DMA1_Stream6_IRQHandler
+                0x08010068                DMA1_Stream1_IRQHandler
+                0x08010068                UART4_IRQHandler
+                0x08010068                TIM3_IRQHandler
+                0x08010068                RCC_IRQHandler
+                0x08010068                TIM8_BRK_TIM12_IRQHandler
+                0x08010068                Default_Handler
+                0x08010068                CEC_IRQHandler
+                0x08010068                ADC_IRQHandler
+                0x08010068                DMA1_Stream7_IRQHandler
+                0x08010068                SPI5_IRQHandler
+                0x08010068                SDMMC1_IRQHandler
+                0x08010068                CAN2_TX_IRQHandler
+                0x08010068                TIM5_IRQHandler
+                0x08010068                DMA2_Stream7_IRQHandler
+                0x08010068                I2C3_EV_IRQHandler
+                0x08010068                EXTI9_5_IRQHandler
+                0x08010068                RTC_WKUP_IRQHandler
+                0x08010068                ETH_WKUP_IRQHandler
+                0x08010068                SPDIF_RX_IRQHandler
+                0x08010068                SPI2_IRQHandler
+                0x08010068                OTG_HS_EP1_IN_IRQHandler
+                0x08010068                DMA1_Stream0_IRQHandler
+                0x08010068                CAN1_TX_IRQHandler
+                0x08010068                EXTI4_IRQHandler
+                0x08010068                RNG_IRQHandler
+                0x08010068                ETH_IRQHandler
+                0x08010068                OTG_HS_EP1_OUT_IRQHandler
+                0x08010068                WWDG_IRQHandler
+                0x08010068                SPI6_IRQHandler
+                0x08010068                MDIOS_IRQHandler
+                0x08010068                I2C4_EV_IRQHandler
+                0x08010068                CAN3_TX_IRQHandler
+                0x08010068                TIM2_IRQHandler
+                0x08010068                OTG_FS_WKUP_IRQHandler
+                0x08010068                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08010068                OTG_HS_IRQHandler
+                0x08010068                DMA2D_IRQHandler
+                0x08010068                EXTI1_IRQHandler
+                0x08010068                SDMMC2_IRQHandler
+                0x08010068                UART7_IRQHandler
+                0x08010068                USART2_IRQHandler
+                0x08010068                DFSDM1_FLT0_IRQHandler
+                0x08010068                I2C2_ER_IRQHandler
+                0x08010068                DMA2_Stream1_IRQHandler
+                0x08010068                CAN1_SCE_IRQHandler
+                0x08010068                FLASH_IRQHandler
+                0x08010068                DMA2_Stream4_IRQHandler
+                0x08010068                OTG_FS_IRQHandler
+                0x08010068                SPI3_IRQHandler
+                0x08010068                DMA1_Stream4_IRQHandler
+                0x08010068                I2C1_ER_IRQHandler
+                0x08010068                FMC_IRQHandler
+                0x08010068                LPTIM1_IRQHandler
+                0x08010068                I2C4_ER_IRQHandler
+                0x08010068                DMA2_Stream6_IRQHandler
+                0x08010068                SAI1_IRQHandler
+                0x08010068                DMA1_Stream3_IRQHandler
+ *fill*         0x0801006a        0x2 
  .text.ocp_nlp_dims_calculate_size_self
-                0x08010070       0x30 lib/acados/acados/libacados.a(ocp_nlp_common.c.obj)
+                0x0801006c       0x30 lib/acados/acados/libacados.a(ocp_nlp_common.c.obj)
+ *fill*         0x0801009c        0x4 
  .text.ocp_nlp_get_violation.constprop.0
                 0x080100a0       0xc0 lib/acados/acados/libacados.a(ocp_nlp_common.c.obj)
  .text.ocp_nlp_config_calculate_size
@@ -11277,7 +11278,7 @@ LOAD c:/users/mariob~1/scoop/apps/gcc-ar~1/current/bin/../lib/gcc/arm-none-eabi/
  .debug_ranges  0x00009ce8       0x18 lib/acados/external/blasfeo/libblasfeo.a(d_blas3_diag_ref.c.obj)
  .debug_ranges  0x00009d00       0x58 lib/acados/external/blasfeo/libblasfeo.a(kernel_dgemm_diag_lib4.c.obj)
 
-.debug_line     0x00000000    0xcce0b
+.debug_line     0x00000000    0xcce1b
  .debug_line    0x00000000     0x18bc CMakeFiles/ITB_Nucleo_configuration.elf.dir/C_/Users/Mario_Bertelli/Desktop/TV_Test/TVTests/c_generated_code/acados_solver_dt_model.c.obj
  .debug_line    0x000018bc     0x128a CMakeFiles/ITB_Nucleo_configuration.elf.dir/C_/Users/Mario_Bertelli/Desktop/TV_Test/TVTests/c_generated_code/dt_model_model/dt_model_expl_ode_fun.c.obj
  .debug_line    0x00002b46     0x896e CMakeFiles/ITB_Nucleo_configuration.elf.dir/C_/Users/Mario_Bertelli/Desktop/TV_Test/TVTests/c_generated_code/dt_model_model/dt_model_expl_vde_forw.c.obj
@@ -11307,95 +11308,95 @@ LOAD c:/users/mariob~1/scoop/apps/gcc-ar~1/current/bin/../lib/gcc/arm-none-eabi/
  .debug_line    0x0001e553      0x218 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/sysmem.c.obj
  .debug_line    0x0001e76b      0x2f1 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/system_stm32f7xx.c.obj
  .debug_line    0x0001ea5c      0x614 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/tim.c.obj
- .debug_line    0x0001f070      0x76c CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj
- .debug_line    0x0001f7dc      0x326 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usartFcnLib.c.obj
- .debug_line    0x0001fb02       0xc6 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32f765bitx.s.obj
- .debug_line    0x0001fbc8     0x5b7b lib/acados/acados/libacados.a(ocp_nlp_common.c.obj)
- .debug_line    0x00025743      0x235 lib/acados/acados/libacados.a(ocp_nlp_constraints_common.c.obj)
- .debug_line    0x00025978      0x227 lib/acados/acados/libacados.a(ocp_nlp_cost_common.c.obj)
- .debug_line    0x00025b9f      0x2c2 lib/acados/acados/libacados.a(ocp_nlp_dynamics_common.c.obj)
- .debug_line    0x00025e61      0x57f lib/acados/acados/libacados.a(ocp_nlp_reg_common.c.obj)
- .debug_line    0x000263e0     0x11fc lib/acados/acados/libacados.a(ocp_qp_common.c.obj)
- .debug_line    0x000275dc      0xb7d lib/acados/acados/libacados.a(ocp_qp_xcond_solver.c.obj)
- .debug_line    0x00028159      0xd2a lib/acados/acados/libacados.a(sim_common.c.obj)
- .debug_line    0x00028e83     0x2992 lib/acados/acados/libacados.a(math.c.obj)
- .debug_line    0x0002b815      0x561 lib/acados/acados/libacados.a(mem.c.obj)
- .debug_line    0x0002bd76      0x1a4 lib/acados/acados/libacados.a(timing.c.obj)
- .debug_line    0x0002bf1a      0x506 lib/acados/acados/libacados.a(external_function_interface.c.obj)
- .debug_line    0x0002c420     0x19a6 lib/acados/acados/libacados.a(ocp_nlp_interface.c.obj)
- .debug_line    0x0002ddc6      0x9f2 lib/acados/acados/libacados.a(ocp_qp_interface.c.obj)
- .debug_line    0x0002e7b8      0x90a lib/acados/acados/libacados.a(dense_qp_hpipm.c.obj)
- .debug_line    0x0002f0c2     0x1db4 lib/acados/acados/libacados.a(ocp_nlp_constraints_bgh.c.obj)
- .debug_line    0x00030e76     0x1d6b lib/acados/acados/libacados.a(ocp_nlp_constraints_bgp.c.obj)
- .debug_line    0x00032be1      0xd32 lib/acados/acados/libacados.a(ocp_nlp_cost_external.c.obj)
- .debug_line    0x00033913      0xdaf lib/acados/acados/libacados.a(ocp_nlp_cost_ls.c.obj)
- .debug_line    0x000346c2      0xee7 lib/acados/acados/libacados.a(ocp_nlp_cost_nls.c.obj)
- .debug_line    0x000355a9     0x1328 lib/acados/acados/libacados.a(ocp_nlp_dynamics_cont.c.obj)
- .debug_line    0x000368d1      0xdc4 lib/acados/acados/libacados.a(ocp_nlp_dynamics_disc.c.obj)
- .debug_line    0x00037695     0x12c8 lib/acados/acados/libacados.a(ocp_nlp_reg_convexify.c.obj)
- .debug_line    0x0003895d      0x6a6 lib/acados/acados/libacados.a(ocp_nlp_reg_mirror.c.obj)
- .debug_line    0x00039003      0x3cf lib/acados/acados/libacados.a(ocp_nlp_reg_noreg.c.obj)
- .debug_line    0x000393d2      0x6a8 lib/acados/acados/libacados.a(ocp_nlp_reg_project.c.obj)
- .debug_line    0x00039a7a      0xd32 lib/acados/acados/libacados.a(ocp_nlp_reg_project_reduc_hess.c.obj)
- .debug_line    0x0003a7ac     0x1c48 lib/acados/acados/libacados.a(ocp_nlp_sqp.c.obj)
- .debug_line    0x0003c3f4     0x1546 lib/acados/acados/libacados.a(ocp_nlp_sqp_rti.c.obj)
- .debug_line    0x0003d93a      0xc25 lib/acados/acados/libacados.a(ocp_qp_full_condensing.c.obj)
- .debug_line    0x0003e55f      0xa17 lib/acados/acados/libacados.a(ocp_qp_hpipm.c.obj)
- .debug_line    0x0003ef76      0xc64 lib/acados/acados/libacados.a(ocp_qp_partial_condensing.c.obj)
- .debug_line    0x0003fbda     0x1989 lib/acados/acados/libacados.a(sim_erk_integrator.c.obj)
- .debug_line    0x00041563     0x3ec5 lib/acados/acados/libacados.a(sim_gnsf.c.obj)
- .debug_line    0x00045428     0x22f1 lib/acados/acados/libacados.a(sim_irk_integrator.c.obj)
- .debug_line    0x00047719     0x1472 lib/acados/acados/libacados.a(sim_lifted_irk_integrator.c.obj)
- .debug_line    0x00048b8b     0x1eb8 lib/acados/acados/libacados.a(external_function_generic.c.obj)
- .debug_line    0x0004aa43     0x1730 lib/acados/acados/libacados.a(print.c.obj)
- .debug_line    0x0004c173      0x7b4 lib/acados/acados/libacados.a(sim_interface.c.obj)
- .debug_line    0x0004c927     0x1060 lib/acados/acados/libacados.a(dense_qp_common.c.obj)
- .debug_line    0x0004d987      0xc94 lib/acados/acados/libacados.a(sim_collocation_utils.c.obj)
- .debug_line    0x0004e61b     0x82cf lib/acados/external/blasfeo/libblasfeo.a(d_aux_lib4.c.obj)
- .debug_line    0x000568ea      0xe3a lib/acados/external/blasfeo/libblasfeo.a(d_blas1_lib4.c.obj)
- .debug_line    0x00057724     0x2798 lib/acados/external/blasfeo/libblasfeo.a(d_blas2_lib4.c.obj)
- .debug_line    0x00059ebc     0x39b9 lib/acados/external/blasfeo/libblasfeo.a(d_blas3_lib4.c.obj)
- .debug_line    0x0005d875     0x2737 lib/acados/external/blasfeo/libblasfeo.a(d_lapack_lib4.c.obj)
- .debug_line    0x0005ffac     0x2feb lib/acados/external/blasfeo/libblasfeo.a(d_aux_ref.c.obj)
- .debug_line    0x00062f97     0x340b lib/acados/external/blasfeo/libblasfeo.a(d_blas2_ref.c.obj)
- .debug_line    0x000663a2     0xdf8a lib/acados/external/blasfeo/libblasfeo.a(d_blas3_ref.c.obj)
- .debug_line    0x0007432c     0x8d1d lib/acados/external/blasfeo/libblasfeo.a(d_lapack_ref.c.obj)
- .debug_line    0x0007d049      0xabd lib/acados/external/blasfeo/libblasfeo.a(d_aux_ext_dep.c.obj)
- .debug_line    0x0007db06      0x385 lib/acados/external/blasfeo/libblasfeo.a(i_aux_ext_dep_lib.c.obj)
- .debug_line    0x0007de8b      0x1a3 lib/acados/external/blasfeo/libblasfeo.a(kernel_align_generic.c.obj)
- .debug_line    0x0007e02e      0x110 lib/acados/external/blasfeo/libblasfeo.a(kernel_d_aux_lib.c.obj)
- .debug_line    0x0007e13e     0x33f7 lib/acados/external/blasfeo/libblasfeo.a(kernel_dgecp_lib4.c.obj)
- .debug_line    0x00081535     0xd42a lib/acados/external/blasfeo/libblasfeo.a(kernel_dgemm_4x4_lib4.c.obj)
- .debug_line    0x0008e95f     0x24ab lib/acados/external/blasfeo/libblasfeo.a(kernel_dgemv_4_lib4.c.obj)
- .debug_line    0x00090e0a     0xe08e lib/acados/external/blasfeo/libblasfeo.a(kernel_dgeqrf_4_lib4.c.obj)
- .debug_line    0x0009ee98      0xf82 lib/acados/external/blasfeo/libblasfeo.a(kernel_dgetr_lib4.c.obj)
- .debug_line    0x0009fe1a     0x2011 lib/acados/external/blasfeo/libblasfeo.a(kernel_dgetrf_pivot_lib4.c.obj)
- .debug_line    0x000a1e2b     0x38bf lib/acados/external/blasfeo/libblasfeo.a(kernel_dpack_lib4.c.obj)
- .debug_line    0x000a56ea     0x13f6 lib/acados/external/blasfeo/libblasfeo.a(kernel_dsymv_4_lib4.c.obj)
- .debug_line    0x000a6ae0      0xede lib/acados/external/hpipm/libhpipm.a(d_cond.c.obj)
- .debug_line    0x000a79be     0x580f lib/acados/external/hpipm/libhpipm.a(d_cond_aux.c.obj)
- .debug_line    0x000ad1cd     0x1f27 lib/acados/external/hpipm/libhpipm.a(d_part_cond.c.obj)
- .debug_line    0x000af0f4     0x1a4a lib/acados/external/hpipm/libhpipm.a(d_dense_qp.c.obj)
- .debug_line    0x000b0b3e      0x432 lib/acados/external/hpipm/libhpipm.a(d_dense_qp_dim.c.obj)
- .debug_line    0x000b0f70     0x34dd lib/acados/external/hpipm/libhpipm.a(d_dense_qp_ipm.c.obj)
- .debug_line    0x000b444d     0x1936 lib/acados/external/hpipm/libhpipm.a(d_dense_qp_kkt.c.obj)
- .debug_line    0x000b5d83      0xaf0 lib/acados/external/hpipm/libhpipm.a(d_dense_qp_res.c.obj)
- .debug_line    0x000b6873      0x53c lib/acados/external/hpipm/libhpipm.a(d_dense_qp_sol.c.obj)
- .debug_line    0x000b6daf      0x352 lib/acados/external/hpipm/libhpipm.a(d_core_qp_ipm.c.obj)
- .debug_line    0x000b7101      0xa9b lib/acados/external/hpipm/libhpipm.a(d_core_qp_ipm_aux.c.obj)
- .debug_line    0x000b7b9c     0x3ef5 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp.c.obj)
- .debug_line    0x000bba91     0x10ad lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_dim.c.obj)
- .debug_line    0x000bcb3e     0x5759 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_ipm.c.obj)
- .debug_line    0x000c2297     0x2895 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_kkt.c.obj)
- .debug_line    0x000c4b2c     0x2071 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_red.c.obj)
- .debug_line    0x000c6b9d     0x157a lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_res.c.obj)
- .debug_line    0x000c8117     0x1266 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_sol.c.obj)
- .debug_line    0x000c937d      0x2a3 lib/acados/external/hpipm/libhpipm.a(aux_mem.c.obj)
- .debug_line    0x000c9620       0xd5 lib/acados/external/hpipm/libhpipm.a(aux_string.c.obj)
- .debug_line    0x000c96f5      0x235 lib/acados/external/blasfeo/libblasfeo.a(d_blas2_diag_lib.c.obj)
- .debug_line    0x000c992a      0x4c3 lib/acados/external/blasfeo/libblasfeo.a(d_blas3_diag_lib4.c.obj)
- .debug_line    0x000c9ded      0x97f lib/acados/external/blasfeo/libblasfeo.a(d_blas3_diag_ref.c.obj)
- .debug_line    0x000ca76c     0x269f lib/acados/external/blasfeo/libblasfeo.a(kernel_dgemm_diag_lib4.c.obj)
+ .debug_line    0x0001f070      0x77c CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj
+ .debug_line    0x0001f7ec      0x326 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usartFcnLib.c.obj
+ .debug_line    0x0001fb12       0xc6 CMakeFiles/ITB_Nucleo_configuration.elf.dir/Startup/startup_stm32f765bitx.s.obj
+ .debug_line    0x0001fbd8     0x5b7b lib/acados/acados/libacados.a(ocp_nlp_common.c.obj)
+ .debug_line    0x00025753      0x235 lib/acados/acados/libacados.a(ocp_nlp_constraints_common.c.obj)
+ .debug_line    0x00025988      0x227 lib/acados/acados/libacados.a(ocp_nlp_cost_common.c.obj)
+ .debug_line    0x00025baf      0x2c2 lib/acados/acados/libacados.a(ocp_nlp_dynamics_common.c.obj)
+ .debug_line    0x00025e71      0x57f lib/acados/acados/libacados.a(ocp_nlp_reg_common.c.obj)
+ .debug_line    0x000263f0     0x11fc lib/acados/acados/libacados.a(ocp_qp_common.c.obj)
+ .debug_line    0x000275ec      0xb7d lib/acados/acados/libacados.a(ocp_qp_xcond_solver.c.obj)
+ .debug_line    0x00028169      0xd2a lib/acados/acados/libacados.a(sim_common.c.obj)
+ .debug_line    0x00028e93     0x2992 lib/acados/acados/libacados.a(math.c.obj)
+ .debug_line    0x0002b825      0x561 lib/acados/acados/libacados.a(mem.c.obj)
+ .debug_line    0x0002bd86      0x1a4 lib/acados/acados/libacados.a(timing.c.obj)
+ .debug_line    0x0002bf2a      0x506 lib/acados/acados/libacados.a(external_function_interface.c.obj)
+ .debug_line    0x0002c430     0x19a6 lib/acados/acados/libacados.a(ocp_nlp_interface.c.obj)
+ .debug_line    0x0002ddd6      0x9f2 lib/acados/acados/libacados.a(ocp_qp_interface.c.obj)
+ .debug_line    0x0002e7c8      0x90a lib/acados/acados/libacados.a(dense_qp_hpipm.c.obj)
+ .debug_line    0x0002f0d2     0x1db4 lib/acados/acados/libacados.a(ocp_nlp_constraints_bgh.c.obj)
+ .debug_line    0x00030e86     0x1d6b lib/acados/acados/libacados.a(ocp_nlp_constraints_bgp.c.obj)
+ .debug_line    0x00032bf1      0xd32 lib/acados/acados/libacados.a(ocp_nlp_cost_external.c.obj)
+ .debug_line    0x00033923      0xdaf lib/acados/acados/libacados.a(ocp_nlp_cost_ls.c.obj)
+ .debug_line    0x000346d2      0xee7 lib/acados/acados/libacados.a(ocp_nlp_cost_nls.c.obj)
+ .debug_line    0x000355b9     0x1328 lib/acados/acados/libacados.a(ocp_nlp_dynamics_cont.c.obj)
+ .debug_line    0x000368e1      0xdc4 lib/acados/acados/libacados.a(ocp_nlp_dynamics_disc.c.obj)
+ .debug_line    0x000376a5     0x12c8 lib/acados/acados/libacados.a(ocp_nlp_reg_convexify.c.obj)
+ .debug_line    0x0003896d      0x6a6 lib/acados/acados/libacados.a(ocp_nlp_reg_mirror.c.obj)
+ .debug_line    0x00039013      0x3cf lib/acados/acados/libacados.a(ocp_nlp_reg_noreg.c.obj)
+ .debug_line    0x000393e2      0x6a8 lib/acados/acados/libacados.a(ocp_nlp_reg_project.c.obj)
+ .debug_line    0x00039a8a      0xd32 lib/acados/acados/libacados.a(ocp_nlp_reg_project_reduc_hess.c.obj)
+ .debug_line    0x0003a7bc     0x1c48 lib/acados/acados/libacados.a(ocp_nlp_sqp.c.obj)
+ .debug_line    0x0003c404     0x1546 lib/acados/acados/libacados.a(ocp_nlp_sqp_rti.c.obj)
+ .debug_line    0x0003d94a      0xc25 lib/acados/acados/libacados.a(ocp_qp_full_condensing.c.obj)
+ .debug_line    0x0003e56f      0xa17 lib/acados/acados/libacados.a(ocp_qp_hpipm.c.obj)
+ .debug_line    0x0003ef86      0xc64 lib/acados/acados/libacados.a(ocp_qp_partial_condensing.c.obj)
+ .debug_line    0x0003fbea     0x1989 lib/acados/acados/libacados.a(sim_erk_integrator.c.obj)
+ .debug_line    0x00041573     0x3ec5 lib/acados/acados/libacados.a(sim_gnsf.c.obj)
+ .debug_line    0x00045438     0x22f1 lib/acados/acados/libacados.a(sim_irk_integrator.c.obj)
+ .debug_line    0x00047729     0x1472 lib/acados/acados/libacados.a(sim_lifted_irk_integrator.c.obj)
+ .debug_line    0x00048b9b     0x1eb8 lib/acados/acados/libacados.a(external_function_generic.c.obj)
+ .debug_line    0x0004aa53     0x1730 lib/acados/acados/libacados.a(print.c.obj)
+ .debug_line    0x0004c183      0x7b4 lib/acados/acados/libacados.a(sim_interface.c.obj)
+ .debug_line    0x0004c937     0x1060 lib/acados/acados/libacados.a(dense_qp_common.c.obj)
+ .debug_line    0x0004d997      0xc94 lib/acados/acados/libacados.a(sim_collocation_utils.c.obj)
+ .debug_line    0x0004e62b     0x82cf lib/acados/external/blasfeo/libblasfeo.a(d_aux_lib4.c.obj)
+ .debug_line    0x000568fa      0xe3a lib/acados/external/blasfeo/libblasfeo.a(d_blas1_lib4.c.obj)
+ .debug_line    0x00057734     0x2798 lib/acados/external/blasfeo/libblasfeo.a(d_blas2_lib4.c.obj)
+ .debug_line    0x00059ecc     0x39b9 lib/acados/external/blasfeo/libblasfeo.a(d_blas3_lib4.c.obj)
+ .debug_line    0x0005d885     0x2737 lib/acados/external/blasfeo/libblasfeo.a(d_lapack_lib4.c.obj)
+ .debug_line    0x0005ffbc     0x2feb lib/acados/external/blasfeo/libblasfeo.a(d_aux_ref.c.obj)
+ .debug_line    0x00062fa7     0x340b lib/acados/external/blasfeo/libblasfeo.a(d_blas2_ref.c.obj)
+ .debug_line    0x000663b2     0xdf8a lib/acados/external/blasfeo/libblasfeo.a(d_blas3_ref.c.obj)
+ .debug_line    0x0007433c     0x8d1d lib/acados/external/blasfeo/libblasfeo.a(d_lapack_ref.c.obj)
+ .debug_line    0x0007d059      0xabd lib/acados/external/blasfeo/libblasfeo.a(d_aux_ext_dep.c.obj)
+ .debug_line    0x0007db16      0x385 lib/acados/external/blasfeo/libblasfeo.a(i_aux_ext_dep_lib.c.obj)
+ .debug_line    0x0007de9b      0x1a3 lib/acados/external/blasfeo/libblasfeo.a(kernel_align_generic.c.obj)
+ .debug_line    0x0007e03e      0x110 lib/acados/external/blasfeo/libblasfeo.a(kernel_d_aux_lib.c.obj)
+ .debug_line    0x0007e14e     0x33f7 lib/acados/external/blasfeo/libblasfeo.a(kernel_dgecp_lib4.c.obj)
+ .debug_line    0x00081545     0xd42a lib/acados/external/blasfeo/libblasfeo.a(kernel_dgemm_4x4_lib4.c.obj)
+ .debug_line    0x0008e96f     0x24ab lib/acados/external/blasfeo/libblasfeo.a(kernel_dgemv_4_lib4.c.obj)
+ .debug_line    0x00090e1a     0xe08e lib/acados/external/blasfeo/libblasfeo.a(kernel_dgeqrf_4_lib4.c.obj)
+ .debug_line    0x0009eea8      0xf82 lib/acados/external/blasfeo/libblasfeo.a(kernel_dgetr_lib4.c.obj)
+ .debug_line    0x0009fe2a     0x2011 lib/acados/external/blasfeo/libblasfeo.a(kernel_dgetrf_pivot_lib4.c.obj)
+ .debug_line    0x000a1e3b     0x38bf lib/acados/external/blasfeo/libblasfeo.a(kernel_dpack_lib4.c.obj)
+ .debug_line    0x000a56fa     0x13f6 lib/acados/external/blasfeo/libblasfeo.a(kernel_dsymv_4_lib4.c.obj)
+ .debug_line    0x000a6af0      0xede lib/acados/external/hpipm/libhpipm.a(d_cond.c.obj)
+ .debug_line    0x000a79ce     0x580f lib/acados/external/hpipm/libhpipm.a(d_cond_aux.c.obj)
+ .debug_line    0x000ad1dd     0x1f27 lib/acados/external/hpipm/libhpipm.a(d_part_cond.c.obj)
+ .debug_line    0x000af104     0x1a4a lib/acados/external/hpipm/libhpipm.a(d_dense_qp.c.obj)
+ .debug_line    0x000b0b4e      0x432 lib/acados/external/hpipm/libhpipm.a(d_dense_qp_dim.c.obj)
+ .debug_line    0x000b0f80     0x34dd lib/acados/external/hpipm/libhpipm.a(d_dense_qp_ipm.c.obj)
+ .debug_line    0x000b445d     0x1936 lib/acados/external/hpipm/libhpipm.a(d_dense_qp_kkt.c.obj)
+ .debug_line    0x000b5d93      0xaf0 lib/acados/external/hpipm/libhpipm.a(d_dense_qp_res.c.obj)
+ .debug_line    0x000b6883      0x53c lib/acados/external/hpipm/libhpipm.a(d_dense_qp_sol.c.obj)
+ .debug_line    0x000b6dbf      0x352 lib/acados/external/hpipm/libhpipm.a(d_core_qp_ipm.c.obj)
+ .debug_line    0x000b7111      0xa9b lib/acados/external/hpipm/libhpipm.a(d_core_qp_ipm_aux.c.obj)
+ .debug_line    0x000b7bac     0x3ef5 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp.c.obj)
+ .debug_line    0x000bbaa1     0x10ad lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_dim.c.obj)
+ .debug_line    0x000bcb4e     0x5759 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_ipm.c.obj)
+ .debug_line    0x000c22a7     0x2895 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_kkt.c.obj)
+ .debug_line    0x000c4b3c     0x2071 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_red.c.obj)
+ .debug_line    0x000c6bad     0x157a lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_res.c.obj)
+ .debug_line    0x000c8127     0x1266 lib/acados/external/hpipm/libhpipm.a(d_ocp_qp_sol.c.obj)
+ .debug_line    0x000c938d      0x2a3 lib/acados/external/hpipm/libhpipm.a(aux_mem.c.obj)
+ .debug_line    0x000c9630       0xd5 lib/acados/external/hpipm/libhpipm.a(aux_string.c.obj)
+ .debug_line    0x000c9705      0x235 lib/acados/external/blasfeo/libblasfeo.a(d_blas2_diag_lib.c.obj)
+ .debug_line    0x000c993a      0x4c3 lib/acados/external/blasfeo/libblasfeo.a(d_blas3_diag_lib4.c.obj)
+ .debug_line    0x000c9dfd      0x97f lib/acados/external/blasfeo/libblasfeo.a(d_blas3_diag_ref.c.obj)
+ .debug_line    0x000ca77c     0x269f lib/acados/external/blasfeo/libblasfeo.a(kernel_dgemm_diag_lib4.c.obj)
 
 .debug_str      0x00000000    0x1a779
  .debug_str     0x00000000     0x1308 CMakeFiles/ITB_Nucleo_configuration.elf.dir/C_/Users/Mario_Bertelli/Desktop/TV_Test/TVTests/c_generated_code/acados_solver_dt_model.c.obj
