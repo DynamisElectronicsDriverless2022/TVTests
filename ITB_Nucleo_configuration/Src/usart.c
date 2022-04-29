@@ -25,6 +25,7 @@
 #include "tim.h"
 #include "usartFcnLib.h"
 #include "TVModel.h"
+
 #define BUFFER 128
 uint64_t h=0;
 
@@ -36,9 +37,10 @@ uint8_t RxData[2*BUFFER];
 uint32_t Time=0;
 
 int BufferTime=0,UsartTime,Count=0;
-uint8_t TxData[36]={'\0','\0','\r',10};
+//uint8_t TxData[36]={'\0','\0','\r',10};
+uint8_t TxData[36];
 uint64_t* ptr;
-double outData[4];
+double outData[4]={3, 5, 4, 7};
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 
 extern dt_model_solver_capsule *capsule;
@@ -203,11 +205,10 @@ void IdleCallback(void)
         //TemopoEsecuzione2=TemopoEsecuzione1/96;
         TxData[0]=(TemopoEsecuzione1 & 0xFF00)>>8;
         TxData[1]=(TemopoEsecuzione1 & 0x00FF);
-
-        //Riempio TxData con quattro double, scomposto ognuno in 4 Bytes
-        for (i=0; j<4; j++){
+        //Qui assegnare a outData i quattro valori di coppia in out da Acados
+        for (j=0; j<4; j++){
             //j conta a che output di Acados sono arrivato tr i 4 disponibili
-            ptr=&outData[j];
+            ptr=(uint64_t*)&outData[j];
             for(i=0; i<8; i++){
                 //i conta a che byte sono arrivato tra gli 8 disponibili nel double (64 bit)
                 TxData[2+j*8+i]= *ptr>>(i*8);     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla seconda
@@ -215,6 +216,7 @@ void IdleCallback(void)
         }
         TxData[34]='\r';
         TxData[35]= 10;
+
         if(TxData[0]==13 && TxData[1]== 10) TxData[1]=11;
         usartTransmit_DMA_wrapper(1,TxData,36);
         BufferTime=0;

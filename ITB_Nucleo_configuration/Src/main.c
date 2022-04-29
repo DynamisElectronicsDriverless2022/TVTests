@@ -31,6 +31,7 @@
 #include "acados_solver_dt_model.h"
 #include "dt_model_model/dt_model_model.h"
 #include "TVModel.h"
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

@@ -4,7 +4,7 @@
 //#include "acados/utils/print.h"
 #include "acados_c/sim_interface.h"
 #include "acados_c/external_function_interface.h"
-
+#include "usart.h"
 // include al solver specifico
 #include "dt_model_model/dt_model_model.h"
 #include "acados_solver_dt_model.h"
@@ -81,12 +81,15 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     // chiamata al solver
     int rti_phase = 0;
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "rti_phase", &rti_phase);
-    int acados_status = dt_model_acados_solve(capsule);
+    int volatile acados_status = dt_model_acados_solve(capsule);
 
     // prendo il vettore delle variabili predette dal solver al primo step (u + x)
-    volatile double torque_Out[4];
-    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) torque_Out);
 
+    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) torqueOut);
+
+    int acados_status_My[1];
+    ocp_nlp_get(nlp_config, capsule->nlp_solver, "status", acados_status_My);
+    int volatile exitflag = acados_status_My[0];
     // tempo di solving
 //  double out_cpu_time[1];
 //  ocp_nlp_get(nlp_config, capsule->nlp_solver, "time_tot", (void *) out_cpu_time);
