@@ -133,6 +133,7 @@ int main(void)
     MX_SDRAM_InitEx();
     HAL_Delay(500);
 
+    printf("Ciao");
     capsule = dt_model_acados_create_capsule();
 
     dt_model_acados_create(capsule);

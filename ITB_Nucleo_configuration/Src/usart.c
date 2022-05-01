@@ -38,7 +38,7 @@ uint32_t Time=0;
 
 int BufferTime=0,UsartTime,Count=0;
 //uint8_t TxData[36]={'\0','\0','\r',10};
-uint8_t TxData[36];
+uint8_t TxData[37];
 uint64_t* ptr;
 double outData[4]={3333, 5555, 4444, 7777};
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
@@ -208,14 +208,15 @@ void IdleCallback(void)
         //Qui assegnare a outData i quattro valori di coppia in out da Acados
         for (j=0; j<4; j++){
             //j conta a che output di Acados sono arrivato tr i 4 disponibili
-            ptr=(uint64_t*)&outData[j];
+            ptr=(uint64_t *)&(outData[j]);
             for(i=0; i<8 ; i++){
                 //i conta a che byte sono arrivato tra gli 8 disponibili nel double (64 bit)
-                TxData[2+j*8+i]= *ptr>>(i*8);     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla seconda
+                TxData[2+j*8+i]= (*ptr>>(i*8))&0xFF;     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla seconda
             }
         }
-        TxData[34]='\r';
-        TxData[35]= 10;
+        TxData[34]= exitFlag; //Da definire
+        TxData[35]='\r';
+        TxData[36]= 10;
 
         if(TxData[0]==13 && TxData[1]== 10) TxData[1]=11;
         usartTransmit_DMA_wrapper(1,TxData,36);
