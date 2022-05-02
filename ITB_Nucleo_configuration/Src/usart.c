@@ -40,7 +40,8 @@ int BufferTime=0,UsartTime,Count=0;
 //uint8_t TxData[36]={'\0','\0','\r',10};
 uint8_t TxData[37];
 uint64_t* ptr;
-double outData[4]={3333, 5555, 4444, 7777};
+extern double outData[4];
+extern int AcadosFlag;
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 
 extern dt_model_solver_capsule *capsule;
@@ -214,7 +215,7 @@ void IdleCallback(void)
                 TxData[2+j*8+i]= (*ptr>>(i*8))&0xFF;     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla seconda
             }
         }
-        TxData[34]= 0; //Da definire exitFlag
+        TxData[34]= AcadosFlag; //Da definire exitFlag
         TxData[35]='\r';
         TxData[36]= 10;
 

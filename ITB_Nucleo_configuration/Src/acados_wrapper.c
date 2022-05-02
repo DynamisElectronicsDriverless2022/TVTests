@@ -9,6 +9,7 @@
 #include "dt_model_model/dt_model_model.h"
 #include "acados_solver_dt_model.h"
 extern dt_model_solver_capsule * capsule;
+int AcadosFlag;
 
 // Inizializzazione solver, questa la mettiamo nel .h
 
@@ -90,6 +91,7 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     int acados_status_My[1];
     ocp_nlp_get(nlp_config, capsule->nlp_solver, "status", acados_status_My);
     int volatile exitflag = acados_status_My[0];
+    AcadosFlag= exitflag;
 
     // tempo di solving
 //  double out_cpu_time[1];

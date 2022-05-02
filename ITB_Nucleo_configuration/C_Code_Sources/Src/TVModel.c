@@ -69,6 +69,9 @@ Verification pane for ERT based targets, which will disable the \
 preprocessor word size checks.
 #endif
 
+//USER DEFINES
+double outData[4];
+
 /* Skipping ulong_long/long_long check: insufficient preprocessor integer range. */
 
 /* Block signals and states (default storage) */
@@ -2249,6 +2252,11 @@ void TV(void)                          /* Explicit Task: Subsystem */
                         &rtDW.CFunction_i[0], &rtDW.CFunction_a[0],
                         &rtDW.CFunction[0], &rtb_Saturation_e[0],
                         &rtb_Efficiency[0], &rtb_y[0], &rtb_CCaller_o2[0]);
+
+  outData[0]= rtb_CCaller_o2[0];
+  outData[1]= rtb_CCaller_o2[1];
+  outData[2]= rtb_CCaller_o2[2];
+  outData[3]= rtb_CCaller_o2[3];
 
   /* Gain: '<S52>/Gain2' incorporates:
    *  Inport: '<Root>/omega_wheels_FL'
