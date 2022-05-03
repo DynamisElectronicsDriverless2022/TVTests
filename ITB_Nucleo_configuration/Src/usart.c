@@ -38,7 +38,7 @@ uint32_t Time=0;
 
 int BufferTime=0,UsartTime,Count=0;
 //uint8_t TxData[36]={'\0','\0','\r',10};
-uint8_t TxData[37];
+uint8_t TxData[36];
 uint64_t* ptr;
 extern double outData[4];
 extern int AcadosFlag;
@@ -164,7 +164,7 @@ void IdleCallback(void)
         //Creo un array "Data" contenente gli ingressi del blocco TV
 
         for(j=0;j<BUFFER/8;j++){
-            //Creo un double come 8 gruppi di 8 bit ciascuno
+            //Creo un double come 8 gruppi di 8 byte ciascuno
             for(i=0;i<8;i++){
                 Number+=((int64_t)RxData[8*j+i])<<(8*i);
             }
@@ -215,15 +215,15 @@ void IdleCallback(void)
                 TxData[2+j*8+i]= (*ptr>>(i*8))&0xFF;     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla seconda
             }
         }
-        TxData[34]= AcadosFlag; //Da definire exitFlag
-        TxData[35]='\r';
-        TxData[36]= 10;
+        //TxData[34]= AcadosFlag; //Da definire exitFlag
+        TxData[34]='\r';
+        TxData[35]= 10;
 
         if(TxData[0]==13 && TxData[1]== 10) TxData[1]=11;
-        usartTransmit_DMA_wrapper(1,TxData,37);
+        usartTransmit_DMA_wrapper(1,TxData,36);
         BufferTime=0;
-    //}
-}
+    }
+//}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

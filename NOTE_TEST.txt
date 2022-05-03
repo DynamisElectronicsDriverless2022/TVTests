@@ -1,3 +1,4 @@
 NOTE TEST SU VCU DP12e CON RAM ESTERNA:
 - Acados alloca un totale di 98kB circa
 - La Heap è allocata solamente sulla RAM Esterna
+- L'app funziona correttamente nel ricevere dati, quello che invia il micro viene ricevuto correttamente, a questo punto presumo sia un probnlema su scheda
