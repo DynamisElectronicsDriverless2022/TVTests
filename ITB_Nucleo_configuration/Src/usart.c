@@ -155,8 +155,10 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 void IdleCallback(void)
 {
-    //if((&huart1)->RxXferCount != 256){
-
+    if((&huart1)->RxXferCount != 256 && (&huart1)->RxXferCount != 0){
+        //reset periferica con dimensione iniziale del BUFFER
+        (&huart1)->RxXferCount = 256;
+        (&huart1)->pRxBuffPtr = RxData;
         //Penso che questi incrementi possano essere tolti
         h++;
 
@@ -190,11 +192,6 @@ void IdleCallback(void)
         rtU.omega_wheels_RL= Data[14];
         rtU.omega_wheels_RR= Data[15];
 
-
-
-        //reset periferica con dimensione iniziale del BUFFER
-        (&huart1)->RxXferCount = 256;
-        (&huart1)->pRxBuffPtr = RxData;
         (&htim6)->Instance->CNT = 0;
         Time = 0;
 
@@ -223,7 +220,7 @@ void IdleCallback(void)
         usartTransmit_DMA_wrapper(1,TxData,36);
         BufferTime=0;
     }
-//}
+}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

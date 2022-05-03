@@ -2,3 +2,4 @@ NOTE TEST SU VCU DP12e CON RAM ESTERNA:
 - Acados alloca un totale di 98kB circa
 - La Heap è allocata solamente sulla RAM Esterna
 - L'app funziona correttamente nel ricevere dati, quello che invia il micro viene ricevuto correttamente, a questo punto presumo sia un probnlema su scheda
+- IL PROBLEMA è CHE I DATI IN INPUT VENGONO INVIATI AL PRIMO GIRO E RIMANGONO UGUALI, QUINDI NON AVENDO VARIAZIONI (ES. STERZO) NON OTTENGO OUTPUT CHE MI ASPETTO. Semba che a volte addirittura non mandi neanche, o che si rompa tutto per qualche motivo
