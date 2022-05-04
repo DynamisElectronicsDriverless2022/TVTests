@@ -1,5 +1,10 @@
 NOTE TEST SU VCU DP12e CON RAM ESTERNA:
 - Acados alloca un totale di 98kB circa
 - La Heap è allocata solamente sulla RAM Esterna
-- L'app funziona correttamente nel ricevere dati, quello che invia il micro viene ricevuto correttamente, a questo punto presumo sia un probnlema su scheda
+- L'app funziona correttamente nel ricevere dati, quello che invia il micro viene ricevuto correttamente, a questo punto presumo sia un problema su scheda
 - IL PROBLEMA è CHE I DATI IN INPUT VENGONO INVIATI AL PRIMO GIRO E RIMANGONO UGUALI, QUINDI NON AVENDO VARIAZIONI (ES. STERZO) NON OTTENGO OUTPUT CHE MI ASPETTO. Semba che a volte addirittura non mandi neanche, o che si rompa tutto per qualche motivo
+-Da aggiungere exitflag su usart
+-Far runnare in automatico
+-Sistemare modello simulink per avere in uscita 4 coppie di modo che ci possa accedere da RtY.Torque
+
+N.B: Dopo 1.56 secondi perde un colpo
