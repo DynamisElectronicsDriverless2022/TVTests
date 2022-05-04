@@ -292,3 +292,7 @@
 281	708	6732943161271638	ITB_Nucleo_configuration.elf	e6dabd695cbaa390
 9	272	6732958441923612	CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj	fb31c3eecad9b4de
 273	697	6732958445534188	ITB_Nucleo_configuration.elf	e6dabd695cbaa390
+10	887	6733866039026197	CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj	fb31c3eecad9b4de
+888	1695	6733866046347749	ITB_Nucleo_configuration.elf	e6dabd695cbaa390
+9	266	6733866097196039	CMakeFiles/ITB_Nucleo_configuration.elf.dir/Src/usart.c.obj	fb31c3eecad9b4de
+267	730	6733866101115523	ITB_Nucleo_configuration.elf	e6dabd695cbaa390
