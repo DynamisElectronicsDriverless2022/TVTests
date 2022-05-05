@@ -212,6 +212,10 @@ void IdleCallback(void)
             for(i=0; i<8 ; i++){
                 //i conta a che byte sono arrivato tra gli 8 disponibili nel double (64 bit)
                 TxData[2+j*8+i]= (*ptr>>(i*8))&0xFF;     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla seconda
+                //Cagnata che ho fatto per far si che non venga inviato un terminatore in mezzo ai double spacchettati
+                if(TxData[2+j*8+i]==(uint8_t)13){
+                    TxData[2+j*8+i]=(uint8_t)14;
+                }
             }
         }
         TxData[34]= AcadosFlag;
