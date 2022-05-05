@@ -38,10 +38,11 @@ uint32_t Time=0;
 
 int BufferTime=0,UsartTime,Count=0;
 //uint8_t TxData[36]={'\0','\0','\r',10};
-uint8_t TxData[37];
+uint8_t TxData[61];
 uint64_t* ptr;
 extern double outData[4];
 extern int AcadosFlag;
+extern double AcadosState[3];
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 
 extern dt_model_solver_capsule *capsule;
@@ -155,7 +156,8 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 void IdleCallback(void)
 {
-    if((&huart1)->RxXferCount != 256 && (&huart1)->RxXferCount != 0){
+    //if((&huart1)->RxXferCount != 256 && (&huart1)->RxXferCount != 0){
+    if((&huart1)->RxXferCount != 256){
         //reset periferica con dimensione iniziale del BUFFER
         (&huart1)->RxXferCount = 256;
         (&huart1)->pRxBuffPtr = RxData;
@@ -213,11 +215,21 @@ void IdleCallback(void)
             }
         }
         TxData[34]= AcadosFlag;
-        TxData[35]='\r';
-        TxData[36]= 10;
+
+        for (j=0; j<3; j++){
+            //j conta a che stato di Acados sono arrivato tra i 4 disponibili
+            ptr=(uint64_t *)&(AcadosState[j]);
+            for(i=0; i<8 ; i++){
+                //i conta a che byte sono arrivato tra gli 8 disponibili nel double (64 bit)
+                TxData[35+j*8+i]= (*ptr>>(i*8))&0xFF;     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla trentacinquesima
+            }
+        }
+
+        TxData[59]='\r';
+        TxData[60]= 10;
 
         if(TxData[0]==13 && TxData[1]== 10) TxData[1]=11;
-        usartTransmit_DMA_wrapper(1,TxData,37);
+        usartTransmit_DMA_wrapper(1,TxData,61);
         BufferTime=0;
     }
 }

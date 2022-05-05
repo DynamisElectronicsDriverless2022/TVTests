@@ -10,6 +10,7 @@
 #include "acados_solver_dt_model.h"
 extern dt_model_solver_capsule * capsule;
 int AcadosFlag;
+double AcadosState[3];
 
 // Inizializzazione solver, questa la mettiamo nel .h
 
@@ -87,6 +88,12 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     // prendo il vettore delle variabili predette dal solver al primo step (u + x)
 
     ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) torqueOut);
+
+    double stateOut[3];
+    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 1, "x", (void *) &stateOut[0]);
+    AcadosState[0]=stateOut[0];
+    AcadosState[1]=stateOut[1];
+    AcadosState[2]=stateOut[2];
 
     int acados_status_My[1];
     ocp_nlp_get(nlp_config, capsule->nlp_solver, "status", acados_status_My);
