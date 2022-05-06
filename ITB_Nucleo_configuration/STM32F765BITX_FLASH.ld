@@ -11,6 +11,7 @@
  *
  *            Set memory bank area and size if external memory is used
  ******************************************************************************
+ *
  * @attention
  *
  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
