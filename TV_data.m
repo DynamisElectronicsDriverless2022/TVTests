@@ -58,9 +58,9 @@ TV.MPC.N                                       = 2;
 TV.MPC.T                                       = 0.04;
 
 % Other data
-TV.MPC.nx                                      = 3;
+TV.MPC.nx                                      = 7;
 TV.MPC.np                                      = 13;
-TV.MPC.ny                                      = 7;
+TV.MPC.ny                                      = 11;
 TV.MPC.nu                                      = 4;
 
 %% torque limits
@@ -75,7 +75,7 @@ TV.LV.TORQUE.T_lim_pos.table_data              = uint16(TV.LV.TORQUE.T_lim_pos.t
 TV.LV.TORQUE.T_lim_pos.breakpoints1            = uint16(TV.LV.TORQUE.T_lim_pos.breakpoints1);
 TV.LV.TORQUE.T_lim_pos.breakpoints2            = uint16(TV.LV.TORQUE.T_lim_pos.breakpoints2);
 %% LUT potenza
-TV.LUT.Power_LUT.Power                         = load('power_torque_LUTs');
+TV.LUT.Power_LUT.Power                         = load('Model_Data\Mat\AMK\power_torque_LUTs.mat');
 
 %% LUT dinamica
 TV.LUT.Car_LUT.steer_at_ground_single_axis_LUT = load('steer_at_ground_single_axis.mat');
@@ -84,9 +84,9 @@ TV.LUT.Car_LUT.steer_at_ground_LUT             = load('steer_at_ground_different
 %% LUT yrd
 TV.LUT.Yrd_LUT.LUT_vectors                     = load('YRD_vectors.mat');
 TV.LUT.Yrd_LUT.LUT_0                           = load('YRD_LUT_0.mat');
-TV.LUT.Yrd_LUT.LUT_1                           = load('YRD_LUT_1.mat');
-TV.LUT.Yrd_LUT.LUT_neg1_5                      = load('YRD_LUT_-1_5.mat');
-TV.LUT.Yrd_LUT.LUT_neg3                        = load('YRD_LUT_-3.mat');
+TV.LUT.Yrd_LUT.LUT_1                           = load('YRD_LUT_1e-3.mat');
+TV.LUT.Yrd_LUT.LUT_neg1_5                      = load('YRD_LUT_-1.5e-3.mat');
+TV.LUT.Yrd_LUT.LUT_neg3                        = load('YRD_LUT_-3e-3.mat');
 %% filter values
 TV.FILTERS.movingAverage                       = 5;
 TV.FILTERS.sampleTime                          = 0.01;

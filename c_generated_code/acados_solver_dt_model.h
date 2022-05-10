@@ -37,12 +37,12 @@
 #include "acados_c/ocp_nlp_interface.h"
 #include "acados_c/external_function_interface.h"
 
-#define DT_MODEL_NX     3
+#define DT_MODEL_NX     7
 #define DT_MODEL_NZ     0
 #define DT_MODEL_NU     4
 #define DT_MODEL_NP     13
-#define DT_MODEL_NBX    0
-#define DT_MODEL_NBX0   3
+#define DT_MODEL_NBX    4
+#define DT_MODEL_NBX0   7
 #define DT_MODEL_NBU    4
 #define DT_MODEL_NSBX   0
 #define DT_MODEL_NSBU   0
@@ -58,8 +58,8 @@
 #define DT_MODEL_NG     4
 #define DT_MODEL_NBXN   0
 #define DT_MODEL_NGN    0
-#define DT_MODEL_NY0    7
-#define DT_MODEL_NY     7
+#define DT_MODEL_NY0    11
+#define DT_MODEL_NY     11
 #define DT_MODEL_NYN    0
 #define DT_MODEL_N      2
 #define DT_MODEL_NH     0
@@ -81,7 +81,7 @@ typedef struct dt_model_solver_capsule
     ocp_nlp_out *sens_out;
     ocp_nlp_solver *nlp_solver;
     void *nlp_opts;
-    ocp_nlp_plan_t *nlp_solver_plan;
+    ocp_nlp_plan *nlp_solver_plan;
     ocp_nlp_config *nlp_config;
     ocp_nlp_dims *nlp_dims;
 
@@ -137,7 +137,7 @@ ocp_nlp_solver *dt_model_acados_get_nlp_solver(dt_model_solver_capsule * capsule
 ocp_nlp_config *dt_model_acados_get_nlp_config(dt_model_solver_capsule * capsule);
 void *dt_model_acados_get_nlp_opts(dt_model_solver_capsule * capsule);
 ocp_nlp_dims *dt_model_acados_get_nlp_dims(dt_model_solver_capsule * capsule);
-ocp_nlp_plan_t *dt_model_acados_get_nlp_plan(dt_model_solver_capsule * capsule);
+ocp_nlp_plan *dt_model_acados_get_nlp_plan(dt_model_solver_capsule * capsule);
 
 #ifdef __cplusplus
 } /* extern "C" */

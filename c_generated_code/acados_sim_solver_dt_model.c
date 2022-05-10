@@ -131,7 +131,7 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
     sim_opts_set(dt_model_sim_config, dt_model_sim_opts, "num_stages", &tmp_int);
     tmp_int = 1;
     sim_opts_set(dt_model_sim_config, dt_model_sim_opts, "num_steps", &tmp_int);
-    tmp_bool = 0;
+    tmp_bool = 1;
     sim_opts_set(dt_model_sim_config, dt_model_sim_opts, "jac_reuse", &tmp_bool);
 
 
@@ -166,8 +166,8 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
 
     /* initialize input */
     // x
-    double x0[3];
-    for (int ii = 0; ii < 3; ii++)
+    double x0[7];
+    for (int ii = 0; ii < 7; ii++)
         x0[ii] = 0.0;
 
     sim_in_set(dt_model_sim_config, dt_model_sim_dims,
@@ -183,11 +183,11 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
                dt_model_sim_in, "u", u0);
 
     // S_forw
-    double S_forw[21];
-    for (int ii = 0; ii < 21; ii++)
+    double S_forw[77];
+    for (int ii = 0; ii < 77; ii++)
         S_forw[ii] = 0.0;
-    for (int ii = 0; ii < 3; ii++)
-        S_forw[ii + ii * 3 ] = 1.0;
+    for (int ii = 0; ii < 7; ii++)
+        S_forw[ii + ii * 7 ] = 1.0;
 
 
     sim_in_set(dt_model_sim_config, dt_model_sim_dims,

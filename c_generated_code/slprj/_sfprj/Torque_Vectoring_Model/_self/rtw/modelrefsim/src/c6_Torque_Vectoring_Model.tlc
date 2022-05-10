@@ -1,0 +1,67 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c6_Torque_Vectoring_Model"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c6_Torque_Vectoring_Model"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_TS_ON"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "TS_ON"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "TS_ON.TC_ON.FL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FR"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "TS_ON.TC_ON.FR"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_RL"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "TS_ON.TC_ON.RL"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_RR"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "TS_ON.TC_ON.RR"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

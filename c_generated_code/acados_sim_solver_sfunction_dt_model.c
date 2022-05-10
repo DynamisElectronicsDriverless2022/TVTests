@@ -68,14 +68,14 @@ static void mdlInitializeSizes (SimStruct *S)
 
     // specify dimension information for the input ports
     // x0
-    ssSetInputPortVectorDimension(S, 0, 3);
+    ssSetInputPortVectorDimension(S, 0, 7);
     // u0
     ssSetInputPortVectorDimension(S, 1, 4);
     // parameters
     ssSetInputPortVectorDimension(S, 2, 13);
 
     // specify dimension information for the output ports
-    ssSetOutputPortVectorDimension(S, 0, 3 ); // xnext
+    ssSetOutputPortVectorDimension(S, 0, 7 ); // xnext
 
     // specify the direct feedthrough status
     // should be set to 1 for all inputs used in mdlOutputs
@@ -144,7 +144,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     /* go through inputs */
     // initial condition
     in_sign = ssGetInputPortRealSignalPtrs(S, 0);
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 7; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     sim_in_set(acados_sim_config, acados_sim_dims,
@@ -152,7 +152,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 
 
     // ssPrintf("\nin acados sim:\n");
-    // for (int i = 0; i < 3; i++) ssPrintf("x0[%d] = %f\n", i, buffer[i]);
+    // for (int i = 0; i < 7; i++) ssPrintf("x0[%d] = %f\n", i, buffer[i]);
     //     ssPrintf("\n");
 
 
@@ -189,7 +189,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
                 "xn", (void *) out_x);
 
     // ssPrintf("\nacados sim solve: returned %d\n", acados_status);
-    // for (int i = 0; i < 3; i++) ssPrintf("x_sim[%d] = %f\n", i, out_x[i]);
+    // for (int i = 0; i < 7; i++) ssPrintf("x_sim[%d] = %f\n", i, out_x[i]);
     //     ssPrintf("\n");
 
 }

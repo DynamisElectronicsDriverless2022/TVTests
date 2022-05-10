@@ -38,7 +38,7 @@ SOURCES = { ...
             'acados_solver_dt_model.c'
           };
 
-INC_PATH = 'C:\Users\Daniele\Documents\acados\examples\acados_matlab_octave\..\../include';
+INC_PATH = 'C:\Users\Daniele\Documents\acados\acados\examples\acados_matlab_octave\..\../include';
 
 INCS = {['-I', fullfile(INC_PATH, 'blasfeo', 'include')], ...
         ['-I', fullfile(INC_PATH, 'hpipm', 'include')], ...
@@ -54,14 +54,14 @@ COMPDEFINES = 'COMPDEFINES=$COMPDEFINES';
 
 
 
-LIB_PATH = ['-L', fullfile('C:\Users\Daniele\Documents\acados\examples\acados_matlab_octave\..\../lib')];
+LIB_PATH = ['-L', fullfile('C:\Users\Daniele\Documents\acados\acados\examples\acados_matlab_octave\..\../lib')];
 
 LIBS = {'-lacados', '-lhpipm', '-lblasfeo'};
 
 % acados linking libraries and flags
 LDFLAGS = [LDFLAGS ' '];
 COMPFLAGS = [COMPFLAGS ' '];
-LIBS{end+1} = '';
+LIBS{end+1} = '-lqpOASES_e';
 LIBS{end+1} = '';
 LIBS{end+1} = '-losqp';
 
@@ -78,18 +78,18 @@ fprintf('\n\nNote: Usage of Sfunction is as follows:\n')
 input_note = 'Inputs are:\n';
 i_in = 1;
 input_note = strcat(input_note, num2str(i_in), ') lbx_0 - lower bound on x for stage 0,',...
-                    ' size [3]\n ');
+                    ' size [7]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') ubx_0 - upper bound on x for stage 0,',...
-                    ' size [3]\n ');
+                    ' size [7]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') parameters - concatenated for all shooting nodes 0 to N+1,',...
                     ' size [39]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') y_ref_0, size [7]\n ');
+input_note = strcat(input_note, num2str(i_in), ') y_ref_0, size [11]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') y_ref - concatenated for shooting nodes 1 to N-1,',...
-                    ' size [7]\n ');
+                    ' size [11]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') lbu for shooting nodes 0 to N-1, size [8]\n ');
 i_in = i_in + 1;
@@ -99,7 +99,7 @@ input_note = strcat(input_note, num2str(i_in), ') lg, size [4]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') ug, size [4]\n ');
 i_in = i_in + 1;  
-input_note = strcat(input_note, num2str(i_in), ') cost_W in column-major format, that is set for all intermediate shooting nodes: 1 to N-1, size [49]\n ');
+input_note = strcat(input_note, num2str(i_in), ') cost_W in column-major format, that is set for all intermediate shooting nodes: 1 to N-1, size [121]\n ');
 i_in = i_in + 1;
 
 fprintf(input_note)

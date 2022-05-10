@@ -66,8 +66,8 @@ OBJ+= $(OCP_OBJ)
 EXTERNAL_DIR=
 EXTERNAL_LIB=
 
-INCLUDE_PATH = C:\Users\Daniele\Documents\acados\examples\acados_matlab_octave\..\../include
-LIB_PATH = C:\Users\Daniele\Documents\acados\examples\acados_matlab_octave\..\../lib
+INCLUDE_PATH = C:\Users\Daniele\Documents\acados\acados\examples\acados_matlab_octave\..\../include
+LIB_PATH = C:\Users\Daniele\Documents\acados\acados\examples\acados_matlab_octave\..\../lib
 all: clean casadi_fun example_sim example
 shared_lib: bundled_shared_lib ocp_shared_lib sim_shared_lib
 
@@ -97,7 +97,7 @@ sim_solver:
 example: ocp_solver main
 	gcc $(ACADOS_FLAGS) -o main_dt_model $(EX_OBJ) $(OBJ) -L $(LIB_PATH) \
 	-lacados -lhpipm -lblasfeo \
-	  -losqp \
+	-lqpOASES_e  -losqp \
 	-lm \
 	-I $(INCLUDE_PATH)/blasfeo/include/ \
 	-I $(INCLUDE_PATH)/hpipm/include/ \
@@ -108,7 +108,7 @@ example: ocp_solver main
 example_sim: sim_solver main_sim
 	gcc $(ACADOS_FLAGS) -o main_sim_dt_model $(EX_SIM_OBJ) $(MODEL_OBJ) $(SIM_OBJ) -L $(LIB_PATH) \
 	-lacados -lhpipm -lblasfeo \
-	  -losqp \
+	-lqpOASES_e  -losqp \
 	-lm \
 	-I $(INCLUDE_PATH)/blasfeo/include/ \
 	-I $(INCLUDE_PATH)/acados/ \
@@ -120,7 +120,7 @@ bundled_shared_lib: casadi_fun ocp_solver sim_solver
 	-I $(INCLUDE_PATH) \
 	-L $(LIB_PATH) \
 	-lacados -lhpipm -lblasfeo \
-	  -losqp \
+	-lqpOASES_e  -losqp \
 	-lm \
 
 ocp_shared_lib: casadi_fun ocp_solver
@@ -130,13 +130,13 @@ ocp_shared_lib: casadi_fun ocp_solver
 	-I $(INCLUDE_PATH) \
 	-L$(EXTERNAL_DIR) -l$(EXTERNAL_LIB) \
 	-L $(LIB_PATH) -lacados -lhpipm -lblasfeo \
-	  -losqp \
+	-lqpOASES_e  -losqp \
 	-lm \
 
 sim_shared_lib: casadi_fun sim_solver
 	gcc $(ACADOS_FLAGS) -shared -o libacados_sim_solver_dt_model.so $(SIM_OBJ) $(MODEL_OBJ) -L$(EXTERNAL_DIR) -l$(EXTERNAL_LIB) \
 	-L $(LIB_PATH) -lacados -lhpipm -lblasfeo \
-	  -losqp \
+	-lqpOASES_e  -losqp \
 	-lm \
 
 clean:
