@@ -89,6 +89,120 @@ rule C_STATIC_LIBRARY_LINKER__blasfeo_Debug
 #############################################
 # Rule for compiling C files.
 
+rule C_COMPILER__getting_started_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__getting_started_Debug
+  command = cmd.exe /C "$PRE_LINK && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__example_d_lu_factorization_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__example_d_lu_factorization_Debug
+  command = cmd.exe /C "$PRE_LINK && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__example_s_lu_factorization_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__example_s_lu_factorization_Debug
+  command = cmd.exe /C "$PRE_LINK && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__example_d_lq_factorization_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__example_d_lq_factorization_Debug
+  command = cmd.exe /C "$PRE_LINK && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__example_s_riccati_recursion_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__example_s_riccati_recursion_Debug
+  command = cmd.exe /C "$PRE_LINK && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__example_d_riccati_recursion_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C executable.
+
+rule C_EXECUTABLE_LINKER__example_d_riccati_recursion_Debug
+  command = cmd.exe /C "$PRE_LINK && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
 rule C_COMPILER__hpipm_Debug
   depfile = $DEP_FILE
   deps = gcc

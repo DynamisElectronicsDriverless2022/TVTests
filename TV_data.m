@@ -75,7 +75,7 @@ TV.LV.TORQUE.T_lim_pos.table_data              = uint16(TV.LV.TORQUE.T_lim_pos.t
 TV.LV.TORQUE.T_lim_pos.breakpoints1            = uint16(TV.LV.TORQUE.T_lim_pos.breakpoints1);
 TV.LV.TORQUE.T_lim_pos.breakpoints2            = uint16(TV.LV.TORQUE.T_lim_pos.breakpoints2);
 %% LUT potenza
-TV.LUT.Power_LUT.Power                         = load('Model_Data\Mat\AMK\power_torque_LUTs.mat');
+TV.LUT.Power_LUT.Power                         = load('Mat\AMK\power_torque_LUTs.mat');
 
 %% LUT dinamica
 TV.LUT.Car_LUT.steer_at_ground_single_axis_LUT = load('steer_at_ground_single_axis.mat');

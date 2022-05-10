@@ -102,6 +102,7 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
 
     ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) devTorqueOut);
 
+
     double stateOut[7];
     ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 1, "x", (void *) &stateOut[0]);
     AcadosState[0]=stateOut[0];
@@ -125,7 +126,7 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     return 1;
 }
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[], double devTorqueOut[]){
+double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],double devTorqueOut[]){
 	#ifndef MATLAB_MEX_FILE
 		return Acados_Caller(x0,extParam,limDown,limUp,reference,lbx,ubx,limAggrDown,limAggrUp,cost_W,constr_C,capsule,devTorqueOut);
 	#endif
