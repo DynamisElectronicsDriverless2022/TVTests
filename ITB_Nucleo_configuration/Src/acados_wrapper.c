@@ -19,7 +19,7 @@ double AcadosState[3];
 
 
 
-double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[],dt_model_solver_capsule * capsule,double torqueOut[]){
+double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],dt_model_solver_capsule * capsule,double devTorqueOut[]){
     /** Da qua in poi Ã¨ il codice che va messo nella funzione che viene chiamata ogni iterazione per chiamare il solver **/
     // Inizializzazione delle variabili del solver
     ocp_nlp_config *nlp_config = dt_model_acados_get_nlp_config(capsule);
@@ -64,6 +64,16 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
         ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "yref", (void *) &reference[ii*7]);
     }
 
+    // lower bound states
+    for (int ii=1; ii<N_it; ii++) {
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lbx", (void *) lbx);
+    }
+
+    // upper bound states
+    for (int ii=1; ii<N_it; ii++) {
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ubx", (void *) ubx);
+    }
+
     // constraint affine (somma di coppie)
     for (int ii = 0; ii < N_it; ii++) {
         //double temp[1]
@@ -76,9 +86,12 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
         //temp[0] = +4*20; //
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ug", (void *) limAggrUp);
     }
-    for(int ii=1;ii<N_it;ii++){
-        ocp_nlp_cost_model_set(nlp_config,nlp_dims,nlp_in,ii,"W",(void *)cost_W);
+    for(int ii=1; ii < N_it; ii++){
+        ocp_nlp_cost_model_set(nlp_config,nlp_dims,nlp_in,ii,"W",(void *) cost_W);
     }
+
+    for (int ii = 1; ii < 2; ii++)
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "C", (void *) constr_C);
 
     // chiamata al solver
     int rti_phase = 0;
@@ -87,9 +100,9 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
 
     // prendo il vettore delle variabili predette dal solver al primo step (u + x)
 
-    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) torqueOut);
+    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) devTorqueOut);
 
-    double stateOut[3];
+    double stateOut[7];
     ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 1, "x", (void *) &stateOut[0]);
     AcadosState[0]=stateOut[0];
     AcadosState[1]=stateOut[1];
@@ -112,9 +125,9 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     return 1;
 }
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[], double torqueOut[]){
+double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[], double devTorqueOut[]){
 	#ifndef MATLAB_MEX_FILE
-		return Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule,torqueOut);
+		return Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule,devTorqueOut);
 	#endif
 	return x0[0]+x0[1];	
 }
