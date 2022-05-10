@@ -61,7 +61,7 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
 
     // riferimento che deve seguire lo stato
     for (int ii = 0; ii < N_it; ii++) {
-        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "yref", (void *) &reference[ii*7]);
+        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "yref", (void *) &reference[ii*11]);
     }
 
     // lower bound states
@@ -90,7 +90,7 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
         ocp_nlp_cost_model_set(nlp_config,nlp_dims,nlp_in,ii,"W",(void *) cost_W);
     }
 
-    for (int ii = 1; ii < 2; ii++)
+    for (int ii = 1; ii < N_it; ii++)
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "C", (void *) constr_C);
 
     // chiamata al solver
@@ -125,9 +125,9 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     return 1;
 }
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double limAggrDown[],double limAggrUp[],double cost_W[], double devTorqueOut[]){
+double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[], double devTorqueOut[]){
 	#ifndef MATLAB_MEX_FILE
-		return Acados_Caller(x0,extParam,limDown,limUp,reference,limAggrDown,limAggrUp,cost_W,capsule,devTorqueOut);
+		return Acados_Caller(x0,extParam,limDown,limUp,reference,lbx,ubx,limAggrDown,limAggrUp,cost_W,constr_C,capsule,devTorqueOut);
 	#endif
 	return x0[0]+x0[1];	
 }
