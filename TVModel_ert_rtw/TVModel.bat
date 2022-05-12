@@ -1,5 +1,5 @@
 
-set MATLAB=C:\Program Files\MATLAB\R2021b
+call "setup_mingw.bat"
 
 cd .
 

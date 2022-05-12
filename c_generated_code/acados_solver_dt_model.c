@@ -435,34 +435,62 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
 
 
 
-    double* zlumem = calloc(4*NS, sizeof(double));
-    double* Zl = zlumem+NS*0;
-    double* Zu = zlumem+NS*1;
-    double* zl = zlumem+NS*2;
-    double* zu = zlumem+NS*3;
-    // change only the non-zero elements:
-    zl[0] = 100;
-    zl[1] = 0.1;
-    zl[2] = 0.1;
-    zu[0] = 100;
-    zu[1] = 0.1;
-    zu[2] = 0.1;
-
-    for (int i = 0; i < N; i++)
-    {
-        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, i, "Zl", Zl);
-        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, i, "Zu", Zu);
-        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, i, "zl", zl);
-        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, i, "zu", zu);
-    }
-    free(zlumem);
-
 
     // terminal cost
 
 
+    double* yref_e = calloc(NYN, sizeof(double));
+    // change only the non-zero elements:
+    
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "yref", yref_e);
+    free(yref_e);
+
+    double* W_e = calloc(NYN*NYN, sizeof(double));
+    // change only the non-zero elements:
+    
+    W_e[2+(NYN) * 2] = 50;
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "W", W_e);
+    free(W_e);
+    double* Vx_e = calloc(NYN*NX, sizeof(double));
+    // change only the non-zero elements:
+    
+    Vx_e[0+(NYN) * 0] = 1;
+    Vx_e[1+(NYN) * 1] = 1;
+    Vx_e[2+(NYN) * 2] = 1;
+    Vx_e[3+(NYN) * 3] = 1;
+    Vx_e[4+(NYN) * 4] = 1;
+    Vx_e[5+(NYN) * 5] = 1;
+    Vx_e[6+(NYN) * 6] = 1;
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Vx", Vx_e);
+    free(Vx_e);
 
 
+    double* zluemem = calloc(4*NSN, sizeof(double));
+    double* Zl_e = zluemem+NSN*0;
+    double* Zu_e = zluemem+NSN*1;
+    double* zl_e = zluemem+NSN*2;
+    double* zu_e = zluemem+NSN*3;
+
+    // change only the non-zero elements:
+    
+
+    
+
+    
+    zl_e[0] = 100;
+    zl_e[1] = 0.1;
+    zl_e[2] = 0.1;
+
+    
+    zu_e[0] = 100;
+    zu_e[1] = 0.1;
+    zu_e[2] = 0.1;
+
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Zl", Zl_e);
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Zu", Zu_e);
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "zl", zl_e);
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "zu", zu_e);
+    free(zluemem);
 
     /**** Constraints ****/
 
@@ -535,25 +563,6 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
 
 
 
-    // set up soft bounds for general linear constraints
-    int* idxsg = malloc(NSG * sizeof(int));
-    
-    idxsg[0] = 0;
-    idxsg[1] = 2;
-    idxsg[2] = 3;
-    double* lusg = calloc(2*NSG, sizeof(double));
-    double* lsg = lusg;
-    double* usg = lusg + NSG;
-    
-
-    for (int i = 0; i < N; i++)
-    {
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "idxsg", idxsg);
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "lsg", lsg);
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "usg", usg);
-    }
-    free(idxsg);
-    free(lusg);
 
 
 
@@ -561,88 +570,76 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
 
 
 
+
+
+
+
+
+
+    /* terminal constraints */
+
+    // set up bounds for last stage
     // x
-    int* idxbx = malloc(NBX * sizeof(int));
+    int* idxbx_e = malloc(NBXN * sizeof(int));
     
-    idxbx[0] = 3;
-    idxbx[1] = 4;
-    idxbx[2] = 5;
-    idxbx[3] = 6;
-    double* lubx = calloc(2*NBX, sizeof(double));
-    double* lbx = lubx;
-    double* ubx = lubx + NBX;
+    idxbx_e[0] = 3;
+    idxbx_e[1] = 4;
+    idxbx_e[2] = 5;
+    idxbx_e[3] = 6;
+    double* lubx_e = calloc(2*NBXN, sizeof(double));
+    double* lbx_e = lubx_e;
+    double* ubx_e = lubx_e + NBXN;
     
-
-    for (int i = 1; i < N; i++)
-    {
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "idxbx", idxbx);
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "lbx", lbx);
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "ubx", ubx);
-    }
-    free(idxbx);
-    free(lubx);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "idxbx", idxbx_e);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "lbx", lbx_e);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "ubx", ubx_e);
+    free(idxbx_e);
+    free(lubx_e);
 
 
-
-    // set up general constraints for stage 0 to N-1 
-    double* D = calloc(NG*NU, sizeof(double));
-    double* C = calloc(NG*NX, sizeof(double));
-    double* lug = calloc(2*NG, sizeof(double));
-    double* lg = lug;
-    double* ug = lug + NG;
-
+    // set up soft bounds for general linear constraints
+    int* idxsg_e = calloc(NSGN, sizeof(int));
+    
+    idxsg_e[0] = 0;
+    idxsg_e[1] = 2;
+    idxsg_e[2] = 3;
+    double* lusg_e = calloc(2*NSGN, sizeof(double));
+    double* lsg_e = lusg_e;
+    double* usg_e = lusg_e + NSGN;
     
 
-    
-    C[0+NG * 3] = 1;
-    C[0+NG * 4] = 1;
-    C[0+NG * 5] = 1;
-    C[0+NG * 6] = 1;
-    C[1+NG * 3] = 1;
-    C[1+NG * 4] = 1;
-    C[1+NG * 5] = 1;
-    C[1+NG * 6] = 1;
-    C[2+NG * 4] = 1;
-    C[2+NG * 6] = -1;
-    C[3+NG * 3] = 1;
-    C[3+NG * 5] = -1;
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "idxsg", idxsg_e);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "lsg", lsg_e);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "usg", usg_e);
+    free(idxsg_e);
+    free(lusg_e);
+
+
+
+
+
+
+
+
+    // set up general constraints for last stage 
+    double* C_e = calloc(NGN*NX, sizeof(double));
+    double* lug_e = calloc(2*NGN, sizeof(double));
+    double* lg_e = lug_e;
+    double* ug_e = lug_e + NGN;
 
     
-    lg[0] = 1;
-    lg[1] = 1;
 
     
-    ug[0] = 1;
-    ug[1] = 1;
+    lg_e[0] = 1;
+    ug_e[0] = 1;
+    lg_e[1] = 1;
+    ug_e[1] = 1;
 
-    for (int i = 0; i < N; i++)
-    {
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "D", D);
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "C", C);
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "lg", lg);
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, i, "ug", ug);
-    }
-    free(D);
-    free(C);
-    free(lug);
-
-
-
-
-
-
-    /* terminal constraints */
-
-
-
-
-
-
-
-
-
-
-
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "C", C_e);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "lg", lg_e);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, N, "ug", ug_e);
+    free(C_e);
+    free(lug_e);
 
 
 
@@ -698,10 +695,8 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "qp_cond_N", &qp_solver_cond_N);
 
 
-    int qp_solver_iter_max = 50;
+    int qp_solver_iter_max = 10;
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "qp_iter_max", &qp_solver_iter_max);
-    int qp_solver_warm_start = 1;
-    ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "qp_warm_start", &qp_solver_warm_start);
 
     int print_level = 0;
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "print_level", &print_level);

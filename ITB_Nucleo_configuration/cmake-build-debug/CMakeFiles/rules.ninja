@@ -17,7 +17,7 @@
 rule ASM_COMPILER__ITB_Nucleo_configuration.2eelf_Debug
   depfile = $DEP_FILE
   deps = gcc
-  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -27,7 +27,7 @@ rule ASM_COMPILER__ITB_Nucleo_configuration.2eelf_Debug
 rule C_COMPILER__ITB_Nucleo_configuration.2eelf_Debug
   depfile = $DEP_FILE
   deps = gcc
-  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -35,7 +35,7 @@ rule C_COMPILER__ITB_Nucleo_configuration.2eelf_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__ITB_Nucleo_configuration.2eelf_Debug
-  command = cmd.exe /C "$PRE_LINK && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-gcc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -54,7 +54,7 @@ rule CUSTOM_COMMAND
 rule C_COMPILER__acados_Debug
   depfile = $DEP_FILE
   deps = gcc
-  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -62,7 +62,7 @@ rule C_COMPILER__acados_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__acados_Debug
-  command = cmd.exe /C "$PRE_LINK && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f $TARGET_FILE && "C:\Users\Mario Bertelli\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ar" qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR17F9~1.EXE $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f $TARGET_FILE && C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -73,7 +73,7 @@ rule C_STATIC_LIBRARY_LINKER__acados_Debug
 rule C_COMPILER__blasfeo_Debug
   depfile = $DEP_FILE
   deps = gcc
-  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -81,7 +81,7 @@ rule C_COMPILER__blasfeo_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__blasfeo_Debug
-  command = cmd.exe /C "$PRE_LINK && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f $TARGET_FILE && "C:\Users\Mario Bertelli\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ar" qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR17F9~1.EXE $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f $TARGET_FILE && C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -92,7 +92,7 @@ rule C_STATIC_LIBRARY_LINKER__blasfeo_Debug
 rule C_COMPILER__hpipm_Debug
   depfile = $DEP_FILE
   deps = gcc
-  command = C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR19DD~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -100,7 +100,7 @@ rule C_COMPILER__hpipm_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hpipm_Debug
-  command = cmd.exe /C "$PRE_LINK && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f $TARGET_FILE && "C:\Users\Mario Bertelli\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ar" qc $TARGET_FILE $LINK_FLAGS @$RSP_FILE && C:\Users\MARIOB~1\scoop\apps\GCC-AR~1\current\bin\AR17F9~1.EXE $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f $TARGET_FILE && C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ar qc $TARGET_FILE $LINK_FLAGS @$RSP_FILE && C:\Users\Daniele\scoop\apps\gcc-arm-none-eabi\current\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -111,7 +111,7 @@ rule C_STATIC_LIBRARY_LINKER__hpipm_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\Mario Bertelli\Desktop\TVTest\TVTests\ITB_Nucleo_configuration" -B"C:\Users\Mario Bertelli\Desktop\TVTest\TVTests\ITB_Nucleo_configuration\cmake-build-debug"
+  command = "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Daniele\Documents\Dynamis\2022\Torque_Vectoring\TVTests\ITB_Nucleo_configuration -BC:\Users\Daniele\Documents\Dynamis\2022\Torque_Vectoring\TVTests\ITB_Nucleo_configuration\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
@@ -120,7 +120,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = "C:\Program Files\JetBrains\CLion 2021.3.3\bin\ninja\win\ninja.exe" $FILE_ARG -t clean $TARGETS
+  command = "C:\Program Files\JetBrains\CLion 2021.3.4\bin\ninja\win\ninja.exe" $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -128,6 +128,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = "C:\Program Files\JetBrains\CLion 2021.3.3\bin\ninja\win\ninja.exe" -t targets
+  command = "C:\Program Files\JetBrains\CLion 2021.3.4\bin\ninja\win\ninja.exe" -t targets
   description = All primary targets available:
 

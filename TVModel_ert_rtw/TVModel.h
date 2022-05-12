@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.5
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue May 10 14:06:55 2022
+ * C/C++ source code generated on : Thu May 12 19:12:17 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -33,6 +33,16 @@
 /* Model Code Variants */
 
 /* Macros for accessing real-time model data structure */
+#ifndef rtmGetErrorStatus
+#define rtmGetErrorStatus(rtm)         ((rtm)->errorStatus)
+#endif
+
+#ifndef rtmSetErrorStatus
+#define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
+#endif
+
+/* Forward declaration for rtModel */
+typedef struct tag_RTM RT_MODEL;
 
 /* user code (top of header file) */
 #include "ITB_Nucleo_configuration\Inc\acados_wrapper.h"
@@ -61,7 +71,7 @@ typedef struct {
 /* Block signals and states (default storage) for system '<Root>' */
 typedef struct {
   real_T CFunction[22];                /* '<S28>/C Function' */
-  real_T CFunction_n[39];              /* '<S31>/C Function' */
+  real_T CFunction_n[26];              /* '<S31>/C Function' */
   real_T Probe[2];                     /* '<S66>/Probe' */
   real_T UnitDelay_DSTATE[4];          /* '<S2>/Unit Delay' */
   real_T Integrator_DSTATE[4];         /* '<S71>/Integrator' */
@@ -86,7 +96,7 @@ typedef struct {
    *   '<S9>/steering_to_wheel_angle_single_axis_LUT'
    *   '<S9>/steering_to_wheel_angles_LUT'
    */
-  real_T pooled9[33];
+  real_T pooled15[33];
 
   /* Expression: TV.LUT.Car_LUT.steer_at_ground_single_axis_LUT.SteerAngle_SingleAxis
    * Referenced by: '<S9>/steering_to_wheel_angle_single_axis_LUT'
@@ -103,14 +113,14 @@ typedef struct {
    *   '<S25>/2-D Lookup Table'
    *   '<S25>/2-D Lookup Table1'
    */
-  real_T pooled21[20];
+  real_T pooled26[20];
 
   /* Pooled Parameter (Expression: TV.LUT.MPC_Lut.control_bound_0_10.alpha)
    * Referenced by:
    *   '<S25>/2-D Lookup Table'
    *   '<S25>/2-D Lookup Table1'
    */
-  real_T pooled22[20];
+  real_T pooled27[20];
 
   /* Pooled Parameter (Expression: [TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 0])
    * Referenced by:
@@ -125,7 +135,7 @@ typedef struct {
    *   '<S62>/Temperature IGBT LUT'
    *   '<S62>/Temperature Internal LUT'
    */
-  real_T pooled25[3];
+  real_T pooled29[3];
 
   /* Pooled Parameter (Mixed Expressions)
    * Referenced by:
@@ -134,49 +144,35 @@ typedef struct {
    *   '<S62>/Display Overload Inverter LUT'
    *   '<S62>/Display Overload Motor LUT'
    */
-  real_T pooled26[3];
+  real_T pooled30[3];
 
   /* Pooled Parameter (Expression: [0 TV.LV.AMK.ID32798_5 TV.LV.AMK.ID32798_6])
    * Referenced by:
    *   '<S61>/Max_Torque_Temperature_Internal_LUT'
    *   '<S62>/Temperature Internal LUT'
    */
-  real_T pooled27[3];
-
-  /* Pooled Parameter (Expression: [0 TV.LV.AMK.ID32798_8 TV.LV.AMK.ID32798_9])
-   * Referenced by:
-   *   '<S61>/Max_Torque_Temperature_IGBT_LUT'
-   *   '<S62>/Temperature IGBT LUT'
-   */
-  real_T pooled28[3];
-
-  /* Pooled Parameter (Expression: [0 TV.LV.AMK.ID32798_11 TV.LV.AMK.ID32798_12])
-   * Referenced by:
-   *   '<S61>/Max_Torque_Temperature_External_LUT'
-   *   '<S62>/Temperature External LUT'
-   */
-  real_T pooled29[3];
+  real_T pooled31[3];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.table_data )
    * Referenced by:
    *   '<S63>/2-D Lookup Table'
    *   '<S72>/2-D Lookup Table1'
    */
-  real_T pooled31[9246];
+  real_T pooled33[9246];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints1)
    * Referenced by:
    *   '<S63>/2-D Lookup Table'
    *   '<S72>/2-D Lookup Table1'
    */
-  real_T pooled32[201];
+  real_T pooled34[201];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints2)
    * Referenced by:
    *   '<S63>/2-D Lookup Table'
    *   '<S72>/2-D Lookup Table1'
    */
-  real_T pooled33[46];
+  real_T pooled35[46];
 
   /* Expression: TV.LUT.MPC_Lut.control_bound_0_10.Fx_target_negative
    * Referenced by: '<S25>/2-D Lookup Table1'
@@ -198,35 +194,35 @@ typedef struct {
    *   '<S36>/2-D Lookup Table'
    *   '<S60>/2-D Lookup Table'
    */
-  real_T pooled43[4000];
+  real_T pooled44[4000];
 
   /* Pooled Parameter (Expression: TV.LV.efficiency_LUT.Omega)
    * Referenced by:
    *   '<S36>/2-D Lookup Table'
    *   '<S60>/2-D Lookup Table'
    */
-  real_T pooled44[200];
+  real_T pooled45[200];
 
   /* Pooled Parameter (Expression: TV.LV.efficiency_LUT.Torque)
    * Referenced by:
    *   '<S36>/2-D Lookup Table'
    *   '<S60>/2-D Lookup Table'
    */
-  real_T pooled45[20];
+  real_T pooled46[20];
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
    *   '<S25>/2-D Lookup Table'
    *   '<S25>/2-D Lookup Table1'
    */
-  uint32_T pooled48[2];
+  uint32_T pooled49[2];
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
    *   '<S36>/2-D Lookup Table'
    *   '<S60>/2-D Lookup Table'
    */
-  uint32_T pooled50[2];
+  uint32_T pooled51[2];
 } ConstP;
 
 /* External inputs (root inport signals with default storage) */
@@ -254,6 +250,11 @@ typedef struct {
   real_T Torque[4];                    /* '<Root>/Torque' */
 } ExtY;
 
+/* Real-time Model Data Structure */
+struct tag_RTM {
+  const char_T * volatile errorStatus;
+};
+
 /* Block signals and states (default storage) */
 extern DW rtDW;
 
@@ -269,6 +270,9 @@ extern const ConstP rtConstP;
 /* Model entry point functions */
 extern void TVModel_initialize(void);
 extern void TV(void);
+
+/* Real-time Model object */
+extern RT_MODEL *const rtM;
 
 /*-
  * These blocks were eliminated from the model due to optimizations:
@@ -313,7 +317,6 @@ extern void TV(void);
  * Block '<Root>/Rate Transition7' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition8' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition9' : Eliminated since input and output rates are identical
- * Block '<S31>/Rate Transition3' : Eliminated since input and output rates are identical
  * Block '<S61>/Cast_0' : Eliminate redundant data type conversion
  * Block '<S61>/Cast_1' : Eliminate redundant data type conversion
  * Block '<S61>/Cast_2' : Eliminate redundant data type conversion

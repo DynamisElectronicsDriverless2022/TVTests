@@ -1,5 +1,5 @@
-"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.3/bin/ninja/win/ninja.exe" -G Ninja "C:\Users\Mario Bertelli\Desktop\TVTest\TVTests\ITB_Nucleo_configuration"
-Toolchain directory: C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.4/bin/ninja/win/ninja.exe" -G Ninja C:\Users\Daniele\Documents\Dynamis\2022\Torque_Vectoring\TVTests\ITB_Nucleo_configuration
+Toolchain directory: C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/bin
 -- Minimal optimization, debug info included
 -- Build type is Debug
 -- ACADOS_WITH_OPENMP: OFF
@@ -26,7 +26,7 @@ CMake Deprecation Warning at acados/external/hpipm/CMakeLists.txt:36 (cmake_mini
 
 
 -- Using BLASFEO path: 
--- Installation directory: C:/Users/Mario Bertelli/Desktop/TVTest/TVTests/ITB_Nucleo_configuration/acados
+-- Installation directory: C:/Users/Daniele/Documents/Dynamis/2022/Torque_Vectoring/TVTests/ITB_Nucleo_configuration/acados
 --  
 -- Target: BLASFEO is GENERIC, HPIPM is GENERIC
 -- Linear algebra: HIGH_PERFORMANCE
@@ -35,9 +35,9 @@ CMake Deprecation Warning at acados/external/hpipm/CMakeLists.txt:36 (cmake_mini
 -- Octave Templates (OFF)
 -- System name:version Generic:1
 -- Build type is Debug
--- Installation directory is C:/Users/Mario Bertelli/Desktop/TVTest/TVTests/ITB_Nucleo_configuration/acados
+-- Installation directory is C:/Users/Daniele/Documents/Dynamis/2022/Torque_Vectoring/TVTests/ITB_Nucleo_configuration/acados
 -- OpenMP parallelization is OFF
 --  
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Mario Bertelli/Desktop/TVTest/TVTests/ITB_Nucleo_configuration/cmake-build-debug
+-- Build files have been written to: C:/Users/Daniele/Documents/Dynamis/2022/Torque_Vectoring/TVTests/ITB_Nucleo_configuration/cmake-build-debug

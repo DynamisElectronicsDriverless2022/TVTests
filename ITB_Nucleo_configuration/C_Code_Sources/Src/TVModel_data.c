@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.5
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue May 10 14:06:55 2022
+ * C/C++ source code generated on : Thu May 12 19:12:17 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -255,20 +255,6 @@ const ConstP rtConstP = {
    *   '<S62>/Temperature Internal LUT'
    */
   { 0.0, 500.0, 600.0 },
-
-  /* Pooled Parameter (Expression: [0 TV.LV.AMK.ID32798_8 TV.LV.AMK.ID32798_9])
-   * Referenced by:
-   *   '<S61>/Max_Torque_Temperature_IGBT_LUT'
-   *   '<S62>/Temperature IGBT LUT'
-   */
-  { 0.0, 1150.0, 1250.0 },
-
-  /* Pooled Parameter (Expression: [0 TV.LV.AMK.ID32798_11 TV.LV.AMK.ID32798_12])
-   * Referenced by:
-   *   '<S61>/Max_Torque_Temperature_External_LUT'
-   *   '<S62>/Temperature External LUT'
-   */
-  { 0.0, 1100.0, 1300.0 },
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.table_data )
    * Referenced by:

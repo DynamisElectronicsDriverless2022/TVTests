@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.5
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue May 10 14:06:55 2022
+ * C/C++ source code generated on : Thu May 12 19:12:17 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -43,6 +43,7 @@ void rt_OneStep(void)
 
   /* Check for overrun */
   if (OverrunFlag) {
+    rtmSetErrorStatus(rtM, "Overrun");
     return;
   }
 
@@ -90,18 +91,11 @@ int_T main(int_T argc, const char *argv[])
          "Generated ERT main won't simulate model step behavior. "
          "To change this behavior select the 'MAT-file logging' option.\n");
   fflush((NULL));
-  while (1) {
+  while (rtmGetErrorStatus(rtM) == (NULL)) {
     /*  Perform application tasks here */
   }
 
-  /* The option 'Remove error status field in real-time model data structure'
-   * is selected, therefore the following code does not need to execute.
-   */
-#if 0
-
   /* Disable rt_OneStep here */
-#endif
-
   return 0;
 }
 

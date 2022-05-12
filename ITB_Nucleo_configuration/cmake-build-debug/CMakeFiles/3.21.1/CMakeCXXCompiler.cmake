@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-g++.exe")
+set(CMAKE_CXX_COMPILER "C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-g++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "10.3.1")
@@ -21,11 +21,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ar")
-set(CMAKE_CXX_COMPILER_AR "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe")
-set(CMAKE_RANLIB "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ld.exe")
+set(CMAKE_AR "C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ar")
+set(CMAKE_CXX_COMPILER_AR "C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
@@ -85,7 +85,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/Mario Bertelli/scoop/apps/gcc/current/include;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/c++/10.3.1;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/c++/10.3.1/arm-none-eabi;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/c++/10.3.1/backward;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include-fixed;C:/Users/Mario Bertelli/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/Daniele/scoop/apps/gcc/current/include;C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/c++/10.3.1;C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/c++/10.3.1/arm-none-eabi;C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include/c++/10.3.1/backward;C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include;C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/lib/gcc/arm-none-eabi/10.3.1/include-fixed;C:/Users/Daniele/scoop/apps/gcc-arm-none-eabi/current/arm-none-eabi/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

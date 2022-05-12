@@ -54,8 +54,8 @@ TV.LV.efficiency_LUT = load('AMK_Efficiency.mat');
 TV.LUT.MPC_Lut.control_bound_0_10 = load("control_bound_0_10.mat");
 
 % Time Horizon Settings
-TV.MPC.N                                       = 2;
-TV.MPC.T                                       = 0.04;
+TV.MPC.N                                       = 1;
+TV.MPC.T                                       = 0.02;
 
 % Other data
 TV.MPC.nx                                      = 7;

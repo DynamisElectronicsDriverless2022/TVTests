@@ -27,7 +27,7 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     ocp_nlp_in *nlp_in = dt_model_acados_get_nlp_in(capsule);
     ocp_nlp_out *nlp_out = dt_model_acados_get_nlp_out(capsule);
 
-    double N_it = 2;
+    double N_it = 1;
 
     // Gli passo lo stato iniziale x0
     //double x0[3];
@@ -38,7 +38,7 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "ubx",(void *) x0);
 
     // Gli passo i parametri esterni, in questo caso un solo parametro per il numero di step del solver
-    for (int ii = 0; ii < N_it; ii++) {
+    for (int ii = 0; ii <= N_it; ii++) {
         dt_model_acados_update_params(capsule, ii,(void *) &extParam[ii*13], 13);
     }
 
@@ -60,28 +60,28 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     //}
 
     // riferimento che deve seguire lo stato
-    for (int ii = 0; ii < N_it; ii++) {
+    for (int ii = 0; ii <= N_it; ii++) {
         ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "yref", (void *) &reference[ii*11]);
     }
 
     // lower bound states
-    for (int ii=1; ii<N_it; ii++) {
+    for (int ii=1; ii<=N_it; ii++) {
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lbx", (void *) lbx);
     }
 
     // upper bound states
-    for (int ii=1; ii<N_it; ii++) {
+    for (int ii=1; ii<=N_it; ii++) {
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ubx", (void *) ubx);
     }
 
     // constraint affine (somma di coppie)
-    for (int ii = 0; ii < N_it; ii++) {
+    for (int ii = 0; ii <= N_it; ii++) {
         //double temp[1]
         //temp[0] = -4*20; //
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lg", (void *) limAggrDown);
     }
     // constraint affine (somma di coppie)
-    for (int ii = 0; ii < N_it; ii++) {
+    for (int ii = 0; ii <= N_it; ii++) {
         //double temp[1]
         //temp[0] = +4*20; //
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ug", (void *) limAggrUp);
@@ -90,7 +90,7 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
         ocp_nlp_cost_model_set(nlp_config,nlp_dims,nlp_in,ii,"W",(void *) cost_W);
     }
 
-    for (int ii = 1; ii < N_it; ii++)
+    for (int ii = 0; ii <= N_it; ii++)
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "C", (void *) constr_C);
 
     // chiamata al solver

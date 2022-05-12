@@ -84,20 +84,21 @@ input_note = strcat(input_note, num2str(i_in), ') ubx_0 - upper bound on x for s
                     ' size [7]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') parameters - concatenated for all shooting nodes 0 to N+1,',...
-                    ' size [39]\n ');
+                    ' size [26]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') y_ref_0, size [11]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') y_ref - concatenated for shooting nodes 1 to N-1,',...
-                    ' size [11]\n ');
+input_note = strcat(input_note, num2str(i_in), ') y_ref_e, size [11]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') lbu for shooting nodes 0 to N-1, size [8]\n ');
+input_note = strcat(input_note, num2str(i_in), ') lbx_e (lbx at shooting node N), size [4]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') ubu for shooting nodes 0 to N-1, size [8]\n ');
+input_note = strcat(input_note, num2str(i_in), ') ubx_e (ubx at shooting node N), size [4]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') lg, size [4]\n ');
+input_note = strcat(input_note, num2str(i_in), ') lbu for shooting nodes 0 to N-1, size [4]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') ug, size [4]\n ');
+input_note = strcat(input_note, num2str(i_in), ') ubu for shooting nodes 0 to N-1, size [4]\n ');
+i_in = i_in + 1;  
+input_note = strcat(input_note, num2str(i_in), ') cost_W_0 in column-major format, size [121]\n ');
 i_in = i_in + 1;  
 input_note = strcat(input_note, num2str(i_in), ') cost_W in column-major format, that is set for all intermediate shooting nodes: 1 to N-1, size [121]\n ');
 i_in = i_in + 1;
