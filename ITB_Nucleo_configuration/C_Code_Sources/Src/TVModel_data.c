@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.5
+ * Model version                  : 1.6
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu May 12 19:12:17 2022
+ * C/C++ source code generated on : Fri May 13 18:30:58 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -227,39 +227,39 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: [TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 0])
    * Referenced by:
-   *   '<S61>/Max_Torque_Overload_Inverter_LUT'
-   *   '<S61>/Max_Torque_Overload_Motor_LUT'
-   *   '<S61>/Max_Torque_Temperature_External_LUT'
-   *   '<S61>/Max_Torque_Temperature_IGBT_LUT'
-   *   '<S61>/Max_Torque_Temperature_Internal_LUT'
-   *   '<S62>/Display Overload Inverter LUT'
-   *   '<S62>/Display Overload Motor LUT'
-   *   '<S62>/Temperature External LUT'
-   *   '<S62>/Temperature IGBT LUT'
-   *   '<S62>/Temperature Internal LUT'
+   *   '<S62>/Max_Torque_Overload_Inverter_LUT'
+   *   '<S62>/Max_Torque_Overload_Motor_LUT'
+   *   '<S62>/Max_Torque_Temperature_External_LUT'
+   *   '<S62>/Max_Torque_Temperature_IGBT_LUT'
+   *   '<S62>/Max_Torque_Temperature_Internal_LUT'
+   *   '<S63>/Display Overload Inverter LUT'
+   *   '<S63>/Display Overload Motor LUT'
+   *   '<S63>/Temperature External LUT'
+   *   '<S63>/Temperature IGBT LUT'
+   *   '<S63>/Temperature Internal LUT'
    */
   { 20.972, 20.972, 0.0 },
 
   /* Pooled Parameter (Mixed Expressions)
    * Referenced by:
-   *   '<S61>/Max_Torque_Overload_Inverter_LUT'
-   *   '<S61>/Max_Torque_Overload_Motor_LUT'
-   *   '<S62>/Display Overload Inverter LUT'
-   *   '<S62>/Display Overload Motor LUT'
+   *   '<S62>/Max_Torque_Overload_Inverter_LUT'
+   *   '<S62>/Max_Torque_Overload_Motor_LUT'
+   *   '<S63>/Display Overload Inverter LUT'
+   *   '<S63>/Display Overload Motor LUT'
    */
   { 0.0, 500.0, 1000.0 },
 
   /* Pooled Parameter (Expression: [0 TV.LV.AMK.ID32798_5 TV.LV.AMK.ID32798_6])
    * Referenced by:
-   *   '<S61>/Max_Torque_Temperature_Internal_LUT'
-   *   '<S62>/Temperature Internal LUT'
+   *   '<S62>/Max_Torque_Temperature_Internal_LUT'
+   *   '<S63>/Temperature Internal LUT'
    */
   { 0.0, 500.0, 600.0 },
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.table_data )
    * Referenced by:
-   *   '<S63>/2-D Lookup Table'
-   *   '<S72>/2-D Lookup Table1'
+   *   '<S64>/2-D Lookup Table'
+   *   '<S73>/2-D Lookup Table1'
    */
   { 2276.0, 2240.0, 2239.0, 2238.0, 2237.0, 2236.0, 2235.0, 2234.0, 2233.0,
     2232.0, 2231.0, 2229.0, 2228.0, 2227.0, 2226.0, 2225.0, 2224.0, 2223.0,
@@ -1214,8 +1214,8 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints1)
    * Referenced by:
-   *   '<S63>/2-D Lookup Table'
-   *   '<S72>/2-D Lookup Table1'
+   *   '<S64>/2-D Lookup Table'
+   *   '<S73>/2-D Lookup Table1'
    */
   { 0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0,
     1100.0, 1200.0, 1300.0, 1400.0, 1500.0, 1600.0, 1700.0, 1800.0, 1900.0,
@@ -1244,8 +1244,8 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints2)
    * Referenced by:
-   *   '<S63>/2-D Lookup Table'
-   *   '<S72>/2-D Lookup Table1'
+   *   '<S64>/2-D Lookup Table'
+   *   '<S73>/2-D Lookup Table1'
    */
   { 330.0, 335.0, 340.0, 345.0, 350.0, 355.0, 360.0, 365.0, 370.0, 375.0, 380.0,
     385.0, 390.0, 395.0, 400.0, 405.0, 410.0, 415.0, 420.0, 425.0, 430.0, 435.0,
@@ -1392,14 +1392,14 @@ const ConstP rtConstP = {
     -1066.9435128515931 },
 
   /* Computed Parameter: uDLookupTable_tableData_d
-   * Referenced by: '<S72>/1-D Lookup Table'
+   * Referenced by: '<S73>/1-D Lookup Table'
    */
   { 0.0, 0.0, 1200.0, 2150.0, 2200.0, 2200.0, 2200.0, 2200.0, 2200.0, 2200.0,
     2200.0, 2200.0, 2200.0, 2200.0, 2150.0, 2000.0, 1900.0, 1650.0, 1300.0,
     1100.0 },
 
   /* Computed Parameter: uDLookupTable_bp01Data
-   * Referenced by: '<S72>/1-D Lookup Table'
+   * Referenced by: '<S73>/1-D Lookup Table'
    */
   { 0.0, 1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0, 8000.0, 9000.0,
     10000.0, 11000.0, 12000.0, 13000.0, 14000.0, 15000.0, 16000.0, 17000.0,
