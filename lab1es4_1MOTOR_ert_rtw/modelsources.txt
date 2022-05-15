@@ -1,3 +1,0 @@
-    lab1es4_1MOTOR.c
-DSP28xx_SciUtil.c
-
