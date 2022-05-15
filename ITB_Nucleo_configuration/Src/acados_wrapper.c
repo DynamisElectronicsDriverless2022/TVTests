@@ -105,9 +105,13 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
 
     double stateOut[7];
     ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 1, "x", (void *) &stateOut[0]);
-    AcadosState[0]=stateOut[0];
-    AcadosState[1]=stateOut[1];
-    AcadosState[2]=stateOut[2];
+    AcadosState[0]=stateOut[0]; //Vx
+    AcadosState[1]=stateOut[1]; //Vy
+    AcadosState[2]=stateOut[2]; //r
+    AcadosState[3]=stateOut[3]; //T_FL
+    AcadosState[4]=stateOut[4]; //T_FR
+    AcadosState[5]=stateOut[5]; //T_RL
+    AcadosState[6]=stateOut[6]; //T_RR
 
     int acados_status_My[1];
     ocp_nlp_get(nlp_config, capsule->nlp_solver, "status", acados_status_My);
