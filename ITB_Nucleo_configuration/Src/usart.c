@@ -40,9 +40,9 @@ int BufferTime=0,UsartTime,Count=0;
 //uint8_t TxData[36]={'\0','\0','\r',10};
 uint8_t TxData[61];
 uint64_t* ptr;
-extern double outData[4];
+//extern double outData[4];
 extern int AcadosFlag;
-extern double AcadosState[3];
+extern double AcadosState[7];
 uint16_t TemopoEsecuzione1=0,TemopoEsecuzione2=0;
 
 extern dt_model_solver_capsule *capsule;
@@ -206,7 +206,10 @@ void IdleCallback(void)
         TxData[0]=(TemopoEsecuzione1 & 0xFF00)>>8;
         TxData[1]=(TemopoEsecuzione1 & 0x00FF);
         //Qui assegnare a outData i quattro valori di coppia in out da Acados
-        for (j=0; j<4; j++){
+
+        /* La seguente parte si usava quando le coppie erano delle uscite e non degli stati, come ora in cui il controllo è fatto sulle derivate delle coppie
+
+         for (j=0; j<4; j++){
             //j conta a che output di Acados sono arrivato tr i 4 disponibili
             ptr=(uint64_t *)&(outData[j]);
             for(i=0; i<8 ; i++){
@@ -217,15 +220,20 @@ void IdleCallback(void)
                     TxData[2+j*8+i]=(uint8_t)14;
                 }
             }
-        }
-        TxData[34]= AcadosFlag;
+        }*/
 
-        for (j=0; j<3; j++){
-            //j conta a che stato di Acados sono arrivato tra i 4 disponibili
+
+        TxData[2]= AcadosFlag;
+
+        for (j=0; j<7; j++){
+            //j conta a che stato di Acados sono arrivato tra i 7 disponibili
             ptr=(uint64_t *)&(AcadosState[j]);
             for(i=0; i<8 ; i++){
                 //i conta a che byte sono arrivato tra gli 8 disponibili nel double (64 bit)
-                TxData[35+j*8+i]= (*ptr>>(i*8))&0xFF;     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla trentacinquesima
+                TxData[3+j*8+i]= (*ptr>>(i*8))&0xFF;     //Assegno ad una cella di TxData il byte puntato da i, a partire dalla trentacinquesima
+                if(TxData[3+j*8+i]==(uint8_t)13){
+                    TxData[3+j*8+i]=(uint8_t)14;
+                }
             }
         }
 
