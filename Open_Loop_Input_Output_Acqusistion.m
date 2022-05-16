@@ -16,7 +16,7 @@ vy = cut(vy);
 yaw_rate = timeseries(wYaw*180/pi,time);
 yaw_rate = cut(yaw_rate);
 
-steering = timeseries(aSteeringWheel,time);
+steering = timeseries(aSteeringWheel/180*pi,time);
 steering = cut(steering);
 
 omega_wheels_FL = timeseries(nMotor_FL*pi/30,time);
