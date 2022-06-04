@@ -2,7 +2,7 @@
  * Copyright 2019 Gianluca Frison, Dimitris Kouzoupis, Robin Verschueren,
  * Andrea Zanelli, Niels van Duijkeren, Jonathan Frey, Tommaso Sartor,
  * Branimir Novoselnik, Rien Quirynen, Rezart Qelibari, Dang Doan,
- * Jonas Koenemann, Yutao Chen, Tobias Schöls, Jonas Schlagenhauf, Moritz Diehl
+ * Jonas Koenemann, Yutao Chen, Tobias SchÃ¶ls, Jonas Schlagenhauf, Moritz Diehl
  *
  * This file is part of acados.
  *
@@ -54,7 +54,7 @@ static void mdlInitializeSizes (SimStruct *S)
     // specify the number of continuous and discrete states
     ssSetNumContStates(S, 0);
     ssSetNumDiscStates(S, 0);  // specify the number of input ports
-    if ( !ssSetNumInputPorts(S, 13) )
+    if ( !ssSetNumInputPorts(S, 15) )
         return;
 
     // specify the number of output ports
@@ -81,13 +81,19 @@ static void mdlInitializeSizes (SimStruct *S)
     // ubu
     ssSetInputPortVectorDimension(S, 8, 4);  
     // lg
-    ssSetInputPortVectorDimension(S, 9, 4);  
+    ssSetInputPortVectorDimension(S, 9, 5);  
     // ug
-    ssSetInputPortVectorDimension(S, 10, 4);  
+    ssSetInputPortVectorDimension(S, 10, 5);  
     // cost_W
     ssSetInputPortVectorDimension(S, 11, 121);  
     // C_e
-    ssSetInputPortVectorDimension(S, 12, 28);/* specify dimension information for the OUTPUT ports */
+    ssSetInputPortVectorDimension(S, 12, 35);
+    // zl_e
+    ssSetInputPortVectorDimension(S, 13, 3);
+    // zu_e 
+     ssSetInputPortVectorDimension(S, 14, 3);
+   
+    /* specify dimension information for the OUTPUT ports */
     ssSetOutputPortVectorDimension(S, 0, 4 );
     ssSetOutputPortVectorDimension(S, 1, 1 );
     ssSetOutputPortVectorDimension(S, 2, 1 );
@@ -110,6 +116,8 @@ static void mdlInitializeSizes (SimStruct *S)
     ssSetInputPortDirectFeedThrough(S, 10, 1);
     ssSetInputPortDirectFeedThrough(S, 11, 1);
     ssSetInputPortDirectFeedThrough(S, 12, 1);
+    ssSetInputPortDirectFeedThrough(S, 13, 1);
+    ssSetInputPortDirectFeedThrough(S, 14, 1);
 
     // one sample time
     ssSetNumSampleTimes(S, 1);
@@ -236,19 +244,19 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     // lg
     in_sign = ssGetInputPortRealSignalPtrs(S, 9);
 
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 5; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     for (int ii = 0; ii < 2; ii++)
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lg", buffer);
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "lg", buffer);
     // ug
     in_sign = ssGetInputPortRealSignalPtrs(S, 10);
 
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 5; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     for (int ii = 0; ii < 2; ii++)
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ug", buffer);
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "ug", buffer);
 
     // cost_W
     in_sign = ssGetInputPortRealSignalPtrs(S, 11);
@@ -261,11 +269,25 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     // C_e
     // VEDERE COSA SUCCEDE SE SI IMPOSTA SOLO A STAGE 1 QUANDO SI SUPERA POTENZA MASSIMA
     in_sign = ssGetInputPortRealSignalPtrs(S, 12);
-    for (int i = 0; i < 28; i++)
+    for (int i = 0; i < 35; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     for (int ii = 0; ii < 2; ii++)
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "C", buffer);
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "C", buffer);
+
+    // zl_e
+    in_sign = ssGetInputPortRealSignalPtrs(S, 13);
+    for (int i = 0; i < 3; i++)
+        buffer[i] = (double)(*in_sign[i]);
+
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zl", buffer);
+
+    // zu_e
+    in_sign = ssGetInputPortRealSignalPtrs(S, 14);
+    for (int i = 0; i < 3; i++)
+        buffer[i] = (double)(*in_sign[i]);
+
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zu", buffer);
 
     /* call solver */
     int rti_phase = 0;

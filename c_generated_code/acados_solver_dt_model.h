@@ -57,7 +57,7 @@
 #define DT_MODEL_NSN    3
 #define DT_MODEL_NG     0
 #define DT_MODEL_NBXN   4
-#define DT_MODEL_NGN    4
+#define DT_MODEL_NGN    5
 #define DT_MODEL_NY0    11
 #define DT_MODEL_NY     11
 #define DT_MODEL_NYN    11
