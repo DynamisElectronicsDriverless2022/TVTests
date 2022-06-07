@@ -54,7 +54,7 @@ static void mdlInitializeSizes (SimStruct *S)
     // specify the number of continuous and discrete states
     ssSetNumContStates(S, 0);
     ssSetNumDiscStates(S, 0);  // specify the number of input ports
-    if ( !ssSetNumInputPorts(S, 15) )
+    if ( !ssSetNumInputPorts(S, 16) )
         return;
 
     // specify the number of output ports
@@ -92,6 +92,8 @@ static void mdlInitializeSizes (SimStruct *S)
     ssSetInputPortVectorDimension(S, 13, 3);
     // zu_e 
      ssSetInputPortVectorDimension(S, 14, 3);
+    // x
+    ssSetInputPortVectorDimension(S, 15, 7);    
    
     /* specify dimension information for the OUTPUT ports */
     ssSetOutputPortVectorDimension(S, 0, 4 );
@@ -118,6 +120,7 @@ static void mdlInitializeSizes (SimStruct *S)
     ssSetInputPortDirectFeedThrough(S, 12, 1);
     ssSetInputPortDirectFeedThrough(S, 13, 1);
     ssSetInputPortDirectFeedThrough(S, 14, 1);
+    ssSetInputPortDirectFeedThrough(S, 15, 1);
 
     // one sample time
     ssSetNumSampleTimes(S, 1);
@@ -288,6 +291,14 @@ static void mdlOutputs(SimStruct *S, int_T tid)
         buffer[i] = (double)(*in_sign[i]);
 
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zu", buffer);
+
+    // x
+    in_sign = ssGetInputPortRealSignalPtrs(S, 15);
+    for (int i = 0; i < 7; i++)
+        buffer[i] = (double)(*in_sign[i]);
+
+    for (int ii = 0; ii < 1; ii++)
+        ocp_nlp_out_set(nlp_config, nlp_dims, nlp_out, 1, "x", buffer);   
 
     /* call solver */
     int rti_phase = 0;

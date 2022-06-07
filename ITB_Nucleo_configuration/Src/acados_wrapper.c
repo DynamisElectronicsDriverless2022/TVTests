@@ -18,8 +18,7 @@ double AcadosState[3];
 // Inizializzazione solver, noi la facciamo nel costruttore della classe
 
 
-
-double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],dt_model_solver_capsule * capsule,double devTorqueOut[]){
+double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],double zl_e[], double zu_e[],double x_init[], dt_model_solver_capsule * capsule,double devTorqueOut[]){
     /** Da qua in poi Ã¨ il codice che va messo nella funzione che viene chiamata ogni iterazione per chiamare il solver **/
     // Inizializzazione delle variabili del solver
     ocp_nlp_config *nlp_config = dt_model_acados_get_nlp_config(capsule);
@@ -93,6 +92,11 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     for (int ii = 0; ii <= N_it; ii++)
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "C", (void *) constr_C);
 
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zu",(void *) zu_e);
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zl",(void *) zl_e);
+
+    for (int ii = 0; ii < 1; ii++)
+        ocp_nlp_out_set(nlp_config, nlp_dims, nlp_out, 1, "x", (void *) x_init);  
     // chiamata al solver
     int rti_phase = 0;
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "rti_phase", &rti_phase);
@@ -130,9 +134,9 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     return 1;
 }
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],double devTorqueOut[]){
+double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],double zl_e[], double zu_e[],double x_init[],double devTorqueOut[]){
 	#ifndef MATLAB_MEX_FILE
-		return Acados_Caller(x0,extParam,limDown,limUp,reference,lbx,ubx,limAggrDown,limAggrUp,cost_W,constr_C,capsule,devTorqueOut);
+		return Acados_Caller(x0,extParam,limDown,limUp,reference,lbx,ubx,limAggrDown,limAggrUp,cost_W,constr_C,zl_e,zu_e,x_init,capsule,devTorqueOut);
 	#endif
 	return x0[0]+x0[1];	
 }

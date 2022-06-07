@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.1
+ * Model version                  : 1.3
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon Jun  6 11:03:25 2022
+ * C/C++ source code generated on : Tue Jun  7 21:35:22 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -35,9 +35,9 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LV.efficiency_LUT.Eta)
    * Referenced by:
-   *   '<S163>/Constant1'
-   *   '<S248>/2-D Lookup Table'
-   *   '<S277>/2-D Lookup Table'
+   *   '<S158>/Constant1'
+   *   '<S245>/2-D Lookup Table'
+   *   '<S273>/2-D Lookup Table'
    */
   { 0.63790494220640581, 0.74027164589488581, 0.78092382826514917,
     0.80202831671794228, 0.81446361286501767, 0.82229930326909617,
@@ -1373,9 +1373,9 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LV.efficiency_LUT.Omega)
    * Referenced by:
-   *   '<S163>/Constant2'
-   *   '<S248>/2-D Lookup Table'
-   *   '<S277>/2-D Lookup Table'
+   *   '<S158>/Constant2'
+   *   '<S245>/2-D Lookup Table'
+   *   '<S273>/2-D Lookup Table'
    */
   { 10.471975511965978, 20.943951023931955, 31.415926535897931,
     41.887902047863911, 52.35987755982989, 62.831853071795862,
@@ -1444,9 +1444,9 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LV.efficiency_LUT.Torque)
    * Referenced by:
-   *   '<S163>/Constant3'
-   *   '<S248>/2-D Lookup Table'
-   *   '<S277>/2-D Lookup Table'
+   *   '<S158>/Constant3'
+   *   '<S245>/2-D Lookup Table'
+   *   '<S273>/2-D Lookup Table'
    */
   { 1.5314150123915824, 3.064464324417925, 4.5805625922535551,
     6.0639495949754112, 7.50156444195137, 8.88291978022873, 10.199976001922975,
@@ -1457,9 +1457,9 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.table_data )
    * Referenced by:
-   *   '<S282>/2-D Lookup Table'
-   *   '<S291>/2-D Lookup Table'
-   *   '<S163>/2-D Lookup Table'
+   *   '<S278>/2-D Lookup Table'
+   *   '<S287>/2-D Lookup Table'
+   *   '<S158>/2-D Lookup Table'
    */
   { 2276.0, 2240.0, 2239.0, 2238.0, 2237.0, 2236.0, 2235.0, 2234.0, 2233.0,
     2232.0, 2231.0, 2229.0, 2228.0, 2227.0, 2226.0, 2225.0, 2224.0, 2223.0,
@@ -2414,9 +2414,9 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints1)
    * Referenced by:
-   *   '<S282>/2-D Lookup Table'
-   *   '<S291>/2-D Lookup Table'
-   *   '<S163>/2-D Lookup Table'
+   *   '<S278>/2-D Lookup Table'
+   *   '<S287>/2-D Lookup Table'
+   *   '<S158>/2-D Lookup Table'
    */
   { 0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0,
     1100.0, 1200.0, 1300.0, 1400.0, 1500.0, 1600.0, 1700.0, 1800.0, 1900.0,
@@ -2445,9 +2445,9 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints2)
    * Referenced by:
-   *   '<S282>/2-D Lookup Table'
-   *   '<S291>/2-D Lookup Table'
-   *   '<S163>/2-D Lookup Table'
+   *   '<S278>/2-D Lookup Table'
+   *   '<S287>/2-D Lookup Table'
+   *   '<S158>/2-D Lookup Table'
    */
   { 330.0, 335.0, 340.0, 345.0, 350.0, 355.0, 360.0, 365.0, 370.0, 375.0, 380.0,
     385.0, 390.0, 395.0, 400.0, 405.0, 410.0, 415.0, 420.0, 425.0, 430.0, 435.0,
@@ -2456,12 +2456,12 @@ const ConstP rtConstP = {
     550.0, 555.0 },
 
   /* Expression: [0,1]
-   * Referenced by: '<S301>/1-D Lookup Table'
+   * Referenced by: '<S297>/1-D Lookup Table'
    */
   { 0.0, 1.0 },
 
   /* Expression: [0,0, 4*TV.LV.TORQUE.T_peak_wheel]
-   * Referenced by: '<S300>/T_peak_wheel_LUT'
+   * Referenced by: '<S296>/T_peak_wheel_LUT'
    */
   { 0.0, 0.0, 1134.0 },
 
@@ -2514,30 +2514,30 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: [TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 0])
    * Referenced by:
-   *   '<S279>/Max_Torque_Overload_Inverter_LUT'
-   *   '<S279>/Max_Torque_Overload_Motor_LUT'
-   *   '<S279>/Max_Torque_Temperature_External_LUT'
-   *   '<S279>/Max_Torque_Temperature_IGBT_LUT'
-   *   '<S279>/Max_Torque_Temperature_Internal_LUT'
-   *   '<S280>/Display Overload Inverter LUT'
-   *   '<S280>/Display Overload Motor LUT'
-   *   '<S280>/Temperature External LUT'
-   *   '<S280>/Temperature IGBT LUT'
-   *   '<S280>/Temperature Internal LUT'
+   *   '<S275>/Max_Torque_Overload_Inverter_LUT'
+   *   '<S275>/Max_Torque_Overload_Motor_LUT'
+   *   '<S275>/Max_Torque_Temperature_External_LUT'
+   *   '<S275>/Max_Torque_Temperature_IGBT_LUT'
+   *   '<S275>/Max_Torque_Temperature_Internal_LUT'
+   *   '<S276>/Display Overload Inverter LUT'
+   *   '<S276>/Display Overload Motor LUT'
+   *   '<S276>/Temperature External LUT'
+   *   '<S276>/Temperature IGBT LUT'
+   *   '<S276>/Temperature Internal LUT'
    */
   { 20.972, 20.972, 0.0 },
 
   /* Pooled Parameter (Mixed Expressions)
    * Referenced by:
-   *   '<S279>/Max_Torque_Overload_Inverter_LUT'
-   *   '<S279>/Max_Torque_Overload_Motor_LUT'
-   *   '<S280>/Display Overload Inverter LUT'
-   *   '<S280>/Display Overload Motor LUT'
+   *   '<S275>/Max_Torque_Overload_Inverter_LUT'
+   *   '<S275>/Max_Torque_Overload_Motor_LUT'
+   *   '<S276>/Display Overload Inverter LUT'
+   *   '<S276>/Display Overload Motor LUT'
    */
   { 0.0, 500.0, 1000.0 },
 
   /* Expression: TV.LUT.MPC_Lut.control_bound_dry.Fx_target_positive
-   * Referenced by: '<S256>/2-D Lookup Table'
+   * Referenced by: '<S253>/2-D Lookup Table'
    */
   { 51.977623909387894, 68.054120149047037, 84.1005415896045, 100.11477764115288,
     116.0948959174635, 132.03912910317072, 147.94586284163395,
@@ -2819,8 +2819,8 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LUT.MPC_Lut.control_bound_dry.Fz)
    * Referenced by:
-   *   '<S256>/2-D Lookup Table'
-   *   '<S256>/2-D Lookup Table1'
+   *   '<S253>/2-D Lookup Table'
+   *   '<S253>/2-D Lookup Table1'
    */
   { 196.20000000000002, 257.08965517241381, 317.97931034482764,
     378.86896551724141, 439.75862068965523, 500.648275862069, 561.53793103448277,
@@ -2834,8 +2834,8 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: TV.LUT.MPC_Lut.control_bound_dry.alpha)
    * Referenced by:
-   *   '<S256>/2-D Lookup Table'
-   *   '<S256>/2-D Lookup Table1'
+   *   '<S253>/2-D Lookup Table'
+   *   '<S253>/2-D Lookup Table1'
    */
   { -0.3, -0.27931034482758621, -0.25862068965517243, -0.23793103448275862,
     -0.21724137931034482, -0.19655172413793104, -0.17586206896551723,
@@ -2849,7 +2849,7 @@ const ConstP rtConstP = {
     0.27931034482758621, 0.3 },
 
   /* Expression: TV.LUT.MPC_Lut.control_bound_dry.Fx_target_negative
-   * Referenced by: '<S256>/2-D Lookup Table1'
+   * Referenced by: '<S253>/2-D Lookup Table1'
    */
   { -53.04197270620368, -68.998158055638015, -84.713544183672653,
     -100.18770354092602, -115.42045389100336, -130.41184077026182,
@@ -3154,25 +3154,25 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S256>/2-D Lookup Table'
-   *   '<S256>/2-D Lookup Table1'
+   *   '<S253>/2-D Lookup Table'
+   *   '<S253>/2-D Lookup Table1'
    */
   { 29U, 29U },
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S248>/2-D Lookup Table'
-   *   '<S277>/2-D Lookup Table'
+   *   '<S245>/2-D Lookup Table'
+   *   '<S273>/2-D Lookup Table'
    */
   { 199U, 19U },
 
   /* Pooled Parameter (Expression: [0 1;1 0;0 1;0 1;1 0;1 0;0 0;0 0])
    * Referenced by:
-   *   '<S237>/Logic'
+   *   '<S231>/Logic'
+   *   '<S255>/Logic'
+   *   '<S256>/Logic'
+   *   '<S257>/Logic'
    *   '<S258>/Logic'
-   *   '<S259>/Logic'
-   *   '<S260>/Logic'
-   *   '<S261>/Logic'
    */
   { false, true, false, false, true, true, false, false, true, false, true, true,
     false, false, false, false }
