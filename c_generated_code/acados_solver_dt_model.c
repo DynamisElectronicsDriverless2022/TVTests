@@ -695,7 +695,7 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "qp_cond_N", &qp_solver_cond_N);
 
 
-    int qp_solver_iter_max = 100;
+    int qp_solver_iter_max = 50;
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "qp_iter_max", &qp_solver_iter_max);
 
     int print_level = 0;

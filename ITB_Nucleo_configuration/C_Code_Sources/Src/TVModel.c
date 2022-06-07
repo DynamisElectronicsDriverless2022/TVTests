@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.3
+ * Model version                  : 1.4
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue Jun  7 21:35:22 2022
+ * C/C++ source code generated on : Tue Jun  7 23:37:14 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -3569,8 +3569,10 @@ void TV(void)
   /* Switch: '<S247>/Switch' */
   dT = !(rtb_Saturation > 0.95);
 
-  /* Gain: '<S253>/Gain' */
-  u0 = 0.017407407407407406 * rtb_lbx_out[0];
+  /* Product: '<S253>/Product' incorporates:
+   *  Gain: '<S253>/Gain'
+   */
+  u0 = 0.017407407407407406 * rtb_lbx_out[0] * 20.0;
 
   /* Saturate: '<S253>/Saturation1' */
   if (u0 <= 0.0) {
@@ -3583,8 +3585,10 @@ void TV(void)
    */
   rtb_Tnew[0] = fmin(fmin(rtb_Braking[0], rtDW.UnitDelay1_DSTATE[0]), u0) * dT;
 
-  /* Gain: '<S253>/Gain' */
-  u0 = 0.017407407407407406 * rtb_lbx_out[1];
+  /* Product: '<S253>/Product' incorporates:
+   *  Gain: '<S253>/Gain'
+   */
+  u0 = 0.017407407407407406 * rtb_lbx_out[1] * 20.0;
 
   /* Saturate: '<S253>/Saturation1' */
   if (u0 <= 0.0) {
@@ -3597,8 +3601,10 @@ void TV(void)
    */
   rtb_Tnew[1] = fmin(fmin(rtb_Braking[1], rtDW.UnitDelay1_DSTATE[1]), u0) * dT;
 
-  /* Gain: '<S253>/Gain' */
-  u0 = 0.017407407407407406 * rtb_lbx_out[2];
+  /* Product: '<S253>/Product' incorporates:
+   *  Gain: '<S253>/Gain'
+   */
+  u0 = 0.017407407407407406 * rtb_lbx_out[2] * 20.0;
 
   /* Saturate: '<S253>/Saturation1' */
   if (u0 <= 0.0) {
@@ -3611,8 +3617,10 @@ void TV(void)
    */
   rtb_Tnew[2] = fmin(fmin(rtb_Braking[2], rtDW.UnitDelay1_DSTATE[2]), u0) * dT;
 
-  /* Gain: '<S253>/Gain' */
-  u0 = 0.017407407407407406 * rtb_lbx_out[3];
+  /* Product: '<S253>/Product' incorporates:
+   *  Gain: '<S253>/Gain'
+   */
+  u0 = 0.017407407407407406 * rtb_lbx_out[3] * 20.0;
 
   /* Saturate: '<S253>/Saturation1' */
   if (u0 <= 0.0) {
@@ -3642,10 +3650,10 @@ void TV(void)
   /* Product: '<S253>/Product1' incorporates:
    *  Gain: '<S253>/Gain1'
    */
-  rtb_lbx_out[0] = 0.017407407407407406 * dT;
-  rtb_lbx_out[1] = 0.017407407407407406 * rtb_UnaryMinus_f_idx_1;
-  rtb_lbx_out[2] = 0.017407407407407406 * rtb_UnaryMinus_f_idx_2;
-  rtb_lbx_out[3] = 0.017407407407407406 * rtb_UnaryMinus_f_idx_0;
+  rtb_lbx_out[0] = 0.017407407407407406 * dT * 20.0;
+  rtb_lbx_out[1] = 0.017407407407407406 * rtb_UnaryMinus_f_idx_1 * 20.0;
+  rtb_lbx_out[2] = 0.017407407407407406 * rtb_UnaryMinus_f_idx_2 * 20.0;
+  rtb_lbx_out[3] = 0.017407407407407406 * rtb_UnaryMinus_f_idx_0 * 20.0;
 
   /* Lookup_n-D: '<S276>/Display Overload Inverter LUT' */
   rtb_Divide_a[0] = rtb_Abs;
