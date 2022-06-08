@@ -2,7 +2,7 @@
  * Copyright 2019 Gianluca Frison, Dimitris Kouzoupis, Robin Verschueren,
  * Andrea Zanelli, Niels van Duijkeren, Jonathan Frey, Tommaso Sartor,
  * Branimir Novoselnik, Rien Quirynen, Rezart Qelibari, Dang Doan,
- * Jonas Koenemann, Yutao Chen, Tobias SchÃ¶ls, Jonas Schlagenhauf, Moritz Diehl
+ * Jonas Koenemann, Yutao Chen, Tobias Schöls, Jonas Schlagenhauf, Moritz Diehl
  *
  * This file is part of acados.
  *
@@ -54,7 +54,7 @@ static void mdlInitializeSizes (SimStruct *S)
     // specify the number of continuous and discrete states
     ssSetNumContStates(S, 0);
     ssSetNumDiscStates(S, 0);  // specify the number of input ports
-    if ( !ssSetNumInputPorts(S, 16) )
+    if ( !ssSetNumInputPorts(S, 17) )
         return;
 
     // specify the number of output ports
@@ -63,15 +63,15 @@ static void mdlInitializeSizes (SimStruct *S)
 
     // specify dimension information for the input ports
     // lbx_0
-    ssSetInputPortVectorDimension(S, 0, 7);
+    ssSetInputPortVectorDimension(S, 0, 4);
     // ubx_0
-    ssSetInputPortVectorDimension(S, 1, 7);
+    ssSetInputPortVectorDimension(S, 1, 4);
     // parameters
     ssSetInputPortVectorDimension(S, 2, (1+1) * 13);
     // y_ref_0
-    ssSetInputPortVectorDimension(S, 3, 11);
+    ssSetInputPortVectorDimension(S, 3, 8);
     // y_ref_e
-    ssSetInputPortVectorDimension(S, 4, 11);
+    ssSetInputPortVectorDimension(S, 4, 8);
     // lbx_e
     ssSetInputPortVectorDimension(S, 5, 4);
     // ubx_e
@@ -80,26 +80,28 @@ static void mdlInitializeSizes (SimStruct *S)
     ssSetInputPortVectorDimension(S, 7, 4);
     // ubu
     ssSetInputPortVectorDimension(S, 8, 4);  
-    // lg
-    ssSetInputPortVectorDimension(S, 9, 5);  
-    // ug
-    ssSetInputPortVectorDimension(S, 10, 5);  
+    // cost_W_0
+    ssSetInputPortVectorDimension(S, 9, 64);  
     // cost_W
-    ssSetInputPortVectorDimension(S, 11, 121);  
-    // C_e
-    ssSetInputPortVectorDimension(S, 12, 35);
+    ssSetInputPortVectorDimension(S, 10, 64);
+     // C_e
+    ssSetInputPortVectorDimension(S, 11, 20);
     // zl_e
-    ssSetInputPortVectorDimension(S, 13, 3);
+    ssSetInputPortVectorDimension(S, 12, 3);
     // zu_e 
-     ssSetInputPortVectorDimension(S, 14, 3);
+     ssSetInputPortVectorDimension(S, 13, 3);
     // x
-    ssSetInputPortVectorDimension(S, 15, 7);    
-   
+    ssSetInputPortVectorDimension(S, 14, 4);     
+    // lg
+    ssSetInputPortVectorDimension(S, 15, 5);     
+    // ug
+    ssSetInputPortVectorDimension(S, 16, 5);     
+
     /* specify dimension information for the OUTPUT ports */
     ssSetOutputPortVectorDimension(S, 0, 4 );
     ssSetOutputPortVectorDimension(S, 1, 1 );
     ssSetOutputPortVectorDimension(S, 2, 1 );
-    ssSetOutputPortVectorDimension(S, 3, 7 ); // state at shooting node 1
+    ssSetOutputPortVectorDimension(S, 3, 4 ); // state at shooting node 1
     ssSetOutputPortVectorDimension(S, 4, 1);
     ssSetOutputPortVectorDimension(S, 5, 1 );
 
@@ -121,6 +123,7 @@ static void mdlInitializeSizes (SimStruct *S)
     ssSetInputPortDirectFeedThrough(S, 13, 1);
     ssSetInputPortDirectFeedThrough(S, 14, 1);
     ssSetInputPortDirectFeedThrough(S, 15, 1);
+    ssSetInputPortDirectFeedThrough(S, 16, 1);
 
     // one sample time
     ssSetNumSampleTimes(S, 1);
@@ -174,18 +177,18 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     InputRealPtrsType in_sign;        
 
     // local buffer
-    real_t buffer[121];
+    real_t buffer[64];
 
     /* go through inputs */
     // lbx_0
     in_sign = ssGetInputPortRealSignalPtrs(S, 0);
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < 4; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "lbx", buffer);
     // ubx_0
     in_sign = ssGetInputPortRealSignalPtrs(S, 1);
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < 4; i++)
         buffer[i] = (double)(*in_sign[i]);
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "ubx", buffer);
     // parameters - stage-variant !!!
@@ -203,16 +206,15 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     // y_ref_0
     in_sign = ssGetInputPortRealSignalPtrs(S, 3);
 
-    for (int i = 0; i < 11; i++)
+    for (int i = 0; i < 8; i++)
         buffer[i] = (double)(*in_sign[i]);
 
-    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "yref", (void *) buffer);  
-
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "yref", (void *) buffer);
   
     // y_ref_e
     in_sign = ssGetInputPortRealSignalPtrs(S, 4);
 
-    for (int i = 0; i < 11; i++)
+    for (int i = 0; i < 8; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "yref", (void *) buffer);
@@ -243,68 +245,73 @@ static void mdlOutputs(SimStruct *S, int_T tid)
         for (int jj = 0; jj < 4; jj++)
             buffer[jj] = (double)(*in_sign[ii*4+jj]);
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ubu", (void *) buffer);
-    }    
-    // lg
+    }  
+    // cost_W_0
     in_sign = ssGetInputPortRealSignalPtrs(S, 9);
-
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 64; i++)
         buffer[i] = (double)(*in_sign[i]);
 
-    for (int ii = 0; ii < 2; ii++)
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "lg", buffer);
-    // ug
-    in_sign = ssGetInputPortRealSignalPtrs(S, 10);
-
-    for (int i = 0; i < 5; i++)
-        buffer[i] = (double)(*in_sign[i]);
-
-    for (int ii = 0; ii < 2; ii++)
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "ug", buffer);
-
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "W", buffer);  
     // cost_W
-    in_sign = ssGetInputPortRealSignalPtrs(S, 11);
-    for (int i = 0; i < 121; i++)
+    in_sign = ssGetInputPortRealSignalPtrs(S, 10);
+    for (int i = 0; i < 64; i++)
         buffer[i] = (double)(*in_sign[i]);
 
-    for (int ii = 0; ii < 2; ii++)
+    for (int ii = 1; ii < 1; ii++)
         ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "W", buffer);
 
     // C_e
     // VEDERE COSA SUCCEDE SE SI IMPOSTA SOLO A STAGE 1 QUANDO SI SUPERA POTENZA MASSIMA
-    in_sign = ssGetInputPortRealSignalPtrs(S, 12);
-    for (int i = 0; i < 35; i++)
+    in_sign = ssGetInputPortRealSignalPtrs(S, 11);
+    for (int i = 0; i < 20; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     for (int ii = 0; ii < 2; ii++)
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "C", buffer);
 
     // zl_e
-    in_sign = ssGetInputPortRealSignalPtrs(S, 13);
+    in_sign = ssGetInputPortRealSignalPtrs(S, 12);
     for (int i = 0; i < 3; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zl", buffer);
 
     // zu_e
-    in_sign = ssGetInputPortRealSignalPtrs(S, 14);
+    in_sign = ssGetInputPortRealSignalPtrs(S, 13);
     for (int i = 0; i < 3; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zu", buffer);
 
     // x
-    in_sign = ssGetInputPortRealSignalPtrs(S, 15);
-    for (int i = 0; i < 7; i++)
+    in_sign = ssGetInputPortRealSignalPtrs(S, 14);
+    for (int i = 0; i < 4; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     for (int ii = 0; ii < 1; ii++)
-        ocp_nlp_out_set(nlp_config, nlp_dims, nlp_out, 1, "x", buffer);   
+        ocp_nlp_out_set(nlp_config, nlp_dims, nlp_out, 1, "x", buffer); 
+
+    // lg
+    in_sign = ssGetInputPortRealSignalPtrs(S, 15);
+
+    for (int i = 0; i < 5; i++)
+        buffer[i] = (double)(*in_sign[i]);
+
+    for (int ii = 0; ii < 2; ii++)
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lg", buffer);
+    // ug
+    in_sign = ssGetInputPortRealSignalPtrs(S, 16);
+
+    for (int i = 0; i < 5; i++)
+        buffer[i] = (double)(*in_sign[i]);
+
+    for (int ii = 0; ii < 2; ii++)
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ug", buffer);
 
     /* call solver */
     int rti_phase = 0;
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "rti_phase", &rti_phase);
     int acados_status = dt_model_acados_solve(capsule);
-
 
     /* set outputs */
     // assign pointers to output signals
@@ -312,7 +319,6 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     int tmp_int;
     out_u0 = ssGetOutputPortRealSignal(S, 0);
     ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) out_u0);
-
   
     out_status = ssGetOutputPortRealSignal(S, 1);
     *out_status = (real_t) acados_status;

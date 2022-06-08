@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.4
+ * Model version                  : 1.10
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue Jun  7 23:37:14 2022
+ * C/C++ source code generated on : Wed Jun  8 13:17:33 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -178,44 +178,49 @@ typedef struct tag_VSW2YOpcQ0JoSsliuYZ3uD dsp_simulink_MovingAverage_l;
 
 /* Block signals and states (default storage) for system '<Root>' */
 typedef struct {
-  dsp_simulink_MovingAverage obj;      /* '<S171>/Moving Average' */
-  dsp_simulink_MovingAverage_l obj_l;  /* '<S277>/Moving Average' */
+  dsp_simulink_MovingAverage obj;      /* '<S172>/Moving Average' */
+  dsp_simulink_MovingAverage_l obj_m;  /* '<S278>/Moving Average' */
   zGeneral_Params General_Params;      /* '<S3>/Data Store_General_Params' */
   real_T CFunction[26];                /* '<S152>/C Function' */
-  real_T Probe[2];                     /* '<S281>/Probe' */
-  real_T Probe_b[2];                   /* '<S290>/Probe' */
-  real_T CFunction_k[4];               /* '<S248>/C Function' */
-  real_T CFunction_h[4];               /* '<S249>/C Function' */
+  real_T Probe[2];                     /* '<S282>/Probe' */
+  real_T Probe_k[2];                   /* '<S291>/Probe' */
+  real_T CFunction_p[4];               /* '<S249>/C Function' */
+  real_T CFunction_f[4];               /* '<S250>/C Function' */
   real_T T_max[4];                     /* '<S23>/Activation logic' */
   real_T T_min[4];                     /* '<S17>/Activation logic' */
   real_T UnitDelay_DSTATE[4];          /* '<S2>/Unit Delay' */
   real_T UD_DSTATE[4];                 /* '<S137>/UD' */
   real_T Integrator_DSTATE[4];         /* '<S62>/Integrator' */
-  real_T DiscreteFIRFilter_states[4];  /* '<S156>/Discrete FIR Filter' */
-  real_T UnitDelay_DSTATE_e[4];        /* '<S17>/Unit Delay' */
-  real_T Integrator_DSTATE_f[4];       /* '<S119>/Integrator' */
-  real_T UnitDelay_DSTATE_ep[4];       /* '<S23>/Unit Delay' */
+  real_T Integrator_DSTATE_m[4];       /* '<S287>/Integrator' */
   real_T UnitDelay1_DSTATE[4];         /* '<S11>/Unit Delay1' */
+  real_T Integrator_DSTATE_f[4];       /* '<S296>/Integrator' */
   real_T UnitDelay2_DSTATE[4];         /* '<S11>/Unit Delay2' */
-  real_T Integrator_DSTATE_d[4];       /* '<S286>/Integrator' */
-  real_T Integrator_DSTATE_i[4];       /* '<S295>/Integrator' */
+  real_T UnitDelay_DSTATE_e[4];        /* '<S17>/Unit Delay' */
+  real_T Integrator_DSTATE_a[4];       /* '<S119>/Integrator' */
+  real_T UnitDelay_DSTATE_d[4];        /* '<S23>/Unit Delay' */
   real_T UnitDelay_DSTATE_j[4];        /* '<S1>/Unit Delay' */
   real_T Memory_PreviousInput[4];      /* '<S139>/Memory' */
-  real_T Integrator_DSTATE_b;          /* '<S208>/Integrator' */
-  real_T Filter_DSTATE;                /* '<S203>/Filter' */
-  real_T tr;                           /* '<S238>/Distribution complete' */
-  real_T Rw;                           /* '<S238>/Distribution complete' */
+  real_T mz_output;                    /* '<S146>/Chart' */
+  real_T Integrator_DSTATE_n;          /* '<S209>/Integrator' */
+  real_T Filter_DSTATE;                /* '<S204>/Filter' */
+  real_T tr;                           /* '<S239>/Distribution complete' */
+  real_T Rw;                           /* '<S239>/Distribution complete' */
+  int32_T DiscreteFIRFilter_states[4]; /* '<S156>/Discrete FIR Filter' */
   int32_T DiscreteFIRFilter_circBuf;   /* '<S156>/Discrete FIR Filter' */
+  int32_T chartGlobalTickCounter;      /* '<S146>/Chart' */
+  int32_T countReferenceTick_1;        /* '<S146>/Chart' */
   int8_T Integrator_PrevResetState;    /* '<S62>/Integrator' */
+  int8_T Integrator_PrevResetState_e;  /* '<S287>/Integrator' */
+  int8_T Integrator_PrevResetState_b;  /* '<S296>/Integrator' */
+  int8_T Integrator_PrevResetState_i;  /* '<S209>/Integrator' */
+  int8_T Filter_PrevResetState;        /* '<S204>/Filter' */
   int8_T Integrator_PrevResetState_g;  /* '<S119>/Integrator' */
-  int8_T Integrator_PrevResetState_i;  /* '<S286>/Integrator' */
-  int8_T Integrator_PrevResetState_b;  /* '<S295>/Integrator' */
-  int8_T Integrator_PrevResetState_j;  /* '<S208>/Integrator' */
-  int8_T Filter_PrevResetState;        /* '<S203>/Filter' */
-  uint8_T Integrator_IC_LOADING;       /* '<S286>/Integrator' */
-  uint8_T Integrator_IC_LOADING_b;     /* '<S295>/Integrator' */
-  uint8_T is_active_c21_TVModel;       /* '<S277>/T_Req_Chart' */
-  uint8_T is_c21_TVModel;              /* '<S277>/T_Req_Chart' */
+  uint8_T Integrator_IC_LOADING;       /* '<S287>/Integrator' */
+  uint8_T Integrator_IC_LOADING_j;     /* '<S296>/Integrator' */
+  uint8_T is_active_c21_TVModel;       /* '<S278>/T_Req_Chart' */
+  uint8_T is_c21_TVModel;              /* '<S278>/T_Req_Chart' */
+  uint8_T is_active_c24_TVModel;       /* '<S146>/Chart' */
+  uint8_T is_c24_TVModel;              /* '<S146>/Chart' */
   uint8_T is_active_c13_TVModel;       /* '<S145>/Overlap Chart' */
   uint8_T is_c13_TVModel;              /* '<S145>/Overlap Chart' */
   uint8_T is_active_c38_TVModel;       /* '<S23>/Activation logic' */
@@ -229,21 +234,20 @@ typedef struct {
   uint8_T is_c36_TVModel;              /* '<S17>/Activation logic' */
   uint8_T is_TS_ON_j;                  /* '<S17>/Activation logic' */
   uint8_T is_FL_g;                     /* '<S17>/Activation logic' */
-  uint8_T is_FR_i;                     /* '<S17>/Activation logic' */
-  uint8_T is_RL_c;                     /* '<S17>/Activation logic' */
-  uint8_T is_RR_k;                     /* '<S17>/Activation logic' */
-  boolean_T Delay_DSTATE[5];           /* '<S171>/Delay' */
-  boolean_T Relay1_Mode;               /* '<S80>/Relay1' */
-  boolean_T Relay1_Mode_k;             /* '<S81>/Relay1' */
-  boolean_T Memory_PreviousInput_i;    /* '<S255>/Memory' */
-  boolean_T Memory_PreviousInput_j;    /* '<S256>/Memory' */
-  boolean_T Memory_PreviousInput_f;    /* '<S257>/Memory' */
-  boolean_T Memory_PreviousInput_ib;   /* '<S258>/Memory' */
-  boolean_T Memory_PreviousInput_a;    /* '<S231>/Memory' */
-  boolean_T IC1_FirstOutputTime;       /* '<S150>/IC1' */
-  boolean_T IC_FirstOutputTime;        /* '<S150>/IC' */
-  boolean_T IC_FirstOutputTime_e;      /* '<S234>/IC' */
-  boolean_T IC1_FirstOutputTime_m;     /* '<S235>/IC1' */
+  uint8_T is_FR_o;                     /* '<S17>/Activation logic' */
+  uint8_T is_RL_j;                     /* '<S17>/Activation logic' */
+  uint8_T is_RR_m;                     /* '<S17>/Activation logic' */
+  boolean_T Delay_DSTATE[5];           /* '<S172>/Delay' */
+  boolean_T Memory_PreviousInput_f;    /* '<S256>/Memory' */
+  boolean_T Memory_PreviousInput_j;    /* '<S257>/Memory' */
+  boolean_T Memory_PreviousInput_j4;   /* '<S258>/Memory' */
+  boolean_T Memory_PreviousInput_i;    /* '<S259>/Memory' */
+  boolean_T Memory_PreviousInput_l;    /* '<S232>/Memory' */
+  boolean_T IC_FirstOutputTime;        /* '<S235>/IC' */
+  boolean_T IC1_FirstOutputTime;       /* '<S236>/IC1' */
+  boolean_T Relay_Mode;                /* '<S80>/Relay' */
+  boolean_T Relay_Mode_o;              /* '<S81>/Relay' */
+  boolean_T countCondWasTrueAtLastTimeStep_;/* '<S146>/Chart' */
 } DW;
 
 /* Constant parameters (default storage) */
@@ -256,58 +260,73 @@ typedef struct {
   /* Pooled Parameter (Expression: TV.LV.efficiency_LUT.Eta)
    * Referenced by:
    *   '<S158>/Constant1'
-   *   '<S245>/2-D Lookup Table'
-   *   '<S273>/2-D Lookup Table'
+   *   '<S246>/2-D Lookup Table'
+   *   '<S274>/2-D Lookup Table'
    */
   real_T pooled5[4000];
 
   /* Pooled Parameter (Expression: TV.LV.efficiency_LUT.Omega)
    * Referenced by:
    *   '<S158>/Constant2'
-   *   '<S245>/2-D Lookup Table'
-   *   '<S273>/2-D Lookup Table'
+   *   '<S246>/2-D Lookup Table'
+   *   '<S274>/2-D Lookup Table'
    */
   real_T pooled7[200];
 
   /* Pooled Parameter (Expression: TV.LV.efficiency_LUT.Torque)
    * Referenced by:
    *   '<S158>/Constant3'
-   *   '<S245>/2-D Lookup Table'
-   *   '<S273>/2-D Lookup Table'
+   *   '<S246>/2-D Lookup Table'
+   *   '<S274>/2-D Lookup Table'
    */
   real_T pooled8[20];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.table_data )
    * Referenced by:
-   *   '<S278>/2-D Lookup Table'
-   *   '<S287>/2-D Lookup Table'
+   *   '<S279>/2-D Lookup Table'
+   *   '<S288>/2-D Lookup Table'
    *   '<S158>/2-D Lookup Table'
    */
   real_T pooled13[9246];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints1)
    * Referenced by:
-   *   '<S278>/2-D Lookup Table'
-   *   '<S287>/2-D Lookup Table'
+   *   '<S279>/2-D Lookup Table'
+   *   '<S288>/2-D Lookup Table'
    *   '<S158>/2-D Lookup Table'
    */
   real_T pooled14[201];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints2)
    * Referenced by:
-   *   '<S278>/2-D Lookup Table'
-   *   '<S287>/2-D Lookup Table'
+   *   '<S279>/2-D Lookup Table'
+   *   '<S288>/2-D Lookup Table'
    *   '<S158>/2-D Lookup Table'
    */
   real_T pooled15[46];
 
+  /* Computed Parameter: LUT_3_tableData
+   * Referenced by: '<S275>/LUT_-3'
+   */
+  real_T LUT_3_tableData[10000];
+
+  /* Expression: TV.LUT.Yrd_LUT.LUT_vectors.delta_vector
+   * Referenced by: '<S275>/LUT_-3'
+   */
+  real_T LUT_3_bp01Data[100];
+
+  /* Expression: TV.LUT.Yrd_LUT.LUT_vectors.v_vector
+   * Referenced by: '<S275>/LUT_-3'
+   */
+  real_T LUT_3_bp02Data[100];
+
   /* Expression: [0,1]
-   * Referenced by: '<S297>/1-D Lookup Table'
+   * Referenced by: '<S298>/1-D Lookup Table'
    */
   real_T uDLookupTable_tableData[2];
 
   /* Expression: [0,0, 4*TV.LV.TORQUE.T_peak_wheel]
-   * Referenced by: '<S296>/T_peak_wheel_LUT'
+   * Referenced by: '<S297>/T_peak_wheel_LUT'
    */
   real_T T_peak_wheel_LUT_tableData[3];
 
@@ -321,7 +340,7 @@ typedef struct {
    *   '<S9>/steering_to_wheel_angle_single_axis_LUT'
    *   '<S9>/steering_to_wheel_angles_LUT'
    */
-  real_T pooled37[33];
+  real_T pooled38[33];
 
   /* Expression: TV.LUT.Car_LUT.steer_at_ground_single_axis_LUT.SteerAngle_SingleAxis
    * Referenced by: '<S9>/steering_to_wheel_angle_single_axis_LUT'
@@ -330,73 +349,78 @@ typedef struct {
 
   /* Pooled Parameter (Expression: [TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 0])
    * Referenced by:
-   *   '<S275>/Max_Torque_Overload_Inverter_LUT'
-   *   '<S275>/Max_Torque_Overload_Motor_LUT'
-   *   '<S275>/Max_Torque_Temperature_External_LUT'
-   *   '<S275>/Max_Torque_Temperature_IGBT_LUT'
-   *   '<S275>/Max_Torque_Temperature_Internal_LUT'
-   *   '<S276>/Display Overload Inverter LUT'
-   *   '<S276>/Display Overload Motor LUT'
-   *   '<S276>/Temperature External LUT'
-   *   '<S276>/Temperature IGBT LUT'
-   *   '<S276>/Temperature Internal LUT'
+   *   '<S276>/Max_Torque_Overload_Inverter_LUT'
+   *   '<S276>/Max_Torque_Overload_Motor_LUT'
+   *   '<S276>/Max_Torque_Temperature_External_LUT'
+   *   '<S276>/Max_Torque_Temperature_IGBT_LUT'
+   *   '<S276>/Max_Torque_Temperature_Internal_LUT'
+   *   '<S277>/Display Overload Inverter LUT'
+   *   '<S277>/Display Overload Motor LUT'
+   *   '<S277>/Temperature External LUT'
+   *   '<S277>/Temperature IGBT LUT'
+   *   '<S277>/Temperature Internal LUT'
    */
-  real_T pooled45[3];
+  real_T pooled42[3];
 
   /* Pooled Parameter (Mixed Expressions)
    * Referenced by:
-   *   '<S275>/Max_Torque_Overload_Inverter_LUT'
-   *   '<S275>/Max_Torque_Overload_Motor_LUT'
-   *   '<S276>/Display Overload Inverter LUT'
-   *   '<S276>/Display Overload Motor LUT'
+   *   '<S276>/Max_Torque_Overload_Inverter_LUT'
+   *   '<S276>/Max_Torque_Overload_Motor_LUT'
+   *   '<S277>/Display Overload Inverter LUT'
+   *   '<S277>/Display Overload Motor LUT'
    */
-  real_T pooled46[3];
+  real_T pooled43[3];
 
   /* Expression: TV.LUT.MPC_Lut.control_bound_dry.Fx_target_positive
-   * Referenced by: '<S253>/2-D Lookup Table'
+   * Referenced by: '<S254>/2-D Lookup Table'
    */
-  real_T uDLookupTable_tableData_m[900];
+  real_T uDLookupTable_tableData_h[900];
 
   /* Pooled Parameter (Expression: TV.LUT.MPC_Lut.control_bound_dry.Fz)
    * Referenced by:
-   *   '<S253>/2-D Lookup Table'
-   *   '<S253>/2-D Lookup Table1'
+   *   '<S254>/2-D Lookup Table'
+   *   '<S254>/2-D Lookup Table1'
    */
-  real_T pooled53[30];
+  real_T pooled50[30];
 
   /* Pooled Parameter (Expression: TV.LUT.MPC_Lut.control_bound_dry.alpha)
    * Referenced by:
-   *   '<S253>/2-D Lookup Table'
-   *   '<S253>/2-D Lookup Table1'
+   *   '<S254>/2-D Lookup Table'
+   *   '<S254>/2-D Lookup Table1'
    */
-  real_T pooled54[30];
+  real_T pooled51[30];
 
   /* Expression: TV.LUT.MPC_Lut.control_bound_dry.Fx_target_negative
-   * Referenced by: '<S253>/2-D Lookup Table1'
+   * Referenced by: '<S254>/2-D Lookup Table1'
    */
   real_T uDLookupTable1_tableData[900];
 
+  /* Computed Parameter: LUT_3_maxIndex
+   * Referenced by: '<S275>/LUT_-3'
+   */
+  uint32_T LUT_3_maxIndex[2];
+
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S253>/2-D Lookup Table'
-   *   '<S253>/2-D Lookup Table1'
+   *   '<S254>/2-D Lookup Table'
+   *   '<S254>/2-D Lookup Table1'
    */
   uint32_T pooled66[2];
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S245>/2-D Lookup Table'
-   *   '<S273>/2-D Lookup Table'
+   *   '<S246>/2-D Lookup Table'
+   *   '<S274>/2-D Lookup Table'
    */
   uint32_T pooled67[2];
 
   /* Pooled Parameter (Expression: [0 1;1 0;0 1;0 1;1 0;1 0;0 0;0 0])
    * Referenced by:
-   *   '<S231>/Logic'
-   *   '<S255>/Logic'
+   *   '<S232>/Logic'
    *   '<S256>/Logic'
    *   '<S257>/Logic'
    *   '<S258>/Logic'
+   *   '<S259>/Logic'
    */
   boolean_T pooled69[16];
 } ConstP;
@@ -469,21 +493,25 @@ extern RT_MODEL *const rtM;
  * Block '<S127>/Data Type Duplicate' : Unused code path elimination
  * Block '<S127>/Data Type Propagation' : Unused code path elimination
  * Block '<S137>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S141>/VX_ref' : Unused code path elimination
+ * Block '<S141>/VY_ref' : Unused code path elimination
  * Block '<S160>/Data Type Duplicate' : Unused code path elimination
  * Block '<S160>/Data Type Propagation' : Unused code path elimination
- * Block '<S216>/Data Type Duplicate' : Unused code path elimination
- * Block '<S216>/Data Type Propagation' : Unused code path elimination
- * Block '<S170>/Data Type Duplicate' : Unused code path elimination
- * Block '<S170>/Data Type Propagation' : Unused code path elimination
- * Block '<S240>/Data Type Duplicate' : Unused code path elimination
- * Block '<S240>/Data Type Propagation' : Unused code path elimination
- * Block '<S246>/NOT' : Unused code path elimination
+ * Block '<S217>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S217>/Data Type Propagation' : Unused code path elimination
+ * Block '<S171>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S171>/Data Type Propagation' : Unused code path elimination
+ * Block '<S241>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S241>/Data Type Propagation' : Unused code path elimination
+ * Block '<S247>/NOT' : Unused code path elimination
  * Block '<S139>/Sum' : Unused code path elimination
- * Block '<S140>/Cast To Double7' : Unused code path elimination
- * Block '<S280>/Data Type Duplicate' : Unused code path elimination
- * Block '<S280>/Data Type Propagation' : Unused code path elimination
- * Block '<S289>/Data Type Duplicate' : Unused code path elimination
- * Block '<S289>/Data Type Propagation' : Unused code path elimination
+ * Block '<S151>/r1' : Unused code path elimination
+ * Block '<S151>/vx' : Unused code path elimination
+ * Block '<S151>/vy' : Unused code path elimination
+ * Block '<S281>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S281>/Data Type Propagation' : Unused code path elimination
+ * Block '<S290>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S290>/Data Type Propagation' : Unused code path elimination
  * Block '<Root>/Rate Transition1' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition10' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition11' : Eliminated since input and output rates are identical
@@ -500,20 +528,22 @@ extern RT_MODEL *const rtM;
  * Block '<Root>/Rate Transition7' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition8' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition9' : Eliminated since input and output rates are identical
- * Block '<S275>/Cast_0' : Eliminate redundant data type conversion
- * Block '<S275>/Cast_1' : Eliminate redundant data type conversion
- * Block '<S275>/Cast_2' : Eliminate redundant data type conversion
- * Block '<S275>/Cast_3' : Eliminate redundant data type conversion
- * Block '<S275>/Cast_4' : Eliminate redundant data type conversion
- * Block '<S286>/Saturation' : Eliminated Saturate block
- * Block '<S279>/K' : Eliminated nontunable gain of 1
+ * Block '<S239>/Signal Conversion' : Eliminate redundant signal conversion block
+ * Block '<S140>/Cast To Double8' : Eliminate redundant data type conversion
  * Block '<S276>/Cast_0' : Eliminate redundant data type conversion
  * Block '<S276>/Cast_1' : Eliminate redundant data type conversion
  * Block '<S276>/Cast_2' : Eliminate redundant data type conversion
  * Block '<S276>/Cast_3' : Eliminate redundant data type conversion
  * Block '<S276>/Cast_4' : Eliminate redundant data type conversion
- * Block '<S295>/Saturation' : Eliminated Saturate block
- * Block '<S288>/K' : Eliminated nontunable gain of 1
+ * Block '<S287>/Saturation' : Eliminated Saturate block
+ * Block '<S280>/K' : Eliminated nontunable gain of 1
+ * Block '<S277>/Cast_0' : Eliminate redundant data type conversion
+ * Block '<S277>/Cast_1' : Eliminate redundant data type conversion
+ * Block '<S277>/Cast_2' : Eliminate redundant data type conversion
+ * Block '<S277>/Cast_3' : Eliminate redundant data type conversion
+ * Block '<S277>/Cast_4' : Eliminate redundant data type conversion
+ * Block '<S296>/Saturation' : Eliminated Saturate block
+ * Block '<S289>/K' : Eliminated nontunable gain of 1
  */
 
 /*-
@@ -695,140 +725,141 @@ extern RT_MODEL *const rtM;
  * '<S162>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Faults Detection/Subsystem/Selected Map'
  * '<S163>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Faults Detection/Vectorino/Vectorino'
  * '<S164>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Faults Detection/Vectorino/Vectorino/30//70'
- * '<S165>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/MATLAB Function1'
- * '<S166>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/MATLAB Function2'
- * '<S167>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/MATLAB Function3'
- * '<S168>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/MATLAB Function4'
- * '<S169>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1'
- * '<S170>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Saturation Dynamic'
- * '<S171>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation'
- * '<S172>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup'
- * '<S173>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/D Gain'
- * '<S174>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Filter'
- * '<S175>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Filter ICs'
- * '<S176>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/I Gain'
- * '<S177>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Ideal P Gain'
- * '<S178>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Ideal P Gain Fdbk'
- * '<S179>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Integrator'
- * '<S180>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Integrator ICs'
- * '<S181>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/N Copy'
- * '<S182>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/N Gain'
- * '<S183>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/P Copy'
- * '<S184>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Parallel P Gain'
- * '<S185>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Reset Signal'
- * '<S186>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation'
- * '<S187>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation Fdbk'
- * '<S188>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Sum'
- * '<S189>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Sum Fdbk'
- * '<S190>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tracking Mode'
- * '<S191>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tracking Mode Sum'
- * '<S192>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tsamp - Integral'
- * '<S193>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tsamp - Ngain'
- * '<S194>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/b Gain'
- * '<S195>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/c Gain'
- * '<S196>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/postSat Signal'
- * '<S197>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/preSat Signal'
- * '<S198>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup/Disc. Clamping Parallel'
- * '<S199>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup/Disc. Clamping Parallel/Dead Zone'
- * '<S200>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup/Disc. Clamping Parallel/Dead Zone/External'
- * '<S201>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup/Disc. Clamping Parallel/Dead Zone/External/Dead Zone Dynamic'
- * '<S202>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/D Gain/External Parameters'
- * '<S203>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Filter/Disc. Forward Euler Filter'
- * '<S204>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Filter ICs/Internal IC - Filter'
- * '<S205>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/I Gain/External Parameters'
- * '<S206>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Ideal P Gain/Passthrough'
- * '<S207>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Ideal P Gain Fdbk/Disabled'
- * '<S208>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Integrator/Discrete'
- * '<S209>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Integrator ICs/Internal IC'
- * '<S210>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/N Copy/Disabled'
- * '<S211>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/N Gain/External Parameters'
- * '<S212>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/P Copy/Disabled'
- * '<S213>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Parallel P Gain/External Parameters'
- * '<S214>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Reset Signal/External Reset'
- * '<S215>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation/External'
- * '<S216>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation/External/Saturation Dynamic'
- * '<S217>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation Fdbk/Disabled'
- * '<S218>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Sum/Sum_PID'
- * '<S219>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Sum Fdbk/Disabled'
- * '<S220>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tracking Mode/Enabled'
- * '<S221>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tracking Mode Sum/Tracking Mode'
- * '<S222>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tsamp - Integral/Passthrough'
- * '<S223>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tsamp - Ngain/Passthrough'
- * '<S224>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/b Gain/External Parameters'
- * '<S225>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/c Gain/External Parameters'
- * '<S226>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/postSat Signal/Forward_Path'
- * '<S227>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/preSat Signal/Forward_Path'
- * '<S228>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation/First Activation'
- * '<S229>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation/If Action Subsystem'
- * '<S230>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation/If Action Subsystem1'
- * '<S231>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation/S-R Flip-Flop'
- * '<S232>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver Inputs'
- * '<S233>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver g'
- * '<S234>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Power Limits Negative'
- * '<S235>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Power Limits Positive'
- * '<S236>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Subsystem'
- * '<S237>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Subsystem1'
- * '<S238>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Subsystem2'
- * '<S239>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver Inputs/Accelerator Mapping '
- * '<S240>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver Inputs/Saturation Dynamic'
- * '<S241>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver g/Coasting'
- * '<S242>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Subsystem2/Distribution complete'
- * '<S243>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytropic Matrix/Efficiency limit'
- * '<S244>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytropic Matrix/MATLAB Function'
- * '<S245>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytropic Matrix/Efficiency limit/Power to engines'
- * '<S246>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin'
- * '<S247>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Brake & ESP'
- * '<S248>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Bus lbx'
- * '<S249>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Bus ubx'
- * '<S250>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Cross Check'
- * '<S251>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Low YRD'
- * '<S252>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics'
- * '<S253>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bounds'
- * '<S254>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops'
- * '<S255>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops/S-R Flip-Flop'
- * '<S256>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops/S-R Flip-Flop1'
- * '<S257>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops/S-R Flip-Flop2'
- * '<S258>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops/S-R Flip-Flop3'
- * '<S259>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation'
- * '<S260>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation'
- * '<S261>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation/Fz FL'
- * '<S262>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation/Fz FR'
- * '<S263>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation/Fz RL'
- * '<S264>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation/Fz RR'
- * '<S265>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation/Slip Angle FL'
- * '<S266>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation/Slip Angle FR'
- * '<S267>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation/Slip Angle RL'
- * '<S268>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation/Slip Angle RR'
- * '<S269>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bounds/Hydraulic brakes'
- * '<S270>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bounds/LMUx Correction'
- * '<S271>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Weights Generation/Efficiency limit'
- * '<S272>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Weights Generation/MATLAB Function'
- * '<S273>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Weights Generation/Efficiency limit/Power to engines'
- * '<S274>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/Reference Tracking/MATLAB Function1'
- * '<S275>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive'
- * '<S276>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen'
- * '<S277>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Request'
- * '<S278>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve'
- * '<S279>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)'
- * '<S280>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Saturation Dynamic'
- * '<S281>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant'
- * '<S282>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization'
- * '<S283>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)'
- * '<S284>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant/Compare To Zero'
- * '<S285>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization/Init_u'
- * '<S286>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)/Discrete'
- * '<S287>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve'
- * '<S288>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)'
- * '<S289>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Saturation Dynamic'
- * '<S290>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant'
- * '<S291>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization'
- * '<S292>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)'
- * '<S293>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant/Compare To Zero'
- * '<S294>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization/Init_u'
- * '<S295>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)/Discrete'
- * '<S296>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Request/T_Req_Acceleration'
- * '<S297>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Request/T_Req_Braking'
- * '<S298>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Request/T_Req_Chart'
+ * '<S165>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Chart'
+ * '<S166>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/MATLAB Function1'
+ * '<S167>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/MATLAB Function2'
+ * '<S168>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/MATLAB Function3'
+ * '<S169>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/MATLAB Function4'
+ * '<S170>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1'
+ * '<S171>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Saturation Dynamic'
+ * '<S172>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation'
+ * '<S173>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup'
+ * '<S174>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/D Gain'
+ * '<S175>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Filter'
+ * '<S176>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Filter ICs'
+ * '<S177>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/I Gain'
+ * '<S178>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Ideal P Gain'
+ * '<S179>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Ideal P Gain Fdbk'
+ * '<S180>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Integrator'
+ * '<S181>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Integrator ICs'
+ * '<S182>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/N Copy'
+ * '<S183>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/N Gain'
+ * '<S184>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/P Copy'
+ * '<S185>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Parallel P Gain'
+ * '<S186>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Reset Signal'
+ * '<S187>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation'
+ * '<S188>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation Fdbk'
+ * '<S189>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Sum'
+ * '<S190>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Sum Fdbk'
+ * '<S191>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tracking Mode'
+ * '<S192>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tracking Mode Sum'
+ * '<S193>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tsamp - Integral'
+ * '<S194>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tsamp - Ngain'
+ * '<S195>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/b Gain'
+ * '<S196>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/c Gain'
+ * '<S197>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/postSat Signal'
+ * '<S198>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/preSat Signal'
+ * '<S199>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup/Disc. Clamping Parallel'
+ * '<S200>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup/Disc. Clamping Parallel/Dead Zone'
+ * '<S201>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup/Disc. Clamping Parallel/Dead Zone/External'
+ * '<S202>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Anti-windup/Disc. Clamping Parallel/Dead Zone/External/Dead Zone Dynamic'
+ * '<S203>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/D Gain/External Parameters'
+ * '<S204>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Filter/Disc. Forward Euler Filter'
+ * '<S205>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Filter ICs/Internal IC - Filter'
+ * '<S206>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/I Gain/External Parameters'
+ * '<S207>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Ideal P Gain/Passthrough'
+ * '<S208>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Ideal P Gain Fdbk/Disabled'
+ * '<S209>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Integrator/Discrete'
+ * '<S210>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Integrator ICs/Internal IC'
+ * '<S211>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/N Copy/Disabled'
+ * '<S212>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/N Gain/External Parameters'
+ * '<S213>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/P Copy/Disabled'
+ * '<S214>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Parallel P Gain/External Parameters'
+ * '<S215>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Reset Signal/External Reset'
+ * '<S216>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation/External'
+ * '<S217>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation/External/Saturation Dynamic'
+ * '<S218>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Saturation Fdbk/Disabled'
+ * '<S219>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Sum/Sum_PID'
+ * '<S220>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Sum Fdbk/Disabled'
+ * '<S221>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tracking Mode/Enabled'
+ * '<S222>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tracking Mode Sum/Tracking Mode'
+ * '<S223>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tsamp - Integral/Passthrough'
+ * '<S224>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/Tsamp - Ngain/Passthrough'
+ * '<S225>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/b Gain/External Parameters'
+ * '<S226>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/c Gain/External Parameters'
+ * '<S227>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/postSat Signal/Forward_Path'
+ * '<S228>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/PID Controller (2DOF)1/preSat Signal/Forward_Path'
+ * '<S229>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation/First Activation'
+ * '<S230>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation/If Action Subsystem'
+ * '<S231>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation/If Action Subsystem1'
+ * '<S232>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Mz Generation/Steer Activation/S-R Flip-Flop'
+ * '<S233>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver Inputs'
+ * '<S234>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver g'
+ * '<S235>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Power Limits Negative'
+ * '<S236>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Power Limits Positive'
+ * '<S237>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Subsystem'
+ * '<S238>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Subsystem1'
+ * '<S239>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Subsystem2'
+ * '<S240>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver Inputs/Accelerator Mapping '
+ * '<S241>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver Inputs/Saturation Dynamic'
+ * '<S242>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Driver g/Coasting'
+ * '<S243>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytopic Constraints/Subsystem2/Distribution complete'
+ * '<S244>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytropic Matrix/Efficiency limit'
+ * '<S245>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytropic Matrix/MATLAB Function'
+ * '<S246>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Polytropic Matrix/Efficiency limit/Power to engines'
+ * '<S247>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin'
+ * '<S248>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Brake & ESP'
+ * '<S249>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Bus lbx'
+ * '<S250>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Bus ubx'
+ * '<S251>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Cross Check'
+ * '<S252>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Low YRD'
+ * '<S253>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics'
+ * '<S254>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bounds'
+ * '<S255>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops'
+ * '<S256>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops/S-R Flip-Flop'
+ * '<S257>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops/S-R Flip-Flop1'
+ * '<S258>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops/S-R Flip-Flop2'
+ * '<S259>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Anti reverse wheelspin/S-R Flip Flops/S-R Flip-Flop3'
+ * '<S260>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation'
+ * '<S261>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation'
+ * '<S262>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation/Fz FL'
+ * '<S263>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation/Fz FR'
+ * '<S264>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation/Fz RL'
+ * '<S265>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Load Transfer Calculation/Fz RR'
+ * '<S266>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation/Slip Angle FL'
+ * '<S267>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation/Slip Angle FR'
+ * '<S268>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation/Slip Angle RL'
+ * '<S269>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bound Dynamics/Slip Angle Calculation/Slip Angle RR'
+ * '<S270>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bounds/Hydraulic brakes'
+ * '<S271>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/States Constraints/Tire Bounds/LMUx Correction'
+ * '<S272>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Weights Generation/Efficiency limit'
+ * '<S273>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Weights Generation/MATLAB Function'
+ * '<S274>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/MPC/Weights Generation/Efficiency limit/Power to engines'
+ * '<S275>' : 'TVModel/Subsystem/Subsystem1/Torque Distribution/Reference Tracking/YRD_LUT_-2'
+ * '<S276>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive'
+ * '<S277>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen'
+ * '<S278>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Request'
+ * '<S279>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve'
+ * '<S280>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)'
+ * '<S281>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Saturation Dynamic'
+ * '<S282>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant'
+ * '<S283>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization'
+ * '<S284>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)'
+ * '<S285>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant/Compare To Zero'
+ * '<S286>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization/Init_u'
+ * '<S287>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)/Discrete'
+ * '<S288>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve'
+ * '<S289>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)'
+ * '<S290>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Saturation Dynamic'
+ * '<S291>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant'
+ * '<S292>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization'
+ * '<S293>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)'
+ * '<S294>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant/Compare To Zero'
+ * '<S295>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization/Init_u'
+ * '<S296>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)/Discrete'
+ * '<S297>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Request/T_Req_Acceleration'
+ * '<S298>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Request/T_Req_Braking'
+ * '<S299>' : 'TVModel/Subsystem/Subsystem1/Torque Limits/Torque Request/T_Req_Chart'
  */
 #endif                                 /* RTW_HEADER_TVModel_h_ */
 

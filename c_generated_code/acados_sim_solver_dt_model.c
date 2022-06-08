@@ -80,31 +80,10 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
     double Tsim = 0.02;
 
     
-    // explicit ode
-    capsule->sim_forw_vde_casadi = (external_function_param_casadi *) malloc(sizeof(external_function_param_casadi));
-    capsule->sim_expl_ode_fun_casadi = (external_function_param_casadi *) malloc(sizeof(external_function_param_casadi));
-
-    capsule->sim_forw_vde_casadi->casadi_fun = &dt_model_expl_vde_forw;
-    capsule->sim_forw_vde_casadi->casadi_n_in = &dt_model_expl_vde_forw_n_in;
-    capsule->sim_forw_vde_casadi->casadi_n_out = &dt_model_expl_vde_forw_n_out;
-    capsule->sim_forw_vde_casadi->casadi_sparsity_in = &dt_model_expl_vde_forw_sparsity_in;
-    capsule->sim_forw_vde_casadi->casadi_sparsity_out = &dt_model_expl_vde_forw_sparsity_out;
-    capsule->sim_forw_vde_casadi->casadi_work = &dt_model_expl_vde_forw_work;
-    external_function_param_casadi_create(capsule->sim_forw_vde_casadi, np);
-
-    capsule->sim_expl_ode_fun_casadi->casadi_fun = &dt_model_expl_ode_fun;
-    capsule->sim_expl_ode_fun_casadi->casadi_n_in = &dt_model_expl_ode_fun_n_in;
-    capsule->sim_expl_ode_fun_casadi->casadi_n_out = &dt_model_expl_ode_fun_n_out;
-    capsule->sim_expl_ode_fun_casadi->casadi_sparsity_in = &dt_model_expl_ode_fun_sparsity_in;
-    capsule->sim_expl_ode_fun_casadi->casadi_sparsity_out = &dt_model_expl_ode_fun_sparsity_out;
-    capsule->sim_expl_ode_fun_casadi->casadi_work = &dt_model_expl_ode_fun_work;
-    external_function_param_casadi_create(capsule->sim_expl_ode_fun_casadi, np);
-
-    
 
     // sim plan & config
     sim_solver_plan plan;
-    plan.sim_solver = ERK;
+    plan.sim_solver = DISCRETE;
 
     // create correct config based on plan
     sim_config * dt_model_sim_config = sim_config_create(plan);
@@ -145,10 +124,6 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
                dt_model_sim_in, "T", &Tsim);
 
     // model functions
-    dt_model_sim_config->model_set(dt_model_sim_in->model,
-                 "expl_vde_for", capsule->sim_forw_vde_casadi);
-    dt_model_sim_config->model_set(dt_model_sim_in->model,
-                 "expl_ode_fun", capsule->sim_expl_ode_fun_casadi);
 
     // sim solver
     sim_solver *dt_model_sim_solver = sim_solver_create(dt_model_sim_config,
@@ -166,8 +141,8 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
 
     /* initialize input */
     // x
-    double x0[7];
-    for (int ii = 0; ii < 7; ii++)
+    double x0[4];
+    for (int ii = 0; ii < 4; ii++)
         x0[ii] = 0.0;
 
     sim_in_set(dt_model_sim_config, dt_model_sim_dims,
@@ -183,11 +158,11 @@ int dt_model_acados_sim_create(sim_solver_capsule * capsule)
                dt_model_sim_in, "u", u0);
 
     // S_forw
-    double S_forw[77];
-    for (int ii = 0; ii < 77; ii++)
+    double S_forw[32];
+    for (int ii = 0; ii < 32; ii++)
         S_forw[ii] = 0.0;
-    for (int ii = 0; ii < 7; ii++)
-        S_forw[ii + ii * 7 ] = 1.0;
+    for (int ii = 0; ii < 4; ii++)
+        S_forw[ii + ii * 4 ] = 1.0;
 
 
     sim_in_set(dt_model_sim_config, dt_model_sim_dims,
@@ -222,8 +197,6 @@ int dt_model_acados_sim_free(sim_solver_capsule *capsule)
     sim_config_destroy(capsule->acados_sim_config);
 
     // free external function
-    external_function_param_casadi_free(capsule->sim_forw_vde_casadi);
-    external_function_param_casadi_free(capsule->sim_expl_ode_fun_casadi);
 
     return 0;
 }
@@ -239,8 +212,6 @@ int dt_model_acados_sim_update_params(sim_solver_capsule *capsule, double *p, in
             " External function has %i parameters. Exiting.\n", np, casadi_np);
         exit(1);
     }
-    capsule->sim_forw_vde_casadi[0].set_param(capsule->sim_forw_vde_casadi, p);
-    capsule->sim_expl_ode_fun_casadi[0].set_param(capsule->sim_expl_ode_fun_casadi, p);
 
     return status;
 }

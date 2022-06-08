@@ -32,8 +32,8 @@
 %
 
 SOURCES = { ...
-            'dt_model_model/dt_model_expl_ode_fun.c', ...
-            'dt_model_model/dt_model_expl_vde_forw.c',...
+            'dt_model_model/dt_model_dyn_disc_phi_fun.c',...
+            'dt_model_model/dt_model_dyn_disc_phi_fun_jac.c',...
             'acados_solver_sfunction_dt_model.c', ...
             'acados_solver_dt_model.c'
           };
@@ -78,17 +78,17 @@ fprintf('\n\nNote: Usage of Sfunction is as follows:\n')
 input_note = 'Inputs are:\n';
 i_in = 1;
 input_note = strcat(input_note, num2str(i_in), ') lbx_0 - lower bound on x for stage 0,',...
-                    ' size [7]\n ');
+                    ' size [4]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') ubx_0 - upper bound on x for stage 0,',...
-                    ' size [7]\n ');
+                    ' size [4]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') parameters - concatenated for all shooting nodes 0 to N+1,',...
                     ' size [26]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') y_ref_0, size [11]\n ');
+input_note = strcat(input_note, num2str(i_in), ') y_ref_0, size [8]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') y_ref_e, size [11]\n ');
+input_note = strcat(input_note, num2str(i_in), ') y_ref_e, size [8]\n ');
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') lbx_e (lbx at shooting node N), size [4]\n ');
 i_in = i_in + 1;
@@ -98,9 +98,9 @@ input_note = strcat(input_note, num2str(i_in), ') lbu for shooting nodes 0 to N-
 i_in = i_in + 1;
 input_note = strcat(input_note, num2str(i_in), ') ubu for shooting nodes 0 to N-1, size [4]\n ');
 i_in = i_in + 1;  
-input_note = strcat(input_note, num2str(i_in), ') cost_W_0 in column-major format, size [121]\n ');
+input_note = strcat(input_note, num2str(i_in), ') cost_W_0 in column-major format, size [64]\n ');
 i_in = i_in + 1;  
-input_note = strcat(input_note, num2str(i_in), ') cost_W in column-major format, that is set for all intermediate shooting nodes: 1 to N-1, size [121]\n ');
+input_note = strcat(input_note, num2str(i_in), ') cost_W in column-major format, that is set for all intermediate shooting nodes: 1 to N-1, size [64]\n ');
 i_in = i_in + 1;
 
 fprintf(input_note)

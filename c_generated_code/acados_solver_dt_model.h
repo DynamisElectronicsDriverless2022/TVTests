@@ -37,12 +37,12 @@
 #include "acados_c/ocp_nlp_interface.h"
 #include "acados_c/external_function_interface.h"
 
-#define DT_MODEL_NX     7
+#define DT_MODEL_NX     4
 #define DT_MODEL_NZ     0
 #define DT_MODEL_NU     4
 #define DT_MODEL_NP     13
 #define DT_MODEL_NBX    0
-#define DT_MODEL_NBX0   7
+#define DT_MODEL_NBX0   4
 #define DT_MODEL_NBU    4
 #define DT_MODEL_NSBX   0
 #define DT_MODEL_NSBU   0
@@ -58,9 +58,9 @@
 #define DT_MODEL_NG     0
 #define DT_MODEL_NBXN   4
 #define DT_MODEL_NGN    5
-#define DT_MODEL_NY0    11
-#define DT_MODEL_NY     11
-#define DT_MODEL_NYN    11
+#define DT_MODEL_NY0    8
+#define DT_MODEL_NY     8
+#define DT_MODEL_NYN    8
 #define DT_MODEL_N      1
 #define DT_MODEL_NH     0
 #define DT_MODEL_NPHI   0
@@ -91,10 +91,8 @@ typedef struct dt_model_solver_capsule
     /* external functions */
     // dynamics
 
-    external_function_param_casadi *forw_vde_casadi;
-    external_function_param_casadi *expl_ode_fun;
-
-
+    external_function_param_casadi *discr_dyn_phi_fun;
+    external_function_param_casadi *discr_dyn_phi_fun_jac_ut_xt;
 
 
     // cost

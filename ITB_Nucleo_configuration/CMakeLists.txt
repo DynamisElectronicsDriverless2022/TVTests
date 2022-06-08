@@ -58,6 +58,8 @@ include_directories(acados)
 include_directories(acados/external)
 include_directories(acados/external/blasfeo/include)
 include_directories(../c_generated_code)
+include_directories(../c_generated_code/dt_model_model)
+
 include(cmake/acados.cmake)
 
 add_definitions(-DSTM32F765xx -DUSE_HAL_DRIVER -DDEBUG)
@@ -85,7 +87,10 @@ file(GLOB_RECURSE SOURCES
         "../c_generated_code/dt_model_model/dt_model_expl_vde_forw.c"
         "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c"
         "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c"
-        "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c")
+        "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c"
+        "../c_generated_code/dt_model_model/dt_model_dyn_disc_phi_fun.c"
+        "../c_generated_code/dt_model_model/dt_model_dyn_disc_phi_fun_jac.c"
+        "../c_generated_code/dt_model_model/dt_model_dyn_disc_phi_fun_jac_hess.c")
 
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F765BITX_FLASH.ld)
