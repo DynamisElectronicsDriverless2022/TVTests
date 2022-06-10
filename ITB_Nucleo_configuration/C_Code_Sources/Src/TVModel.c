@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.11
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Jun  9 12:20:35 2022
+ * Model version                  : 1.12
+ * Simulink Coder version         : 9.7 (R2022a) 13-Nov-2021
+ * C/C++ source code generated on : Fri Jun 10 15:27:19 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -20,6 +20,10 @@
  */
 
 #include "TVModel.h"
+#include "rtwtypes.h"
+#include <math.h>
+#include <string.h>
+#include <stddef.h>
 
 /* Named constants for Chart: '<S22>/Overlap Chart' */
 #define IN_Go                          ((uint8_T)1U)
@@ -35,55 +39,6 @@
 #define IN_Brake                       ((uint8_T)1U)
 #define IN_Throttle                    ((uint8_T)2U)
 #define NumBitsPerChar                 8U
-#ifndef UCHAR_MAX
-#include <limits.h>
-#endif
-
-#if ( UCHAR_MAX != (0xFFU) ) || ( SCHAR_MAX != (0x7F) )
-#error Code was generated for compiler with different sized uchar/char. \
-Consider adjusting Test hardware word size settings on the \
-Hardware Implementation pane to match your compiler word sizes as \
-defined in limits.h of the compiler. Alternatively, you can \
-select the Test hardware is the same as production hardware option and \
-select the Enable portable word sizes option on the Code Generation > \
-Verification pane for ERT based targets, which will disable the \
-preprocessor word size checks.
-#endif
-
-#if ( USHRT_MAX != (0xFFFFU) ) || ( SHRT_MAX != (0x7FFF) )
-#error Code was generated for compiler with different sized ushort/short. \
-Consider adjusting Test hardware word size settings on the \
-Hardware Implementation pane to match your compiler word sizes as \
-defined in limits.h of the compiler. Alternatively, you can \
-select the Test hardware is the same as production hardware option and \
-select the Enable portable word sizes option on the Code Generation > \
-Verification pane for ERT based targets, which will disable the \
-preprocessor word size checks.
-#endif
-
-#if ( UINT_MAX != (0xFFFFFFFFU) ) || ( INT_MAX != (0x7FFFFFFF) )
-#error Code was generated for compiler with different sized uint/int. \
-Consider adjusting Test hardware word size settings on the \
-Hardware Implementation pane to match your compiler word sizes as \
-defined in limits.h of the compiler. Alternatively, you can \
-select the Test hardware is the same as production hardware option and \
-select the Enable portable word sizes option on the Code Generation > \
-Verification pane for ERT based targets, which will disable the \
-preprocessor word size checks.
-#endif
-
-#if ( ULONG_MAX != (0xFFFFFFFFU) ) || ( LONG_MAX != (0x7FFFFFFF) )
-#error Code was generated for compiler with different sized ulong/long. \
-Consider adjusting Test hardware word size settings on the \
-Hardware Implementation pane to match your compiler word sizes as \
-defined in limits.h of the compiler. Alternatively, you can \
-select the Test hardware is the same as production hardware option and \
-select the Enable portable word sizes option on the Code Generation > \
-Verification pane for ERT based targets, which will disable the \
-preprocessor word size checks.
-#endif
-
-/* Skipping ulong_long/long_long check: insufficient preprocessor integer range. */
 
 /* Block signals and states (default storage) */
 DW rtDW;
@@ -893,12 +848,12 @@ static void sort(real_T x[4], int32_T idx[4])
 {
   real_T x4[4];
   real_T xwork[4];
-  int32_T idx4[4];
   int32_T i1;
   int32_T i3;
   int32_T i4;
   int32_T ib;
   int32_T nNaNs;
+  int8_T idx4[4];
   int8_T perm[4];
   idx[0] = 0;
   x4[0] = 0.0;
@@ -1135,7 +1090,6 @@ void TV(void)
 {
   g_dsp_internal_SlidingWindowA_l *obj_0;
   g_dsp_internal_SlidingWindowAve *obj;
-  int64_T acc1;
   real_T rtb_y[64];
   real_T rtb_CCaller_o3[26];
   real_T csumrev[24];
@@ -1146,20 +1100,20 @@ void TV(void)
   real_T rtb_CCaller_o10[5];
   real_T rtb_CCaller_o9[5];
   real_T rtb_Braking[4];
-  real_T rtb_Braking_0[4];
   real_T rtb_CCaller_o8[4];
   real_T rtb_Memory[4];
   real_T rtb_Product[4];
   real_T rtb_Product1[4];
   real_T rtb_Tnew[4];
+  real_T rtb_Tnew_0[4];
   real_T rtb_UnaryMinus_d0[4];
-  real_T rtb_UnaryMinus_f[4];
   real_T rtb_CCaller_o13[3];
   real_T rtb_CCaller_o14[3];
   real_T fractions[2];
   real_T fractions_0[2];
   real_T Faeroz_tmp;
   real_T Fy_FR;
+  real_T Mzreq;
   real_T cumRevIndex;
   real_T modValueRev;
   real_T rtb_Abs_i_idx_0;
@@ -1202,16 +1156,17 @@ void TV(void)
   real_T rtb_front_wheel_angle_single__d;
   real_T rtb_vx;
   real_T rtb_yrd;
-  real_T u0;
   real_T u0_tmp;
-  real_T u_tmp;
+  real_T u0_tmp_0;
   real_T z;
   int32_T tmp[2];
-  int32_T X1;
   int32_T b_exit;
+  int32_T i;
   int32_T rtb_y_tmp;
   uint32_T bpIndices[2];
   uint32_T bpIndices_0[2];
+  int8_T modValueRev_0;
+  int8_T rtb_fixforDTpropagationissue_0;
   boolean_T guard1 = false;
   boolean_T guard2 = false;
   boolean_T rtb_Compare;
@@ -1223,6 +1178,7 @@ void TV(void)
   boolean_T rtb_Logic_idx_1;
   boolean_T rtb_Logic_o_idx_0;
   boolean_T rtb_Logic_o_idx_1;
+  boolean_T rtb_fixforDTpropagationissue;
 
   /* Outputs for Atomic SubSystem: '<Root>/Subsystem' */
   /* Saturate: '<S1>/Saturation' incorporates:
@@ -1253,14 +1209,12 @@ void TV(void)
   /* Signum: '<S9>/Sign' incorporates:
    *  Inport: '<Root>/steering'
    */
-  if (rtU.steering < 0.0) {
+  if (rtIsNaN(rtU.steering)) {
+    rtb_Sign = rtU.steering;
+  } else if (rtU.steering < 0.0) {
     rtb_Sign = -1.0;
-  } else if (rtU.steering > 0.0) {
-    rtb_Sign = 1.0;
-  } else if (rtU.steering == 0.0) {
-    rtb_Sign = 0.0;
   } else {
-    rtb_Sign = (rtNaN);
+    rtb_Sign = (rtU.steering > 0.0);
   }
 
   /* End of Signum: '<S9>/Sign' */
@@ -1372,8 +1326,8 @@ void TV(void)
   /* CFunction: '<S29>/C Function' incorporates:
    *  Constant: '<S29>/Constant3'
    */
-  for (X1 = 0; X1 < 2; X1++) {
-    memcpy(&rtDW.CFunction[X1 * 13], &RateTransition3[0], 13U * sizeof(real_T));
+  for (i = 0; i < 2; i++) {
+    memcpy(&rtDW.CFunction[i * 13], &RateTransition3[0], 13U * sizeof(real_T));
   }
 
   /* End of CFunction: '<S29>/C Function' */
@@ -1414,60 +1368,60 @@ void TV(void)
    *  Gain: '<S165>/Gain4'
    *  Inport: '<Root>/omega_wheels_FL'
    */
-  z = 128.91550390443524 * rtU.omega_wheels_FL;
+  Fy_FR = 128.91550390443524 * rtU.omega_wheels_FL;
 
   /* Saturate: '<S156>/Saturation1' incorporates:
    *  Gain: '<S156>/Gain4'
    */
-  if (z <= 0.0) {
+  if (Fy_FR <= 0.0) {
     rtb_UnaryMinus_d0[0] = 0.0;
   } else {
-    rtb_UnaryMinus_d0[0] = z;
+    rtb_UnaryMinus_d0[0] = Fy_FR;
   }
 
   /* Gain: '<S156>/Gain4' incorporates:
    *  Gain: '<S165>/Gain4'
    *  Inport: '<Root>/omega_wheels_FR'
    */
-  Fy_FR = 128.91550390443524 * rtU.omega_wheels_FR;
+  rtb_yrd = 128.91550390443524 * rtU.omega_wheels_FR;
 
   /* Saturate: '<S156>/Saturation1' incorporates:
    *  Gain: '<S156>/Gain4'
    */
-  if (Fy_FR <= 0.0) {
+  if (rtb_yrd <= 0.0) {
     rtb_UnaryMinus_d0[1] = 0.0;
   } else {
-    rtb_UnaryMinus_d0[1] = Fy_FR;
+    rtb_UnaryMinus_d0[1] = rtb_yrd;
   }
 
   /* Gain: '<S156>/Gain4' incorporates:
    *  Gain: '<S165>/Gain4'
    *  Inport: '<Root>/omega_wheels_RL'
    */
-  rtb_yrd = 128.91550390443524 * rtU.omega_wheels_RL;
+  u0_tmp = 128.91550390443524 * rtU.omega_wheels_RL;
 
   /* Saturate: '<S156>/Saturation1' incorporates:
    *  Gain: '<S156>/Gain4'
    */
-  if (rtb_yrd <= 0.0) {
+  if (u0_tmp <= 0.0) {
     rtb_UnaryMinus_d0[2] = 0.0;
   } else {
-    rtb_UnaryMinus_d0[2] = rtb_yrd;
+    rtb_UnaryMinus_d0[2] = u0_tmp;
   }
 
   /* Gain: '<S156>/Gain4' incorporates:
    *  Gain: '<S165>/Gain4'
    *  Inport: '<Root>/omega_wheels_RR'
    */
-  u0_tmp = 128.91550390443524 * rtU.omega_wheels_RR;
+  u0_tmp_0 = 128.91550390443524 * rtU.omega_wheels_RR;
 
   /* Saturate: '<S156>/Saturation1' incorporates:
    *  Gain: '<S156>/Gain4'
    */
-  if (u0_tmp <= 0.0) {
+  if (u0_tmp_0 <= 0.0) {
     rtb_UnaryMinus_d0[3] = 0.0;
   } else {
-    rtb_UnaryMinus_d0[3] = u0_tmp;
+    rtb_UnaryMinus_d0[3] = u0_tmp_0;
   }
 
   /* Lookup_n-D: '<S156>/2-D Lookup Table' incorporates:
@@ -1527,25 +1481,26 @@ void TV(void)
    *  Switch: '<S158>/Switch2'
    */
   if (rtDW.Integrator_DSTATE[0] > 21.0) {
-    rtb_Saturation1 = 21.0;
+    rtb_UnaryMinus_f_tmp = 21.0;
   } else if (rtDW.Integrator_DSTATE[0] < 0.0) {
     /* Switch: '<S158>/Switch' incorporates:
      *  Constant: '<S156>/Constant'
      */
-    rtb_Saturation1 = 0.0;
+    rtb_UnaryMinus_f_tmp = 0.0;
   } else {
-    rtb_Saturation1 = rtDW.Integrator_DSTATE[0];
+    rtb_UnaryMinus_f_tmp = rtDW.Integrator_DSTATE[0];
   }
 
-  u0 = fmin(fmin(fmin(rtb_Braking[0], rtb_Tnew[0]), 20.972), rtb_Saturation1);
+  Mzreq = fmin(fmin(fmin(rtb_Braking[0], rtb_Tnew[0]), 20.972),
+               rtb_UnaryMinus_f_tmp);
 
   /* Saturate: '<S153>/Saturation_Positive' incorporates:
    *  MinMax: '<S153>/Min'
    */
-  if (u0 <= 0.0) {
+  if (Mzreq <= 0.0) {
     rtb_Braking[0] = 0.0;
   } else {
-    rtb_Braking[0] = u0;
+    rtb_Braking[0] = Mzreq;
   }
 
   /* MinMax: '<S153>/Min' incorporates:
@@ -1557,25 +1512,26 @@ void TV(void)
    *  Switch: '<S158>/Switch2'
    */
   if (rtDW.Integrator_DSTATE[1] > 21.0) {
-    rtb_Saturation1 = 21.0;
+    rtb_UnaryMinus_f_tmp = 21.0;
   } else if (rtDW.Integrator_DSTATE[1] < 0.0) {
     /* Switch: '<S158>/Switch' incorporates:
      *  Constant: '<S156>/Constant'
      */
-    rtb_Saturation1 = 0.0;
+    rtb_UnaryMinus_f_tmp = 0.0;
   } else {
-    rtb_Saturation1 = rtDW.Integrator_DSTATE[1];
+    rtb_UnaryMinus_f_tmp = rtDW.Integrator_DSTATE[1];
   }
 
-  u0 = fmin(fmin(fmin(rtb_Braking[1], rtb_Tnew[1]), 20.972), rtb_Saturation1);
+  Mzreq = fmin(fmin(fmin(rtb_Braking[1], rtb_Tnew[1]), 20.972),
+               rtb_UnaryMinus_f_tmp);
 
   /* Saturate: '<S153>/Saturation_Positive' incorporates:
    *  MinMax: '<S153>/Min'
    */
-  if (u0 <= 0.0) {
+  if (Mzreq <= 0.0) {
     rtb_Braking[1] = 0.0;
   } else {
-    rtb_Braking[1] = u0;
+    rtb_Braking[1] = Mzreq;
   }
 
   /* MinMax: '<S153>/Min' incorporates:
@@ -1587,25 +1543,26 @@ void TV(void)
    *  Switch: '<S158>/Switch2'
    */
   if (rtDW.Integrator_DSTATE[2] > 21.0) {
-    rtb_Saturation1 = 21.0;
+    rtb_UnaryMinus_f_tmp = 21.0;
   } else if (rtDW.Integrator_DSTATE[2] < 0.0) {
     /* Switch: '<S158>/Switch' incorporates:
      *  Constant: '<S156>/Constant'
      */
-    rtb_Saturation1 = 0.0;
+    rtb_UnaryMinus_f_tmp = 0.0;
   } else {
-    rtb_Saturation1 = rtDW.Integrator_DSTATE[2];
+    rtb_UnaryMinus_f_tmp = rtDW.Integrator_DSTATE[2];
   }
 
-  u0 = fmin(fmin(fmin(rtb_Braking[2], rtb_Tnew[2]), 20.972), rtb_Saturation1);
+  Mzreq = fmin(fmin(fmin(rtb_Braking[2], rtb_Tnew[2]), 20.972),
+               rtb_UnaryMinus_f_tmp);
 
   /* Saturate: '<S153>/Saturation_Positive' incorporates:
    *  MinMax: '<S153>/Min'
    */
-  if (u0 <= 0.0) {
+  if (Mzreq <= 0.0) {
     rtb_Braking[2] = 0.0;
   } else {
-    rtb_Braking[2] = u0;
+    rtb_Braking[2] = Mzreq;
   }
 
   /* MinMax: '<S153>/Min' incorporates:
@@ -1617,25 +1574,26 @@ void TV(void)
    *  Switch: '<S158>/Switch2'
    */
   if (rtDW.Integrator_DSTATE[3] > 21.0) {
-    rtb_Saturation1 = 21.0;
+    rtb_UnaryMinus_f_tmp = 21.0;
   } else if (rtDW.Integrator_DSTATE[3] < 0.0) {
     /* Switch: '<S158>/Switch' incorporates:
      *  Constant: '<S156>/Constant'
      */
-    rtb_Saturation1 = 0.0;
+    rtb_UnaryMinus_f_tmp = 0.0;
   } else {
-    rtb_Saturation1 = rtDW.Integrator_DSTATE[3];
+    rtb_UnaryMinus_f_tmp = rtDW.Integrator_DSTATE[3];
   }
 
-  u0 = fmin(fmin(fmin(rtb_Braking[3], rtb_Tnew[3]), 20.972), rtb_Saturation1);
+  Mzreq = fmin(fmin(fmin(rtb_Braking[3], rtb_Tnew[3]), 20.972),
+               rtb_UnaryMinus_f_tmp);
 
   /* Saturate: '<S153>/Saturation_Positive' incorporates:
    *  MinMax: '<S153>/Min'
    */
-  if (u0 <= 0.0) {
+  if (Mzreq <= 0.0) {
     rtb_Braking[3] = 0.0;
   } else {
-    rtb_Braking[3] = u0;
+    rtb_Braking[3] = Mzreq;
   }
 
   /* Math: '<S139>/Square1' incorporates:
@@ -1803,66 +1761,66 @@ void TV(void)
   /* Product: '<S131>/Product' incorporates:
    *  Gain: '<S131>/Gain'
    */
-  u0 = 0.017407407407407406 * rtb_Saturation_k_idx_0 * 20.0;
+  Mzreq = 0.017407407407407406 * rtb_Saturation_k_idx_0 * 20.0;
 
   /* Saturate: '<S131>/Saturation1' */
-  if (u0 <= 0.0) {
-    u0 = 0.0;
+  if (Mzreq <= 0.0) {
+    Mzreq = 0.0;
   }
 
   /* Product: '<S125>/Product' incorporates:
    *  Constant: '<S11>/Constant6'
    *  MinMax: '<S27>/Min'
    */
-  rtb_Product[0] = fmin(fmin(rtb_Braking[0], 21.0), u0) * rtb_Saturation1;
+  rtb_Product[0] = fmin(fmin(rtb_Braking[0], 21.0), Mzreq) * rtb_Saturation1;
 
   /* Product: '<S131>/Product' incorporates:
    *  Gain: '<S131>/Gain'
    */
-  u0 = 0.017407407407407406 * rtb_Saturation_k_idx_1 * 20.0;
+  Mzreq = 0.017407407407407406 * rtb_Saturation_k_idx_1 * 20.0;
 
   /* Saturate: '<S131>/Saturation1' */
-  if (u0 <= 0.0) {
-    u0 = 0.0;
+  if (Mzreq <= 0.0) {
+    Mzreq = 0.0;
   }
 
   /* Product: '<S125>/Product' incorporates:
    *  Constant: '<S11>/Constant6'
    *  MinMax: '<S27>/Min'
    */
-  rtb_Product[1] = fmin(fmin(rtb_Braking[1], 21.0), u0) * rtb_Saturation1;
+  rtb_Product[1] = fmin(fmin(rtb_Braking[1], 21.0), Mzreq) * rtb_Saturation1;
 
   /* Product: '<S131>/Product' incorporates:
    *  Gain: '<S131>/Gain'
    */
-  u0 = 0.017407407407407406 * rtb_Saturation_k_idx_2 * 20.0;
+  Mzreq = 0.017407407407407406 * rtb_Saturation_k_idx_2 * 20.0;
 
   /* Saturate: '<S131>/Saturation1' */
-  if (u0 <= 0.0) {
-    u0 = 0.0;
+  if (Mzreq <= 0.0) {
+    Mzreq = 0.0;
   }
 
   /* Product: '<S125>/Product' incorporates:
    *  Constant: '<S11>/Constant6'
    *  MinMax: '<S27>/Min'
    */
-  rtb_Product[2] = fmin(fmin(rtb_Braking[2], 21.0), u0) * rtb_Saturation1;
+  rtb_Product[2] = fmin(fmin(rtb_Braking[2], 21.0), Mzreq) * rtb_Saturation1;
 
   /* Product: '<S131>/Product' incorporates:
    *  Gain: '<S131>/Gain'
    */
-  u0 = 0.017407407407407406 * rtb_Saturation_k_idx_3 * 20.0;
+  Mzreq = 0.017407407407407406 * rtb_Saturation_k_idx_3 * 20.0;
 
   /* Saturate: '<S131>/Saturation1' */
-  if (u0 <= 0.0) {
-    u0 = 0.0;
+  if (Mzreq <= 0.0) {
+    Mzreq = 0.0;
   }
 
   /* Product: '<S125>/Product' incorporates:
    *  Constant: '<S11>/Constant6'
    *  MinMax: '<S27>/Min'
    */
-  rtb_Product[3] = fmin(fmin(rtb_Braking[3], 21.0), u0) * rtb_Saturation1;
+  rtb_Product[3] = fmin(fmin(rtb_Braking[3], 21.0), Mzreq) * rtb_Saturation1;
 
   /* Lookup_n-D: '<S131>/2-D Lookup Table1' */
   rtb_UnaryMinus_d0[0] = look2_binlx(rtb_UnaryMinus_d0[0], rtb_Tnew[0],
@@ -1906,28 +1864,28 @@ void TV(void)
   rtb_Compare_p = (0.079577471545947673 - rtDW.Probe_k[0] <= 0.0);
 
   /* Saturate: '<S165>/Saturation1' */
-  if (z <= 0.0) {
+  if (Fy_FR <= 0.0) {
     rtb_Braking[0] = 0.0;
   } else {
-    rtb_Braking[0] = z;
-  }
-
-  if (Fy_FR <= 0.0) {
-    rtb_Braking[1] = 0.0;
-  } else {
-    rtb_Braking[1] = Fy_FR;
+    rtb_Braking[0] = Fy_FR;
   }
 
   if (rtb_yrd <= 0.0) {
-    rtb_Braking[2] = 0.0;
+    rtb_Braking[1] = 0.0;
   } else {
-    rtb_Braking[2] = rtb_yrd;
+    rtb_Braking[1] = rtb_yrd;
   }
 
   if (u0_tmp <= 0.0) {
+    rtb_Braking[2] = 0.0;
+  } else {
+    rtb_Braking[2] = u0_tmp;
+  }
+
+  if (u0_tmp_0 <= 0.0) {
     rtb_Braking[3] = 0.0;
   } else {
-    rtb_Braking[3] = u0_tmp;
+    rtb_Braking[3] = u0_tmp_0;
   }
 
   /* End of Saturate: '<S165>/Saturation1' */
@@ -1997,10 +1955,10 @@ void TV(void)
    *  RelationalOperator: '<S124>/Less Than'
    *  RelationalOperator: '<S124>/Less Than1'
    */
-  b_exit = (int32_T)(((((uint32_T)(rtb_Switch <= -0.6) << 1) + (rtb_Switch >=
-    -0.5)) << 1) + rtDW.Memory_PreviousInput_f);
-  rtb_Logic_idx_0 = rtConstP.pooled61[(uint32_T)b_exit];
-  rtb_Logic_idx_1 = rtConstP.pooled61[b_exit + 8U];
+  i = (int32_T)(((((uint32_T)(rtb_Switch <= -0.6) << 1) + (rtb_Switch >= -0.5)) <<
+                 1) + rtDW.Memory_PreviousInput_f);
+  rtb_Logic_idx_0 = rtConstP.pooled61[(uint32_T)i];
+  rtb_Logic_idx_1 = rtConstP.pooled61[i + 8U];
 
   /* CombinatorialLogic: '<S134>/Logic' incorporates:
    *  Constant: '<S124>/Constant'
@@ -2009,10 +1967,10 @@ void TV(void)
    *  RelationalOperator: '<S124>/Less Than'
    *  RelationalOperator: '<S124>/Less Than1'
    */
-  b_exit = (int32_T)(((((uint32_T)(rtb_Switch_b <= -0.6) << 1) + (rtb_Switch_b >=
+  i = (int32_T)(((((uint32_T)(rtb_Switch_b <= -0.6) << 1) + (rtb_Switch_b >=
     -0.5)) << 1) + rtDW.Memory_PreviousInput_j);
-  rtb_Logic_d_idx_0 = rtConstP.pooled61[(uint32_T)b_exit];
-  rtb_Logic_d_idx_1 = rtConstP.pooled61[b_exit + 8U];
+  rtb_Logic_d_idx_0 = rtConstP.pooled61[(uint32_T)i];
+  rtb_Logic_d_idx_1 = rtConstP.pooled61[i + 8U];
 
   /* CombinatorialLogic: '<S135>/Logic' incorporates:
    *  Constant: '<S124>/Constant'
@@ -2021,10 +1979,10 @@ void TV(void)
    *  RelationalOperator: '<S124>/Less Than'
    *  RelationalOperator: '<S124>/Less Than1'
    */
-  b_exit = (int32_T)(((((uint32_T)(rtb_RL <= -0.6) << 1) + (rtb_RL >= -0.5)) <<
-                      1) + rtDW.Memory_PreviousInput_j4);
-  rtb_Logic_o_idx_0 = rtConstP.pooled61[(uint32_T)b_exit];
-  rtb_Logic_o_idx_1 = rtConstP.pooled61[b_exit + 8U];
+  i = (int32_T)(((((uint32_T)(rtb_RL <= -0.6) << 1) + (rtb_RL >= -0.5)) << 1) +
+                rtDW.Memory_PreviousInput_j4);
+  rtb_Logic_o_idx_0 = rtConstP.pooled61[(uint32_T)i];
+  rtb_Logic_o_idx_1 = rtConstP.pooled61[i + 8U];
 
   /* CombinatorialLogic: '<S136>/Logic' incorporates:
    *  Constant: '<S124>/Constant'
@@ -2033,9 +1991,9 @@ void TV(void)
    *  RelationalOperator: '<S124>/Less Than'
    *  RelationalOperator: '<S124>/Less Than1'
    */
-  b_exit = (int32_T)(((((uint32_T)(rtb_RR <= -0.6) << 1) + (rtb_RR >= -0.5)) <<
-                      1) + rtDW.Memory_PreviousInput_i);
-  rtb_Logic_ds_idx_0 = rtConstP.pooled61[(uint32_T)b_exit];
+  i = (int32_T)(((((uint32_T)(rtb_RR <= -0.6) << 1) + (rtb_RR >= -0.5)) << 1) +
+                rtDW.Memory_PreviousInput_i);
+  rtb_Logic_ds_idx_0 = rtConstP.pooled61[(uint32_T)i];
 
   /* Product: '<S124>/Product' incorporates:
    *  CombinatorialLogic: '<S136>/Logic'
@@ -2043,7 +2001,7 @@ void TV(void)
   rtb_Tnew[0] = rtb_Braking[0] * (real_T)rtb_Logic_idx_1;
   rtb_Tnew[1] = rtb_Braking[1] * (real_T)rtb_Logic_d_idx_1;
   rtb_Tnew[2] = (real_T)rtb_Logic_o_idx_1 * rtb_Braking[2];
-  rtb_Tnew[3] = (real_T)rtConstP.pooled61[b_exit + 8U] * rtb_Braking[3];
+  rtb_Tnew[3] = (real_T)rtConstP.pooled61[i + 8U] * rtb_Braking[3];
 
   /* Outputs for Atomic SubSystem: '<S17>/YRD_LUT_-2' */
   /* Abs: '<S49>/Abs' incorporates:
@@ -2065,16 +2023,16 @@ void TV(void)
     obj->isSetupComplete = false;
     obj->isInitialized = 1;
     obj->pCumSum = 0.0;
-    for (b_exit = 0; b_exit < 24; b_exit++) {
-      obj->pCumSumRev[b_exit] = 0.0;
+    for (i = 0; i < 24; i++) {
+      obj->pCumSumRev[i] = 0.0;
     }
 
     obj->pCumRevIndex = 1.0;
     obj->pModValueRev = 0.0;
     obj->isSetupComplete = true;
     obj->pCumSum = 0.0;
-    for (b_exit = 0; b_exit < 24; b_exit++) {
-      obj->pCumSumRev[b_exit] = 0.0;
+    for (i = 0; i < 24; i++) {
+      obj->pCumSumRev[i] = 0.0;
     }
 
     obj->pCumRevIndex = 1.0;
@@ -2083,8 +2041,8 @@ void TV(void)
 
   cumRevIndex = obj->pCumRevIndex;
   rtb_Integrator_m = obj->pCumSum;
-  for (b_exit = 0; b_exit < 24; b_exit++) {
-    csumrev[b_exit] = obj->pCumSumRev[b_exit];
+  for (i = 0; i < 24; i++) {
+    csumrev[i] = obj->pCumSumRev[i];
   }
 
   modValueRev = obj->pModValueRev;
@@ -2101,8 +2059,8 @@ void TV(void)
   } else {
     cumRevIndex = 1.0;
     rtb_Integrator_m = 0.0;
-    for (b_exit = 22; b_exit >= 0; b_exit--) {
-      csumrev[b_exit] += csumrev[b_exit + 1];
+    for (i = 22; i >= 0; i--) {
+      csumrev[i] += csumrev[i + 1];
     }
   }
 
@@ -2111,8 +2069,8 @@ void TV(void)
   }
 
   obj->pCumSum = rtb_Integrator_m;
-  for (b_exit = 0; b_exit < 24; b_exit++) {
-    obj->pCumSumRev[b_exit] = csumrev[b_exit];
+  for (i = 0; i < 24; i++) {
+    obj->pCumSumRev[i] = csumrev[i];
   }
 
   obj->pCumRevIndex = cumRevIndex;
@@ -2133,9 +2091,9 @@ void TV(void)
    *  RelationalOperator: '<S49>/Less Than'
    *  RelationalOperator: '<S49>/Less Than2'
    */
-  rtb_Logic_idx_1 = rtConstP.pooled61[((((uint32_T)(0.017453292519943295 <=
-    rtb_yrd) << 1) + ((rtb_Saturation1 < 0.0043633231299858239) &&
-                      rtDW.Delay_DSTATE[0])) << 1) + rtDW.Memory_PreviousInput_l];
+  rtb_Logic_idx_1 = rtConstP.pooled61[((((uint32_T)(rtb_yrd >=
+    0.017453292519943295) << 1) + ((rtb_Saturation1 < 0.0043633231299858239) &&
+    rtDW.Delay_DSTATE[0])) << 1) + rtDW.Memory_PreviousInput_l];
 
   /* Outputs for IfAction SubSystem: '<S49>/If Action Subsystem1' incorporates:
    *  ActionPort: '<S108>/Action Port'
@@ -2164,12 +2122,6 @@ void TV(void)
   rtb_Braking[2] = rtb_Tnew[2];
   rtb_Braking[3] = rtb_Tnew[3];
   if (rtb_Logic_d_idx_1) {
-    b_exit = 0;
-  } else {
-    b_exit = 1;
-  }
-
-  if (b_exit == 0) {
     if (rtb_Tnew[0] > rtb_Product[0]) {
       rtb_Braking[0] = rtb_Product[0] - cumRevIndex;
     }
@@ -2236,8 +2188,8 @@ void TV(void)
    *  Sum: '<S117>/Sum'
    */
   cumRevIndex = (1.0 / (rt_powd_snf(rtU.throttle / (1.0 - rtU.throttle), -1.5) +
-                        1.0) - rtb_Sign) * (real_T)(int8_T)((int8_T)(rtb_Sign >=
-    0.05) ^ (int8_T)(rtU.throttle >= 0.05)) * 84.0;
+                        1.0) - rtb_Sign) * (real_T)((rtb_Sign >= 0.05) ^
+    (rtU.throttle >= 0.05)) * 84.0;
 
   /* Switch: '<S118>/Switch2' incorporates:
    *  RelationalOperator: '<S118>/LowerRelop1'
@@ -2277,7 +2229,7 @@ void TV(void)
    *  RelationalOperator: '<S119>/Less Than'
    *  RelationalOperator: '<S119>/Less Than1'
    */
-  if ((rtU.throttle < 0.05) && (0.05 > rtb_Sign)) {
+  if ((rtU.throttle < 0.05) && (rtb_Sign < 0.05)) {
     rtb_SumofElements1 = -0.0;
   } else {
     rtb_SumofElements1 = fmin(modValueRev, z);
@@ -2325,10 +2277,10 @@ void TV(void)
   /* End of Saturate: '<S152>/Saturation' */
 
   /* Product: '<S152>/Divide2' incorporates:
+   *  Abs: '<S114>/Abs1'
    *  Lookup_n-D: '<S152>/LUT_-3'
    *  Product: '<S152>/Divide'
    *  Product: '<S152>/Divide1'
-   *  Signum: '<S76>/SignPreIntegrator'
    */
   rtb_yrd = rtb_front_wheel_angle_single__d / rtb_yrd * (look2_binlx(rtb_yrd,
     rtb_Saturation1, rtConstP.LUT_3_bp01Data, rtConstP.LUT_3_bp02Data,
@@ -2354,151 +2306,141 @@ void TV(void)
    */
   rtb_Switch_b = rtb_UnaryMinus_f_tmp * 3.14825;
   rtb_RL_tmp = rtb_Gain1 * 1.27 / 2.0;
-  rtb_RL_tmp_0 = rtb_Gain1 * 0.73439999999999994 + rtU.vy;
-  u0 = rtb_vx - rtb_RL_tmp;
-  rtb_RL = atan(rtb_RL_tmp_0 / u0) - rtb_front_wheel_angle_single__d;
+  u0_tmp = rtb_Gain1 * 0.73439999999999994 + rtU.vy;
+  u0_tmp_0 = rtb_vx - rtb_RL_tmp;
+  rtb_RL = atan(u0_tmp / u0_tmp_0) - rtb_front_wheel_angle_single__d;
   rtb_Sign = rtb_RL_tmp + rtb_vx;
-  Fy_FR = atan(rtb_RL_tmp_0 / rtb_Sign) - rtb_front_wheel_angle_single__d;
-  rtb_RR = rtU.vy - rtb_Gain1 * 0.79560000000000008;
-  rtb_Switch = atan(rtb_RR / u0);
-  rtb_Saturation1 = atan(rtb_RR / rtb_Sign);
-  u0 = 0.5 * rtb_Switch_b * 0.55490196078431375;
+  Fy_FR = atan(u0_tmp / rtb_Sign) - rtb_front_wheel_angle_single__d;
+  u0_tmp = rtU.vy - rtb_Gain1 * 0.79560000000000008;
+  rtb_Saturation1 = atan(u0_tmp / u0_tmp_0);
+  rtb_Switch = atan(u0_tmp / rtb_Sign);
+  u0_tmp_0 = 0.5 * rtb_Switch_b * 0.55490196078431375;
   rtb_RR = rtb_UnaryMinus_f_tmp * 1.0461500000000001 * 0.5 / 1.53 * 0.576;
-  rtb_Sign = (((635.688 - 30.826771653543307 * rtU.ay) + u0) - rtb_RR) -
+  rtb_Sign = (((635.688 - 30.826771653543307 * rtU.ay) + u0_tmp_0) - rtb_RR) -
     25.588235294117645 * rtU.ax;
-  rtb_UnaryMinus_f_tmp = (((30.826771653543307 * rtU.ay + 635.688) + u0) -
-    rtb_RR) - 25.588235294117645 * rtU.ax;
-  u0_tmp = 0.5 * rtb_Switch_b * 0.4450980392156863;
-  rtb_Switch_b = (((688.66200000000015 - 30.826771653543307 * rtU.ay) + u0_tmp)
-                  + rtb_RR) + 25.588235294117645 * rtU.ax;
-  rtb_RR = (((30.826771653543307 * rtU.ay + 688.66200000000015) + u0_tmp) +
-            rtb_RR) + 25.588235294117645 * rtU.ax;
+  Mzreq = (((30.826771653543307 * rtU.ay + 635.688) + u0_tmp_0) - rtb_RR) -
+    25.588235294117645 * rtU.ax;
+  rtb_UnaryMinus_f_tmp = 0.5 * rtb_Switch_b * 0.4450980392156863;
+  rtb_Switch_b = (((688.66200000000015 - 30.826771653543307 * rtU.ay) +
+                   rtb_UnaryMinus_f_tmp) + rtb_RR) + 25.588235294117645 * rtU.ax;
+  rtb_RR = (((30.826771653543307 * rtU.ay + 688.66200000000015) +
+             rtb_UnaryMinus_f_tmp) + rtb_RR) + 25.588235294117645 * rtU.ax;
   Faeroz_tmp = 12.4 * rtb_RL - 0.512;
-  u_tmp = (1.14E-6 * rtb_Sign - rtb_RL) + 0.00239;
-  if (u_tmp < 0.0) {
-    u0_tmp = -1.0;
-  } else if (u_tmp > 0.0) {
-    u0_tmp = 1.0;
-  } else if (u_tmp == 0.0) {
-    u0_tmp = 0.0;
+  u0_tmp = (1.14E-6 * rtb_Sign - rtb_RL) + 0.00239;
+  if (rtIsNaN(u0_tmp)) {
+    rtb_UnaryMinus_f_tmp = u0_tmp;
+  } else if (u0_tmp < 0.0) {
+    rtb_UnaryMinus_f_tmp = -1.0;
   } else {
-    u0_tmp = (rtNaN);
+    rtb_UnaryMinus_f_tmp = (u0_tmp > 0.0);
   }
 
   rtb_RL_tmp_tmp = 0.000282 * rtb_Sign - 2.02;
-  rtb_RL_tmp = sin(atan(0.000559 * rtb_Sign) * 2.0) * 34500.0 * u_tmp / (1.34 *
+  rtb_RL_tmp = sin(atan(0.000559 * rtb_Sign) * 2.0) * 34500.0 * u0_tmp / (1.34 *
     rtb_Sign * 0.8 * rtb_RL_tmp_tmp - 0.01);
-  u0 = 0.0013 * rtb_Sign - 2.33;
-  u_tmp = sqrt(Faeroz_tmp * Faeroz_tmp + 1.0);
-  rtb_RL_tmp_0 = (3.86E-7 * rtb_Sign + 0.000205) * 13.9 / u_tmp;
-  rtb_RL = (sin(atan(rtb_RL_tmp - (0.26 * u0_tmp + 1.0) * (3.99E-5 * rtb_Sign -
-    0.521) * (atan(rtb_RL_tmp) - rtb_RL_tmp)) * 1.34) * (rtb_Sign * 0.8) *
-            rtb_RL_tmp_tmp + (7.1E-5 * rtb_Sign - 0.149) * (rtb_Sign * 0.8)) *
-    cos(atan((atan(((3.86E-7 * rtb_Sign - rtb_Braking[0]) + 0.000205) * 13.9 /
-                   u_tmp) - ((3.86E-7 * rtb_Sign - rtb_Braking[0]) + 0.000205) *
-              13.9 / sqrt(Faeroz_tmp * Faeroz_tmp + 1.0)) * u0 + ((3.86E-7 *
-           rtb_Sign - rtb_Braking[0]) + 0.000205) * 13.9 / sqrt(Faeroz_tmp *
-          Faeroz_tmp + 1.0)) * 0.958) / cos(atan((atan(rtb_RL_tmp_0) -
-    rtb_RL_tmp_0) * u0 + rtb_RL_tmp_0) * 0.958) - sin(atan(16.1 * rtb_Braking[0])
-    * 1.94) * (rtb_Sign * 0.8) * rtb_RL_tmp_tmp * (1.03E-5 * rtb_Sign - 0.000288)
-    / sqrt(rtb_RL * rtb_RL * 225.0 + 1.0);
-  u0 = 12.4 * Fy_FR - 0.512;
-  u_tmp = (1.14E-6 * rtb_UnaryMinus_f_tmp - Fy_FR) + 0.00239;
-  if (u_tmp < 0.0) {
-    u0_tmp = -1.0;
-  } else if (u_tmp > 0.0) {
-    u0_tmp = 1.0;
-  } else if (u_tmp == 0.0) {
-    u0_tmp = 0.0;
+  u0_tmp_0 = 0.0013 * rtb_Sign - 2.33;
+  u0_tmp = sqrt(Faeroz_tmp * Faeroz_tmp + 1.0);
+  rtb_RL_tmp_0 = (3.86E-7 * rtb_Sign + 0.000205) * 13.9 / u0_tmp;
+  rtb_RL = (sin(atan(rtb_RL_tmp - (0.26 * rtb_UnaryMinus_f_tmp + 1.0) * (3.99E-5
+    * rtb_Sign - 0.521) * (atan(rtb_RL_tmp) - rtb_RL_tmp)) * 1.34) * (rtb_Sign *
+             0.8) * rtb_RL_tmp_tmp + (7.1E-5 * rtb_Sign - 0.149) * (rtb_Sign *
+             0.8)) * cos(atan((atan(((3.86E-7 * rtb_Sign - rtb_Braking[0]) +
+    0.000205) * 13.9 / u0_tmp) - ((3.86E-7 * rtb_Sign - rtb_Braking[0]) +
+    0.000205) * 13.9 / sqrt(Faeroz_tmp * Faeroz_tmp + 1.0)) * u0_tmp_0 +
+    ((3.86E-7 * rtb_Sign - rtb_Braking[0]) + 0.000205) * 13.9 / sqrt(Faeroz_tmp *
+    Faeroz_tmp + 1.0)) * 0.958) / cos(atan((atan(rtb_RL_tmp_0) - rtb_RL_tmp_0) *
+    u0_tmp_0 + rtb_RL_tmp_0) * 0.958) - sin(atan(16.1 * rtb_Braking[0]) * 1.94) *
+    (rtb_Sign * 0.8) * rtb_RL_tmp_tmp * (1.03E-5 * rtb_Sign - 0.000288) / sqrt
+    (rtb_RL * rtb_RL * 225.0 + 1.0);
+  u0_tmp_0 = 12.4 * Fy_FR - 0.512;
+  u0_tmp = (1.14E-6 * Mzreq - Fy_FR) + 0.00239;
+  if (rtIsNaN(u0_tmp)) {
+    rtb_UnaryMinus_f_tmp = u0_tmp;
+  } else if (u0_tmp < 0.0) {
+    rtb_UnaryMinus_f_tmp = -1.0;
   } else {
-    u0_tmp = (rtNaN);
+    rtb_UnaryMinus_f_tmp = (u0_tmp > 0.0);
   }
 
-  rtb_RL_tmp_0 = 0.000282 * rtb_UnaryMinus_f_tmp - 2.02;
-  rtb_Sign = sin(atan(0.000559 * rtb_UnaryMinus_f_tmp) * 2.0) * 34500.0 * u_tmp /
-    (1.34 * rtb_UnaryMinus_f_tmp * 0.8 * rtb_RL_tmp_0 - 0.01);
-  u_tmp = 0.0013 * rtb_UnaryMinus_f_tmp - 2.33;
-  rtb_RL_tmp = sqrt(u0 * u0 + 1.0);
-  rtb_RL_tmp_tmp = (3.86E-7 * rtb_UnaryMinus_f_tmp + 0.000205) * 13.9 /
-    rtb_RL_tmp;
-  Fy_FR = (sin(atan(rtb_Sign - (0.26 * u0_tmp + 1.0) * (3.99E-5 *
-              rtb_UnaryMinus_f_tmp - 0.521) * (atan(rtb_Sign) - rtb_Sign)) *
-               1.34) * (rtb_UnaryMinus_f_tmp * 0.8) * rtb_RL_tmp_0 + (7.1E-5 *
-            rtb_UnaryMinus_f_tmp - 0.149) * (rtb_UnaryMinus_f_tmp * 0.8)) * cos
-    (atan((atan(((3.86E-7 * rtb_UnaryMinus_f_tmp - rtb_Braking[1]) + 0.000205) *
-                13.9 / rtb_RL_tmp) - ((3.86E-7 * rtb_UnaryMinus_f_tmp -
-         rtb_Braking[1]) + 0.000205) * 13.9 / sqrt(u0 * u0 + 1.0)) * u_tmp +
-          ((3.86E-7 * rtb_UnaryMinus_f_tmp - rtb_Braking[1]) + 0.000205) * 13.9 /
-          sqrt(u0 * u0 + 1.0)) * 0.958) / cos(atan((atan(rtb_RL_tmp_tmp) -
-    rtb_RL_tmp_tmp) * u_tmp + rtb_RL_tmp_tmp) * 0.958) - sin(atan(16.1 *
-    rtb_Braking[1]) * 1.94) * (rtb_UnaryMinus_f_tmp * 0.8) * rtb_RL_tmp_0 *
-    (1.03E-5 * rtb_UnaryMinus_f_tmp - 0.000288) / sqrt(Fy_FR * Fy_FR * 225.0 +
-    1.0);
-  rtb_Sign = 12.4 * rtb_Switch - 0.512;
-  u0 = 12.4 * rtb_Saturation1 - 0.512;
-  u_tmp = (1.14E-6 * rtb_Switch_b - rtb_Switch) + 0.00239;
-  rtb_UnaryMinus_f_tmp = (1.14E-6 * rtb_RR - rtb_Saturation1) + 0.00239;
-  if (u_tmp < 0.0) {
-    u0_tmp = -1.0;
-  } else if (u_tmp > 0.0) {
-    u0_tmp = 1.0;
-  } else if (u_tmp == 0.0) {
-    u0_tmp = 0.0;
+  rtb_RL_tmp = 0.000282 * Mzreq - 2.02;
+  rtb_Sign = sin(atan(0.000559 * Mzreq) * 2.0) * 34500.0 * u0_tmp / (1.34 *
+    Mzreq * 0.8 * rtb_RL_tmp - 0.01);
+  Faeroz_tmp = 0.0013 * Mzreq - 2.33;
+  u0_tmp = sqrt(u0_tmp_0 * u0_tmp_0 + 1.0);
+  rtb_RL_tmp_tmp = (3.86E-7 * Mzreq + 0.000205) * 13.9 / u0_tmp;
+  Fy_FR = (sin(atan(rtb_Sign - (0.26 * rtb_UnaryMinus_f_tmp + 1.0) * (3.99E-5 *
+              Mzreq - 0.521) * (atan(rtb_Sign) - rtb_Sign)) * 1.34) * (Mzreq *
+            0.8) * rtb_RL_tmp + (7.1E-5 * Mzreq - 0.149) * (Mzreq * 0.8)) * cos
+    (atan((atan(((3.86E-7 * Mzreq - rtb_Braking[1]) + 0.000205) * 13.9 / u0_tmp)
+           - ((3.86E-7 * Mzreq - rtb_Braking[1]) + 0.000205) * 13.9 / sqrt
+           (u0_tmp_0 * u0_tmp_0 + 1.0)) * Faeroz_tmp + ((3.86E-7 * Mzreq -
+        rtb_Braking[1]) + 0.000205) * 13.9 / sqrt(u0_tmp_0 * u0_tmp_0 + 1.0)) *
+     0.958) / cos(atan((atan(rtb_RL_tmp_tmp) - rtb_RL_tmp_tmp) * Faeroz_tmp +
+                       rtb_RL_tmp_tmp) * 0.958) - sin(atan(16.1 * rtb_Braking[1])
+    * 1.94) * (Mzreq * 0.8) * rtb_RL_tmp * (1.03E-5 * Mzreq - 0.000288) / sqrt
+    (Fy_FR * Fy_FR * 225.0 + 1.0);
+  u0_tmp_0 = 12.4 * rtb_Saturation1 - 0.512;
+  rtb_RL_tmp = 12.4 * rtb_Switch - 0.512;
+  u0_tmp = (1.14E-6 * rtb_Switch_b - rtb_Saturation1) + 0.00239;
+  rtb_Sign = (1.14E-6 * rtb_RR - rtb_Switch) + 0.00239;
+  if (rtIsNaN(u0_tmp)) {
+    rtb_UnaryMinus_f_tmp = u0_tmp;
+  } else if (u0_tmp < 0.0) {
+    rtb_UnaryMinus_f_tmp = -1.0;
   } else {
-    u0_tmp = (rtNaN);
+    rtb_UnaryMinus_f_tmp = (u0_tmp > 0.0);
   }
 
-  if (rtb_UnaryMinus_f_tmp < 0.0) {
-    rtb_RL_tmp_0 = -1.0;
-  } else if (rtb_UnaryMinus_f_tmp > 0.0) {
-    rtb_RL_tmp_0 = 1.0;
-  } else if (rtb_UnaryMinus_f_tmp == 0.0) {
-    rtb_RL_tmp_0 = 0.0;
+  if (rtIsNaN(rtb_Sign)) {
+    Mzreq = rtb_Sign;
+  } else if (rtb_Sign < 0.0) {
+    Mzreq = -1.0;
   } else {
-    rtb_RL_tmp_0 = (rtNaN);
+    Mzreq = (rtb_Sign > 0.0);
   }
 
-  rtb_RL_tmp = 0.000282 * rtb_Switch_b - 2.02;
-  u_tmp = sin(atan(0.000559 * rtb_Switch_b) * 2.0) * 34500.0 * u_tmp / (1.34 *
-    rtb_Switch_b * 0.8 * rtb_RL_tmp - 0.01);
+  Faeroz_tmp = 0.000282 * rtb_Switch_b - 2.02;
+  u0_tmp = sin(atan(0.000559 * rtb_Switch_b) * 2.0) * 34500.0 * u0_tmp / (1.34 *
+    rtb_Switch_b * 0.8 * Faeroz_tmp - 0.01);
   rtb_RL_tmp_tmp = 0.0013 * rtb_Switch_b - 2.33;
-  Faeroz_tmp = 0.000282 * rtb_RR - 2.02;
-  rtb_Saturation1_tmp = sin(atan(0.000559 * rtb_RR) * 2.0) * 34500.0 *
-    rtb_UnaryMinus_f_tmp / (1.34 * rtb_RR * 0.8 * Faeroz_tmp - 0.01);
+  rtb_RL_tmp_0 = 0.000282 * rtb_RR - 2.02;
+  rtb_Saturation1_tmp = sin(atan(0.000559 * rtb_RR) * 2.0) * 34500.0 * rtb_Sign /
+    (1.34 * rtb_RR * 0.8 * rtb_RL_tmp_0 - 0.01);
   rtb_Saturation1_tmp_0 = 0.0013 * rtb_RR - 2.33;
-  rtb_UnaryMinus_f_tmp = rtb_yrd - rtb_Gain1;
-  rtb_Saturation1_tmp_tmp = sqrt(rtb_Sign * rtb_Sign + 1.0);
+  rtb_Sign = rtb_yrd - rtb_Gain1;
+  rtb_Saturation1_tmp_tmp = sqrt(u0_tmp_0 * u0_tmp_0 + 1.0);
   rtb_Saturation1_tmp_1 = (3.86E-7 * rtb_Switch_b + 0.000205) * 13.9 /
     rtb_Saturation1_tmp_tmp;
-  rtb_Saturation1_tmp_tmp_0 = sqrt(u0 * u0 + 1.0);
+  rtb_Saturation1_tmp_tmp_0 = sqrt(rtb_RL_tmp * rtb_RL_tmp + 1.0);
   rtb_Saturation1_tmp_2 = (3.86E-7 * rtb_RR + 0.000205) * 13.9 /
     rtb_Saturation1_tmp_tmp_0;
-  rtb_Saturation1 = rtb_UnaryMinus_f_tmp / 0.08 * 180.0 - (((rtb_RL + Fy_FR) *
-    cos(rtb_front_wheel_angle_single__d) * 0.73439999999999994 - (((sin(atan
-    (u_tmp - (0.26 * u0_tmp + 1.0) * (3.99E-5 * rtb_Switch_b - 0.521) * (atan
-    (u_tmp) - u_tmp)) * 1.34) * (rtb_Switch_b * 0.8) * rtb_RL_tmp + (7.1E-5 *
-    rtb_Switch_b - 0.149) * (rtb_Switch_b * 0.8)) * cos(atan((atan(((3.86E-7 *
-    rtb_Switch_b - rtb_Braking[2]) + 0.000205) * 13.9 / rtb_Saturation1_tmp_tmp)
-    - ((3.86E-7 * rtb_Switch_b - rtb_Braking[2]) + 0.000205) * 13.9 / sqrt
-    (rtb_Sign * rtb_Sign + 1.0)) * rtb_RL_tmp_tmp + ((3.86E-7 * rtb_Switch_b -
-    rtb_Braking[2]) + 0.000205) * 13.9 / sqrt(rtb_Sign * rtb_Sign + 1.0)) *
-    0.958) / cos(atan((atan(rtb_Saturation1_tmp_1) - rtb_Saturation1_tmp_1) *
-                      rtb_RL_tmp_tmp + rtb_Saturation1_tmp_1) * 0.958) - sin
-    (atan(16.1 * rtb_Braking[2]) * 1.94) * (rtb_Switch_b * 0.8) * rtb_RL_tmp *
-    (1.03E-5 * rtb_Switch_b - 0.000288) / sqrt(rtb_Switch * rtb_Switch * 225.0 +
-    1.0)) + ((sin(atan(rtb_Saturation1_tmp - (0.26 * rtb_RL_tmp_0 + 1.0) *
-                       (3.99E-5 * rtb_RR - 0.521) * (atan(rtb_Saturation1_tmp) -
-    rtb_Saturation1_tmp)) * 1.34) * (rtb_RR * 0.8) * Faeroz_tmp + (7.1E-5 *
+  rtb_Saturation1 = rtb_Sign / 0.08 * 180.0 - (((rtb_RL + Fy_FR) * cos
+    (rtb_front_wheel_angle_single__d) * 0.73439999999999994 - (((sin(atan(u0_tmp
+    - (0.26 * rtb_UnaryMinus_f_tmp + 1.0) * (3.99E-5 * rtb_Switch_b - 0.521) *
+    (atan(u0_tmp) - u0_tmp)) * 1.34) * (rtb_Switch_b * 0.8) * Faeroz_tmp +
+    (7.1E-5 * rtb_Switch_b - 0.149) * (rtb_Switch_b * 0.8)) * cos(atan((atan
+    (((3.86E-7 * rtb_Switch_b - rtb_Braking[2]) + 0.000205) * 13.9 /
+     rtb_Saturation1_tmp_tmp) - ((3.86E-7 * rtb_Switch_b - rtb_Braking[2]) +
+    0.000205) * 13.9 / sqrt(u0_tmp_0 * u0_tmp_0 + 1.0)) * rtb_RL_tmp_tmp +
+    ((3.86E-7 * rtb_Switch_b - rtb_Braking[2]) + 0.000205) * 13.9 / sqrt
+    (u0_tmp_0 * u0_tmp_0 + 1.0)) * 0.958) / cos(atan((atan(rtb_Saturation1_tmp_1)
+    - rtb_Saturation1_tmp_1) * rtb_RL_tmp_tmp + rtb_Saturation1_tmp_1) * 0.958)
+    - sin(atan(16.1 * rtb_Braking[2]) * 1.94) * (rtb_Switch_b * 0.8) *
+    Faeroz_tmp * (1.03E-5 * rtb_Switch_b - 0.000288) / sqrt(rtb_Saturation1 *
+    rtb_Saturation1 * 225.0 + 1.0)) + ((sin(atan(rtb_Saturation1_tmp - (0.26 *
+    Mzreq + 1.0) * (3.99E-5 * rtb_RR - 0.521) * (atan(rtb_Saturation1_tmp) -
+    rtb_Saturation1_tmp)) * 1.34) * (rtb_RR * 0.8) * rtb_RL_tmp_0 + (7.1E-5 *
     rtb_RR - 0.149) * (rtb_RR * 0.8)) * cos(atan((atan(((3.86E-7 * rtb_RR -
     rtb_Braking[3]) + 0.000205) * 13.9 / rtb_Saturation1_tmp_tmp_0) - ((3.86E-7 *
-    rtb_RR - rtb_Braking[3]) + 0.000205) * 13.9 / sqrt(u0 * u0 + 1.0)) *
-    rtb_Saturation1_tmp_0 + ((3.86E-7 * rtb_RR - rtb_Braking[3]) + 0.000205) *
-    13.9 / sqrt(u0 * u0 + 1.0)) * 0.958) / cos(atan((atan(rtb_Saturation1_tmp_2)
-    - rtb_Saturation1_tmp_2) * rtb_Saturation1_tmp_0 + rtb_Saturation1_tmp_2) *
-    0.958) - sin(atan(16.1 * rtb_Braking[3]) * 1.94) * (rtb_RR * 0.8) *
-             Faeroz_tmp * (1.03E-5 * rtb_RR - 0.000288) / sqrt(rtb_Saturation1 *
-    rtb_Saturation1 * 225.0 + 1.0))) * 0.79560000000000008) + -(Fy_FR - rtb_RL) *
-    sin(rtb_front_wheel_angle_single__d) * 1.27 / 2.0);
+    rtb_RR - rtb_Braking[3]) + 0.000205) * 13.9 / sqrt(rtb_RL_tmp * rtb_RL_tmp +
+    1.0)) * rtb_Saturation1_tmp_0 + ((3.86E-7 * rtb_RR - rtb_Braking[3]) +
+    0.000205) * 13.9 / sqrt(rtb_RL_tmp * rtb_RL_tmp + 1.0)) * 0.958) / cos(atan
+    ((atan(rtb_Saturation1_tmp_2) - rtb_Saturation1_tmp_2) *
+     rtb_Saturation1_tmp_0 + rtb_Saturation1_tmp_2) * 0.958) - sin(atan(16.1 *
+    rtb_Braking[3]) * 1.94) * (rtb_RR * 0.8) * rtb_RL_tmp_0 * (1.03E-5 * rtb_RR
+    - 0.000288) / sqrt(rtb_Switch * rtb_Switch * 225.0 + 1.0))) *
+    0.79560000000000008) + -(Fy_FR - rtb_RL) * sin
+    (rtb_front_wheel_angle_single__d) * 1.27 / 2.0);
   if (rtIsNaN(rtb_Saturation1)) {
     rtb_Saturation1 = 0.0;
   }
@@ -2534,7 +2476,7 @@ void TV(void)
    *  DiscreteIntegrator: '<S86>/Integrator'
    *  Product: '<S91>/PProd Out'
    */
-  rtb_Switch_b = (rtb_UnaryMinus_f_tmp * 0.0 + rtDW.Integrator_DSTATE_n) +
+  rtb_Switch = (rtb_Sign * 0.0 + rtDW.Integrator_DSTATE_n) +
     rtb_front_wheel_angle_single__d;
 
   /* Switch: '<S94>/Switch2' incorporates:
@@ -2544,15 +2486,15 @@ void TV(void)
    *  RelationalOperator: '<S94>/UpperRelop'
    *  Switch: '<S94>/Switch'
    */
-  if (rtb_Switch_b > 50.0) {
-    rtb_Switch = 50.0;
-  } else if (rtb_Switch_b < -50.0) {
+  if (rtb_Switch > 50.0) {
+    rtb_Switch_b = 50.0;
+  } else if (rtb_Switch < -50.0) {
     /* Switch: '<S94>/Switch' incorporates:
      *  Constant: '<S23>/Constant10'
      */
-    rtb_Switch = -50.0;
+    rtb_Switch_b = -50.0;
   } else {
-    rtb_Switch = rtb_Switch_b;
+    rtb_Switch_b = rtb_Switch;
   }
 
   /* End of Switch: '<S94>/Switch2' */
@@ -2560,19 +2502,19 @@ void TV(void)
   /* Sum: '<S23>/Sum1' incorporates:
    *  Gain: '<S23>/Gain2'
    */
-  u0 = 0.017407407407407406 * rtb_Saturation1 + rtb_Switch;
+  Mzreq = 0.017407407407407406 * rtb_Saturation1 + rtb_Switch_b;
 
   /* Saturate: '<S23>/Saturation' */
-  if (u0 > 20.0) {
-    u0 = 20.0;
-  } else if (u0 < -20.0) {
-    u0 = -20.0;
+  if (Mzreq > 20.0) {
+    Mzreq = 20.0;
+  } else if (Mzreq < -20.0) {
+    Mzreq = -20.0;
   }
 
   /* End of Saturate: '<S23>/Saturation' */
 
   /* Product: '<S23>/Product' */
-  rtb_Saturation1 = u0 * (real_T)rtb_Logic_d_idx_1;
+  rtb_Saturation1 = Mzreq * (real_T)rtb_Logic_d_idx_1;
 
   /* MATLAB Function: '<S23>/MATLAB Function3' */
   rtb_RR = ((rtb_Abs_i_idx_0 * rtDW.CFunction_f[0] + rtb_Abs_l *
@@ -2602,17 +2544,15 @@ void TV(void)
    *  Inport: '<Root>/throttle'
    *  RelationalOperator: '<S23>/Less Than'
    */
-  if (rtb_Integrator_m < 0.0) {
-    rtb_RR = -1.0;
-  } else if (rtb_Integrator_m > 0.0) {
-    rtb_RR = 1.0;
-  } else if (rtb_Integrator_m == 0.0) {
-    rtb_RR = 0.0;
+  if (rtIsNaN(rtb_Integrator_m)) {
+    rtb_UnaryMinus_f_tmp = rtb_Integrator_m;
+  } else if (rtb_Integrator_m < 0.0) {
+    rtb_UnaryMinus_f_tmp = -1.0;
   } else {
-    rtb_RR = (rtNaN);
+    rtb_UnaryMinus_f_tmp = (rtb_Integrator_m > 0.0);
   }
 
-  if (rtb_RR > 0.0) {
+  if (rtb_UnaryMinus_f_tmp > 0.0) {
     /* SignalConversion generated from: '<S43>/ SFunction ' incorporates:
      *  Constant: '<S2>/Constant2'
      *  Constant: '<S2>/Constant9'
@@ -2620,12 +2560,12 @@ void TV(void)
     tmp[0] = -35000;
     tmp[1] = 80000;
     if (tmp[rtU.throttle >= 0.05] < 10000) {
-      rtb_Saturation1 = 0.0;
+      rtb_UnaryMinus_f_tmp = 0.0;
     } else {
-      rtb_Saturation1 = 0.75;
+      rtb_UnaryMinus_f_tmp = 0.75;
     }
 
-    rtb_RR = rtb_Integrator_m * rtb_Saturation1;
+    rtb_RR = rtb_Integrator_m * rtb_UnaryMinus_f_tmp;
   } else {
     rtb_RR = rtb_Integrator_m;
 
@@ -2636,88 +2576,93 @@ void TV(void)
     tmp[0] = -35000;
     tmp[1] = 80000;
     if (tmp[rtU.throttle >= 0.05] < 10000) {
-      rtb_Saturation1 = 0.0;
+      rtb_UnaryMinus_f_tmp = 0.0;
     } else {
-      rtb_Saturation1 = 0.75;
+      rtb_UnaryMinus_f_tmp = 0.75;
     }
 
-    rtb_Integrator_m *= rtb_Saturation1;
+    rtb_Integrator_m *= rtb_UnaryMinus_f_tmp;
   }
 
   /* End of MATLAB Function: '<S23>/MATLAB Function1' */
 
   /* MinMax: '<S111>/Max' */
-  modValueRev = fmax(modValueRev, z);
+  z = fmax(modValueRev, z);
 
   /* InitialCondition: '<S113>/IC1' */
   rtDW.IC1_FirstOutputTime = false;
+
+  /* Abs: '<S114>/Abs3' incorporates:
+   *  Abs: '<S115>/Abs3'
+   */
+  modValueRev = fabs(rtb_Memory[0]);
 
   /* Gain: '<S149>/Gain2' incorporates:
    *  Gain: '<S121>/Gain2'
    *  Inport: '<Root>/omega_wheels_FL'
    */
-  z = 13.5 * rtU.omega_wheels_FL;
+  Fy_FR = 13.5 * rtU.omega_wheels_FL;
 
   /* Saturate: '<S149>/Saturation' incorporates:
    *  Gain: '<S149>/Gain2'
    */
-  if (z > 2083.9231268812296) {
+  if (Fy_FR > 2083.9231268812296) {
     rtb_Braking[0] = 2083.9231268812296;
-  } else if (z < 10.471975511965978) {
+  } else if (Fy_FR < 10.471975511965978) {
     rtb_Braking[0] = 10.471975511965978;
   } else {
-    rtb_Braking[0] = z;
+    rtb_Braking[0] = Fy_FR;
   }
 
   /* Gain: '<S149>/Gain2' incorporates:
    *  Gain: '<S121>/Gain2'
    *  Inport: '<Root>/omega_wheels_FR'
    */
-  Fy_FR = 13.5 * rtU.omega_wheels_FR;
+  rtb_yrd = 13.5 * rtU.omega_wheels_FR;
 
   /* Saturate: '<S149>/Saturation' incorporates:
    *  Gain: '<S149>/Gain2'
    */
-  if (Fy_FR > 2083.9231268812296) {
+  if (rtb_yrd > 2083.9231268812296) {
     rtb_Braking[1] = 2083.9231268812296;
-  } else if (Fy_FR < 10.471975511965978) {
+  } else if (rtb_yrd < 10.471975511965978) {
     rtb_Braking[1] = 10.471975511965978;
   } else {
-    rtb_Braking[1] = Fy_FR;
+    rtb_Braking[1] = rtb_yrd;
   }
 
   /* Gain: '<S149>/Gain2' incorporates:
    *  Gain: '<S121>/Gain2'
    *  Inport: '<Root>/omega_wheels_RL'
    */
-  rtb_yrd = 13.5 * rtU.omega_wheels_RL;
+  u0_tmp = 13.5 * rtU.omega_wheels_RL;
 
   /* Saturate: '<S149>/Saturation' incorporates:
    *  Gain: '<S149>/Gain2'
    */
-  if (rtb_yrd > 2083.9231268812296) {
+  if (u0_tmp > 2083.9231268812296) {
     rtb_Braking[2] = 2083.9231268812296;
-  } else if (rtb_yrd < 10.471975511965978) {
+  } else if (u0_tmp < 10.471975511965978) {
     rtb_Braking[2] = 10.471975511965978;
   } else {
-    rtb_Braking[2] = rtb_yrd;
+    rtb_Braking[2] = u0_tmp;
   }
 
   /* Gain: '<S149>/Gain2' incorporates:
    *  Gain: '<S121>/Gain2'
    *  Inport: '<Root>/omega_wheels_RR'
    */
-  u0_tmp = 13.5 * rtU.omega_wheels_RR;
+  u0_tmp_0 = 13.5 * rtU.omega_wheels_RR;
 
   /* Saturate: '<S149>/Saturation' incorporates:
    *  Gain: '<S149>/Gain2'
    */
-  if (u0_tmp > 2083.9231268812296) {
+  if (u0_tmp_0 > 2083.9231268812296) {
     rtb_Braking[3] = 2083.9231268812296;
-  } else if (u0_tmp < 10.471975511965978) {
+  } else if (u0_tmp_0 < 10.471975511965978) {
     rtb_Braking[3] = 10.471975511965978;
   } else {
-    rtb_Braking[3] = u0_tmp;
+    rtb_Braking[3] = u0_tmp_0;
   }
 
   /* Abs: '<S151>/Abs' */
@@ -2737,40 +2682,40 @@ void TV(void)
     rtConstP.pooled8, rtConstP.pooled5, rtConstP.pooled59, 200U);
 
   /* Saturate: '<S151>/Saturation' */
-  u0 = rtb_Braking[0];
-  if (u0 > 1.0) {
+  Mzreq = rtb_Braking[0];
+  if (Mzreq > 1.0) {
     rtb_Braking[0] = 1.0;
-  } else if (u0 < 0.3) {
+  } else if (Mzreq < 0.3) {
     rtb_Braking[0] = 0.3;
   } else {
-    rtb_Braking[0] = u0;
+    rtb_Braking[0] = Mzreq;
   }
 
-  u0 = rtb_Braking[1];
-  if (u0 > 1.0) {
+  Mzreq = rtb_Braking[1];
+  if (Mzreq > 1.0) {
     rtb_Braking[1] = 1.0;
-  } else if (u0 < 0.3) {
+  } else if (Mzreq < 0.3) {
     rtb_Braking[1] = 0.3;
   } else {
-    rtb_Braking[1] = u0;
+    rtb_Braking[1] = Mzreq;
   }
 
-  u0 = rtb_Braking[2];
-  if (u0 > 1.0) {
+  Mzreq = rtb_Braking[2];
+  if (Mzreq > 1.0) {
     rtb_Braking[2] = 1.0;
-  } else if (u0 < 0.3) {
+  } else if (Mzreq < 0.3) {
     rtb_Braking[2] = 0.3;
   } else {
-    rtb_Braking[2] = u0;
+    rtb_Braking[2] = Mzreq;
   }
 
-  u0 = rtb_Braking[3];
-  if (u0 > 1.0) {
+  Mzreq = rtb_Braking[3];
+  if (Mzreq > 1.0) {
     rtb_Braking[3] = 1.0;
-  } else if (u0 < 0.3) {
+  } else if (Mzreq < 0.3) {
     rtb_Braking[3] = 0.3;
   } else {
-    rtb_Braking[3] = u0;
+    rtb_Braking[3] = Mzreq;
   }
 
   /* End of Saturate: '<S151>/Saturation' */
@@ -2784,27 +2729,27 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_RR'
    */
   if (rtU.omega_wheels_FL > 0.0) {
-    rtb_Saturation1 = 0.96 * rtb_Braking[0];
+    rtb_UnaryMinus_f_tmp = 0.96 * rtb_Braking[0];
   } else {
-    rtb_Saturation1 = 1.0416666666666667 * rtb_Braking[0];
+    rtb_UnaryMinus_f_tmp = 1.0416666666666667 * rtb_Braking[0];
   }
 
   if (rtU.omega_wheels_FR > 0.0) {
-    rtb_RL = 0.96 * rtb_Braking[1];
+    Mzreq = 0.96 * rtb_Braking[1];
   } else {
-    rtb_RL = 1.0416666666666667 * rtb_Braking[1];
+    Mzreq = 1.0416666666666667 * rtb_Braking[1];
   }
 
   if (rtU.omega_wheels_RL > 0.0) {
-    rtb_Gain1 = 0.96 * rtb_Braking[2];
+    rtb_RL = 0.96 * rtb_Braking[2];
   } else {
-    rtb_Gain1 = 1.0416666666666667 * rtb_Braking[2];
+    rtb_RL = 1.0416666666666667 * rtb_Braking[2];
   }
 
   if (rtU.omega_wheels_RR > 0.0) {
-    rtb_Sign = 0.96 * rtb_Braking[3];
+    rtb_Gain1 = 0.96 * rtb_Braking[3];
   } else {
-    rtb_Sign = 1.0416666666666667 * rtb_Braking[3];
+    rtb_Gain1 = 1.0416666666666667 * rtb_Braking[3];
   }
 
   /* End of Switch: '<S149>/Switch3' */
@@ -2818,10 +2763,10 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_RR'
    *  Product: '<S149>/Product'
    */
-  rtb_Tnew[0] = 13.5 * rtU.omega_wheels_FL * rtb_Saturation1 * 0.0;
-  rtb_Tnew[1] = 13.5 * rtU.omega_wheels_FR * rtb_RL * 0.0;
-  rtb_Tnew[2] = 13.5 * rtU.omega_wheels_RL * rtb_Gain1 * 0.0;
-  rtb_Tnew[3] = 13.5 * rtU.omega_wheels_RR * rtb_Sign * 0.0;
+  rtb_Tnew[0] = 13.5 * rtU.omega_wheels_FL * rtb_UnaryMinus_f_tmp * 0.0;
+  rtb_Tnew[1] = 13.5 * rtU.omega_wheels_FR * Mzreq * 0.0;
+  rtb_Tnew[2] = 13.5 * rtU.omega_wheels_RL * rtb_RL * 0.0;
+  rtb_Tnew[3] = 13.5 * rtU.omega_wheels_RR * rtb_Gain1 * 0.0;
   memset(&rtb_CCaller_o6[0], 0, sizeof(real_T) << 4U);
   rtb_CCaller_o6[0] = rtb_Tnew[0];
   rtb_CCaller_o6[5] = rtb_Tnew[1];
@@ -2837,61 +2782,61 @@ void TV(void)
   varargin_2[10] = rtb_Tnew[2];
   varargin_2[15] = rtb_Tnew[3];
   memset(&rtb_y[0], 0, sizeof(real_T) << 6U);
-  for (b_exit = 0; b_exit < 4; b_exit++) {
-    X1 = b_exit << 2;
-    rtb_y_tmp = b_exit << 3;
-    rtb_y[rtb_y_tmp] = rtb_CCaller_o6[X1];
-    rtb_y[rtb_y_tmp + 1] = rtb_CCaller_o6[X1 + 1];
-    rtb_y[rtb_y_tmp + 2] = rtb_CCaller_o6[X1 + 2];
-    rtb_y[rtb_y_tmp + 3] = rtb_CCaller_o6[X1 + 3];
+  for (i = 0; i < 4; i++) {
+    b_exit = i << 2;
+    rtb_y_tmp = i << 3;
+    rtb_y[rtb_y_tmp] = rtb_CCaller_o6[b_exit];
+    rtb_y[rtb_y_tmp + 1] = rtb_CCaller_o6[b_exit + 1];
+    rtb_y[rtb_y_tmp + 2] = rtb_CCaller_o6[b_exit + 2];
+    rtb_y[rtb_y_tmp + 3] = rtb_CCaller_o6[b_exit + 3];
   }
 
-  for (b_exit = 0; b_exit < 4; b_exit++) {
-    X1 = b_exit << 2;
-    rtb_y_tmp = (b_exit + 4) << 3;
-    rtb_y[rtb_y_tmp + 4] = varargin_2[X1];
-    rtb_y[rtb_y_tmp + 5] = varargin_2[X1 + 1];
-    rtb_y[rtb_y_tmp + 6] = varargin_2[X1 + 2];
-    rtb_y[rtb_y_tmp + 7] = varargin_2[X1 + 3];
+  for (i = 0; i < 4; i++) {
+    b_exit = i << 2;
+    rtb_y_tmp = (i + 4) << 3;
+    rtb_y[rtb_y_tmp + 4] = varargin_2[b_exit];
+    rtb_y[rtb_y_tmp + 5] = varargin_2[b_exit + 1];
+    rtb_y[rtb_y_tmp + 6] = varargin_2[b_exit + 2];
+    rtb_y[rtb_y_tmp + 7] = varargin_2[b_exit + 3];
   }
 
-  for (b_exit = 0; b_exit < 64; b_exit++) {
-    rtb_y[b_exit] *= 50.0;
+  for (i = 0; i < 64; i++) {
+    rtb_y[i] *= 50.0;
   }
 
   /* End of MATLAB Function: '<S28>/MATLAB Function' */
 
   /* Saturate: '<S121>/Saturation' */
-  if (z > 2083.9231268812296) {
+  if (Fy_FR > 2083.9231268812296) {
     rtb_Braking[0] = 2083.9231268812296;
-  } else if (z < 10.471975511965978) {
+  } else if (Fy_FR < 10.471975511965978) {
     rtb_Braking[0] = 10.471975511965978;
   } else {
-    rtb_Braking[0] = z;
-  }
-
-  if (Fy_FR > 2083.9231268812296) {
-    rtb_Braking[1] = 2083.9231268812296;
-  } else if (Fy_FR < 10.471975511965978) {
-    rtb_Braking[1] = 10.471975511965978;
-  } else {
-    rtb_Braking[1] = Fy_FR;
+    rtb_Braking[0] = Fy_FR;
   }
 
   if (rtb_yrd > 2083.9231268812296) {
-    rtb_Braking[2] = 2083.9231268812296;
+    rtb_Braking[1] = 2083.9231268812296;
   } else if (rtb_yrd < 10.471975511965978) {
-    rtb_Braking[2] = 10.471975511965978;
+    rtb_Braking[1] = 10.471975511965978;
   } else {
-    rtb_Braking[2] = rtb_yrd;
+    rtb_Braking[1] = rtb_yrd;
   }
 
   if (u0_tmp > 2083.9231268812296) {
-    rtb_Braking[3] = 2083.9231268812296;
+    rtb_Braking[2] = 2083.9231268812296;
   } else if (u0_tmp < 10.471975511965978) {
+    rtb_Braking[2] = 10.471975511965978;
+  } else {
+    rtb_Braking[2] = u0_tmp;
+  }
+
+  if (u0_tmp_0 > 2083.9231268812296) {
+    rtb_Braking[3] = 2083.9231268812296;
+  } else if (u0_tmp_0 < 10.471975511965978) {
     rtb_Braking[3] = 10.471975511965978;
   } else {
-    rtb_Braking[3] = u0_tmp;
+    rtb_Braking[3] = u0_tmp_0;
   }
 
   /* End of Saturate: '<S121>/Saturation' */
@@ -2913,40 +2858,40 @@ void TV(void)
     rtConstP.pooled8, rtConstP.pooled5, rtConstP.pooled59, 200U);
 
   /* Saturate: '<S123>/Saturation' */
-  u0 = rtb_Braking[0];
-  if (u0 > 1.0) {
+  Mzreq = rtb_Braking[0];
+  if (Mzreq > 1.0) {
     rtb_Braking[0] = 1.0;
-  } else if (u0 < 0.3) {
+  } else if (Mzreq < 0.3) {
     rtb_Braking[0] = 0.3;
   } else {
-    rtb_Braking[0] = u0;
+    rtb_Braking[0] = Mzreq;
   }
 
-  u0 = rtb_Braking[1];
-  if (u0 > 1.0) {
+  Mzreq = rtb_Braking[1];
+  if (Mzreq > 1.0) {
     rtb_Braking[1] = 1.0;
-  } else if (u0 < 0.3) {
+  } else if (Mzreq < 0.3) {
     rtb_Braking[1] = 0.3;
   } else {
-    rtb_Braking[1] = u0;
+    rtb_Braking[1] = Mzreq;
   }
 
-  u0 = rtb_Braking[2];
-  if (u0 > 1.0) {
+  Mzreq = rtb_Braking[2];
+  if (Mzreq > 1.0) {
     rtb_Braking[2] = 1.0;
-  } else if (u0 < 0.3) {
+  } else if (Mzreq < 0.3) {
     rtb_Braking[2] = 0.3;
   } else {
-    rtb_Braking[2] = u0;
+    rtb_Braking[2] = Mzreq;
   }
 
-  u0 = rtb_Braking[3];
-  if (u0 > 1.0) {
+  Mzreq = rtb_Braking[3];
+  if (Mzreq > 1.0) {
     rtb_Braking[3] = 1.0;
-  } else if (u0 < 0.3) {
+  } else if (Mzreq < 0.3) {
     rtb_Braking[3] = 0.3;
   } else {
-    rtb_Braking[3] = u0;
+    rtb_Braking[3] = Mzreq;
   }
 
   /* End of Saturate: '<S123>/Saturation' */
@@ -2957,9 +2902,9 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_FL'
    */
   if (rtU.omega_wheels_FL > 0.0) {
-    rtb_Saturation1 = 0.96 * rtb_Braking[0];
+    rtb_UnaryMinus_f_tmp = 0.96 * rtb_Braking[0];
   } else {
-    rtb_Saturation1 = 1.0416666666666667 * rtb_Braking[0];
+    rtb_UnaryMinus_f_tmp = 1.0416666666666667 * rtb_Braking[0];
   }
 
   /* Abs: '<S121>/Abs' incorporates:
@@ -2967,7 +2912,7 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_FL'
    *  Product: '<S121>/Divide'
    */
-  rtb_Product[0] = fabs(13.5 * rtU.omega_wheels_FL / rtb_Saturation1);
+  rtb_Product[0] = fabs(13.5 * rtU.omega_wheels_FL / rtb_UnaryMinus_f_tmp);
 
   /* Switch: '<S121>/Switch3' incorporates:
    *  Gain: '<S121>/     '
@@ -2975,9 +2920,9 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_FR'
    */
   if (rtU.omega_wheels_FR > 0.0) {
-    rtb_Saturation1 = 0.96 * rtb_Braking[1];
+    rtb_UnaryMinus_f_tmp = 0.96 * rtb_Braking[1];
   } else {
-    rtb_Saturation1 = 1.0416666666666667 * rtb_Braking[1];
+    rtb_UnaryMinus_f_tmp = 1.0416666666666667 * rtb_Braking[1];
   }
 
   /* Abs: '<S121>/Abs' incorporates:
@@ -2985,7 +2930,7 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_FR'
    *  Product: '<S121>/Divide'
    */
-  rtb_Product[1] = fabs(13.5 * rtU.omega_wheels_FR / rtb_Saturation1);
+  rtb_Product[1] = fabs(13.5 * rtU.omega_wheels_FR / rtb_UnaryMinus_f_tmp);
 
   /* Switch: '<S121>/Switch3' incorporates:
    *  Gain: '<S121>/     '
@@ -2993,9 +2938,9 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_RL'
    */
   if (rtU.omega_wheels_RL > 0.0) {
-    rtb_Saturation1 = 0.96 * rtb_Braking[2];
+    rtb_UnaryMinus_f_tmp = 0.96 * rtb_Braking[2];
   } else {
-    rtb_Saturation1 = 1.0416666666666667 * rtb_Braking[2];
+    rtb_UnaryMinus_f_tmp = 1.0416666666666667 * rtb_Braking[2];
   }
 
   /* Abs: '<S121>/Abs' incorporates:
@@ -3003,7 +2948,7 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_RL'
    *  Product: '<S121>/Divide'
    */
-  rtb_Product[2] = fabs(13.5 * rtU.omega_wheels_RL / rtb_Saturation1);
+  rtb_Product[2] = fabs(13.5 * rtU.omega_wheels_RL / rtb_UnaryMinus_f_tmp);
 
   /* Switch: '<S121>/Switch3' incorporates:
    *  Gain: '<S121>/     '
@@ -3011,9 +2956,9 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_RR'
    */
   if (rtU.omega_wheels_RR > 0.0) {
-    rtb_Saturation1 = 0.96 * rtb_Braking[3];
+    rtb_UnaryMinus_f_tmp = 0.96 * rtb_Braking[3];
   } else {
-    rtb_Saturation1 = 1.0416666666666667 * rtb_Braking[3];
+    rtb_UnaryMinus_f_tmp = 1.0416666666666667 * rtb_Braking[3];
   }
 
   /* Abs: '<S121>/Abs' incorporates:
@@ -3021,18 +2966,18 @@ void TV(void)
    *  Inport: '<Root>/omega_wheels_RR'
    *  Product: '<S121>/Divide'
    */
-  rtb_Product[3] = fabs(13.5 * rtU.omega_wheels_RR / rtb_Saturation1);
+  rtb_Product[3] = fabs(13.5 * rtU.omega_wheels_RR / rtb_UnaryMinus_f_tmp);
 
   /* Gain: '<S24>/Gain' incorporates:
    *  Sum: '<S24>/Sum'
    */
-  z = (modValueRev + rtb_SumofElements1) * 0.5;
+  rtb_RL = (z + rtb_SumofElements1) * 0.5;
 
   /* Chart: '<S116>/Distribution complete' incorporates:
    *  SignalConversion generated from: '<S120>/ SFunction '
    */
-  if (z >= 0.0) {
-    rtb_RL = z;
+  if (rtb_RL >= 0.0) {
+    Fy_FR = rtb_RL;
     rtb_Braking[0] = rtDW.CFunction_f[1];
     rtb_Braking[1] = rtDW.CFunction_f[3];
     rtb_Braking[2] = rtDW.CFunction_f[0];
@@ -3041,9 +2986,9 @@ void TV(void)
     rtb_UnaryMinus_d0[1] = rtDW.CFunction_p[3];
     rtb_UnaryMinus_d0[2] = rtDW.CFunction_p[0];
     rtb_UnaryMinus_d0[3] = rtDW.CFunction_p[2];
-    Fy_FR = rtb_Integrator_m;
+    Mzreq = rtb_Integrator_m;
   } else {
-    rtb_RL = -z;
+    Fy_FR = -rtb_RL;
     rtb_Braking[0] = -rtDW.CFunction_p[1];
     rtb_Braking[1] = -rtDW.CFunction_p[3];
     rtb_Braking[2] = -rtDW.CFunction_p[0];
@@ -3052,55 +2997,46 @@ void TV(void)
     rtb_UnaryMinus_d0[1] = -rtDW.CFunction_f[3];
     rtb_UnaryMinus_d0[2] = -rtDW.CFunction_f[0];
     rtb_UnaryMinus_d0[3] = -rtDW.CFunction_f[2];
-    Fy_FR = -rtb_Integrator_m;
+    Mzreq = -rtb_Integrator_m;
   }
 
-  if (Fy_FR < 0.0) {
+  if (Mzreq < 0.0) {
     rtb_Gain1 = rtb_Braking[2];
     rtb_Saturation1 = rtb_Braking[3];
-    rtb_yrd = rtb_Braking[0];
-    u0_tmp = rtb_Braking[1];
+    rtb_UnaryMinus_f_tmp = rtb_Braking[0];
+    rtb_yrd = rtb_Braking[1];
     rtb_Braking[0] = rtb_Gain1;
     rtb_Braking[1] = rtb_Saturation1;
-    rtb_Braking[2] = rtb_yrd;
-    rtb_Braking[3] = u0_tmp;
+    rtb_Braking[2] = rtb_UnaryMinus_f_tmp;
+    rtb_Braking[3] = rtb_yrd;
     rtb_Gain1 = rtb_UnaryMinus_d0[2];
     rtb_Saturation1 = rtb_UnaryMinus_d0[3];
-    rtb_yrd = rtb_UnaryMinus_d0[0];
-    u0_tmp = rtb_UnaryMinus_d0[1];
+    rtb_UnaryMinus_f_tmp = rtb_UnaryMinus_d0[0];
+    rtb_yrd = rtb_UnaryMinus_d0[1];
     rtb_UnaryMinus_d0[0] = rtb_Gain1;
     rtb_UnaryMinus_d0[1] = rtb_Saturation1;
-    rtb_UnaryMinus_d0[2] = rtb_yrd;
-    rtb_UnaryMinus_d0[3] = u0_tmp;
+    rtb_UnaryMinus_d0[2] = rtb_UnaryMinus_f_tmp;
+    rtb_UnaryMinus_d0[3] = rtb_yrd;
   }
 
-  for (X1 = 0; X1 < 4; X1++) {
-    rtb_Braking_0[X1] = rtb_Braking[X1];
+  BaseDistribution(Fy_FR, rtb_Braking, rtb_UnaryMinus_d0, fabs(Mzreq), rtb_Tnew);
+  if (!(rtb_RL >= 0.0)) {
+    rtb_Tnew_0[0] = -rtb_Tnew[0];
+    rtb_Tnew_0[1] = -rtb_Tnew[1];
+    rtb_Tnew_0[2] = -rtb_Tnew[2];
+    rtb_Tnew_0[3] = -rtb_Tnew[3];
+    assignBrakeTorque(rtb_Tnew_0, rtb_Tnew);
   }
 
-  for (X1 = 0; X1 < 4; X1++) {
-    rtb_UnaryMinus_f[X1] = rtb_UnaryMinus_d0[X1];
-  }
-
-  BaseDistribution(rtb_RL, rtb_Braking_0, rtb_UnaryMinus_f, fabs(Fy_FR),
-                   rtb_Tnew);
-  if (!(z >= 0.0)) {
-    rtb_Braking_0[0] = -rtb_Tnew[0];
-    rtb_Braking_0[1] = -rtb_Tnew[1];
-    rtb_Braking_0[2] = -rtb_Tnew[2];
-    rtb_Braking_0[3] = -rtb_Tnew[3];
-    assignBrakeTorque(rtb_Braking_0, rtb_Tnew);
-  }
-
-  if (Fy_FR < 0.0) {
+  if (Mzreq < 0.0) {
     rtb_RL = rtb_Tnew[2];
     rtb_Gain1 = rtb_Tnew[3];
-    z = rtb_Tnew[0];
-    rtb_Saturation1 = rtb_Tnew[1];
+    rtb_Saturation1 = rtb_Tnew[0];
+    Fy_FR = rtb_Tnew[1];
     rtb_Tnew[0] = rtb_RL;
     rtb_Tnew[1] = rtb_Gain1;
-    rtb_Tnew[2] = z;
-    rtb_Tnew[3] = rtb_Saturation1;
+    rtb_Tnew[2] = rtb_Saturation1;
+    rtb_Tnew[3] = Fy_FR;
   }
 
   /* End of Chart: '<S116>/Distribution complete' */
@@ -3134,19 +3070,11 @@ void TV(void)
   /* Abs: '<S115>/Abs1' incorporates:
    *  Abs: '<S114>/Abs1'
    */
-  z = fabs(rtb_Memory[1]);
-
-  /* Abs: '<S115>/Abs3' incorporates:
-   *  Abs: '<S114>/Abs3'
-   */
-  rtb_RL = fabs(rtb_Memory[0]);
+  rtb_RL = fabs(rtb_Memory[1]);
 
   /* CCaller: '<S16>/C Caller' incorporates:
+   *  Abs: '<S114>/Abs3'
    *  Abs: '<S115>/Abs1'
-   *  Abs: '<S115>/Abs3'
-   *  Constant: '<S16>/Constant'
-   *  Constant: '<S26>/Constant'
-   *  MATLAB Function: '<S25>/MATLAB Function'
    *  Saturate: '<S112>/Saturation'
    *  SignalConversion generated from: '<S16>/C Caller'
    *  UnaryMinus: '<S115>/Unary Minus'
@@ -3154,14 +3082,16 @@ void TV(void)
    * */
   rtb_CCaller_o9[0] = rtb_SumofElements1;
   rtb_CCaller_o9[1] = cumRevIndex;
-  rtb_CCaller_o9[2] = -z;
-  rtb_CCaller_o9[3] = -rtb_RL;
+  rtb_CCaller_o9[2] = -rtb_RL;
+  rtb_CCaller_o9[3] = -modValueRev;
   rtb_CCaller_o9[4] = rtb_RR;
-  rtb_CCaller_o10[0] = modValueRev;
+  rtb_CCaller_o10[0] = z;
   rtb_CCaller_o10[1] = 80.0;
-  rtb_CCaller_o10[2] = z;
-  rtb_CCaller_o10[3] = rtb_RL;
+  rtb_CCaller_o10[2] = rtb_RL;
+  rtb_CCaller_o10[3] = modValueRev;
   rtb_CCaller_o10[4] = rtb_Integrator_m;
+
+  /* MATLAB Function: '<S25>/MATLAB Function' */
   rtb_CCaller_o12[0] = 1.0;
   rtb_CCaller_o12[5] = 1.0;
   rtb_CCaller_o12[10] = 1.0;
@@ -3171,17 +3101,23 @@ void TV(void)
   rtb_CCaller_o12[11] = rtb_Product[2] / 1000.0;
   rtb_CCaller_o12[16] = rtb_Product[3] / 1000.0;
   rtb_CCaller_o12[2] = 0.0;
-  rtb_CCaller_o12[7] = 1.0;
-  rtb_CCaller_o12[12] = 0.0;
-  rtb_CCaller_o12[17] = -1.0;
   rtb_CCaller_o12[3] = 1.0;
+  rtb_CCaller_o12[7] = 1.0;
   rtb_CCaller_o12[8] = 0.0;
+  rtb_CCaller_o12[12] = 0.0;
   rtb_CCaller_o12[13] = -1.0;
+  rtb_CCaller_o12[17] = -1.0;
   rtb_CCaller_o12[18] = 0.0;
   rtb_CCaller_o12[4] = rtb_Abs_i_idx_0;
   rtb_CCaller_o12[9] = rtb_Abs_l;
   rtb_CCaller_o12[14] = -0.635;
   rtb_CCaller_o12[19] = 0.635;
+
+  /* CCaller: '<S16>/C Caller' incorporates:
+   *  Constant: '<S16>/Constant'
+   *  Constant: '<S26>/Constant'
+   *  SignalConversion generated from: '<S16>/C Caller'
+   */
   rtb_CCaller_o13[0] = 1000.0;
   rtb_CCaller_o13[1] = 50.0;
   rtb_CCaller_o13[2] = 50.0;
@@ -3198,26 +3134,26 @@ void TV(void)
   rtb_Tnew[3] = 0.0;
 
   /* CCaller: '<S16>/C Caller' */
-  X1 = Acados_Caller_wrapper(&rtb_Memory[0], &rtb_CCaller_o3[0], &rtb_Braking[0],
-    &rtb_UnaryMinus_d0[0], &rtb_CCaller_o6[0], &rtb_Product1[0],
+  rtb_SumofElements1 = Acados_Caller_wrapper(&rtb_Memory[0], &rtb_CCaller_o3[0],
+    &rtb_Braking[0], &rtb_UnaryMinus_d0[0], &rtb_CCaller_o6[0], &rtb_Product1[0],
     &rtb_CCaller_o8[0], &rtb_CCaller_o9[0], &rtb_CCaller_o10[0], &rtb_y[0],
     &rtb_CCaller_o12[0], &rtb_CCaller_o13[0], &rtb_CCaller_o14[0], &rtb_Product
     [0], &rtb_Tnew[0]);
 
   /* DiscreteFir: '<S33>/Discrete FIR Filter' */
-  acc1 = (int64_T)X1 << 30;
+  modValueRev = rtb_SumofElements1;
   for (b_exit = rtDW.DiscreteFIRFilter_circBuf; b_exit < 4; b_exit++) {
-    acc1 += (int64_T)rtDW.DiscreteFIRFilter_states[b_exit] << 30;
+    modValueRev += rtDW.DiscreteFIRFilter_states[b_exit];
   }
 
   for (b_exit = 0; b_exit < rtDW.DiscreteFIRFilter_circBuf; b_exit++) {
-    acc1 += (int64_T)rtDW.DiscreteFIRFilter_states[b_exit] << 30;
+    modValueRev += rtDW.DiscreteFIRFilter_states[b_exit];
   }
 
   /* End of DiscreteFir: '<S33>/Discrete FIR Filter' */
 
   /* Switch: '<S33>/Switch' */
-  if ((rtb_vx > 3.0) && (!((real_T)acc1 * 9.3132257461547852E-10 >= 4.0))) {
+  if ((rtb_vx > 3.0) && (!(modValueRev >= 4.0))) {
   } else {
     /* Outputs for IfAction SubSystem: '<S22>/Vectorino' incorporates:
      *  ActionPort: '<S34>/Action Port'
@@ -3249,7 +3185,7 @@ void TV(void)
   if (rtDW.is_active_c13_TVModel == 0U) {
     rtDW.is_active_c13_TVModel = 1U;
     rtDW.is_c13_TVModel = IN_Go;
-  } else if (rtDW.is_c13_TVModel == 1) {
+  } else if (rtDW.is_c13_TVModel == IN_Go) {
     if (rtb_Logic_d_idx_1) {
       rtDW.is_c13_TVModel = IN_Stop;
     }
@@ -3268,11 +3204,11 @@ void TV(void)
    *  RelationalOperator: '<S79>/u_GT_lo'
    *  Switch: '<S79>/Switch1'
    */
-  if (rtb_Switch_b >= 50.0) {
+  if (rtb_Switch >= 50.0) {
     rtb_vx = 50.0;
-  } else if (rtb_Switch_b > -50.0) {
+  } else if (rtb_Switch > -50.0) {
     /* Switch: '<S79>/Switch1' */
-    rtb_vx = rtb_Switch_b;
+    rtb_vx = rtb_Switch;
   } else {
     rtb_vx = -50.0;
   }
@@ -3280,25 +3216,17 @@ void TV(void)
   /* End of Switch: '<S79>/Switch' */
 
   /* Sum: '<S79>/Diff' */
-  rtb_vx = rtb_Switch_b - rtb_vx;
+  modValueRev = rtb_Switch - rtb_vx;
 
-  /* RelationalOperator: '<S76>/NotEqual' incorporates:
-   *  Gain: '<S76>/ZeroGain'
+  /* RelationalOperator: '<S76>/Relational Operator' incorporates:
+   *  Constant: '<S76>/Constant5'
    */
-  rtb_Logic_d_idx_1 = (0.0 * rtb_Switch_b != rtb_vx);
+  rtb_Logic_d_idx_1 = (modValueRev != 0.0);
 
-  /* Signum: '<S76>/SignPreSat' */
-  if (rtb_vx < 0.0) {
-    rtb_Sign = -1.0;
-  } else if (rtb_vx > 0.0) {
-    rtb_Sign = 1.0;
-  } else if (rtb_vx == 0.0) {
-    rtb_Sign = 0.0;
-  } else {
-    rtb_Sign = (rtNaN);
-  }
-
-  /* End of Signum: '<S76>/SignPreSat' */
+  /* RelationalOperator: '<S76>/fix for DT propagation issue' incorporates:
+   *  Constant: '<S76>/Constant5'
+   */
+  rtb_fixforDTpropagationissue = (modValueRev > 0.0);
 
   /* Sum: '<S99>/SumI1' incorporates:
    *  Constant: '<S23>/Const10ant15'
@@ -3306,39 +3234,50 @@ void TV(void)
    *  Product: '<S83>/IProd Out'
    *  Sum: '<S98>/SumI3'
    */
-  rtb_vx = (rtb_Switch - rtb_Switch) * 100.0 + rtb_UnaryMinus_f_tmp * 20.0;
+  modValueRev = (rtb_Switch_b - rtb_Switch_b) * 100.0 + rtb_Sign * 20.0;
 
-  /* Signum: '<S76>/SignPreIntegrator' */
-  if (rtb_vx < 0.0) {
-    rtb_Switch = -1.0;
-  } else if (rtb_vx > 0.0) {
-    rtb_Switch = 1.0;
-  } else if (rtb_vx == 0.0) {
-    rtb_Switch = 0.0;
+  /* Switch: '<S76>/Switch1' incorporates:
+   *  Constant: '<S76>/Constant'
+   *  Constant: '<S76>/Constant2'
+   */
+  if (rtb_fixforDTpropagationissue) {
+    rtb_fixforDTpropagationissue_0 = 1;
   } else {
-    rtb_Switch = (rtNaN);
+    rtb_fixforDTpropagationissue_0 = -1;
   }
 
-  /* End of Signum: '<S76>/SignPreIntegrator' */
+  /* End of Switch: '<S76>/Switch1' */
+
+  /* Switch: '<S76>/Switch2' incorporates:
+   *  Constant: '<S76>/Constant3'
+   *  Constant: '<S76>/Constant4'
+   *  Constant: '<S76>/Constant5'
+   *  RelationalOperator: '<S76>/fix for DT propagation issue1'
+   */
+  if (modValueRev > 0.0) {
+    modValueRev_0 = 1;
+  } else {
+    modValueRev_0 = -1;
+  }
+
+  /* End of Switch: '<S76>/Switch2' */
 
   /* Switch: '<S76>/Switch' incorporates:
    *  Constant: '<S76>/Constant1'
-   *  DataTypeConversion: '<S76>/DataTypeConv1'
-   *  DataTypeConversion: '<S76>/DataTypeConv2'
    *  Logic: '<S76>/AND3'
    *  RelationalOperator: '<S76>/Equal1'
    */
-  if (rtb_Logic_d_idx_1 && ((int8_T)rtb_Sign == (int8_T)rtb_Switch)) {
+  if (rtb_Logic_d_idx_1 && (rtb_fixforDTpropagationissue_0 == modValueRev_0)) {
     rtb_Gain1 = 0.0;
   } else {
-    rtb_Gain1 = rtb_vx;
+    rtb_Gain1 = modValueRev;
   }
 
   /* End of Switch: '<S76>/Switch' */
 
   /* Chart: '<S23>/Chart' */
   rtDW.chartGlobalTickCounter++;
-  rtb_Logic_d_idx_1 = (rtDW.is_c24_TVModel == 3);
+  rtb_Logic_d_idx_1 = (rtDW.is_c24_TVModel == IN_SWITCHING_FILTER);
   if ((!rtb_Logic_d_idx_1) || (!rtDW.countCondWasTrueAtLastTimeStep_)) {
     rtDW.countReferenceTick_1 = rtDW.chartGlobalTickCounter;
   }
@@ -3359,12 +3298,13 @@ void TV(void)
       rtDW.countReferenceTick_1 = rtDW.chartGlobalTickCounter;
       rtDW.is_c24_TVModel = IN_SWITCHING_FILTER;
       rtDW.mz_output *= mz_filter_tau;
-      rtDW.countCondWasTrueAtLastTimeStep_ = (rtDW.is_c24_TVModel == 3);
+      rtDW.countCondWasTrueAtLastTimeStep_ = (rtDW.is_c24_TVModel ==
+        IN_SWITCHING_FILTER);
       break;
 
      default:
       /* case IN_SWITCHING_FILTER: */
-      rtb_Logic_d_idx_1 = (rtDW.is_c24_TVModel == 3);
+      rtb_Logic_d_idx_1 = (rtDW.is_c24_TVModel == IN_SWITCHING_FILTER);
       if ((!rtb_Logic_d_idx_1) || (!rtDW.countCondWasTrueAtLastTimeStep_)) {
         rtDW.countReferenceTick_1 = rtDW.chartGlobalTickCounter;
       }
@@ -3396,7 +3336,7 @@ void TV(void)
     rtDW.is_c21_TVModel = IN_Throttle;
     rtb_yrd = 0.0;
     guard1 = true;
-  } else if (rtDW.is_c21_TVModel == 1) {
+  } else if (rtDW.is_c21_TVModel == IN_Brake) {
     if ((!rtb_Logic_d_idx_1) && (rtU.throttle < 0.05)) {
       rtDW.is_c21_TVModel = IN_Throttle;
       rtb_yrd = 0.0;
@@ -3428,15 +3368,16 @@ void TV(void)
      *  Inport: '<Root>/brake'
      *  Switch: '<S155>/Switch'
      */
-    u0 = look1_binlx(rtU.brake, fractions, rtConstP.uDLookupTable_tableData, 1U);
+    Mzreq = look1_binlx(rtU.brake, fractions, rtConstP.uDLookupTable_tableData,
+                        1U);
 
     /* Saturate: '<S175>/Saturation_Brake' incorporates:
      *  Switch: '<S155>/Switch'
      */
-    if (u0 > 1.0) {
-      u0 = 1.0;
-    } else if (u0 < 0.0) {
-      u0 = 0.0;
+    if (Mzreq > 1.0) {
+      Mzreq = 1.0;
+    } else if (Mzreq < 0.0) {
+      Mzreq = 0.0;
     }
 
     /* End of Saturate: '<S175>/Saturation_Brake' */
@@ -3444,7 +3385,7 @@ void TV(void)
     /* Switch: '<S155>/Switch' incorporates:
      *  Gain: '<S175>/Gain_Max_Torque_Needed'
      */
-    rtb_yrd = -529.2 * u0;
+    rtb_yrd = -529.2 * Mzreq;
   }
 
   if (guard1) {
@@ -3558,7 +3499,7 @@ void TV(void)
    *  Constant: '<S159>/Time constant'
    *  MinMax: '<S159>/Max'
    */
-  rtb_Saturation1 = 1.0 / fmax(rtDW.Probe[0], 0.079577471545947673);
+  rtb_UnaryMinus_f_tmp = 1.0 / fmax(rtDW.Probe[0], 0.079577471545947673);
 
   /* Update for DiscreteIntegrator: '<S164>/Integrator' */
   rtDW.Integrator_PrevResetState = (int8_T)rtb_Compare;
@@ -3570,7 +3511,7 @@ void TV(void)
    *  Constant: '<S168>/Time constant'
    *  MinMax: '<S168>/Max'
    */
-  rtb_RL = 1.0 / fmax(rtDW.Probe_k[0], 0.079577471545947673);
+  Mzreq = 1.0 / fmax(rtDW.Probe_k[0], 0.079577471545947673);
 
   /* Update for DiscreteIntegrator: '<S173>/Integrator' */
   rtDW.Integrator_PrevResetState_b = (int8_T)rtb_Compare_p;
@@ -3592,14 +3533,14 @@ void TV(void)
    *  Sum: '<S157>/Sum1'
    */
   rtDW.Integrator_DSTATE[0] += (rtb_Gain_idx_0 - rtb_Integrator_idx_0) *
-    rtb_Saturation1 * 0.02;
+    rtb_UnaryMinus_f_tmp * 0.02;
 
   /* Update for DiscreteIntegrator: '<S173>/Integrator' incorporates:
    *  Product: '<S166>/1//T'
    *  Sum: '<S166>/Sum1'
    */
   rtDW.Integrator_DSTATE_f[0] += (rtb_Saturation_k_idx_0 -
-    rtb_Integrator_c_idx_0) * rtb_RL * 0.02;
+    rtb_Integrator_c_idx_0) * Mzreq * 0.02;
 
   /* Update for Delay: '<S49>/Delay' */
   rtDW.Delay_DSTATE[0] = rtDW.Delay_DSTATE[1];
@@ -3609,14 +3550,14 @@ void TV(void)
    *  Sum: '<S157>/Sum1'
    */
   rtDW.Integrator_DSTATE[1] += (rtb_Gain_idx_1 - rtb_Integrator_idx_1) *
-    rtb_Saturation1 * 0.02;
+    rtb_UnaryMinus_f_tmp * 0.02;
 
   /* Update for DiscreteIntegrator: '<S173>/Integrator' incorporates:
    *  Product: '<S166>/1//T'
    *  Sum: '<S166>/Sum1'
    */
   rtDW.Integrator_DSTATE_f[1] += (rtb_Saturation_k_idx_1 -
-    rtb_Integrator_c_idx_1) * rtb_RL * 0.02;
+    rtb_Integrator_c_idx_1) * Mzreq * 0.02;
 
   /* Update for Delay: '<S49>/Delay' */
   rtDW.Delay_DSTATE[1] = rtDW.Delay_DSTATE[2];
@@ -3626,14 +3567,14 @@ void TV(void)
    *  Sum: '<S157>/Sum1'
    */
   rtDW.Integrator_DSTATE[2] += (rtb_Gain_idx_2 - rtb_Integrator_idx_2) *
-    rtb_Saturation1 * 0.02;
+    rtb_UnaryMinus_f_tmp * 0.02;
 
   /* Update for DiscreteIntegrator: '<S173>/Integrator' incorporates:
    *  Product: '<S166>/1//T'
    *  Sum: '<S166>/Sum1'
    */
   rtDW.Integrator_DSTATE_f[2] += (rtb_Saturation_k_idx_2 -
-    rtb_Integrator_c_idx_2) * rtb_RL * 0.02;
+    rtb_Integrator_c_idx_2) * Mzreq * 0.02;
 
   /* Update for Delay: '<S49>/Delay' */
   rtDW.Delay_DSTATE[2] = rtDW.Delay_DSTATE[3];
@@ -3643,14 +3584,14 @@ void TV(void)
    *  Sum: '<S157>/Sum1'
    */
   rtDW.Integrator_DSTATE[3] += (rtb_Gain_idx_3 - rtb_Integrator_idx_3) *
-    rtb_Saturation1 * 0.02;
+    rtb_UnaryMinus_f_tmp * 0.02;
 
   /* Update for DiscreteIntegrator: '<S173>/Integrator' incorporates:
    *  Product: '<S166>/1//T'
    *  Sum: '<S166>/Sum1'
    */
   rtDW.Integrator_DSTATE_f[3] += (rtb_Saturation_k_idx_3 -
-    rtb_Integrator_c_idx_3) * rtb_RL * 0.02;
+    rtb_Integrator_c_idx_3) * Mzreq * 0.02;
 
   /* Update for Delay: '<S49>/Delay' */
   rtDW.Delay_DSTATE[3] = rtDW.Delay_DSTATE[4];
@@ -3677,7 +3618,8 @@ void TV(void)
   }
 
   /* Update circular buffer */
-  rtDW.DiscreteFIRFilter_states[rtDW.DiscreteFIRFilter_circBuf] = X1;
+  rtDW.DiscreteFIRFilter_states[rtDW.DiscreteFIRFilter_circBuf] =
+    rtb_SumofElements1;
 
   /* End of Update for DiscreteFir: '<S33>/Discrete FIR Filter' */
 

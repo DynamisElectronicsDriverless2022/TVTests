@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.11
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Jun  9 12:20:35 2022
+ * Model version                  : 1.12
+ * Simulink Coder version         : 9.7 (R2022a) 13-Nov-2021
+ * C/C++ source code generated on : Fri Jun 10 15:27:19 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -21,10 +21,6 @@
 
 #ifndef RTW_HEADER_TVModel_h_
 #define RTW_HEADER_TVModel_h_
-#include "rtwtypes.h"
-#include <stddef.h>
-#include <math.h>
-#include <string.h>
 #ifndef TVModel_COMMON_INCLUDES_
 #define TVModel_COMMON_INCLUDES_
 #include "rtwtypes.h"
@@ -189,6 +185,7 @@ typedef struct {
   real_T UnitDelay_DSTATE[4];          /* '<S2>/Unit Delay' */
   real_T Integrator_DSTATE[4];         /* '<S164>/Integrator' */
   real_T Integrator_DSTATE_f[4];       /* '<S173>/Integrator' */
+  real_T DiscreteFIRFilter_states[4];  /* '<S33>/Discrete FIR Filter' */
   real_T UnitDelay_DSTATE_j[4];        /* '<S1>/Unit Delay' */
   real_T Memory_PreviousInput[4];      /* '<S16>/Memory' */
   real_T mz_output;                    /* '<S23>/Chart' */
@@ -196,7 +193,6 @@ typedef struct {
   real_T Filter_DSTATE;                /* '<S81>/Filter' */
   real_T tr;                           /* '<S116>/Distribution complete' */
   real_T Rw;                           /* '<S116>/Distribution complete' */
-  int32_T DiscreteFIRFilter_states[4]; /* '<S33>/Discrete FIR Filter' */
   int32_T DiscreteFIRFilter_circBuf;   /* '<S33>/Discrete FIR Filter' */
   int32_T chartGlobalTickCounter;      /* '<S23>/Chart' */
   int32_T countReferenceTick_1;        /* '<S23>/Chart' */
