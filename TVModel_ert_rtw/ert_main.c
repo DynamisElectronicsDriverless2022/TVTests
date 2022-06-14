@@ -8,8 +8,8 @@
  * Code generated for Simulink model 'TVModel'.
  *
  * Model version                  : 1.12
- * Simulink Coder version         : 9.7 (R2022a) 13-Nov-2021
- * C/C++ source code generated on : Fri Jun 10 15:27:19 2022
+ * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
+ * C/C++ source code generated on : Wed Jun 15 00:24:37 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -21,7 +21,7 @@
 
 #include <stddef.h>
 #include <stdio.h>            /* This example main program uses printf/fflush */
-#include "TVModel.h"                   /* Model header file */
+#include "TVModel.h"                   /* Model's header file */
 
 /*
  * Associating rt_OneStep with a real-time clock or interrupt service routine
@@ -67,9 +67,9 @@ void rt_OneStep(void)
 }
 
 /*
- * The example main function illustrates what is required by your
+ * The example "main" function illustrates what is required by your
  * application code to initialize, execute, and terminate the generated code.
- * Attaching rt_OneStep to a real-time clock is target specific. This example
+ * Attaching rt_OneStep to a real-time clock is target specific.  This example
  * illustrates how you do this relative to initializing the model.
  */
 int_T main(int_T argc, const char *argv[])
@@ -82,8 +82,8 @@ int_T main(int_T argc, const char *argv[])
   TVModel_initialize();
 
   /* Attach rt_OneStep to a timer or interrupt service routine with
-   * period 0.02 seconds (base rate of the model) here.
-   * The call syntax for rt_OneStep is
+   * period 0.02 seconds (the model's base sample time) here.  The
+   * call syntax for rt_OneStep is
    *
    *  rt_OneStep();
    */
@@ -95,6 +95,7 @@ int_T main(int_T argc, const char *argv[])
     /*  Perform application tasks here */
   }
 
+  /* Disable rt_OneStep here */
   return 0;
 }
 

@@ -1,5 +1,6 @@
 
 uiopen('Select and Open .mat associated to Acquisitions')
+%%
 
 ax = timeseries(Ax,time);
 ax = cut(ax);
@@ -19,10 +20,10 @@ yaw_rate = cut(yaw_rate);
 steering = timeseries(aSteeringWheel/180*pi,time);
 steering = cut(steering);
 
-omega_wheels_FL = timeseries(nMotor_FL*pi/30,time);
-omega_wheels_FR = timeseries(nMotor_FR*pi/30,time);
-omega_wheels_RL = timeseries(nMotor_RL*pi/30,time);
-omega_wheels_RR = timeseries(nMotor_RR*pi/30,time);
+omega_wheels_FL = timeseries(nMotor_FL*pi/30/14.2,time);
+omega_wheels_FR = timeseries(nMotor_FR*pi/30/14.2,time);
+omega_wheels_RL = timeseries(nMotor_RL*pi/30/14.2,time);
+omega_wheels_RR = timeseries(nMotor_RR*pi/30/14.2,time);
 
 omega_wheels_FL = cut(omega_wheels_FL);
 omega_wheels_FR = cut(omega_wheels_FR);

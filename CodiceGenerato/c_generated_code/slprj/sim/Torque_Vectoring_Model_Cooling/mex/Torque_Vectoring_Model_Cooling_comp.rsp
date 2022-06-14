@@ -1,0 +1,8 @@
+-IC:/Users/Daniele/Documents/Dynamis/2022/Torque_Vectoring/MPC/Code_Generation/c_generated_code
+-IC:/Users/Daniele/Documents/Dynamis/2022/Torque_Vectoring/MPC/Code_Generation/c_generated_code/slprj/sim/Torque_Vectoring_Model_Cooling
+-IC:/Program\ Files/MATLAB/R2022a/extern/include
+-IC:/Program\ Files/MATLAB/R2022a/simulink/include
+-IC:/Program\ Files/MATLAB/R2022a/rtw/c/src
+-IC:/Program\ Files/MATLAB/R2022a/rtw/c/src/ext_mode/common
+-IC:/Program\ Files/MATLAB/R2022a/rtw/c/ert
+-IC:/Users/Daniele/Documents/Dynamis/2022/Torque_Vectoring/MPC/Code_Generation/c_generated_code/slprj/sim/_sharedutils

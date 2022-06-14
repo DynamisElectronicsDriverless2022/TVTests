@@ -21,8 +21,8 @@ TV.SIGNALS.SETTINGS.IzScale = 1;
 
 % ~~~~~~~~~~~~~~~~~  STANDARD ~~~~~~~~~~~~~~~~~~~~~~~~~ %
 %% 
-TV.SIGNALS.SETTINGS.LMUxScaleFront = 20;
-TV.SIGNALS.SETTINGS.LMUxScaleRear = 20;
+TV.SIGNALS.SETTINGS.LMUxScaleFront = 1;
+TV.SIGNALS.SETTINGS.LMUxScaleRear = 1;
 
 TV.SIGNALS.SETTINGS.ThrottleShape = 1.5;
 

@@ -2,7 +2,7 @@
 ## Makefile generated for component 'TVModel'. 
 ## 
 ## Makefile     : TVModel.mk
-## Generated on : Fri Jun 10 15:27:35 2022
+## Generated on : Wed Jun 15 00:24:54 2022
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/TVModel.exe
 ## Product type : executable
 ## 
@@ -20,8 +20,8 @@
 
 PRODUCT_NAME              = TVModel
 MAKEFILE                  = TVModel.mk
-MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2022a
-MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2022a/bin
+MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2021b
+MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2021b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 START_DIR                 = C:/Users/Daniele/Documents/Dynamis/2022/Torque_Vectoring
 SOLVER                    = 
@@ -41,7 +41,7 @@ CPP_STANDARD_OPTS         = -fwrapv
 
 # Toolchain Name:          MinGW64 | gmake (64-bit Windows)
 # Supported Version(s):    6.x
-# ToolchainInfo Version:   2022a
+# ToolchainInfo Version:   2021b
 # Specification Revision:  1.0
 # 
 #-------------------------------------------
@@ -138,7 +138,7 @@ CPPFLAGS             = -c $(CPP_STANDARD_OPTS) -m64 \
                        -O0
 CPP_LDFLAGS          =  -static -m64
 CPP_SHAREDLIB_LDFLAGS  = -shared -Wl,--no-undefined \
-                         -Wl,--out-implib,$(notdir $(basename $(PRODUCT))).lib
+                         -Wl,--out-implib,$(basename $(PRODUCT)).lib
 DOWNLOAD_FLAGS       =
 EXECUTE_FLAGS        =
 LDFLAGS              =  -static -m64
@@ -148,7 +148,7 @@ MEX_CFLAGS           =
 MEX_LDFLAGS          =
 MAKE_FLAGS           = -f $(MAKEFILE)
 SHAREDLIB_LDFLAGS    = -shared -Wl,--no-undefined \
-                       -Wl,--out-implib,$(notdir $(basename $(PRODUCT))).lib
+                       -Wl,--out-implib,$(basename $(PRODUCT)).lib
 
 
 

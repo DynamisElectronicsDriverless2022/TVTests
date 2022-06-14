@@ -8,8 +8,8 @@
  * Code generated for Simulink model 'TVModel'.
  *
  * Model version                  : 1.12
- * Simulink Coder version         : 9.7 (R2022a) 13-Nov-2021
- * C/C++ source code generated on : Fri Jun 10 15:27:19 2022
+ * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
+ * C/C++ source code generated on : Wed Jun 15 00:24:37 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M

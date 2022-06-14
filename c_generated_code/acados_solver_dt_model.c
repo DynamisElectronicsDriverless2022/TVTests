@@ -468,13 +468,13 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
 
     
     zl_e[0] = 150;
-    zl_e[1] = 0.1;
-    zl_e[2] = 0.1;
+    zl_e[1] = 10;
+    zl_e[2] = 10;
 
     
     zu_e[0] = 150;
-    zu_e[1] = 0.1;
-    zu_e[2] = 0.1;
+    zu_e[1] = 10;
+    zu_e[2] = 10;
 
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Zl", Zl_e);
     ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, N, "Zu", Zu_e);
