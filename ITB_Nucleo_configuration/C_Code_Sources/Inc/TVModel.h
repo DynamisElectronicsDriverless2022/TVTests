@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TVModel'.
  *
- * Model version                  : 1.14
+ * Model version                  : 1.16
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Thu Jul  7 16:26:30 2022
+ * C/C++ source code generated on : Thu Jul  7 17:49:30 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -51,8 +51,8 @@ typedef struct {
   real_T Probe[2];                     /* '<S33>/Probe' */
   real_T Probe_k[2];                   /* '<S98>/Probe' */
   real_T CFunction[54];                /* '<S172>/C Function' */
-  real_T Probe_kx[2];                  /* '<S232>/Probe' */
-  real_T Probe_b[2];                   /* '<S241>/Probe' */
+  real_T Probe_kx[2];                  /* '<S225>/Probe' */
+  real_T Probe_b[2];                   /* '<S234>/Probe' */
   real_T Merge[4];                     /* '<S164>/Merge' */
   real_T UnitDelay_DSTATE[4];          /* '<S2>/Unit Delay' */
   real_T UD_DSTATE[4];                 /* '<S28>/UD' */
@@ -65,12 +65,10 @@ typedef struct {
   real_T Filter_DSTATE_d[4];           /* '<S134>/Filter' */
   real_T Integrator_DSTATE_f3[4];      /* '<S103>/Integrator' */
   real_T UnitDelay_DSTATE_g[4];        /* '<S27>/Unit Delay' */
-  real_T Integrator_DSTATE_j[4];       /* '<S237>/Integrator' */
-  real_T Integrator_DSTATE_ff[4];      /* '<S246>/Integrator' */
+  real_T Integrator_DSTATE_j[4];       /* '<S230>/Integrator' */
+  real_T Integrator_DSTATE_ff[4];      /* '<S239>/Integrator' */
   real_T UnitDelay_DSTATE_j[4];        /* '<S1>/Unit Delay' */
   real_T Memory_PreviousInput[4];      /* '<S158>/Memory' */
-  real_T yaw_rate_desired_LUT;         /* '<S159>/Merge_LUT_results' */
-  real_T yaw_rate_desired_LUT_d;       /* '<S159>/Merge_LUT_results1' */
   real_T UnitDelay3_1_DSTATE;          /* '<S26>/Unit Delay3' */
   real_T UnitDelay3_2_DSTATE;          /* '<S26>/Unit Delay3' */
   real_T UnitDelay3_3_DSTATE;          /* '<S26>/Unit Delay3' */
@@ -106,13 +104,13 @@ typedef struct {
   int8_T Filter_PrevResetState_d[4];   /* '<S134>/Filter' */
   int8_T Integrator_PrevResetState_d;  /* '<S38>/Integrator' */
   int8_T Integrator_PrevResetState_m;  /* '<S103>/Integrator' */
-  int8_T Integrator_PrevResetState_i;  /* '<S237>/Integrator' */
-  int8_T Integrator_PrevResetState_f;  /* '<S246>/Integrator' */
+  int8_T Integrator_PrevResetState_i;  /* '<S230>/Integrator' */
+  int8_T Integrator_PrevResetState_f;  /* '<S239>/Integrator' */
   uint8_T DiscreteFIRFilter_states[4]; /* '<S177>/Discrete FIR Filter' */
   uint8_T Integrator_IC_LOADING;       /* '<S38>/Integrator' */
   uint8_T Integrator_IC_LOADING_i;     /* '<S103>/Integrator' */
-  uint8_T Integrator_IC_LOADING_it;    /* '<S237>/Integrator' */
-  uint8_T Integrator_IC_LOADING_b;     /* '<S246>/Integrator' */
+  uint8_T Integrator_IC_LOADING_it;    /* '<S230>/Integrator' */
+  uint8_T Integrator_IC_LOADING_b;     /* '<S239>/Integrator' */
   boolean_T Memory_PreviousInput_f[4]; /* '<S26>/Memory' */
   boolean_T Memory_PreviousInput_m[4]; /* '<S27>/Memory' */
 } DW;
@@ -124,59 +122,20 @@ typedef struct {
 
 /* Constant parameters (default storage) */
 typedef struct {
-  /* Pooled Parameter (Expression: single(TV.LUT.Yrd_LUT.LUT_1.ay_matrix))
-   * Referenced by:
-   *   '<S224>/LUT_1'
-   *   '<S226>/LUT_1'
+  /* Computed Parameter: LUT_3_tableData
+   * Referenced by: '<S219>/LUT_-3'
    */
-  real_T pooled15[10000];
+  real_T LUT_3_tableData[10000];
 
-  /* Pooled Parameter (Expression: single(TV.LUT.Yrd_LUT.LUT_0.ay_matrix))
-   * Referenced by:
-   *   '<S223>/LUT_0'
-   *   '<S225>/LUT_0'
+  /* Expression: TV.LUT.Yrd_LUT.LUT_vectors.delta_vector
+   * Referenced by: '<S219>/LUT_-3'
    */
-  real_T pooled16[10000];
+  real_T LUT_3_bp01Data[100];
 
-  /* Pooled Parameter (Expression: single(TV.LUT.Yrd_LUT.LUT_neg1_5.ay_matrix))
-   * Referenced by:
-   *   '<S220>/LUT_-1.5'
-   *   '<S221>/LUT_-1.5'
+  /* Expression: TV.LUT.Yrd_LUT.LUT_vectors.v_vector
+   * Referenced by: '<S219>/LUT_-3'
    */
-  real_T pooled17[10000];
-
-  /* Pooled Parameter (Expression: single(TV.LUT.Yrd_LUT.LUT_neg3.ay_matrix))
-   * Referenced by:
-   *   '<S219>/LUT_-3'
-   *   '<S222>/LUT_-3'
-   */
-  real_T pooled19[10000];
-
-  /* Pooled Parameter (Expression: TV.LUT.Yrd_LUT.LUT_vectors.delta_vector)
-   * Referenced by:
-   *   '<S219>/LUT_-3'
-   *   '<S220>/LUT_-1.5'
-   *   '<S221>/LUT_-1.5'
-   *   '<S222>/LUT_-3'
-   *   '<S223>/LUT_0'
-   *   '<S224>/LUT_1'
-   *   '<S225>/LUT_0'
-   *   '<S226>/LUT_1'
-   */
-  real_T pooled20[100];
-
-  /* Pooled Parameter (Expression: TV.LUT.Yrd_LUT.LUT_vectors.v_vector)
-   * Referenced by:
-   *   '<S219>/LUT_-3'
-   *   '<S220>/LUT_-1.5'
-   *   '<S221>/LUT_-1.5'
-   *   '<S222>/LUT_-3'
-   *   '<S223>/LUT_0'
-   *   '<S224>/LUT_1'
-   *   '<S225>/LUT_0'
-   *   '<S226>/LUT_1'
-   */
-  real_T pooled21[100];
+  real_T LUT_3_bp02Data[100];
 
   /* Expression: [1e4;8e5;1e4;1e4;1e4;0.1]
    * Referenced by: '<S166>/Constant'
@@ -198,7 +157,7 @@ typedef struct {
    *   '<S9>/steering_to_wheel_angle_single_axis_LUT'
    *   '<S9>/steering_to_wheel_angles_LUT'
    */
-  real_T pooled36[33];
+  real_T pooled30[33];
 
   /* Expression: TV.LUT.Car_LUT.steer_at_ground_single_axis_LUT.SteerAngle_SingleAxis
    * Referenced by: '<S9>/steering_to_wheel_angle_single_axis_LUT'
@@ -207,48 +166,48 @@ typedef struct {
 
   /* Pooled Parameter (Expression: [TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 TV.LV.AMK.ID82*TV.LV.AMK.ID32771/100 0])
    * Referenced by:
-   *   '<S227>/Max_Torque_Overload_Inverter_LUT'
-   *   '<S227>/Max_Torque_Overload_Motor_LUT'
-   *   '<S227>/Max_Torque_Temperature_External_LUT'
-   *   '<S227>/Max_Torque_Temperature_IGBT_LUT'
-   *   '<S227>/Max_Torque_Temperature_Internal_LUT'
-   *   '<S228>/Display Overload Inverter LUT'
-   *   '<S228>/Display Overload Motor LUT'
-   *   '<S228>/Temperature External LUT'
-   *   '<S228>/Temperature IGBT LUT'
-   *   '<S228>/Temperature Internal LUT'
+   *   '<S220>/Max_Torque_Overload_Inverter_LUT'
+   *   '<S220>/Max_Torque_Overload_Motor_LUT'
+   *   '<S220>/Max_Torque_Temperature_External_LUT'
+   *   '<S220>/Max_Torque_Temperature_IGBT_LUT'
+   *   '<S220>/Max_Torque_Temperature_Internal_LUT'
+   *   '<S221>/Display Overload Inverter LUT'
+   *   '<S221>/Display Overload Motor LUT'
+   *   '<S221>/Temperature External LUT'
+   *   '<S221>/Temperature IGBT LUT'
+   *   '<S221>/Temperature Internal LUT'
    */
-  real_T pooled42[3];
+  real_T pooled36[3];
 
   /* Pooled Parameter (Mixed Expressions)
    * Referenced by:
-   *   '<S227>/Max_Torque_Overload_Inverter_LUT'
-   *   '<S227>/Max_Torque_Overload_Motor_LUT'
-   *   '<S228>/Display Overload Inverter LUT'
-   *   '<S228>/Display Overload Motor LUT'
+   *   '<S220>/Max_Torque_Overload_Inverter_LUT'
+   *   '<S220>/Max_Torque_Overload_Motor_LUT'
+   *   '<S221>/Display Overload Inverter LUT'
+   *   '<S221>/Display Overload Motor LUT'
    */
-  real_T pooled43[3];
+  real_T pooled37[3];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.table_data )
    * Referenced by:
-   *   '<S229>/2-D Lookup Table'
-   *   '<S238>/2-D Lookup Table'
+   *   '<S222>/2-D Lookup Table'
+   *   '<S231>/2-D Lookup Table'
    */
-  real_T pooled46[9246];
+  real_T pooled40[9246];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints1)
    * Referenced by:
-   *   '<S229>/2-D Lookup Table'
-   *   '<S238>/2-D Lookup Table'
+   *   '<S222>/2-D Lookup Table'
+   *   '<S231>/2-D Lookup Table'
    */
-  real_T pooled47[201];
+  real_T pooled41[201];
 
   /* Pooled Parameter (Expression: TV.LV.TORQUE.T_lim_pos.breakpoints2)
    * Referenced by:
-   *   '<S229>/2-D Lookup Table'
-   *   '<S238>/2-D Lookup Table'
+   *   '<S222>/2-D Lookup Table'
+   *   '<S231>/2-D Lookup Table'
    */
-  real_T pooled48[46];
+  real_T pooled42[46];
 
   /* Expression: TV.LUT.MPC_Lut.control_bound_dry.Fx_target_positive
    * Referenced by: '<S209>/2-D Lookup Table'
@@ -260,39 +219,31 @@ typedef struct {
    *   '<S209>/2-D Lookup Table'
    *   '<S209>/2-D Lookup Table1'
    */
-  real_T pooled50[30];
+  real_T pooled44[30];
 
   /* Pooled Parameter (Expression: TV.LUT.MPC_Lut.control_bound_dry.alpha)
    * Referenced by:
    *   '<S209>/2-D Lookup Table'
    *   '<S209>/2-D Lookup Table1'
    */
-  real_T pooled51[30];
+  real_T pooled45[30];
 
   /* Expression: TV.LUT.MPC_Lut.control_bound_dry.Fx_target_negative
    * Referenced by: '<S209>/2-D Lookup Table1'
    */
   real_T uDLookupTable1_tableData[900];
 
-  /* Pooled Parameter (Expression: )
-   * Referenced by:
-   *   '<S219>/LUT_-3'
-   *   '<S220>/LUT_-1.5'
-   *   '<S221>/LUT_-1.5'
-   *   '<S222>/LUT_-3'
-   *   '<S223>/LUT_0'
-   *   '<S224>/LUT_1'
-   *   '<S225>/LUT_0'
-   *   '<S226>/LUT_1'
+  /* Computed Parameter: LUT_3_maxIndex
+   * Referenced by: '<S219>/LUT_-3'
    */
-  uint32_T pooled56[2];
+  uint32_T LUT_3_maxIndex[2];
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
    *   '<S209>/2-D Lookup Table'
    *   '<S209>/2-D Lookup Table1'
    */
-  uint32_T pooled58[2];
+  uint32_T pooled51[2];
 
   /* Pooled Parameter (Expression: [0 1;1 0;0 1;0 1;1 0;1 0;0 0;0 0])
    * Referenced by:
@@ -302,7 +253,7 @@ typedef struct {
    *   '<S213>/Logic'
    *   '<S214>/Logic'
    */
-  boolean_T pooled61[16];
+  boolean_T pooled54[16];
 } ConstP;
 
 /* External inputs (root inport signals with default storage) */
@@ -328,6 +279,7 @@ typedef struct {
 /* External outputs (root outports fed by signals with default storage) */
 typedef struct {
   real_T Torque[4];                    /* '<Root>/Torque' */
+  real_T States[7];                    /* '<Root>/States' */
 } ExtY;
 
 /* Real-time Model Data Structure */
@@ -376,10 +328,10 @@ extern RT_MODEL *const rtM;
  * Block '<S201>/Data Type Duplicate' : Unused code path elimination
  * Block '<S201>/Data Type Propagation' : Unused code path elimination
  * Block '<S203>/NOT' : Unused code path elimination
- * Block '<S231>/Data Type Duplicate' : Unused code path elimination
- * Block '<S231>/Data Type Propagation' : Unused code path elimination
- * Block '<S240>/Data Type Duplicate' : Unused code path elimination
- * Block '<S240>/Data Type Propagation' : Unused code path elimination
+ * Block '<S224>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S224>/Data Type Propagation' : Unused code path elimination
+ * Block '<S233>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S233>/Data Type Propagation' : Unused code path elimination
  * Block '<Root>/Rate Transition1' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition10' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition11' : Eliminated since input and output rates are identical
@@ -407,28 +359,21 @@ extern RT_MODEL *const rtM;
  * Block '<S154>/Setpoint Weighting (Proportional)' : Eliminated nontunable gain of 1
  * Block '<S155>/Setpoint Weighting (Derivative)' : Eliminated nontunable gain of 1
  * Block '<S192>/Gain3' : Eliminated nontunable gain of 1
- * Block '<S159>/Cast To Double' : Eliminate redundant data type conversion
- * Block '<S159>/Cast To Double1' : Eliminate redundant data type conversion
- * Block '<S159>/Cast To Double2' : Eliminate redundant data type conversion
- * Block '<S159>/Cast To Double3' : Eliminate redundant data type conversion
- * Block '<S159>/Cast To Double4' : Eliminate redundant data type conversion
- * Block '<S159>/Cast To Double5' : Eliminate redundant data type conversion
- * Block '<S159>/Cast To Double6' : Eliminate redundant data type conversion
- * Block '<S159>/Cast To Double7' : Eliminate redundant data type conversion
- * Block '<S227>/Cast_0' : Eliminate redundant data type conversion
- * Block '<S227>/Cast_1' : Eliminate redundant data type conversion
- * Block '<S227>/Cast_2' : Eliminate redundant data type conversion
- * Block '<S227>/Cast_3' : Eliminate redundant data type conversion
- * Block '<S227>/Cast_4' : Eliminate redundant data type conversion
- * Block '<S237>/Saturation' : Eliminated Saturate block
- * Block '<S230>/K' : Eliminated nontunable gain of 1
- * Block '<S228>/Cast_0' : Eliminate redundant data type conversion
- * Block '<S228>/Cast_1' : Eliminate redundant data type conversion
- * Block '<S228>/Cast_2' : Eliminate redundant data type conversion
- * Block '<S228>/Cast_3' : Eliminate redundant data type conversion
- * Block '<S228>/Cast_4' : Eliminate redundant data type conversion
- * Block '<S246>/Saturation' : Eliminated Saturate block
- * Block '<S239>/K' : Eliminated nontunable gain of 1
+ * Block '<S159>/Cast To Double8' : Eliminate redundant data type conversion
+ * Block '<S220>/Cast_0' : Eliminate redundant data type conversion
+ * Block '<S220>/Cast_1' : Eliminate redundant data type conversion
+ * Block '<S220>/Cast_2' : Eliminate redundant data type conversion
+ * Block '<S220>/Cast_3' : Eliminate redundant data type conversion
+ * Block '<S220>/Cast_4' : Eliminate redundant data type conversion
+ * Block '<S230>/Saturation' : Eliminated Saturate block
+ * Block '<S223>/K' : Eliminated nontunable gain of 1
+ * Block '<S221>/Cast_0' : Eliminate redundant data type conversion
+ * Block '<S221>/Cast_1' : Eliminate redundant data type conversion
+ * Block '<S221>/Cast_2' : Eliminate redundant data type conversion
+ * Block '<S221>/Cast_3' : Eliminate redundant data type conversion
+ * Block '<S221>/Cast_4' : Eliminate redundant data type conversion
+ * Block '<S239>/Saturation' : Eliminated Saturate block
+ * Block '<S232>/K' : Eliminated nontunable gain of 1
  * Block '<S179>/Constant3' : Unused code path elimination
  * Block '<S179>/Constant4' : Unused code path elimination
  */
@@ -666,34 +611,27 @@ extern RT_MODEL *const rtM;
  * '<S216>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/MPC/States Constraints/Tire Bounds/LMUx Correction'
  * '<S217>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/MPC/Weights Generation/MATLAB Function'
  * '<S218>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/MATLAB Function'
- * '<S219>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT_-1'
- * '<S220>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT_-1.1'
- * '<S221>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT_-1.5'
- * '<S222>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT_-3'
- * '<S223>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT_0'
- * '<S224>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT_1'
- * '<S225>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT_2'
- * '<S226>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT_3'
- * '<S227>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive'
- * '<S228>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen'
- * '<S229>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve'
- * '<S230>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)'
- * '<S231>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Saturation Dynamic'
- * '<S232>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant'
- * '<S233>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization'
- * '<S234>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)'
- * '<S235>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant/Compare To Zero'
- * '<S236>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization/Init_u'
- * '<S237>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)/Discrete'
- * '<S238>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve'
- * '<S239>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)'
- * '<S240>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Saturation Dynamic'
- * '<S241>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant'
- * '<S242>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization'
- * '<S243>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)'
- * '<S244>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant/Compare To Zero'
- * '<S245>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization/Init_u'
- * '<S246>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)/Discrete'
+ * '<S219>' : 'TVModel/Subsystem/Subsystem2/Torque Distribution/Reference Tracking/YRD_LUT-1'
+ * '<S220>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive'
+ * '<S221>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen'
+ * '<S222>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve'
+ * '<S223>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)'
+ * '<S224>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Saturation Dynamic'
+ * '<S225>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant'
+ * '<S226>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization'
+ * '<S227>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)'
+ * '<S228>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant/Compare To Zero'
+ * '<S229>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization/Init_u'
+ * '<S230>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Positive/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)/Discrete'
+ * '<S231>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve'
+ * '<S232>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)'
+ * '<S233>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Saturation Dynamic'
+ * '<S234>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant'
+ * '<S235>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization'
+ * '<S236>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)'
+ * '<S237>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Enable//disable time constant/Compare To Zero'
+ * '<S238>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Initialization/Init_u'
+ * '<S239>' : 'TVModel/Subsystem/Subsystem2/Torque Limits/Torque Limits Regen/Torque_Curve/Low-Pass Filter (Discrete or Continuous)/Integrator (Discrete or Continuous)/Discrete'
  */
 #endif                                 /* RTW_HEADER_TVModel_h_ */
 

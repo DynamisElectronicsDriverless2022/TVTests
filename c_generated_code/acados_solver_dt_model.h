@@ -81,7 +81,7 @@ typedef struct dt_model_solver_capsule
     ocp_nlp_out *sens_out;
     ocp_nlp_solver *nlp_solver;
     void *nlp_opts;
-    ocp_nlp_plan *nlp_solver_plan;
+    ocp_nlp_plan_t *nlp_solver_plan;
     ocp_nlp_config *nlp_config;
     ocp_nlp_dims *nlp_dims;
 
@@ -140,7 +140,7 @@ ocp_nlp_solver *dt_model_acados_get_nlp_solver(dt_model_solver_capsule * capsule
 ocp_nlp_config *dt_model_acados_get_nlp_config(dt_model_solver_capsule * capsule);
 void *dt_model_acados_get_nlp_opts(dt_model_solver_capsule * capsule);
 ocp_nlp_dims *dt_model_acados_get_nlp_dims(dt_model_solver_capsule * capsule);
-ocp_nlp_plan *dt_model_acados_get_nlp_plan(dt_model_solver_capsule * capsule);
+ocp_nlp_plan_t *dt_model_acados_get_nlp_plan(dt_model_solver_capsule * capsule);
 
 #ifdef __cplusplus
 } /* extern "C" */

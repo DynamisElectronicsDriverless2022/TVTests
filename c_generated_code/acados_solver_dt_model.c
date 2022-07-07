@@ -148,7 +148,7 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     /************************************************
     *  plan & config
     ************************************************/
-    ocp_nlp_plan * nlp_solver_plan = ocp_nlp_plan_create(N);
+    ocp_nlp_plan_t * nlp_solver_plan = ocp_nlp_plan_create(N);
     capsule->nlp_solver_plan = nlp_solver_plan;
     nlp_solver_plan->nlp_solver = SQP_RTI;
 
@@ -904,7 +904,7 @@ ocp_nlp_solver *dt_model_acados_get_nlp_solver(dt_model_solver_capsule * capsule
 ocp_nlp_config *dt_model_acados_get_nlp_config(dt_model_solver_capsule * capsule) { return capsule->nlp_config; }
 void *dt_model_acados_get_nlp_opts(dt_model_solver_capsule * capsule) { return capsule->nlp_opts; }
 ocp_nlp_dims *dt_model_acados_get_nlp_dims(dt_model_solver_capsule * capsule) { return capsule->nlp_dims; }
-ocp_nlp_plan *dt_model_acados_get_nlp_plan(dt_model_solver_capsule * capsule) { return capsule->nlp_solver_plan; }
+ocp_nlp_plan_t *dt_model_acados_get_nlp_plan(dt_model_solver_capsule * capsule) { return capsule->nlp_solver_plan; }
 
 
 void dt_model_acados_print_stats(dt_model_solver_capsule * capsule)

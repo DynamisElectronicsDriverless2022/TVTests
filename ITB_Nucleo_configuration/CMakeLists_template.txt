@@ -85,10 +85,9 @@ file(GLOB_RECURSE SOURCES
         "../c_generated_code/dt_model_model/dt_model_expl_ode_fun.c"
         "../c_generated_code/dt_model_model/dt_model_expl_ode_hess.c"
         "../c_generated_code/dt_model_model/dt_model_expl_vde_adj.c"
-        "../c_generated_code/dt_model_model/dt_model_dyn_disc_phi_fun.c"
-        "../c_generated_code/dt_model_model/dt_model_dyn_disc_phi_fun_jac.c"
-        "../c_generated_code/dt_model_model/dt_model_dyn_disc_phi_fun_jac_hess.c")
-
+        "../c_generated_code/dt_model_constraints/*.c"
+        "../c_generated_code/dt_model_constraints/*.h"
+        "../c_generated_code/dt_model_constraints/*.o")
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})
 

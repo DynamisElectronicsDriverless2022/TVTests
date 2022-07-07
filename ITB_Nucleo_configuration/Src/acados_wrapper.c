@@ -69,11 +69,11 @@ double Acados_Caller(double x0[],double extParam[],double y_ref0[],double y_ref[
     ocp_nlp_cost_model_set(nlp_config,nlp_dims,nlp_in,1,"W",(void *) cost_W);
 
     // Lower cost slack variableas+
-    for(int ii=0;i<N_it;i++){
+    for(int ii=0;ii<N_it;ii++){
         ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "zu",(void *) zu_e);
     }
     // Upper cost slack variables
-    for(int ii=0;i<N_it;i++){
+    for(int ii=0;ii<N_it;ii++){
         ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "zl",(void *) zl_e);
     }
     
