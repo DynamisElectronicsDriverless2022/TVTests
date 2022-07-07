@@ -217,10 +217,12 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     mxArray *disc_phi_fun_jac_hess_mat = mxCreateNumericMatrix(1, 1, mxINT64_CLASS, mxREAL);
 
 
-    l_ptr = mxGetData(disc_phi_fun_mat);
-    l_ptr[0] = (long long) acados_ocp_capsule->discr_dyn_phi_fun;
-    l_ptr = mxGetData(disc_phi_fun_jac_mat);
-    l_ptr[0] = (long long) acados_ocp_capsule->discr_dyn_phi_fun_jac_ut_xt;
+    
+    l_ptr = mxGetData(forw_vde_mat);
+    l_ptr[0] = (long long) acados_ocp_capsule->forw_vde_casadi;
+    l_ptr = mxGetData(expl_ode_fun_mat);
+    l_ptr[0] = (long long) acados_ocp_capsule->expl_ode_fun;
+
 
     mxSetField(plhs[1], 0, "expl_ode_fun", expl_ode_fun_mat);
     mxSetField(plhs[1], 0, "forw_vde", forw_vde_mat);
@@ -249,11 +251,15 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     mxArray *nl_constr_h_fun_jac_mat = mxCreateNumericMatrix(1, 2, mxINT64_CLASS, mxREAL);
     l_ptr = mxGetData(nl_constr_h_fun_jac_mat);
 
+    l_ptr[0] = (long long) acados_ocp_capsule->nl_constr_h_fun_jac;
+
 
     mxSetField(plhs[1], 0, "nl_constr_h_fun_jac", nl_constr_h_fun_jac_mat);
 
     mxArray *nl_constr_h_fun_mat = mxCreateNumericMatrix(1, 2, mxINT64_CLASS, mxREAL);
     l_ptr = mxGetData(nl_constr_h_fun_mat);
+
+    l_ptr[0] = (long long) acados_ocp_capsule->nl_constr_h_fun;
 
 
     mxSetField(plhs[1], 0, "nl_constr_h_fun", nl_constr_h_fun_mat);

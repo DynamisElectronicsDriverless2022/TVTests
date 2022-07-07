@@ -57,12 +57,12 @@ TV.LV.efficiency_LUT                           = load('AMK_Efficiency.mat');
 TV.LUT.MPC_Lut.control_bound_dry               = load("control_bound_dry.mat");
 
 % Time Horizon Settings
-TV.MPC.N                                       = 1;
-TV.MPC.T                                       = 0.02;
+TV.MPC.N                                       = 2;
+TV.MPC.T                                       = 0.02*2;
 
 % Other data
 TV.MPC.nx                                      = 7;
-TV.MPC.np                                      = 13;
+TV.MPC.np                                      = 18;
 TV.MPC.ny                                      = 11;
 TV.MPC.nu                                      = 4;
 TV.MPC.mz_filter_time                          = 0.2;

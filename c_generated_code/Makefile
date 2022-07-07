@@ -41,11 +41,13 @@ ACADOS_FLAGS = -fPIC -std=c99  #-fno-diagnostics-show-line-numbers -g
 # ACADOS_FLAGS += -g3
 
 MODEL_OBJ=
-MODEL_OBJ+= dt_model_model/dt_model_dyn_disc_phi_fun.o
-MODEL_OBJ+= dt_model_model/dt_model_dyn_disc_phi_fun_jac.o
+MODEL_OBJ+= dt_model_model/dt_model_expl_ode_fun.o
+MODEL_OBJ+= dt_model_model/dt_model_expl_vde_forw.o
 
 
 OCP_OBJ=
+OCP_OBJ+= dt_model_constraints/dt_model_constr_h_fun_jac_uxt_zt.o
+OCP_OBJ+= dt_model_constraints/dt_model_constr_h_fun.o
 OCP_OBJ+= acados_solver_dt_model.o
 
 
@@ -60,6 +62,7 @@ EX_SIM_OBJ+= main_sim_dt_model.o
 
 OBJ=
 OBJ+= $(MODEL_OBJ)
+OBJ+= $(SIM_OBJ)
 OBJ+= $(OCP_OBJ)
 
 EXTERNAL_DIR=
@@ -67,15 +70,19 @@ EXTERNAL_LIB=
 
 INCLUDE_PATH = C:\Users\Daniele\Documents\acados\acados\examples\acados_matlab_octave\..\../include
 LIB_PATH = C:\Users\Daniele\Documents\acados\acados\examples\acados_matlab_octave\..\../lib
-all: clean casadi_fun example
-shared_lib: ocp_shared_lib
+all: clean casadi_fun example_sim example
+shared_lib: bundled_shared_lib ocp_shared_lib sim_shared_lib
 
 CASADI_MODEL_SOURCE=
-CASADI_MODEL_SOURCE+= dt_model_dyn_disc_phi_fun.c
-CASADI_MODEL_SOURCE+= dt_model_dyn_disc_phi_fun_jac.c
+CASADI_MODEL_SOURCE+= dt_model_expl_ode_fun.c
+CASADI_MODEL_SOURCE+= dt_model_expl_vde_forw.c
+CASADI_CON_H_SOURCE=
+CASADI_CON_H_SOURCE+= dt_model_constr_h_fun_jac_uxt_zt.c
+CASADI_CON_H_SOURCE+= dt_model_constr_h_fun.c
 
 casadi_fun:
 	( cd dt_model_model & gcc $(ACADOS_FLAGS) -c $(CASADI_MODEL_SOURCE))
+	( cd dt_model_constraints & gcc $(ACADOS_FLAGS) -c $(CASADI_CON_H_SOURCE))
 
 main:
 	gcc $(ACADOS_FLAGS) -c main_dt_model.c -I $(INCLUDE_PATH)/blasfeo/include/ -I $(INCLUDE_PATH)/hpipm/include/ \
@@ -111,6 +118,16 @@ example_sim: sim_solver main_sim
 	-lm \
 	-I $(INCLUDE_PATH)/blasfeo/include/ \
 	-I $(INCLUDE_PATH)/acados/ \
+
+bundled_shared_lib: casadi_fun ocp_solver sim_solver
+	gcc $(ACADOS_FLAGS) -shared -o libacados_solver_dt_model.so $(OBJ) \
+	-I $(INCLUDE_PATH)/blasfeo/include/ \
+	-I $(INCLUDE_PATH)/hpipm/include/ \
+	-I $(INCLUDE_PATH) \
+	-L $(LIB_PATH) \
+	-lacados -lhpipm -lblasfeo \
+	-lqpOASES_e  -losqp \
+	-lm \
 
 ocp_shared_lib: casadi_fun ocp_solver
 	gcc $(ACADOS_FLAGS) -shared -o libacados_ocp_solver_dt_model.so $(OCP_OBJ) $(MODEL_OBJ) \

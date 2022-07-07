@@ -33,6 +33,8 @@
 
 SOURCES = [ 'acados_sim_solver_sfunction_dt_model.c ', ...
             'acados_sim_solver_dt_model.c ', ...
+            'dt_model_model/dt_model_expl_ode_fun.c ', ...
+            'dt_model_model/dt_model_expl_vde_forw.c ',...
           ];
 
 INC_PATH = 'C:\Users\Daniele\Documents\acados\acados\examples\acados_matlab_octave\..\../include';
@@ -56,11 +58,11 @@ fprintf( [ '\n\nSuccessfully created sfunction:\nacados_sim_solver_sfunction_dt_
 
 %% print note on usage of s-function
 fprintf('\n\nNote: Usage of Sfunction is as follows:\n')
-input_note = 'Inputs are:\n1) x0, initial state, size [4]\n ';
+input_note = 'Inputs are:\n1) x0, initial state, size [7]\n ';
 i_in = 2;
 input_note = strcat(input_note, num2str(i_in), ') u, size [4]\n ');
 i_in = i_in + 1;
-input_note = strcat(input_note, num2str(i_in), ') parameters, size [13]\n ');
+input_note = strcat(input_note, num2str(i_in), ') parameters, size [18]\n ');
 i_in = i_in + 1;
 
 
@@ -69,6 +71,6 @@ fprintf(input_note)
 disp(' ')
 
 output_note = strcat('Outputs are:\n', ...
-                '1) x1 - simulated state, size [4]\n');
+                '1) x1 - simulated state, size [7]\n');
 
 fprintf(output_note)

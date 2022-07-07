@@ -12,9 +12,9 @@
 #include "acados_solver_dt_model.h"
 
 
-double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],double zl_e[],double zu_e[],double x_init[],dt_model_solver_capsule * capsule, double torqueOut[]);
+double Acados_Caller(double x0[],double extParam[],double y_ref0[],double y_ref[],double y_refe[],double lbx[], double ubx[],double limDown[],double limUp[],double lh[],double uh[],double cost_W[],double zl_e[], double zu_e[],double lh_0[], double uh_0[], dt_model_solver_capsule * capsule,double u0[],double x1[]);
 
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[], double zl_e[], double zu_e[], double x_init[], double torqueOut[]);
+double Acados_Caller_wrapper(double x0[],double extParam[],double y_ref0[],double y_ref[],double y_refe[],double lbx[], double ubx[],double limDown[],double limUp[],double lh[],double uh[],double cost_W[],double zl_e[], double zu_e[],double lh_0[], double uh_0[],double u0[],double x1[]);
 
 #endif

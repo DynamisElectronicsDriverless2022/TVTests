@@ -9,16 +9,12 @@
 #include "dt_model_model/dt_model_model.h"
 #include "acados_solver_dt_model.h"
 extern dt_model_solver_capsule * capsule;
-int AcadosFlag;
-double AcadosState[7];
 
 // Inizializzazione solver, questa la mettiamo nel .h
 
-
 // Inizializzazione solver, noi la facciamo nel costruttore della classe
 
-
-double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],double zl_e[], double zu_e[],double x_init[], dt_model_solver_capsule * capsule,double devTorqueOut[]){
+double Acados_Caller(double x0[],double extParam[],double y_ref0[],double y_ref[],double y_refe[],double lbx[], double ubx[],double limDown[],double limUp[],double lh[],double uh[],double cost_W[],double zl_e[], double zu_e[],double lh_0[], double uh_0[], dt_model_solver_capsule * capsule,double u0[],double x1[]){
     /** Da qua in poi Ã¨ il codice che va messo nella funzione che viene chiamata ogni iterazione per chiamare il solver **/
     // Inizializzazione delle variabili del solver
     ocp_nlp_config *nlp_config = dt_model_acados_get_nlp_config(capsule);
@@ -26,77 +22,67 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
     ocp_nlp_in *nlp_in = dt_model_acados_get_nlp_in(capsule);
     ocp_nlp_out *nlp_out = dt_model_acados_get_nlp_out(capsule);
 
-    double N_it = 1;
+    double N_it = 2;
 
-    // Gli passo lo stato iniziale x0
-    //double x0[3];
-    //x0[0] = 16
-    //x0[1] = -0.2
-    //x0[2] = 0.15
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "lbx",(void *) x0);
     ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "ubx",(void *) x0);
 
-    // Gli passo i parametri esterni, in questo caso un solo parametro per il numero di step del solver
+    // Parameters
     for (int ii = 0; ii <= N_it; ii++) {
-        dt_model_acados_update_params(capsule, ii,(void *) &extParam[ii*13], 13);
+        dt_model_acados_update_params(capsule, ii,(void *) &extParam[ii*18], 18);
     }
 
 
-    // limiti inferiori della variabile di controllo
+    // References y_ref_0
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 0, "yref", (void *) y_ref0);
+    // References y_ref
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "yref", (void *) y_ref);
+    // References y_ref_e
+    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 2, "yref", (void *) y_refe);
+
+
+    // Lower bound states
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "lbx", (void *) lbx);
+
+    // Upper bound states
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "ubx", (void *) ubx);
+
+    
+    // Lower bound control action
     for (int ii = 0; ii < N_it; ii++) {
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lbu", (void *) &limDown[4*ii]);
     }
 
-    // limiti superiori della variabile di controllo
+    // Upper bound control action
     for (int ii = 0; ii < N_it; ii++) {
-        //double temp[]
-        //temp[0] = +20; // COPPIA DI PICCO
-        //temp[1] = +20; // COPPIA DI PICCO
-        //temp[2] = +20; // COPPIA DI PICCO
-        //temp[3] = +20; // COPPIA DI PICCO
         ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ubu", (void *) &limUp[4*ii]);
     }
     //}
 
-    // riferimento che deve seguire lo stato
-    for (int ii = 0; ii <= N_it; ii++) {
-        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "yref", (void *) &reference[ii*11]);
-    }
 
-    // lower bound states
-    for (int ii=1; ii<=N_it; ii++) {
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lbx", (void *) lbx);
-    }
+    // Lower bound non-linear constraints 
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "lh", (void *) lh);
+    // Upper bound non-linear constraints
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "uh", (void *) uh);
 
-    // upper bound states
-    for (int ii=1; ii<=N_it; ii++) {
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ubx", (void *) ubx);
-    }
+    // Weighting matrix
+    ocp_nlp_cost_model_set(nlp_config,nlp_dims,nlp_in,1,"W",(void *) cost_W);
 
-    // constraint affine (somma di coppie)
-    for (int ii = 0; ii <= N_it; ii++) {
-        //double temp[1]
-        //temp[0] = -4*20; //
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "lg", (void *) limAggrDown);
+    // Lower cost slack variableas+
+    for(int ii=0;i<N_it;i++){
+        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "zu",(void *) zu_e);
     }
-    // constraint affine (somma di coppie)
-    for (int ii = 0; ii <= N_it; ii++) {
-        //double temp[1]
-        //temp[0] = +4*20; //
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "ug", (void *) limAggrUp);
+    // Upper cost slack variables
+    for(int ii=0;i<N_it;i++){
+        ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, ii, "zl",(void *) zl_e);
     }
-    for(int ii=1; ii < N_it; ii++){
-        ocp_nlp_cost_model_set(nlp_config,nlp_dims,nlp_in,ii,"W",(void *) cost_W);
-    }
+    
+    // Lower bound non-linear constraints stage 0
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "lh", (void *) lh_0);
+    // Upper bound non-linear constraints stage 0
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "uh", (void *) uh_0);
 
-    for (int ii = 0; ii <= N_it; ii++)
-        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "C", (void *) constr_C);
 
-    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zu",(void *) zu_e);
-    ocp_nlp_cost_model_set(nlp_config, nlp_dims, nlp_in, 1, "zl",(void *) zl_e);
-
-    for (int ii = 0; ii < 1; ii++)
-        ocp_nlp_out_set(nlp_config, nlp_dims, nlp_out, 1, "x", (void *) x_init);
     // chiamata al solver
     int rti_phase = 0;
     ocp_nlp_solver_opts_set(nlp_config, capsule->nlp_opts, "rti_phase", &rti_phase);
@@ -104,39 +90,22 @@ double Acados_Caller(double x0[],double extParam[],double limDown[],double limUp
 
     // prendo il vettore delle variabili predette dal solver al primo step (u + x)
 
-    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) devTorqueOut);
+    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 0, "u", (void *) u0);
 
 
-    double stateOut[4];
-    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 1, "x", (void *) &stateOut[0]);
-    AcadosState[0]=0; //Vx
-    AcadosState[1]=0; //Vy
-    AcadosState[2]=0; //r
-    AcadosState[3]=stateOut[0]; //T_FL
-    AcadosState[4]=stateOut[1]; //T_FR
-    AcadosState[5]=stateOut[2]; //T_RL
-    AcadosState[6]=stateOut[3]; //T_RR
 
-    int acados_status_My[1];
-    ocp_nlp_get(nlp_config, capsule->nlp_solver, "status", acados_status_My);
-    int volatile exitflag = acados_status_My[0];
-    AcadosFlag= exitflag;
+    ocp_nlp_out_get(nlp_config, nlp_dims, nlp_out, 1, "x", (void *) x1);
 
-    // tempo di solving
-//  double out_cpu_time[1];
-//  ocp_nlp_get(nlp_config, capsule->nlp_solver, "time_tot", (void *) out_cpu_time);
-//
-//  // per debug
-//  if (acados_status != 0) printf("Acados longitudinal mpc failed, exitflag = %i.\n", acados_status);
-//  acadostime_long = out_cpu_time[0];
 
-    // estraggo il valore di interesse della variabile di controllo dal vettore delle variabili predette
-    return 1;
+    int AcadosStatus;
+    ocp_nlp_get(nlp_config, capsule->nlp_solver, "status", &AcadosStatus);
+
+    return AcadosStatus;
 }
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double limDown[],double limUp[],double reference[],double lbx[], double ubx[],double limAggrDown[],double limAggrUp[],double cost_W[],double constr_C[],double zl_e[], double zu_e[],double x_init[],double devTorqueOut[]){
+double Acados_Caller_wrapper(double x0[],double extParam[],double y_ref0[],double y_ref[],double y_refe[],double lbx[], double ubx[],double limDown[],double limUp[],double lh[],double uh[],double cost_W[],double zl_e[], double zu_e[],double lh_0[], double uh_0[],double u0[],double x1[]){
 #ifndef MATLAB_MEX_FILE
-    return Acados_Caller(x0,extParam,limDown,limUp,reference,lbx,ubx,limAggrDown,limAggrUp,cost_W,constr_C,zl_e,zu_e,x_init,capsule,devTorqueOut);
+    return Acados_Caller(x0,extParam,y_ref0,y_ref,y_refe,lbx,ubx,limDown,limUp,lh,uh,cost_W,zl_e,zu_e,lh_0,uh_0, capsule,u0,x1);
 #endif
     return x0[0]+x0[1];
 }

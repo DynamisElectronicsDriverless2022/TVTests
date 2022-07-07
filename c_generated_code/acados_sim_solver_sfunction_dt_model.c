@@ -68,14 +68,14 @@ static void mdlInitializeSizes (SimStruct *S)
 
     // specify dimension information for the input ports
     // x0
-    ssSetInputPortVectorDimension(S, 0, 4);
+    ssSetInputPortVectorDimension(S, 0, 7);
     // u0
     ssSetInputPortVectorDimension(S, 1, 4);
     // parameters
-    ssSetInputPortVectorDimension(S, 2, 13);
+    ssSetInputPortVectorDimension(S, 2, 18);
 
     // specify dimension information for the output ports
-    ssSetOutputPortVectorDimension(S, 0, 4 ); // xnext
+    ssSetOutputPortVectorDimension(S, 0, 7 ); // xnext
 
     // specify the direct feedthrough status
     // should be set to 1 for all inputs used in mdlOutputs
@@ -138,13 +138,13 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     
 
     // local buffer
-    real_t buffer[13];
+    real_t buffer[18];
 
 
     /* go through inputs */
     // initial condition
     in_sign = ssGetInputPortRealSignalPtrs(S, 0);
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 7; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     sim_in_set(acados_sim_config, acados_sim_dims,
@@ -152,7 +152,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 
 
     // ssPrintf("\nin acados sim:\n");
-    // for (int i = 0; i < 4; i++) ssPrintf("x0[%d] = %f\n", i, buffer[i]);
+    // for (int i = 0; i < 7; i++) ssPrintf("x0[%d] = %f\n", i, buffer[i]);
     //     ssPrintf("\n");
 
 
@@ -170,11 +170,11 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     // parameters
     in_sign = ssGetInputPortRealSignalPtrs(S, 2);
 
-    for (int i = 0; i < 13; i++)
+    for (int i = 0; i < 18; i++)
         buffer[i] = (double)(*in_sign[i]);
 
     // update value of parameters
-    dt_model_acados_sim_update_params(capsule, buffer, 13);
+    dt_model_acados_sim_update_params(capsule, buffer, 18);
 
 
     /* call solver */
@@ -189,7 +189,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
                 "xn", (void *) out_x);
 
     // ssPrintf("\nacados sim solve: returned %d\n", acados_status);
-    // for (int i = 0; i < 4; i++) ssPrintf("x_sim[%d] = %f\n", i, out_x[i]);
+    // for (int i = 0; i < 7; i++) ssPrintf("x_sim[%d] = %f\n", i, out_x[i]);
     //     ssPrintf("\n");
 
 }
