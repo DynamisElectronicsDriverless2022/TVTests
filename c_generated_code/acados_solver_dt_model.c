@@ -164,7 +164,7 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     {
         
         nlp_solver_plan->nlp_dynamics[i] = CONTINUOUS_MODEL;
-        nlp_solver_plan->sim_solver_plan[i].sim_solver = ERK;
+        nlp_solver_plan->sim_solver_plan[i].sim_solver = IRK;
     }
 
     for (int i = 0; i < N; i++)
@@ -314,29 +314,39 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     
 
 
-    // explicit ode
-    capsule->forw_vde_casadi = (external_function_param_casadi *) malloc(sizeof(external_function_param_casadi)*N);
+    // implicit dae
+    capsule->impl_dae_fun = (external_function_param_casadi *) malloc(sizeof(external_function_param_casadi)*N);
     for (int i = 0; i < N; i++) {
-        capsule->forw_vde_casadi[i].casadi_fun = &dt_model_expl_vde_forw;
-        capsule->forw_vde_casadi[i].casadi_n_in = &dt_model_expl_vde_forw_n_in;
-        capsule->forw_vde_casadi[i].casadi_n_out = &dt_model_expl_vde_forw_n_out;
-        capsule->forw_vde_casadi[i].casadi_sparsity_in = &dt_model_expl_vde_forw_sparsity_in;
-        capsule->forw_vde_casadi[i].casadi_sparsity_out = &dt_model_expl_vde_forw_sparsity_out;
-        capsule->forw_vde_casadi[i].casadi_work = &dt_model_expl_vde_forw_work;
-        external_function_param_casadi_create(&capsule->forw_vde_casadi[i], 18);
+        capsule->impl_dae_fun[i].casadi_fun = &dt_model_impl_dae_fun;
+        capsule->impl_dae_fun[i].casadi_work = &dt_model_impl_dae_fun_work;
+        capsule->impl_dae_fun[i].casadi_sparsity_in = &dt_model_impl_dae_fun_sparsity_in;
+        capsule->impl_dae_fun[i].casadi_sparsity_out = &dt_model_impl_dae_fun_sparsity_out;
+        capsule->impl_dae_fun[i].casadi_n_in = &dt_model_impl_dae_fun_n_in;
+        capsule->impl_dae_fun[i].casadi_n_out = &dt_model_impl_dae_fun_n_out;
+        external_function_param_casadi_create(&capsule->impl_dae_fun[i], 18);
     }
 
-    capsule->expl_ode_fun = (external_function_param_casadi *) malloc(sizeof(external_function_param_casadi)*N);
+    capsule->impl_dae_fun_jac_x_xdot_z = (external_function_param_casadi *) malloc(sizeof(external_function_param_casadi)*N);
     for (int i = 0; i < N; i++) {
-        capsule->expl_ode_fun[i].casadi_fun = &dt_model_expl_ode_fun;
-        capsule->expl_ode_fun[i].casadi_n_in = &dt_model_expl_ode_fun_n_in;
-        capsule->expl_ode_fun[i].casadi_n_out = &dt_model_expl_ode_fun_n_out;
-        capsule->expl_ode_fun[i].casadi_sparsity_in = &dt_model_expl_ode_fun_sparsity_in;
-        capsule->expl_ode_fun[i].casadi_sparsity_out = &dt_model_expl_ode_fun_sparsity_out;
-        capsule->expl_ode_fun[i].casadi_work = &dt_model_expl_ode_fun_work;
-        external_function_param_casadi_create(&capsule->expl_ode_fun[i], 18);
+        capsule->impl_dae_fun_jac_x_xdot_z[i].casadi_fun = &dt_model_impl_dae_fun_jac_x_xdot_z;
+        capsule->impl_dae_fun_jac_x_xdot_z[i].casadi_work = &dt_model_impl_dae_fun_jac_x_xdot_z_work;
+        capsule->impl_dae_fun_jac_x_xdot_z[i].casadi_sparsity_in = &dt_model_impl_dae_fun_jac_x_xdot_z_sparsity_in;
+        capsule->impl_dae_fun_jac_x_xdot_z[i].casadi_sparsity_out = &dt_model_impl_dae_fun_jac_x_xdot_z_sparsity_out;
+        capsule->impl_dae_fun_jac_x_xdot_z[i].casadi_n_in = &dt_model_impl_dae_fun_jac_x_xdot_z_n_in;
+        capsule->impl_dae_fun_jac_x_xdot_z[i].casadi_n_out = &dt_model_impl_dae_fun_jac_x_xdot_z_n_out;
+        external_function_param_casadi_create(&capsule->impl_dae_fun_jac_x_xdot_z[i], 18);
     }
 
+    capsule->impl_dae_jac_x_xdot_u_z = (external_function_param_casadi *) malloc(sizeof(external_function_param_casadi)*N);
+    for (int i = 0; i < N; i++) {
+        capsule->impl_dae_jac_x_xdot_u_z[i].casadi_fun = &dt_model_impl_dae_jac_x_xdot_u_z;
+        capsule->impl_dae_jac_x_xdot_u_z[i].casadi_work = &dt_model_impl_dae_jac_x_xdot_u_z_work;
+        capsule->impl_dae_jac_x_xdot_u_z[i].casadi_sparsity_in = &dt_model_impl_dae_jac_x_xdot_u_z_sparsity_in;
+        capsule->impl_dae_jac_x_xdot_u_z[i].casadi_sparsity_out = &dt_model_impl_dae_jac_x_xdot_u_z_sparsity_out;
+        capsule->impl_dae_jac_x_xdot_u_z[i].casadi_n_in = &dt_model_impl_dae_jac_x_xdot_u_z_n_in;
+        capsule->impl_dae_jac_x_xdot_u_z[i].casadi_n_out = &dt_model_impl_dae_jac_x_xdot_u_z_n_out;
+        external_function_param_casadi_create(&capsule->impl_dae_jac_x_xdot_u_z[i], 18);
+    }
 
 
     /************************************************
@@ -362,8 +372,11 @@ int dt_model_acados_create_with_discretization(dt_model_solver_capsule * capsule
     /**** Dynamics ****/
     for (int i = 0; i < N; i++)
     {
-        ocp_nlp_dynamics_model_set(nlp_config, nlp_dims, nlp_in, i, "expl_vde_forw", &capsule->forw_vde_casadi[i]);
-        ocp_nlp_dynamics_model_set(nlp_config, nlp_dims, nlp_in, i, "expl_ode_fun", &capsule->expl_ode_fun[i]);
+        ocp_nlp_dynamics_model_set(nlp_config, nlp_dims, nlp_in, i, "impl_dae_fun", &capsule->impl_dae_fun[i]);
+        ocp_nlp_dynamics_model_set(nlp_config, nlp_dims, nlp_in, i,
+                                   "impl_dae_fun_jac_x_xdot_z", &capsule->impl_dae_fun_jac_x_xdot_z[i]);
+        ocp_nlp_dynamics_model_set(nlp_config, nlp_dims, nlp_in, i,
+                                   "impl_dae_jac_x_xdot_u", &capsule->impl_dae_jac_x_xdot_u_z[i]);
     
     }
 
@@ -818,8 +831,9 @@ int dt_model_acados_update_params(dt_model_solver_capsule * capsule, int stage, 
     const int N = capsule->nlp_solver_plan->N;
     if (stage < N && stage >= 0)
     {
-        capsule->forw_vde_casadi[stage].set_param(capsule->forw_vde_casadi+stage, p);
-        capsule->expl_ode_fun[stage].set_param(capsule->expl_ode_fun+stage, p);
+        capsule->impl_dae_fun[stage].set_param(capsule->impl_dae_fun+stage, p);
+        capsule->impl_dae_fun_jac_x_xdot_z[stage].set_param(capsule->impl_dae_fun_jac_x_xdot_z+stage, p);
+        capsule->impl_dae_jac_x_xdot_u_z[stage].set_param(capsule->impl_dae_jac_x_xdot_u_z+stage, p);
     
 
         // constraints
@@ -877,11 +891,13 @@ int dt_model_acados_free(dt_model_solver_capsule * capsule)
     // dynamics
     for (int i = 0; i < N; i++)
     {
-        external_function_param_casadi_free(&capsule->forw_vde_casadi[i]);
-        external_function_param_casadi_free(&capsule->expl_ode_fun[i]);
+        external_function_param_casadi_free(&capsule->impl_dae_fun[i]);
+        external_function_param_casadi_free(&capsule->impl_dae_fun_jac_x_xdot_z[i]);
+        external_function_param_casadi_free(&capsule->impl_dae_jac_x_xdot_u_z[i]);
     }
-    free(capsule->forw_vde_casadi);
-    free(capsule->expl_ode_fun);
+    free(capsule->impl_dae_fun);
+    free(capsule->impl_dae_fun_jac_x_xdot_z);
+    free(capsule->impl_dae_jac_x_xdot_u_z);
 
     // cost
 

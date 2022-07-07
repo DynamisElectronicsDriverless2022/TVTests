@@ -41,8 +41,9 @@ ACADOS_FLAGS = -fPIC -std=c99  #-fno-diagnostics-show-line-numbers -g
 # ACADOS_FLAGS += -g3
 
 MODEL_OBJ=
-MODEL_OBJ+= dt_model_model/dt_model_expl_ode_fun.o
-MODEL_OBJ+= dt_model_model/dt_model_expl_vde_forw.o
+MODEL_OBJ+= dt_model_model/dt_model_impl_dae_fun.o
+MODEL_OBJ+= dt_model_model/dt_model_impl_dae_fun_jac_x_xdot_z.o
+MODEL_OBJ+= dt_model_model/dt_model_impl_dae_jac_x_xdot_u_z.o
 
 
 OCP_OBJ=
@@ -74,8 +75,9 @@ all: clean casadi_fun example_sim example
 shared_lib: bundled_shared_lib ocp_shared_lib sim_shared_lib
 
 CASADI_MODEL_SOURCE=
-CASADI_MODEL_SOURCE+= dt_model_expl_ode_fun.c
-CASADI_MODEL_SOURCE+= dt_model_expl_vde_forw.c
+CASADI_MODEL_SOURCE+= dt_model_impl_dae_fun.c
+CASADI_MODEL_SOURCE+= dt_model_impl_dae_fun_jac_x_xdot_z.c
+CASADI_MODEL_SOURCE+= dt_model_impl_dae_jac_x_xdot_u_z.c
 CASADI_CON_H_SOURCE=
 CASADI_CON_H_SOURCE+= dt_model_constr_h_fun_jac_uxt_zt.c
 CASADI_CON_H_SOURCE+= dt_model_constr_h_fun.c
