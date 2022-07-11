@@ -46,8 +46,8 @@
 #define DT_MODEL_NBU    4
 #define DT_MODEL_NSBX   0
 #define DT_MODEL_NSBU   0
-#define DT_MODEL_NSH    4
-#define DT_MODEL_NSG    0
+#define DT_MODEL_NSH    0
+#define DT_MODEL_NSG    4
 #define DT_MODEL_NSPHI  0
 #define DT_MODEL_NSHN   0
 #define DT_MODEL_NSGN   0
@@ -55,14 +55,14 @@
 #define DT_MODEL_NSBXN  0
 #define DT_MODEL_NS     4
 #define DT_MODEL_NSN    0
-#define DT_MODEL_NG     0
+#define DT_MODEL_NG     6
 #define DT_MODEL_NBXN   0
 #define DT_MODEL_NGN    0
 #define DT_MODEL_NY0    11
 #define DT_MODEL_NY     11
 #define DT_MODEL_NYN    11
 #define DT_MODEL_N      2
-#define DT_MODEL_NH     6
+#define DT_MODEL_NH     0
 #define DT_MODEL_NPHI   0
 #define DT_MODEL_NHN    0
 #define DT_MODEL_NPHIN  0
@@ -91,9 +91,8 @@ typedef struct dt_model_solver_capsule
     /* external functions */
     // dynamics
 
-    external_function_param_casadi *impl_dae_fun;
-    external_function_param_casadi *impl_dae_fun_jac_x_xdot_z;
-    external_function_param_casadi *impl_dae_jac_x_xdot_u_z;
+    external_function_param_casadi *forw_vde_casadi;
+    external_function_param_casadi *expl_ode_fun;
 
 
 
@@ -106,9 +105,6 @@ typedef struct dt_model_solver_capsule
 
 
     // constraints
-    external_function_param_casadi *nl_constr_h_fun_jac;
-    external_function_param_casadi *nl_constr_h_fun;
-    external_function_param_casadi *nl_constr_h_fun_jac_hess;
 
 
 

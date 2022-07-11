@@ -41,14 +41,11 @@ ACADOS_FLAGS = -fPIC -std=c99  #-fno-diagnostics-show-line-numbers -g
 # ACADOS_FLAGS += -g3
 
 MODEL_OBJ=
-MODEL_OBJ+= dt_model_model/dt_model_impl_dae_fun.o
-MODEL_OBJ+= dt_model_model/dt_model_impl_dae_fun_jac_x_xdot_z.o
-MODEL_OBJ+= dt_model_model/dt_model_impl_dae_jac_x_xdot_u_z.o
+MODEL_OBJ+= dt_model_model/dt_model_expl_ode_fun.o
+MODEL_OBJ+= dt_model_model/dt_model_expl_vde_forw.o
 
 
 OCP_OBJ=
-OCP_OBJ+= dt_model_constraints/dt_model_constr_h_fun_jac_uxt_zt.o
-OCP_OBJ+= dt_model_constraints/dt_model_constr_h_fun.o
 OCP_OBJ+= acados_solver_dt_model.o
 
 
@@ -75,16 +72,11 @@ all: clean casadi_fun example_sim example
 shared_lib: bundled_shared_lib ocp_shared_lib sim_shared_lib
 
 CASADI_MODEL_SOURCE=
-CASADI_MODEL_SOURCE+= dt_model_impl_dae_fun.c
-CASADI_MODEL_SOURCE+= dt_model_impl_dae_fun_jac_x_xdot_z.c
-CASADI_MODEL_SOURCE+= dt_model_impl_dae_jac_x_xdot_u_z.c
-CASADI_CON_H_SOURCE=
-CASADI_CON_H_SOURCE+= dt_model_constr_h_fun_jac_uxt_zt.c
-CASADI_CON_H_SOURCE+= dt_model_constr_h_fun.c
+CASADI_MODEL_SOURCE+= dt_model_expl_ode_fun.c
+CASADI_MODEL_SOURCE+= dt_model_expl_vde_forw.c
 
 casadi_fun:
 	( cd dt_model_model & gcc $(ACADOS_FLAGS) -c $(CASADI_MODEL_SOURCE))
-	( cd dt_model_constraints & gcc $(ACADOS_FLAGS) -c $(CASADI_CON_H_SOURCE))
 
 main:
 	gcc $(ACADOS_FLAGS) -c main_dt_model.c -I $(INCLUDE_PATH)/blasfeo/include/ -I $(INCLUDE_PATH)/hpipm/include/ \

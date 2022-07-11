@@ -14,7 +14,7 @@ extern dt_model_solver_capsule * capsule;
 
 // Inizializzazione solver, noi la facciamo nel costruttore della classe
 
-double Acados_Caller(double x0[],double extParam[],double y_ref0[],double y_ref[],double y_refe[],double lbx[], double ubx[],double limDown[],double limUp[],double lh[],double uh[],double cost_W[],double zl_e[], double zu_e[],double lh_0[], double uh_0[], dt_model_solver_capsule * capsule,double u0[],double x1[]){
+double Acados_Caller(double x0[],double extParam[],double y_ref0[],double y_ref[],double y_refe[],double lbx[], double ubx[],double limDown[],double limUp[],double lh[],double uh[],double cost_W[],double zl_e[], double zu_e[],double lh_0[], double uh_0[],double D[],double C[], dt_model_solver_capsule * capsule,double u0[],double x1[]){
     /** Da qua in poi Ã¨ il codice che va messo nella funzione che viene chiamata ogni iterazione per chiamare il solver **/
     // Inizializzazione delle variabili del solver
     ocp_nlp_config *nlp_config = dt_model_acados_get_nlp_config(capsule);
@@ -61,9 +61,9 @@ double Acados_Caller(double x0[],double extParam[],double y_ref0[],double y_ref[
 
 
     // Lower bound non-linear constraints 
-    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "lh", (void *) lh);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "lg", (void *) lg);
     // Upper bound non-linear constraints
-    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "uh", (void *) uh);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "ug", (void *) ug);
 
     // Weighting matrix
     ocp_nlp_cost_model_set(nlp_config,nlp_dims,nlp_in,1,"W",(void *) cost_W);
@@ -78,10 +78,17 @@ double Acados_Caller(double x0[],double extParam[],double y_ref0[],double y_ref[
     }
     
     // Lower bound non-linear constraints stage 0
-    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "lh", (void *) lh_0);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "lg", (void *) lg_0);
     // Upper bound non-linear constraints stage 0
-    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "uh", (void *) uh_0);
+    ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 0, "ug", (void *) ug_0);
 
+    // Control constraint matrix D
+    for (int ii = 0; ii < 2; ii++)
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, ii, "D",(void *) D);
+
+    // State constraint matrix C
+    for (int ii = 0; ii < 2; ii++)
+        ocp_nlp_constraints_model_set(nlp_config, nlp_dims, nlp_in, 1, "C",(void *) C);
 
     // chiamata al solver
     int rti_phase = 0;
@@ -103,9 +110,9 @@ double Acados_Caller(double x0[],double extParam[],double y_ref0[],double y_ref[
     return AcadosStatus;
 }
 #endif
-double Acados_Caller_wrapper(double x0[],double extParam[],double y_ref0[],double y_ref[],double y_refe[],double lbx[], double ubx[],double limDown[],double limUp[],double lh[],double uh[],double cost_W[],double zl_e[], double zu_e[],double lh_0[], double uh_0[],double u0[],double x1[]){
+double Acados_Caller_wrapper(double x0[],double extParam[],double y_ref0[],double y_ref[],double y_refe[],double lbx[], double ubx[],double limDown[],double limUp[],double lh[],double uh[],double cost_W[],double zl_e[], double zu_e[],double lh_0[], double uh_0[],double D[],double C[],double u0[],double x1[]){
 #ifndef MATLAB_MEX_FILE
-    return Acados_Caller(x0,extParam,y_ref0,y_ref,y_refe,lbx,ubx,limDown,limUp,lh,uh,cost_W,zl_e,zu_e,lh_0,uh_0, capsule,u0,x1);
+    return Acados_Caller(x0,extParam,y_ref0,y_ref,y_refe,lbx,ubx,limDown,limUp,lh,uh,cost_W,zl_e,zu_e,lh_0,uh_0,D,C, capsule,u0,x1);
 #endif
     return x0[0]+x0[1];
 }
